@@ -1,4 +1,12 @@
+import { Inter } from 'next/font/google'
+import styles from './page.module.css'
+import Link from  'next/link';
 import './globals.css'
+import Image from 'next/image';
+import NavBar from './z components/NavBar';
+
+const inter = Inter({ subsets: ['latin'] })
+
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +20,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      
+      <body>
+        <main className={styles.main}>
+          
+          <NavBar />
+
+            {children}
+
+        </main>
+        </body>
     </html>
   )
 }
