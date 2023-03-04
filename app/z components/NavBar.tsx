@@ -3,6 +3,7 @@ import styles from '../page.module.css'
 import Link from  'next/link';
 import '../globals.css'
 import Image from 'next/image';
+import SocialLinks from './SocialLinks';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -40,6 +41,7 @@ export default function NavBar() {
                         <h5 className={inter.className}>Contact <span>-&gt;</span> </h5>
                     </div>
                 </Link>
+                <SocialLinks />
             </nav>
         </>
     )

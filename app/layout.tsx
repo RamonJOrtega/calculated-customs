@@ -5,6 +5,7 @@ import './globals.css'
 import Image from 'next/image';
 import NavBar from './z components/NavBar';
 import Footer from './z components/Footer'
+import SocialLinks from './z components/SocialLinks'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,7 +24,6 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <main className={styles.main}>
-
           <NavBar />
           {children}
           <Footer />
