@@ -4,6 +4,7 @@ import Link from  'next/link';
 import './globals.css'
 import Image from 'next/image';
 import NavBar from './z components/NavBar';
+import Footer from './z components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,7 +26,8 @@ export default function RootLayout({
 
           <NavBar />
           {children}
-          
+          <Footer />
+
         </main>
       </body>
     </html>

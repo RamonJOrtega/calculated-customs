@@ -14,20 +14,17 @@ export default function Home() {
 
   return (
     <> 
-      <div className={styles.description}>
+      <div >
       
           <div className={styles.card}>
             <h3 className={inter.className}>Rotational Inertia Calculator<span>-&gt;</span> </h3>
+            <div className={inter.className}>
+            <InertiaCalculator  />
+            </div>
           </div>
     
       </div>
 
-      <div className={styles.card}>
-        <div className={inter.className}>
-        <InertiaCalculator  />
-        </div>
-    
-      </div>
 
     </>
   )
