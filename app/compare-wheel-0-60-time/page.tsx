@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import "../globals.css"
 import styles from '../page.module.css'
-
+import { Inter } from 'next/font/google'
+const inter = Inter({ subsets: ['latin'] })
 
 export default function CompareZeroToSixtyPage() {
     return(
-        <>
+        <div className={inter.className}>
              <div className="overlayContainer">
              <Image
               src="/white black compare 0-60.jpg"
@@ -37,6 +38,6 @@ export default function CompareZeroToSixtyPage() {
                 <a href="https://www.tkqlhce.com/click-100641204-10377976">wheels</a> and <a href="https://www.kqzyfj.com/click-100641204-10377851">tires</a> 
                 from our affiliate links embedded throughout the website.
             </p>
-        </>
+        </div>
     )
 }

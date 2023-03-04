@@ -2,9 +2,12 @@ import Image from "next/image"
 import torqueExplanation from "./Torque explanation.png"
 import "../globals.css"
 import styles from "../page.module.css"
+import { Inter } from 'next/font/google'
+const inter = Inter({ subsets: ['latin'] })
+
 export default function LearnPage() {
     return(
-        <>
+        <div className={inter.className}>
             <div className="overlayContainer">
                 <Image src="/Rohana Wheel.jpg" 
                 alt="Vercel Logo"
@@ -71,6 +74,6 @@ export default function LearnPage() {
                 width={200}
                 height={200}
                 priority />
-        </>
+        </div>
     )
 }
