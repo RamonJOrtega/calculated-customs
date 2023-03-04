@@ -20,16 +20,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      
       <body>
         <main className={styles.main}>
-          
+
           <NavBar />
-
-            {children}
-
+          {children}
+          
         </main>
-        </body>
+      </body>
     </html>
   )
 }

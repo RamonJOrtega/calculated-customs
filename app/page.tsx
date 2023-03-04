@@ -1,31 +1,32 @@
 import { Inter } from 'next/font/google'
 import styles from './page.module.css'
-import { TireWheelInertiaCalculator } from './z components/TireWheelInertiaCalculator'
 import dynamic from 'next/dynamic'
+import FieldTitle from './z components/FieldTitle'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+const InertiaCalculator = dynamic(() => import('./z components/InertiaCalculator'), {
+  ssr:false
+})
 
-  // const TireWheelInertiaCalculator = dynamic(
-  //   () => import('./z components/TireWheelInertiaCalculator')
-  //   .then((mod) => mod.TireWheelInertiaCalculator),
-  //   {ssr:false}
-  // ) 
+
+export default function Home() {
 
   return (
     <> 
       <div className={styles.description}>
-        <p>
-          <div className={styles.card}>
-                  <h3 className={inter.className}>Rotational Inertia Calculator<span>-&gt;</span> </h3>
-                </div>
-        </p>
       
+          <div className={styles.card}>
+            <h3 className={inter.className}>Rotational Inertia Calculator<span>-&gt;</span> </h3>
+          </div>
+    
       </div>
 
-      <div className={styles.center}>
-        <h1>Calculate</h1>
+      <div className={styles.card}>
+        <div className={inter.className}>
+        <InertiaCalculator  />
+        </div>
+    
       </div>
 
     </>
