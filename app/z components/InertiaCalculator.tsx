@@ -14,10 +14,10 @@ export default function InertiaCalculator () {
 
 
     const [isStandardNotation, setIsStandardNotation] = React.useState(true)
-    const [tireWeight, setTireWieght] = React.useState(0)
+    const [tireWeight, setTireWeight] = React.useState(0)
     const [tireWidth, setTireWidth] = React.useState(0)
     const [aspectRatio, setAspectRatio] = React.useState(0)
-    const [wheelWeight, setwheelWieght] = React.useState(0)
+    const [wheelWeight, setWheelWeight] = React.useState(0)
     const [tireDiameter, setTireDiameter] = React.useState(0)
     const [wheelDiameter, setWheelDiameter] = React.useState(0)
     const [tireInertiaResult, setTireInertiaResult] =  React.useState(0)
@@ -28,6 +28,7 @@ export default function InertiaCalculator () {
     return (
         <>
             <table>
+                <tbody>
                 <tr>
                     <td colSpan={2} > 
                         {isStandardNotation ? 
@@ -46,8 +47,8 @@ export default function InertiaCalculator () {
                 <tr>
                     <td> 
                         {isStandardNotation ? 
-                            (<FieldInput inputId="tireWid" isStandardNotation={isStandardNotation}/>):
-                            (<FieldInput inputId="tireDia" />)
+                            (<FieldInput inputId="tireWid" setValue={setTireWidth} isStandardNotation={isStandardNotation}/>):
+                            (<FieldInput inputId="tireDia" setValue={setTireDiameter}/>)
                         } 
                     </td>
                     <td align="center">
@@ -63,7 +64,7 @@ export default function InertiaCalculator () {
                         }          
                     </td>
                     <td align="center"><span> R </span></td>
-                    <td> <FieldInput inputId="wheelDia" /> </td>
+                    <td> <FieldInput inputId="wheelDia" setValue={setWheelDiameter}/> </td>
                     <td align="center"><div> inch </div></td>
                 </tr>
                 <tr>
@@ -73,11 +74,11 @@ export default function InertiaCalculator () {
 
                 </tr>
                 <tr>
-                    <td> <FieldInput inputId="tireWt" /> </td>
+                    <td> <FieldInput inputId="tireWt" setValue={setTireWeight}/> </td>
                     <td align="center"><div> pound </div> </td>
 
                     <td colSpan={3}> {isStandardNotation && (<StandarNotationCheckBox  isStandardNotation={isStandardNotation} setIsStandardNotation={setIsStandardNotation}/>)}  </td>
-                    <td> <FieldInput inputId="wheelWt" />  </td>
+                    <td> <FieldInput inputId="wheelWt" setValue={setWheelWeight}/>  </td>
                     <td align="center"><div> pound </div> </td>
 
                 </tr>
@@ -95,6 +96,7 @@ export default function InertiaCalculator () {
                         <td > <WheelResult wheelWeight={wheelWeight} wheelDiameter={wheelDiameter} /> </td>
                         <td align="center"><div> kg&#x2022;m<sup>2</sup></div></td>
                     </tr>
+                    </tbody>
             </table>
         </>
     )

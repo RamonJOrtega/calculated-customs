@@ -9,7 +9,7 @@ export default function NavBar() {
     
     return(
         <>
-            <nav className={styles.grid}>
+            <nav className={styles.footer}>
             <Link href="/">
                     <div className={styles.card}>
                         <h6 className={inter.className}>Home<span>-&gt;</span> </h6>

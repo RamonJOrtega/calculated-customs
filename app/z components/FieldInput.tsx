@@ -3,12 +3,34 @@ import styles from '../page.module.css'
 import Link from  'next/link';
 import '../globals.css'
 import Image from 'next/image';
+import { Props } from 'next/script';
 
-export default function FieldInput(props: any) {
-    
+
+interface FieldInputProps {
+    setValue: any
+    tipText?: string
+    isStandardNotation?: boolean
+    inputId?: string
+}
+
+const FieldInput: React.FC<FieldInputProps> = (props: any) => {
+    console.log(props)
     return(
         <div  id={props.divId}> 
-            <input className="num" id={props.inputId} type="number" list={props.list} maxLength={props.maxLength} step={props.step}/> 
+            <input 
+                onChange={
+                    (e)=>{
+                    console.log(e.target.value)
+                    props.setValue(e.target.value)
+                    }
+                }
+                className="num" 
+                id={props.inputId} 
+                type="number" 
+                list={props.list} 
+                maxLength={props.maxLength} 
+                step={props.step}
+            /> 
             {props.isStandardNotation && props.list==="widthList" && (
                 <datalist id="widthList" >
                     <option value="105"></option><option value="115"></option><option value="125"></option><option value="135"></option>
@@ -33,6 +55,7 @@ export default function FieldInput(props: any) {
         </div> 
     )
 }
+export default FieldInput
 
 //list="widthList" maxLength={3} step="1"
 //list="aspectList" maxLength={3} step="1" 
