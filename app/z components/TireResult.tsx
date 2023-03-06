@@ -12,6 +12,7 @@ interface TireResultProps {
     aspectRatio: number;
     isStandardNotation: boolean;
     setTireDiameter: any;
+    placeHolder: string;
     
 }
  const TireResult: React.FC<TireResultProps> = (props) => {
@@ -36,7 +37,7 @@ interface TireResultProps {
     return(
         <>
             <div id="TireResult"> 
-                <input className="result" id="tireRes" type="number" disabled value={tireResult}/> 
+                <input placeholder={props.placeHolder} className="result" id="tireRes" type="number" disabled value={tireResult}/> 
             </div>
         </>
     )

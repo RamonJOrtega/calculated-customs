@@ -11,6 +11,7 @@ interface FieldInputProps {
     tipText?: string
     isStandardNotation?: boolean
     inputId?: string
+    placeHolder?: string
 }
 
 const FieldInput: React.FC<FieldInputProps> = (props: any) => {
@@ -20,7 +21,6 @@ const FieldInput: React.FC<FieldInputProps> = (props: any) => {
             <input 
                 onChange={
                     (e)=>{
-                    console.log(e.target.value)
                     props.setValue(e.target.value)
                     }
                 }
@@ -30,6 +30,8 @@ const FieldInput: React.FC<FieldInputProps> = (props: any) => {
                 list={props.list} 
                 maxLength={props.maxLength} 
                 step={props.step}
+                onClick={()=>{props.setValue(0)}}
+                placeholder={props.placeHolder}
             /> 
             {props.isStandardNotation && props.list==="widthList" && (
                 <datalist id="widthList" >

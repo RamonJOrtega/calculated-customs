@@ -7,6 +7,7 @@ import Image from 'next/image';
 interface WheelResultProps {
     wheelDiameter: number;
     wheelWeight: number;
+    placeHolder: string;
 }
  const WheelResult: React.FC<WheelResultProps> = (props) => {
     const wheelRad_m = (props.wheelDiameter) * 0.0254 / 2                                  //  console.log('wheel radius in meters: ' + wheelRad_m)
@@ -20,7 +21,7 @@ interface WheelResultProps {
     return(
         <>
             <div id="wheelResult"> 
-                <input className="result" id="wheelRes" type="number" disabled value={wheelInertia}/> 
+                <input placeholder={props.placeHolder} className="result" id="wheelRes" type="number" disabled value={wheelInertia}/> 
             </div>
         </>
     )

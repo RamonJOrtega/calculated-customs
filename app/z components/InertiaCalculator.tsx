@@ -6,7 +6,7 @@ import TotalResult from "./TotalResult"
 import WheelResult from "./WheelResult"
 import FieldTitle from "./FieldTitle"
 import React from "react"
-import FieldInput from "./FieldInput";
+import FieldInput from "./FieldInput" ;
 import StandarNotationCheckBox from "./StandardNotationCheckBox";
 
 
@@ -28,7 +28,7 @@ export default function InertiaCalculator () {
     return (
         <>
             <table>
-                <tbody>
+                <tbody> 
                 <tr>
                     <td colSpan={2} > 
                         {isStandardNotation ? 
@@ -44,11 +44,12 @@ export default function InertiaCalculator () {
                     </td>
                     <td colSpan={2} > <FieldTitle title="Wheel Diameter"/> </td>
                 </tr>
+
                 <tr>
                     <td> 
                         {isStandardNotation ? 
-                            (<FieldInput inputId="tireWid" setValue={setTireWidth} isStandardNotation={isStandardNotation}/>):
-                            (<FieldInput inputId="tireDia" setValue={setTireDiameter}/>)
+                            (<FieldInput placeHolder={"input mm"} inputId="tireWid" setValue={setTireWidth}/>):
+                            (<FieldInput placeHolder={"input dia."} inputId="tireDia" setValue={setTireDiameter}/>)
                         } 
                     </td>
                     <td align="center">
@@ -59,14 +60,15 @@ export default function InertiaCalculator () {
                     </td>
                     <td colSpan={2}>
                         {isStandardNotation ? 
-                            (<FieldInput inputId="calcDia" isStandardNotation={isStandardNotation}/>): 
+                            (<FieldInput placeHolder={"input %"} inputId="aspRat" setValue={setAspectRatio} isStandardNotation={isStandardNotation} />): 
                             (<StandarNotationCheckBox isStandardNotation={isStandardNotation} setIsStandardNotation={setIsStandardNotation}  />)
                         }          
                     </td>
                     <td align="center"><span> R </span></td>
-                    <td> <FieldInput inputId="wheelDia" setValue={setWheelDiameter}/> </td>
+                    <td> <FieldInput placeHolder={"input dia."} inputId="wheelDia" setValue={setWheelDiameter}/> </td>
                     <td align="center"><div> inch </div></td>
                 </tr>
+
                 <tr>
                     <td colSpan={2}> <FieldTitle title="&nbsp;  Tire Weight" /> </td>
                     <td colSpan={3}> {isStandardNotation && (<FieldTitle title="Standard Notation" tipText="Optional. <br></br> Use standard notation to get tire diameter" />)} </td>
@@ -74,11 +76,11 @@ export default function InertiaCalculator () {
 
                 </tr>
                 <tr>
-                    <td> <FieldInput inputId="tireWt" setValue={setTireWeight}/> </td>
+                    <td> <FieldInput placeHolder={"input wt."} inputId="tireWt" setValue={setTireWeight}/> </td>
                     <td align="center"><div> pound </div> </td>
 
                     <td colSpan={3}> {isStandardNotation && (<StandarNotationCheckBox  isStandardNotation={isStandardNotation} setIsStandardNotation={setIsStandardNotation}/>)}  </td>
-                    <td> <FieldInput inputId="wheelWt" setValue={setWheelWeight}/>  </td>
+                    <td> <FieldInput placeHolder={"input wt."} inputId="wheelWt" setValue={setWheelWeight}/>  </td>
                     <td align="center"><div> pound </div> </td>
 
                 </tr>
@@ -88,12 +90,12 @@ export default function InertiaCalculator () {
                     <td colSpan={2}> <FieldTitle title="Wheel Inertia" /> </td>
                 </tr>
                 <tr>
-                    <td > <TireResult setTireDiameter={setTireDiameter} wheelDiameter={wheelDiameter} tireDiameter={tireDiameter} tireWidth={tireWidth} tireWeight={tireWeight} aspectRatio={aspectRatio} isStandardNotation={isStandardNotation} /> </td>
+                    <td > <TireResult placeHolder={"need more input"} setTireDiameter={setTireDiameter} wheelDiameter={wheelDiameter} tireDiameter={tireDiameter} tireWidth={tireWidth} tireWeight={tireWeight} aspectRatio={aspectRatio} isStandardNotation={isStandardNotation} /> </td>
                         <td align="center"><div> kg&#x2022;m<sup>2</sup></div></td>
-                        <td > <TotalResult tireInertiaResult={tireInertiaResult} wheelInertiaResult={wheelInertiaResult}/>  </td>
+                        <td > <TotalResult placeHolder={"need more input"} tireInertiaResult={tireInertiaResult} wheelInertiaResult={wheelInertiaResult}/>  </td>
                         <td align="right"><div> kg&#x2022;      </div></td>
                         <td align="left"> <div> m<sup>2</sup>   </div></td>
-                        <td > <WheelResult wheelWeight={wheelWeight} wheelDiameter={wheelDiameter} /> </td>
+                        <td > <WheelResult placeHolder={"need more input"} wheelWeight={wheelWeight} wheelDiameter={wheelDiameter} /> </td>
                         <td align="center"><div> kg&#x2022;m<sup>2</sup></div></td>
                     </tr>
                     </tbody>
