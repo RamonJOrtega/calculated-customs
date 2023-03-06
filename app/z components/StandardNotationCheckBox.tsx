@@ -15,7 +15,10 @@ interface StandardNotationCheckBoxProps {
         <>
 
            <div> 
-            <input type="checkbox" onChange={()=>{props.setIsStandardNotation(!props.isStandardNotation)}}/> 
+            <input 
+                type="checkbox"
+                checked={props.isStandardNotation}
+                onChange={()=>{props.setIsStandardNotation(!props.isStandardNotation)}}/> 
                 <span className="postFix1"> ex. 325/40R22 </span> 
             </div>     
 

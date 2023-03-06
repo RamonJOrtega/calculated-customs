@@ -13,7 +13,7 @@ import StandarNotationCheckBox from "./StandardNotationCheckBox";
 export default function InertiaCalculator () {
 
 
-    const [isStandardNotation, setIsStandardNotation] = React.useState(true)
+    const [isStandardNotation, setIsStandardNotation] = React.useState(false)
     const [tireWeight, setTireWeight] = React.useState(0)
     const [tireWidth, setTireWidth] = React.useState(0)
     const [aspectRatio, setAspectRatio] = React.useState(0)
