@@ -17,7 +17,7 @@ interface TireResultProps {
 }
  const TireResult: React.FC<TireResultProps> = (props) => {
     
-    let tireResult: number = 0;
+    let tireResult: string = "";
     if (props.isStandardNotation && props.tireWidth && props.aspectRatio && props.wheelDiameter) {calcTireDiaFromStandardNotation()}
     if (props.tireDiameter && props.tireWeight) {calcTireDiaFromDiaByWidNotation()}
 
@@ -31,7 +31,7 @@ interface TireResultProps {
         const treadInertia = 0.75 * tireMass_kg * tireRad_m * tireRad_m                     // console.log('treadInertia in kg*m^2: ' + treadInertia)
         const wheelRad_m = (props.wheelDiameter) * 0.0254 / 2
         const sidewallInertia = 0.25 * (1/2) * tireMass_kg * (tireRad_m * tireRad_m + wheelRad_m * wheelRad_m)// console.log('sidewallInertia in kg*m^2: ' + sidewallInertia)
-        tireResult = Math.round((treadInertia + sidewallInertia)*10)/10
+        tireResult = (treadInertia + sidewallInertia).toFixed(1)
     }
   
     return(

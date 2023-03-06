@@ -14,7 +14,7 @@ interface TotalResultProps {
     let wheelInertia = 0;
     if (props.tireInertiaResult) {tireInertia = (props.tireInertiaResult)}
     if (props.wheelInertiaResult) {wheelInertia = (props.wheelInertiaResult)}
-    const totalInertia = Math.round((tireInertia + wheelInertia)*10)/10
+    const totalInertia = (tireInertia + wheelInertia).toFixed(1)
   
     
     return(
