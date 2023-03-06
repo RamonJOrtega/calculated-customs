@@ -11,6 +11,7 @@ interface FieldInputProps {
     tipText?: string
     isStandardNotation?: boolean
     inputId?: string
+    list?: string
     placeHolder?: string
 }
 
@@ -33,7 +34,7 @@ const FieldInput: React.FC<FieldInputProps> = (props: any) => {
                 onClick={()=>{props.setValue(0)}}
                 placeholder={props.placeHolder}
             /> 
-            {props.isStandardNotation && props.list==="widthList" && (
+            {props.list==="widthList" && (
                 <datalist id="widthList" >
                     <option value="105"></option><option value="115"></option><option value="125"></option><option value="135"></option>
                     <option value="145"></option><option value="155"></option><option value="165"></option><option value="175"></option>
@@ -45,7 +46,7 @@ const FieldInput: React.FC<FieldInputProps> = (props: any) => {
                     <option value="405"></option>
                 </datalist>
             )}
-            {props.isStandardNotation && props.list==="aspectList" && (
+            {props.list==="aspectList" && (
                 <datalist id="aspectList" >
                     <option value="10"></option><option value="15"></option><option value="20"></option><option value="25"></option>
                     <option value="30"></option><option value="35"></option><option value="40"></option><option value="45"></option>

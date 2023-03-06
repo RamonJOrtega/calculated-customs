@@ -48,7 +48,7 @@ export default function InertiaCalculator () {
                 <tr>
                     <td> 
                         {isStandardNotation ? 
-                            (<FieldInput placeHolder={"input mm"} inputId="tireWid" setValue={setTireWidth}/>):
+                            (<FieldInput list={"widthList"} placeHolder={"input mm"} inputId="tireWid" setValue={setTireWidth}/>):
                             (<FieldInput placeHolder={"input dia."} inputId="tireDia" setValue={setTireDiameter}/>)
                         } 
                     </td>
@@ -60,7 +60,7 @@ export default function InertiaCalculator () {
                     </td>
                     <td colSpan={2}>
                         {isStandardNotation ? 
-                            (<FieldInput placeHolder={"input %"} inputId="aspRat" setValue={setAspectRatio} isStandardNotation={isStandardNotation} />): 
+                            (<FieldInput list={"aspectList"} placeHolder={"input %"} inputId="aspRat" setValue={setAspectRatio} isStandardNotation={isStandardNotation} />): 
                             (<StandarNotationCheckBox isStandardNotation={isStandardNotation} setIsStandardNotation={setIsStandardNotation}  />)
                         }          
                     </td>
