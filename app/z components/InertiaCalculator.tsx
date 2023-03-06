@@ -95,7 +95,7 @@ export default function InertiaCalculator () {
                         <td > <TotalResult placeHolder={"need more input"} tireInertiaResult={tireInertiaResult} wheelInertiaResult={wheelInertiaResult}/>  </td>
                         <td align="right"><div> kg&#x2022;      </div></td>
                         <td align="left"> <div> m<sup>2</sup>   </div></td>
-                        <td > <WheelResult placeHolder={"need more input"} wheelWeight={wheelWeight} wheelDiameter={wheelDiameter} /> </td>
+                        <td > <WheelResult placeHolder={"need more input"} wheelWeight={wheelWeight} wheelDiameter={wheelDiameter} setWheelInertiaResult={setWheelInertiaResult} /> </td>
                         <td align="center"><div> kg&#x2022;m<sup>2</sup></div></td>
                     </tr>
                     </tbody>

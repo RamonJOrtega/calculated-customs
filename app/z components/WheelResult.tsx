@@ -8,6 +8,7 @@ interface WheelResultProps {
     wheelDiameter: string;
     wheelWeight: string;
     placeHolder: string;
+    setWheelInertiaResult: any;
 }
  const WheelResult: React.FC<WheelResultProps> = (props) => {
     const wheelRad_m = parseFloat(props.wheelDiameter) * 0.0254 / 2                                  //  console.log('wheel radius in meters: ' + wheelRad_m)
@@ -16,7 +17,7 @@ interface WheelResultProps {
     const hubInertia = 0.20 * (1/2) * wheelMass_kg * 0.165 * 0.165                              //console.log("hub inertia is " + hubInertia)
     const rimInertia = 0.55 * wheelMass_kg * wheelRad_m * wheelRad_m                            //console.log("RIM inertia is " + rimInertia)
     const wheelInertia = (rimInertia + spokeInertia + hubInertia).toFixed(1)
-    
+    props.setWheelInertiaResult(wheelInertia)
   
     return(
         <>

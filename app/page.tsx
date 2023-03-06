@@ -22,7 +22,7 @@ export default function Home() {
           <p>
             Click here to browse 
             <a href="https://www.tkqlhce.com/click-100641204-10377976"> wheels</a> and 
-            <a href="https://www.tkqlhce.com/click-100641204-10377976"> tires</a>.   
+            <a href="https://www.kqzyfj.com/click-100641204-10377851"> tires</a>.   
             Enter sizes and weights below.
             Calculate the fastest combinations!
           </p>

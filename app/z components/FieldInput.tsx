@@ -17,7 +17,6 @@ interface FieldInputProps {
 }
 
 const FieldInput: React.FC<FieldInputProps> = (props) => {
-    console.log(props)
     return(
         <div > 
             <input 
