@@ -13,12 +13,13 @@ interface FieldInputProps {
     inputId?: string
     list?: string
     placeHolder?: string
+    value: string
 }
 
-const FieldInput: React.FC<FieldInputProps> = (props: any) => {
+const FieldInput: React.FC<FieldInputProps> = (props) => {
     console.log(props)
     return(
-        <div  id={props.divId}> 
+        <div > 
             <input 
                 onChange={
                     (e)=>{
@@ -29,10 +30,9 @@ const FieldInput: React.FC<FieldInputProps> = (props: any) => {
                 id={props.inputId} 
                 type="number" 
                 list={props.list} 
-                maxLength={props.maxLength} 
-                step={props.step}
-                onClick={()=>{props.setValue(0)}}
+                onClick={()=>{props.setValue("")}}
                 placeholder={props.placeHolder}
+                value = {props.value}
             /> 
             {props.list==="widthList" && (
                 <datalist id="widthList" >

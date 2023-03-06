@@ -36,7 +36,7 @@ div{
 input[type=checkbox] {
   display: inline;
   height: 1em;
-  accent-color: rgb(255, 222, 34);
+  accent-color: #fde047;
   border-radius: 5px;
   border: none;
   /* margin-left: 3px; */
@@ -58,7 +58,7 @@ input[type=checkbox] {
   /* width: 9em; */
   width: 90%;
   border: none;
-  background: rgb(255, 222, 34);
+  background: #fde047;
   border-radius: 5px;
   height: 2em;
   /* margin-right: 5px; */
@@ -79,21 +79,21 @@ input[type=checkbox] {
 }
 
 span[id=toolTip]{
-  color: rgb(255, 222, 34);
+  color: #fde047;
   font-size: .8em;
   font-weight: bold;
   margin-right: 3px;
 
 }
 span[id=toolTip0]{
-  color: rgb(255, 222, 34);
+  color:#fde047;
   font-size: .8em;
   font-weight: bold;
   margin-right: 3px;
 
 }
 span[id=toolTip1]{
-  color: rgb(255, 222, 34);
+  color: #fde047;
   font-size: .8em;
   font-weight: bold;
   margin-right: 3px;
