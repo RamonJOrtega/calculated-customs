@@ -56,6 +56,10 @@ export default function ComparisonCalculator () {
             <FieldTitle title={"Current 0-60 Time"} />
             <KnownRadioButton isKnown={currentZeroSixtyTimeIsKnown} setIsKnown={setCurrentZeroSixtyTimeIsKnown} />
             <FieldInput value={currentZeroSixtyTime} placeHolder={"6.0"} setValue={setCurrentZeroSixtyTime}/>
+            <ZeroToSixtyResult vehicleWeight={vehicleWeight} currentZeroSixtyTime = {currentZeroSixtyTime}
+            totalInertiaResult1={totalInertiaResult1} totalInertiaResult2={totalInertiaResult2}  
+            
+            /> 
          
             
             <InertiaCalculator />
