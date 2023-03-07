@@ -37,8 +37,8 @@ export default function ComparisonCalculator () {
     const [vehicleWeightIsKnown, setVehicleWeightIsKnown] = React.useState(false)
     const [currentZeroSixtyTimeIsKnown, setCurrentZeroSixtyTimeIsKnown] = React.useState(true)
 
-    const [vehicleWeight, setVehicleWeight] = React.useState("")
-    const [currentZeroSixtyTime, setCurrentZeroSixtyTime] = React.useState("")
+    const [vehicleWeight, setVehicleWeight] = React.useState("4000")
+    const [currentZeroSixtyTime, setCurrentZeroSixtyTime] = React.useState("6.0")
 
 
 

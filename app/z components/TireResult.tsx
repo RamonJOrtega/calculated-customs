@@ -27,7 +27,6 @@ interface TireResultProps {
         props.setTireDiameter((props.wheelDiameter) + 2*sideWallHeight_in)
       }
     function calcTireDiaFromTireWheelDiaNotation():void{
-        console.log(props.tireDiameter + " = tire diameter")
         const tireRad_m = parseFloat(props.tireDiameter) * 0.0254/2;                           // console.log('tire radius in meters: ' + tireRad_m)
         const tireMass_kg = parseFloat(props.tireWeight) * 0.453592;                          // console.log('tire mass in kilograms: ' + tireMass_kg)
         const treadInertia = 0.75 * tireMass_kg * tireRad_m * tireRad_m                     // console.log('treadInertia in kg*m^2: ' + treadInertia)

@@ -4,6 +4,7 @@ import Link from  'next/link';
 import '../globals.css'
 import Image from 'next/image';
 import { parse } from 'path';
+import { isConstructorDeclaration } from 'typescript';
 
 interface ZeroToSixtyResultProps {
     vehicleWeight: string;
@@ -20,31 +21,41 @@ interface ZeroToSixtyResultProps {
     placeHolder: string;
     
 }
- const ZeroToSixtyResult: React.FC<ZeroToSixtyResultProps> = (props) => {
-const FOUR: number = parseFloat(props.tireDiameter1)/2 //tireRadius1
-const FIVE: number = parseFloat(props.tireWeight1)  //tireWeight1
-const THIRTYSEVEN: number=parseFloat(props.tireWeight2) //tireWeight2
-const TWO: number = parseFloat(props.wheelWeight1) //wheelWeight1
-const THIRTYSIX: number = parseFloat(props.wheelWeight2) //wheelWeight1
-const SIX: number = parseFloat(props.totalInertiaResult1) //inertia1
-const FORTY: number = parseFloat(props.totalInertiaResult2) //inertia2
-const FORTYEIGHT: number = parseFloat(props.tireDiameter2)/2 //tireRadius2
-const FIFTYTWO: number = parseFloat(props.vehicleWeight)    //vehicleWeight
-const FIFTYFIVE = FIFTYTWO*0.453592 //mass_cur_car_on_cur_wheels 
-const FIFTYTHREE = parseFloat(props.currentZeroSixtyTime); //currentZeroToSixtyTime
-const  FIFTYSIX = (FIFTYTWO - 4*(FIVE + TWO) + 4* (THIRTYSEVEN + THIRTYSIX)* 0.453592)//mass_alt_car_on_alt_wheels
-const FIFTYEIGHT = (4 * SIX / FOUR) +  FIFTYFIVE * FOUR //T_1
-const FIFTYSEVEN = (4 *FORTY /FORTYEIGHT) + (FIFTYSIX)*FORTYEIGHT //T_2 
+const ZeroToSixtyResult: React.FC<ZeroToSixtyResultProps> = (props) => {
+const tireRadius1 = parseFloat(props.tireDiameter1)*0.0254/2 //convert from Diameter[in] to Radius[m]
+const tireRadius2 = parseFloat(props.tireDiameter2)*0.0254/2 //convert from Diameter[in] to Radius[m]
+const tireWeight1 = parseFloat(props.tireWeight1) 
+const tireWeight2 = parseFloat(props.tireWeight2) 
+const wheelWeight1 = parseFloat(props.wheelWeight1) 
+const wheelWeight2 = parseFloat(props.wheelWeight2) 
+const inertia1 = parseFloat(props.totalInertiaResult1) 
+const inertia2 = parseFloat(props.totalInertiaResult2) 
+const vehicleWeight = parseFloat(props.vehicleWeight)
+const currentZeroToSixtyTime = parseFloat(props.currentZeroSixtyTime); 
 
-const percentDec = 100*(FIFTYEIGHT-FIFTYSEVEN)/FIFTYEIGHT;
-const percentInc = 100*(FIFTYSEVEN-FIFTYEIGHT)/FIFTYEIGHT;
-const secondsFaster = FIFTYTHREE-(FIFTYSEVEN/FIFTYEIGHT)*FIFTYTHREE
-const secondsSlower = (FIFTYTHREE-(FIFTYSEVEN/FIFTYEIGHT)*FIFTYTHREE)*(-1)
+const mass_current_car_on_current_wheels = vehicleWeight*0.453592  
+console.log(mass_current_car_on_current_wheels)
+const  mass_alt_car_on_alt_wheels = ((vehicleWeight - 4*(tireWeight1 + wheelWeight1) + 4* (tireWeight2 + wheelWeight2))* 0.453592)//mass_alt_car_on_alt_wheels
+
+
+console.log("tire radius 1: " + tireRadius1)
+console.log("total inertia 1: " + inertia2)
+console.log("car mass current:  " + mass_current_car_on_current_wheels)
+
+const T1 = (4 * (inertia1 / tireRadius1)) +  (mass_current_car_on_current_wheels * tireRadius1) 
+const T2 = (4 * inertia2 /tireRadius2) + (mass_alt_car_on_alt_wheels)*tireRadius2  
+console.log(T1+ " : T1,       " + T2 + " : T2")
+
+const percentDec = (100*(T1-T2)/T1).toFixed(1);
+const percentInc = (100*(T2-T1)/T1).toFixed(1);
+const secondsFaster = (currentZeroToSixtyTime-(T2/T1)*currentZeroToSixtyTime).toFixed(2)
+const secondsSlower = ((currentZeroToSixtyTime-(T2/T1)*currentZeroToSixtyTime)*(-1)).toFixed(2)
+console.log(percentDec+ " : percent Dec, " + secondsSlower + " : seconds faster")
 
     return(
         <>
-            {FIFTYEIGHT > FIFTYSEVEN ? 
-            (<div> <input disabled value={percentDec }/>  time decrease</div>): 
+            {T1 > T2 ? 
+            (<div> <input disabled value={percentDec}/>  time decrease</div>): 
             (<div> <input disabled value={percentInc}/>  time increase</div>)
             }
             

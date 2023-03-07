@@ -14,11 +14,9 @@ interface TotalResultProps {
     let wheelInertia = "";
     tireInertia = (props.tireInertiaResult)
     wheelInertia = (props.wheelInertiaResult)
-    console.log("tire" + tireInertia + "and wheel " + wheelInertia)
 
     const totalInertia = (parseFloat(tireInertia) + parseFloat(wheelInertia)).toFixed(1)
     props.setTotalInertiaResult(totalInertia)
-    console.log("total" + totalInertia)
     return(
         <>
             <div id="totalResult"> 
