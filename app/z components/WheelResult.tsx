@@ -7,7 +7,6 @@ import Image from 'next/image';
 interface WheelResultProps {
     wheelDiameter: string;
     wheelWeight: string;
-    placeHolder: string;
     setWheelInertiaResult: any;
 }
  const WheelResult: React.FC<WheelResultProps> = (props) => {
@@ -22,7 +21,7 @@ interface WheelResultProps {
     return(
         <>
             <div id="wheelResult"> 
-                <input placeholder={props.placeHolder} className="result" id="wheelRes" type="number" disabled value={wheelInertia}/> 
+                <input placeholder="need more input" className="result" id="wheelRes" type="number" disabled value={wheelInertia}/> 
             </div>
         </>
     )

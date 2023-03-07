@@ -39,7 +39,7 @@ interface TireResultProps {
     return(
         <>
             <div id="TireResult"> 
-                <input placeholder={props.placeHolder} className="result" id="tireRes" type="number" disabled value={tireResult}/> 
+                <input placeholder="need more input" className="result" id="tireRes" type="number" disabled value={tireResult}/> 
             </div>
         </>
     )

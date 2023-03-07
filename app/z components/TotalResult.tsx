@@ -6,7 +6,6 @@ import Image from 'next/image';
 interface TotalResultProps {
     tireInertiaResult: string;
     wheelInertiaResult: string;
-    placeHolder: string;
     setTotalInertiaResult: any;
 }
  const TotalResult: React.FC<TotalResultProps> = (props) => {
@@ -21,7 +20,7 @@ interface TotalResultProps {
         <>
             <div id="totalResult"> 
                 <input 
-                    placeholder={props.placeHolder} 
+                    placeholder="need more input" 
                     className="result" 
                     id="totalRes" 
                     type="number" 

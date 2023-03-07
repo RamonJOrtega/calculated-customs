@@ -16,10 +16,7 @@ interface ZeroToSixtyResultProps {
     tireDiameter1: string;
     tireDiameter2: string;
     wheelWeight1: string;
-    wheelWeight2: string;
-    
-    placeHolder: string;
-    
+    wheelWeight2: string;    
 }
 const ZeroToSixtyResult: React.FC<ZeroToSixtyResultProps> = (props) => {
 const tireRadius1 = parseFloat(props.tireDiameter1)*0.0254/2 //convert from Diameter[in] to Radius[m]
@@ -34,13 +31,7 @@ const vehicleWeight = parseFloat(props.vehicleWeight)
 const currentZeroToSixtyTime = parseFloat(props.currentZeroSixtyTime); 
 
 const mass_current_car_on_current_wheels = vehicleWeight*0.453592  
-console.log(mass_current_car_on_current_wheels)
-const  mass_alt_car_on_alt_wheels = ((vehicleWeight - 4*(tireWeight1 + wheelWeight1) + 4* (tireWeight2 + wheelWeight2))* 0.453592)//mass_alt_car_on_alt_wheels
-
-
-console.log("tire radius 1: " + tireRadius1)
-console.log("total inertia 1: " + inertia2)
-console.log("car mass current:  " + mass_current_car_on_current_wheels)
+const  mass_alt_car_on_alt_wheels = ((vehicleWeight - 4*(tireWeight1 + wheelWeight1) + 4* (tireWeight2 + wheelWeight2))* 0.453592) 
 
 const T1 = (4 * (inertia1 / tireRadius1)) +  (mass_current_car_on_current_wheels * tireRadius1) 
 const T2 = (4 * inertia2 /tireRadius2) + (mass_alt_car_on_alt_wheels)*tireRadius2  
@@ -55,7 +46,7 @@ console.log(percentDec+ " : percent Dec, " + secondsSlower + " : seconds faster"
     return(
         <>
             {T1 > T2 ? 
-            (<div> <input disabled value={percentDec}/>  time decrease</div>): 
+            (<div> <input disabled value={percentDec} placeholder="need more input"/>  time decrease</div>): 
             (<div> <input disabled value={percentInc}/>  time increase</div>)
             }
             
