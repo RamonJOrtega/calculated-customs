@@ -7,6 +7,7 @@ interface TotalResultProps {
     tireInertiaResult: string;
     wheelInertiaResult: string;
     placeHolder: string;
+    setTotalInertiaResult: any;
 }
  const TotalResult: React.FC<TotalResultProps> = (props) => {
     let tireInertia = "";
@@ -16,6 +17,7 @@ interface TotalResultProps {
     console.log("tire" + tireInertia + "and wheel " + wheelInertia)
 
     const totalInertia = (parseFloat(tireInertia) + parseFloat(wheelInertia)).toFixed(1)
+    props.setTotalInertiaResult(totalInertia)
     console.log("total" + totalInertia)
     return(
         <>

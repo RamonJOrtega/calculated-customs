@@ -106,8 +106,12 @@ const InertiaCalculator: React.FC<inertiaCalculatorProps> = (props) => {
                         wheelDiameter={wheelDiameter} tireDiameter={props.tireDiameter} tireWidth={tireWidth} 
                         tireWeight={props.tireWeight} aspectRatio={aspectRatio} isStandardNotation={isStandardNotation} /> </td>
                         <td align="center"><div> kg&#x2022;m<sup>2</sup></div></td>
-                        <td > <TotalResult placeHolder={"need more input"} 
-                            tireInertiaResult={tireInertiaResult} wheelInertiaResult={wheelInertiaResult}/>  </td>
+                        <td > 
+                            <TotalResult placeHolder={"need more input"} 
+                                tireInertiaResult={tireInertiaResult} wheelInertiaResult = {wheelInertiaResult}
+                                setTotalInertiaResult = {props.setTotalInertiaResult}
+                            />
+                        </td>
                         <td align="right"><div> kg&#x2022;      </div></td>
                         <td align="left"> <div> m<sup>2</sup>   </div></td>
                         <td > <WheelResult placeHolder={"need more input"} 
