@@ -39,8 +39,11 @@ export default function Home() {
         </div>
           <div className={styles.card}>
             <h3 className={inter.className}>Rotational Inertia Calculator<span>-&gt;</span> </h3>
-            <div className={inter.className}>         
-            <ComparisonCalculator  />
+            <div className={inter.className}>
+              <div className={styles.center}>
+                <ComparisonCalculator  />
+              </div>         
+            
             </div>
           </div>
         

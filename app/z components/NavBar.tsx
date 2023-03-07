@@ -14,11 +14,14 @@ export default function NavBar() {
             <nav className={styles.grid}>
                 <Link href="/">
                     <div className={styles.card}>
-                        <h5 className={styles.center}>
+                        <h3>      
                         CALCULATED CUSTOMS <span> 
-                        <Image src="/logo.svg" alt="calculated customs logo" width={40} height={31} priority />
-                        </span> 
-                        </h5>
+                                <Image src="/logo.svg" 
+                                alt="calculated customs logo" 
+                                width={25} 
+                                height={25} priority />
+                            </span> 
+                        </h3>
                     </div>
                 </Link>
                 <Link href="/compare-wheel-0-60-time">
