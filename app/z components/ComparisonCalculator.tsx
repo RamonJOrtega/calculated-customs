@@ -54,7 +54,7 @@ export default function ComparisonCalculator () {
             <KnownRadioButton isKnown={vehicleWeightIsKnown} setIsKnown={setVehicleWeightIsKnown} />
             <FieldInput value={vehicleWeight} placeHolder={"4000"} setValue={setVehicleWeight}/>
             <FieldTitle title={"Current 0-60 Time"} />
-            <KnownRadioButton isKnown={currentZeroSixtyTimeIsKnown} setIsKnown={setVehicleWeightIsKnown} />
+            <KnownRadioButton isKnown={currentZeroSixtyTimeIsKnown} setIsKnown={setCurrentZeroSixtyTimeIsKnown} />
             <FieldInput value={currentZeroSixtyTime} placeHolder={"6.0"} setValue={setCurrentZeroSixtyTime}/>
          
             

@@ -24,7 +24,7 @@ interface KnownRadioButtonProps {
                 </label>
                 <label>
                     <input type="radio" value="unknown"
-                    checked={props.isKnown}
+                    checked={!props.isKnown}
                     onChange={()=>{
                         props.setIsKnown(!props.isKnown)
                     }}/>
