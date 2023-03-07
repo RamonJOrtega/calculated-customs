@@ -25,11 +25,12 @@ export default function ComparisonCalculator () {
     const [isStandardNotation, isCamparisonEnabled] = React.useState(false)
 
     const [tireDiameter1, setTireDiameter1] =  React.useState("")
+
     const [tireDiameter2, setTireDiameter2] = React.useState("")
     const [tireWeight1, setTireWeight1] =  React.useState("")
     const [tireWeight2, setTireWeight2] = React.useState("")
-    const [totalInertiaResult1, setTotalWheelInertiaResult1] = React.useState("")
-    const [totalInertiaResult2, settotalInertiaResult1] =  React.useState("")
+    const [totalInertiaResult1, setTotalInertiaResult1] = React.useState("")
+    const [totalInertiaResult2, setTotalInertiaResult2] =  React.useState("")
     const [wheelWeight1, setWheelWeight1] = React.useState("")
     const [wheelWeight2, setWheelWeight2] = React.useState("")  
 
@@ -45,7 +46,12 @@ export default function ComparisonCalculator () {
 
     return (
         <>
-            <InertiaCalculator />
+            <InertiaCalculator  
+            tireDiameter={tireDiameter1} setTireDiameter={setTireDiameter1}
+            tireWeight={tireWeight1} setTireWeight={setTireWeight1}
+            wheelWeight={wheelWeight1} setWheelWeight = {setWheelWeight1}
+            totalInertiaResult = {totalInertiaResult1} setTotalInertiaResult = {setTotalInertiaResult1}
+            />
             <div className={styles.card}>
             <Link href="compare-wheel-0-60-time" >
               <h3 className={inter.className}>
@@ -59,7 +65,12 @@ export default function ComparisonCalculator () {
             <FieldTitle title={"Current 0-60 Time"} />
             <KnownRadioButton isKnown={currentZeroSixtyTimeIsKnown} setIsKnown={setCurrentZeroSixtyTimeIsKnown} />
             <FieldInput value={currentZeroSixtyTime} placeHolder={"6.0"} setValue={setCurrentZeroSixtyTime}/>
-            <InertiaCalculator />
+            <InertiaCalculator  
+            tireDiameter={tireDiameter2} setTireDiameter={setTireDiameter2}
+            tireWeight={tireWeight2} setTireWeight={setTireWeight2}
+            wheelWeight={wheelWeight2} setWheelWeight = {setWheelWeight2}
+            totalInertiaResult = {totalInertiaResult2} setTotalInertiaResult = {setTotalInertiaResult2}
+            />
             <ZeroToSixtyResult 
             vehicleWeight={vehicleWeight} 
             currentZeroSixtyTime = {currentZeroSixtyTime}
