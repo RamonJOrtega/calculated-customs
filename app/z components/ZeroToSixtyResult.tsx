@@ -43,14 +43,15 @@ const secondsSlower = (FIFTYTHREE-(FIFTYSEVEN/FIFTYEIGHT)*FIFTYTHREE)*(-1)
 
     return(
         <>
-            {FIFTYEIGHT > FIFTYSEVEN ? (<div>{percentDec} time decrease</div>): (<div>{percentInc} time increase</div>)}
-
-            <div>{secondsFaster}</div>
-            <div>{secondsSlower}</div>
-           
-            <div id="wheelResult"> 
-                <input placeholder={props.placeHolder} className="result" id="wheelRes" type="number" disabled value={wheelInertia}/> 
-            </div>
+            {FIFTYEIGHT > FIFTYSEVEN ? 
+            (<div> <input disabled value={percentDec }/>  time decrease</div>): 
+            (<div> <input disabled value={percentInc}/>  time increase</div>)
+            }
+            
+            (<div> <input disabled value={secondsFaster}/>  seconds faster</div>)
+            (<div> <input disabled value={secondsSlower}/>  seconds slower </div>)
+            
+          
         </>
     )
 }

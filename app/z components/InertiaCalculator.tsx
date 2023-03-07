@@ -14,19 +14,26 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 
-export default function InertiaCalculator () {
+interface inertiaCalculatorProps {
+    tireDiameter: string
+    setTireDiameter: any
+    tireWeight: string
+    setTireWeight: any
+    wheelWeight: string
+    setWheelWeight: any
+    totalInertiaResult: string
+    setTotalInertiaResult: any   
+}
+const InertiaCalculator: React.FC<inertiaCalculatorProps> = (props) => {
 
 
     const [isStandardNotation, setIsStandardNotation] = React.useState(false)
-    const [tireWeight, setTireWeight] = React.useState("")
     const [tireWidth, setTireWidth] = React.useState("")
     const [aspectRatio, setAspectRatio] = React.useState("")
-    const [wheelWeight, setWheelWeight] = React.useState("")
-    const [tireDiameter, setTireDiameter] = React.useState("")
+
     const [wheelDiameter, setWheelDiameter] = React.useState("")
     const [tireInertiaResult, setTireInertiaResult] =  React.useState("")
     const [wheelInertiaResult, setWheelInertiaResult] = React.useState("")
-    const [totalInertiaResult, setTotalWheelInertiaResult] = React.useState("")  
 
 
     return (
@@ -53,7 +60,7 @@ export default function InertiaCalculator () {
                     <td> 
                         {isStandardNotation ? 
                             (<FieldInput value={tireWidth} list={"widthList"} placeHolder={"input mm"} inputId="tireWid" setValue={setTireWidth}/>):
-                            (<FieldInput value={tireDiameter} placeHolder={"input dia."} inputId="tireDia" setValue={setTireDiameter}/>)
+                            (<FieldInput value={props.tireDiameter} placeHolder={"input dia."} inputId="tireDia" setValue={props.setTireDiameter}/>)
                         } 
                     </td>
                     <td align="center">
@@ -65,7 +72,7 @@ export default function InertiaCalculator () {
                     <td colSpan={2}>
                         {isStandardNotation ? 
                             (<FieldInput value={aspectRatio} list={"aspectList"} placeHolder={"input %"} inputId="aspRat" setValue={setAspectRatio} isStandardNotation={isStandardNotation} />): 
-                            (<StandarNotationCheckBox setTireDiameter={setTireDiameter} isStandardNotation={isStandardNotation} setIsStandardNotation={setIsStandardNotation}  />)
+                            (<StandarNotationCheckBox setTireDiameter={props.setTireDiameter} isStandardNotation={isStandardNotation} setIsStandardNotation={setIsStandardNotation}  />)
                         }          
                     </td>
                     <td align="center"><span> R </span></td>
@@ -80,11 +87,11 @@ export default function InertiaCalculator () {
 
                 </tr>
                 <tr>
-                    <td> <FieldInput value={tireWeight} placeHolder={"input wt."} inputId="tireWt" setValue={setTireWeight}/> </td>
+                    <td> <FieldInput value={props.tireWeight} placeHolder={"input wt."} inputId="tireWt" setValue={props.setTireWeight}/> </td>
                     <td align="center"><div> pound </div> </td>
 
-                    <td colSpan={3}> {isStandardNotation && (<StandarNotationCheckBox setTireDiameter={setTireDiameter} isStandardNotation={isStandardNotation} setIsStandardNotation={setIsStandardNotation}/>)}  </td>
-                    <td> <FieldInput value={wheelWeight} placeHolder={"input wt."} inputId="wheelWt" setValue={setWheelWeight}/>  </td>
+                    <td colSpan={3}> {isStandardNotation && (<StandarNotationCheckBox setTireDiameter={props.setTireDiameter} isStandardNotation={isStandardNotation} setIsStandardNotation={setIsStandardNotation}/>)}  </td>
+                    <td> <FieldInput value={props.wheelWeight} placeHolder={"input wt."} inputId="wheelWt" setValue={props.setWheelWeight}/>  </td>
                     <td align="center"><div> pound </div> </td>
 
                 </tr>
@@ -94,12 +101,18 @@ export default function InertiaCalculator () {
                     <td colSpan={2}> <FieldTitle title="Wheel Inertia" /> </td>
                 </tr>
                 <tr>
-                    <td > <TireResult placeHolder={"need more input"} setTireDiameter={setTireDiameter} setTireInertiaResult={setTireInertiaResult} wheelDiameter={wheelDiameter} tireDiameter={tireDiameter} tireWidth={tireWidth} tireWeight={tireWeight} aspectRatio={aspectRatio} isStandardNotation={isStandardNotation} /> </td>
+                    <td > <TireResult placeHolder={"need more input"} 
+                        setTireDiameter={props.setTireDiameter} setTireInertiaResult={setTireInertiaResult} 
+                        wheelDiameter={wheelDiameter} tireDiameter={props.tireDiameter} tireWidth={tireWidth} 
+                        tireWeight={props.tireWeight} aspectRatio={aspectRatio} isStandardNotation={isStandardNotation} /> </td>
                         <td align="center"><div> kg&#x2022;m<sup>2</sup></div></td>
-                        <td > <TotalResult placeHolder={"need more input"} tireInertiaResult={tireInertiaResult} wheelInertiaResult={wheelInertiaResult}/>  </td>
+                        <td > <TotalResult placeHolder={"need more input"} 
+                            tireInertiaResult={tireInertiaResult} wheelInertiaResult={wheelInertiaResult}/>  </td>
                         <td align="right"><div> kg&#x2022;      </div></td>
                         <td align="left"> <div> m<sup>2</sup>   </div></td>
-                        <td > <WheelResult placeHolder={"need more input"} wheelWeight={wheelWeight} wheelDiameter={wheelDiameter} setWheelInertiaResult={setWheelInertiaResult} /> </td>
+                        <td > <WheelResult placeHolder={"need more input"} 
+                            wheelWeight={props.wheelWeight} wheelDiameter={wheelDiameter} 
+                            setWheelInertiaResult={setWheelInertiaResult} /> </td>
                         <td align="center"><div> kg&#x2022;m<sup>2</sup></div></td>
                     </tr>
                     </tbody>
@@ -109,3 +122,5 @@ export default function InertiaCalculator () {
     )
      
 }
+
+export default InertiaCalculator
