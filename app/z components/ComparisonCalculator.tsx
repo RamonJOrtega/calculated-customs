@@ -13,6 +13,7 @@ import styles from '../page.module.css'
 import { Inter } from 'next/font/google'
 import InertiaCalculator from "./InertiaCalculator"
 import KnownRadioButton from "./KnownRadioButton"
+import ZeroToSixtyResult from "./ZeroToSixtyResult"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,12 +24,14 @@ export default function ComparisonCalculator () {
 
     const [isStandardNotation, isCamparisonEnabled] = React.useState(false)
 
-    const [tireInertiaResult1, setTireInertiaResult1] =  React.useState("")
-    const [wheelInertiaResult1, setWheelInertiaResult1] = React.useState("")
+    const [tireDiameter1, setTireDiameter1] =  React.useState("")
+    const [tireDiameter2, setTireDiameter2] = React.useState("")
+    const [tireWeight1, setTireWeight1] =  React.useState("")
+    const [tireWeight2, setTireWeight2] = React.useState("")
     const [totalInertiaResult1, setTotalWheelInertiaResult1] = React.useState("")
-    const [tireInertiaResult2, setTireInertiaResult2] =  React.useState("")
-    const [wheelInertiaResult2, setWheelInertiaResult2] = React.useState("")
-    const [totalInertiaResult2, setTotalWheelInertiaResult2] = React.useState("")  
+    const [totalInertiaResult2, settotalInertiaResult1] =  React.useState("")
+    const [wheelWeight1, setWheelWeight1] = React.useState("")
+    const [wheelWeight2, setWheelWeight2] = React.useState("")  
 
     const [vehicleWeightIsKnown, setVehicleWeightIsKnown] = React.useState(false)
     const [currentZeroSixtyTimeIsKnown, setCurrentZeroSixtyTimeIsKnown] = React.useState(true)
@@ -56,13 +59,24 @@ export default function ComparisonCalculator () {
             <FieldTitle title={"Current 0-60 Time"} />
             <KnownRadioButton isKnown={currentZeroSixtyTimeIsKnown} setIsKnown={setCurrentZeroSixtyTimeIsKnown} />
             <FieldInput value={currentZeroSixtyTime} placeHolder={"6.0"} setValue={setCurrentZeroSixtyTime}/>
-            <ZeroToSixtyResult vehicleWeight={vehicleWeight} currentZeroSixtyTime = {currentZeroSixtyTime}
-            totalInertiaResult1={totalInertiaResult1} totalInertiaResult2={totalInertiaResult2}  
+            <InertiaCalculator />
+            <ZeroToSixtyResult 
+            vehicleWeight={vehicleWeight} 
+            currentZeroSixtyTime = {currentZeroSixtyTime}
+            totalInertiaResult1={totalInertiaResult1} 
+            totalInertiaResult2={totalInertiaResult2}
+            tireWeight1={tireWeight1}
+            tireWeight2={tireWeight2}
+            tireDiameter1={tireDiameter1}
+            tireDiameter2={tireDiameter2}
+            wheelWeight1={wheelWeight1}
+            wheelWeight2={wheelWeight2}
+            placeHolder={"0-60 time: 8.0 % time increase"}
             
             /> 
          
             
-            <InertiaCalculator />
+            
             
             
         </>
