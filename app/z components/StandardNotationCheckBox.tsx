@@ -7,6 +7,7 @@ import Image from 'next/image';
 interface StandardNotationCheckBoxProps {
     isStandardNotation: boolean;
     setIsStandardNotation: any;
+    setTireDiameter: any;
 }
 
  const StandarNotationCheckBox: React.FC<StandardNotationCheckBoxProps> = (props) => {
@@ -18,7 +19,11 @@ interface StandardNotationCheckBoxProps {
             <input 
                 type="checkbox"
                 checked={props.isStandardNotation}
-                onChange={()=>{props.setIsStandardNotation(!props.isStandardNotation)}}/> 
+                onChange={()=>{
+                    props.setIsStandardNotation(!props.isStandardNotation)
+                    props.setTireDiameter("")
+                    }
+                }/> 
                 <span className="postFix1"> ex. 325/40R22 </span> 
             </div>     
 

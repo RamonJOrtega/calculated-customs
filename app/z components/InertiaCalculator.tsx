@@ -8,6 +8,10 @@ import FieldTitle from "./FieldTitle"
 import React from "react"
 import FieldInput  from "./FieldInput"  ;
 import StandarNotationCheckBox from "./StandardNotationCheckBox";
+import Link from "next/link"
+import styles from '../page.module.css'
+import { Inter } from 'next/font/google'
+const inter = Inter({ subsets: ['latin'] })
 
 
 export default function InertiaCalculator () {
@@ -61,11 +65,11 @@ export default function InertiaCalculator () {
                     <td colSpan={2}>
                         {isStandardNotation ? 
                             (<FieldInput value={aspectRatio} list={"aspectList"} placeHolder={"input %"} inputId="aspRat" setValue={setAspectRatio} isStandardNotation={isStandardNotation} />): 
-                            (<StandarNotationCheckBox isStandardNotation={isStandardNotation} setIsStandardNotation={setIsStandardNotation}  />)
+                            (<StandarNotationCheckBox setTireDiameter={setTireDiameter} isStandardNotation={isStandardNotation} setIsStandardNotation={setIsStandardNotation}  />)
                         }          
                     </td>
                     <td align="center"><span> R </span></td>
-                    <td> <FieldInput value={wheelDiameter} placeHolder={"input dia."} inputId="wheelDia" setValue={setWheelDiameter}/> </td>
+                    <td> <FieldInput value={wheelDiameter} placeHolder={"input dia. > tire"} inputId="wheelDia" setValue={setWheelDiameter}/> </td>
                     <td align="center"><div> inch </div></td>
                 </tr>
 
@@ -79,7 +83,7 @@ export default function InertiaCalculator () {
                     <td> <FieldInput value={tireWeight} placeHolder={"input wt."} inputId="tireWt" setValue={setTireWeight}/> </td>
                     <td align="center"><div> pound </div> </td>
 
-                    <td colSpan={3}> {isStandardNotation && (<StandarNotationCheckBox  isStandardNotation={isStandardNotation} setIsStandardNotation={setIsStandardNotation}/>)}  </td>
+                    <td colSpan={3}> {isStandardNotation && (<StandarNotationCheckBox setTireDiameter={setTireDiameter} isStandardNotation={isStandardNotation} setIsStandardNotation={setIsStandardNotation}/>)}  </td>
                     <td> <FieldInput value={wheelWeight} placeHolder={"input wt."} inputId="wheelWt" setValue={setWheelWeight}/>  </td>
                     <td align="center"><div> pound </div> </td>
 
@@ -100,6 +104,7 @@ export default function InertiaCalculator () {
                     </tr>
                     </tbody>
             </table>
+           
         </>
     )
      
