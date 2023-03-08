@@ -16,6 +16,7 @@ interface WheelResultProps {
     const hubInertia = 0.20 * (1/2) * wheelMass_kg * 0.165 * 0.165                              //console.log("hub inertia is " + hubInertia)
     const rimInertia = 0.55 * wheelMass_kg * wheelRad_m * wheelRad_m                            //console.log("RIM inertia is " + rimInertia)
     const wheelInertia = (rimInertia + spokeInertia + hubInertia).toFixed(1)
+    console.log(wheelInertia + " is wheel inertia")
     props.setWheelInertiaResult(wheelInertia)
   
     return(

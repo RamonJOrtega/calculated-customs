@@ -13,7 +13,6 @@ interface TireResultProps {
     isStandardNotation: boolean;
     setTireDiameter: any;
     setTireInertiaResult: any
-    placeHolder: string;
     
 }
  const TireResult: React.FC<TireResultProps> = (props) => {

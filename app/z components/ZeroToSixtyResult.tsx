@@ -46,7 +46,7 @@ console.log(percentDec+ " : percent Dec, " + secondsSlower + " : seconds faster"
     return(
         <>
             {T1 > T2 ? 
-            (<div> <input disabled value={percentDec} placeholder="need more input"/>  time decrease</div>): 
+            (<div> <input disabled value={percentDec} placeholder="need more input" type="number" className='result'/>  time decrease</div>): 
             (<div> <input disabled value={percentInc}/>  time increase</div>)
             }
             
