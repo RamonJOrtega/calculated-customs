@@ -7,7 +7,6 @@ import styles from '../page.module.css'
 import { Inter } from 'next/font/google'
 import InertiaCalculator from "./InertiaCalculator"
 import ZeroToSixtyResult from "./ZeroToSixtyResult"
-import ZeroToSixtyVariables from "./ZeroToSixtyVariables";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +15,9 @@ const inter = Inter({ subsets: ['latin'] })
 export default function ComparisonCalculator () {
 
 
-    const [isComparisonEnabled, setIsCamparisonEnabled] = React.useState(true)
+    const [isComparisonEnabled, setIsCamparisonEnabled] = React.useState(false)
+    const [isInertiaCalculatorEnabled, setIsInertiaCalculatorEnabled] = React.useState(true)
+
 
     const [tireDiameter1, setTireDiameter1] =  React.useState("")
 
@@ -36,28 +37,33 @@ export default function ComparisonCalculator () {
 
     return (
         <>
-            <h3 >Calculate Rotational Inertia for 1 Wheel/Tire<span>-&gt;</span> </h3>
-            <InertiaCalculator  
-            currentZeroSixtyTimeIsKnown={currentZeroSixtyTimeIsKnown} 
-            vehicleWeightIsKnown={vehicleWeightIsKnown}
-            currentZeroSixtyTime={currentZeroSixtyTime} 
-            vehicleWeight={vehicleWeight}
-            setVehicleWeightIsKnown={setVehicleWeightIsKnown}
-            setVehicleWeight={setVehicleWeight}
-            setCurrentZeroSixtyTimeIsKnown={setCurrentZeroSixtyTimeIsKnown}
-            setCurrentZeroSixtyTime={setCurrentZeroSixtyTime} 
-            isComparisonEnabled={isComparisonEnabled}
-            tireDiameter={tireDiameter1} setTireDiameter={setTireDiameter1}
-            tireWeight={tireWeight1} setTireWeight={setTireWeight1}
-            wheelWeight={wheelWeight1} setWheelWeight = {setWheelWeight1}
-            totalInertiaResult = {totalInertiaResult1} setTotalInertiaResult = {setTotalInertiaResult1}
-            />
+            
+            <button className={styles.card} onClick={()=>{setIsInertiaCalculatorEnabled(!isInertiaCalculatorEnabled)}} >
+            <h3 className={inter.className} >Calculate Rotational Inertia for 1 Wheel/Tire<span>-&gt;</span> </h3>
+                <h3>to Compare Wheel 0-60 Time</h3>
+            </button>
+            {isInertiaCalculatorEnabled && (
+              <InertiaCalculator  
+              currentZeroSixtyTimeIsKnown={currentZeroSixtyTimeIsKnown} 
+              vehicleWeightIsKnown={vehicleWeightIsKnown}
+              currentZeroSixtyTime={currentZeroSixtyTime} 
+              vehicleWeight={vehicleWeight}
+              setVehicleWeightIsKnown={setVehicleWeightIsKnown}
+              setVehicleWeight={setVehicleWeight}
+              setCurrentZeroSixtyTimeIsKnown={setCurrentZeroSixtyTimeIsKnown}
+              setCurrentZeroSixtyTime={setCurrentZeroSixtyTime} 
+              isComparisonEnabled={isComparisonEnabled}
+              tireDiameter={tireDiameter1} setTireDiameter={setTireDiameter1}
+              tireWeight={tireWeight1} setTireWeight={setTireWeight1}
+              wheelWeight={wheelWeight1} setWheelWeight = {setWheelWeight1}
+              totalInertiaResult = {totalInertiaResult1} setTotalInertiaResult = {setTotalInertiaResult1}
+              />
+            )}
+              
             <button className={styles.card} onClick={()=>{setIsCamparisonEnabled(!isComparisonEnabled)}} >
               <h3 className={inter.className}>
                 Calculate Rational Inertia for 2nd Wheel/Tire<span>-&gt;</span> </h3>
                 <h3>to Compare Wheel 0-60 Time</h3>
-              
-          
             </button>
             {isComparisonEnabled &&
               (<div>
