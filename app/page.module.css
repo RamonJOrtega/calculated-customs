@@ -307,6 +307,7 @@
 
 .zeroToSixtyInfo {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -318,3 +319,10 @@
 .titleOverlay {
   height: 300px;
 }
+
+.radioStack{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+

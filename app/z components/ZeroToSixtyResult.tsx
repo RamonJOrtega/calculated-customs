@@ -37,34 +37,52 @@ const T1 = (4 * (inertia1 / tireRadius1)) +  (mass_current_car_on_current_wheels
 const T2 = (4 * inertia2 /tireRadius2) + (mass_alt_car_on_alt_wheels)*tireRadius2  
 console.log(T1+ " : T1,       " + T2 + " : T2")
 
-const percentDec = (100*(T1-T2)/T1).toFixed(1);
+const percentDec = ((100*(T1-T2)/T1).toFixed(1));
 const percentInc = (100*(T2-T1)/T1).toFixed(1);
 const secondsFaster = (currentZeroToSixtyTime-(T2/T1)*currentZeroToSixtyTime).toFixed(2)
 const secondsSlower = ((currentZeroToSixtyTime-(T2/T1)*currentZeroToSixtyTime)*(-1)).toFixed(2)
+
+const percentDecMessage = percentDec + " time decrease"
+const percentIncMessage = percentInc + " time increase"
+const secondsFasterMessage = secondsFaster + " seconds faster"
+const secondsSlowerMessage = secondsSlower + " seconds slower"
+
+
 console.log(percentDec+ " : percent Dec, " + secondsSlower + " : seconds faster")
 
     return(
-        <div className={styles.zeroToSixtyInfo}>
+        < >
+        
             {T1 > T2 ? 
-            (<div id="wheelResult"> 
-                <input 
-                    placeholder="need more input"
-                    className='result'
-                    id="wheelRes"
-                    type="number"
-                    disabled 
-                    value={percentDec}
-                />  
-                time decrease
-            </div>): 
-            (<div> <input disabled value={percentInc}/>  time increase</div>)
+                (<div className={styles.zeroToSixtyInfo}> 
+                    <input 
+                        placeholder="need more input"
+                        className='result'
+                        id="wheelRes"
+                        disabled 
+                        value={percentDec}
+                    />  
+                    <input 
+                        disabled 
+                        value={secondsFaster}
+                    />  
+                </div>) 
+                : 
+                (<div className={styles.zeroToSixtyInfo}> 
+                    <input 
+                        disabled 
+                        value={percentInc}
+                    />  
+                    <input 
+                        disabled 
+                        value={secondsSlower}/> 
+                </div>)
             }
             
-            (<div> <input disabled value={secondsFaster}/>  seconds faster</div>)
-            (<div> <input disabled value={secondsSlower}/>  seconds slower </div>)
+           
             
           
-        </div>
+        </>
     )
 }
 

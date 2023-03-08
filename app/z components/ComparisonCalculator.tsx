@@ -16,7 +16,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function ComparisonCalculator () {
 
 
-    const [isComparisonEnabled, setIsCamparisonEnabled] = React.useState(false)
+    const [isComparisonEnabled, setIsCamparisonEnabled] = React.useState(true)
 
     const [tireDiameter1, setTireDiameter1] =  React.useState("")
 
@@ -36,8 +36,16 @@ export default function ComparisonCalculator () {
 
     return (
         <>
-            <h3 >Rotational Inertia Calculator<span>-&gt;</span> </h3>
+            <h3 >Calculate Rotational Inertia for 1 Wheel/Tire<span>-&gt;</span> </h3>
             <InertiaCalculator  
+            currentZeroSixtyTimeIsKnown={currentZeroSixtyTimeIsKnown} 
+            vehicleWeightIsKnown={vehicleWeightIsKnown}
+            currentZeroSixtyTime={currentZeroSixtyTime} 
+            vehicleWeight={vehicleWeight}
+            setVehicleWeightIsKnown={setVehicleWeightIsKnown}
+            setVehicleWeight={setVehicleWeight}
+            setCurrentZeroSixtyTimeIsKnown={setCurrentZeroSixtyTimeIsKnown}
+            setCurrentZeroSixtyTime={setCurrentZeroSixtyTime} 
             isComparisonEnabled={isComparisonEnabled}
             tireDiameter={tireDiameter1} setTireDiameter={setTireDiameter1}
             tireWeight={tireWeight1} setTireWeight={setTireWeight1}
@@ -46,13 +54,14 @@ export default function ComparisonCalculator () {
             />
             <button className={styles.card} onClick={()=>{setIsCamparisonEnabled(!isComparisonEnabled)}} >
               <h3 className={inter.className}>
-                Compare a 2nd Wheel 0-60 Time <span>-&gt;</span> 
-              </h3>
+                Calculate Rational Inertia for 2nd Wheel/Tire<span>-&gt;</span> </h3>
+                <h3>to Compare Wheel 0-60 Time</h3>
+              
           
             </button>
             {isComparisonEnabled &&
               (<div>
-                <ZeroToSixtyVariables 
+                <InertiaCalculator  
                 currentZeroSixtyTimeIsKnown={currentZeroSixtyTimeIsKnown} 
                 vehicleWeightIsKnown={vehicleWeightIsKnown}
                 currentZeroSixtyTime={currentZeroSixtyTime} 
@@ -61,9 +70,6 @@ export default function ComparisonCalculator () {
                 setVehicleWeight={setVehicleWeight}
                 setCurrentZeroSixtyTimeIsKnown={setCurrentZeroSixtyTimeIsKnown}
                 setCurrentZeroSixtyTime={setCurrentZeroSixtyTime} 
-                
-                />
-                <InertiaCalculator  
                 isComparisonEnabled={isComparisonEnabled}
                 tireDiameter={tireDiameter2} setTireDiameter={setTireDiameter2}
                 tireWeight={tireWeight2} setTireWeight={setTireWeight2}

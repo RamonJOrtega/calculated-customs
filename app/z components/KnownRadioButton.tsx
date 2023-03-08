@@ -13,7 +13,7 @@ interface KnownRadioButtonProps {
     
     return(
         <>
-           <div> 
+           <div className={styles.radioStack}> 
                 <label>
                     <input type="radio" value="known" 
                     checked={props.isKnown}
