@@ -20,8 +20,8 @@ export default function Home() {
       <div >
         
         <div className={inter.className}>
-        <h1>KNOW WHAT TO EXPECT FROM YOUR WHEELS AND TIRES</h1>
-        <br></br>
+          <h1>KNOW WHAT TO EXPECT FROM YOUR WHEELS AND TIRES</h1>
+          <br></br>
           <p>
             Click here to browse 
             <a href="https://www.tkqlhce.com/click-100641204-10377976"> wheels</a> and 
@@ -37,18 +37,24 @@ export default function Home() {
           <br></br>
        
         </div>
+
           <div className={styles.card}>
             <div className={inter.className}>
-           
-
               <div className={styles.center}>
-              
                 <ComparisonCalculator  />
               </div>         
-            
             </div>
           </div>
-        
+        <div className={inter.className}>
+          
+            <p>Calculate the affects of weight AND size of wheels AND tires at the same time. 
+                Our calculator will quantify the 0-60mph time difference. 
+                That way, you know what to expect from your new wheels and tires. 
+                You will noticeably FEEL performance benefits from lowering rotational inertia (even by small amounts of 0.1 square meter kilograms). 
+                Acceleration, braking, and cornering will all benefit from choosing the right combination of weights and sizes.
+            </p>
+        </div>
+          
           
        
     

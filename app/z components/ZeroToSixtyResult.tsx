@@ -44,7 +44,7 @@ const secondsSlower = ((currentZeroToSixtyTime-(T2/T1)*currentZeroToSixtyTime)*(
 console.log(percentDec+ " : percent Dec, " + secondsSlower + " : seconds faster")
 
     return(
-        <>
+        <div className={styles.zeroToSixtyInfo}>
             {T1 > T2 ? 
             (<div id="wheelResult"> 
                 <input 
@@ -64,7 +64,7 @@ console.log(percentDec+ " : percent Dec, " + secondsSlower + " : seconds faster"
             (<div> <input disabled value={secondsSlower}/>  seconds slower </div>)
             
           
-        </>
+        </div>
     )
 }
 
