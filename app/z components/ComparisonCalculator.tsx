@@ -52,10 +52,15 @@ export default function ComparisonCalculator () {
             {isComparisonEnabled &&
               (<div>
                 <ZeroToSixtyVariables 
-                currentZeroSixtyTimeIsKnown={currentZeroSixtyTimeIsKnown} setVehicleWeightIsKnown={setVehicleWeightIsKnown}
-                setCurrentZeroSixtyTimeIsKnown={setCurrentZeroSixtyTimeIsKnown} vehicleWeight={vehicleWeight}
-                currentZeroSixtyTime={currentZeroSixtyTime} setVehicleWeight={setVehicleWeight}
-                setCurrentZeroSixtyTime={setCurrentZeroSixtyTime} vehicleWeightIsKnown={vehicleWeightIsKnown}
+                currentZeroSixtyTimeIsKnown={currentZeroSixtyTimeIsKnown} 
+                vehicleWeightIsKnown={vehicleWeightIsKnown}
+                currentZeroSixtyTime={currentZeroSixtyTime} 
+                vehicleWeight={vehicleWeight}
+                setVehicleWeightIsKnown={setVehicleWeightIsKnown}
+                setVehicleWeight={setVehicleWeight}
+                setCurrentZeroSixtyTimeIsKnown={setCurrentZeroSixtyTimeIsKnown}
+                setCurrentZeroSixtyTime={setCurrentZeroSixtyTime} 
+                
                 />
                 <InertiaCalculator  
                 tireDiameter={tireDiameter2} setTireDiameter={setTireDiameter2}

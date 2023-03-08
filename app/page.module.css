@@ -281,15 +281,16 @@
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  color:  #ca8a04;
+  border-bottom: 1px dotted #fde047; /* If you want dots under the hoverable text */
 }
 
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-color: black;
-  color: #fff;
+  background-color: #fde047;
+  color: slategray;
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
@@ -302,4 +303,9 @@
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+.zeroToSixtyInfo {
+  display: flex;
+  justify-content: space-between;
 }
