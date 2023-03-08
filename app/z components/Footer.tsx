@@ -15,11 +15,7 @@ export default function NavBar() {
                         <h6 className={inter.className}>Home<span>-&gt;</span> </h6>
                     </div>
                 </Link>
-                <Link href="/compare-wheel-0-60-time">
-                    <div className={styles.card}>
-                        <h6 className={inter.className}>Compare Wheel 0-60 Time <span>-&gt;</span> </h6>
-                    </div>
-                </Link>
+                
                 <Link href="/learn">
                     <div className={styles.card}>
                         <h6 className={inter.className}>Learn <span>-&gt;</span> </h6>
