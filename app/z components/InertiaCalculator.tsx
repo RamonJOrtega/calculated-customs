@@ -23,11 +23,12 @@ interface inertiaCalculatorProps {
     setWheelWeight: any
     totalInertiaResult: string
     setTotalInertiaResult: any   
+    isComparisonEnabled: boolean
 }
 const InertiaCalculator: React.FC<inertiaCalculatorProps> = (props) => {
 
 
-    const [isStandardNotation, setIsStandardNotation] = React.useState(false)
+    const [isStandardNotation, setIsStandardNotation] = React.useState(true)
     const [tireWidth, setTireWidth] = React.useState("")
     const [aspectRatio, setAspectRatio] = React.useState("")
 
@@ -40,6 +41,12 @@ const InertiaCalculator: React.FC<inertiaCalculatorProps> = (props) => {
         <>
             <table>
                 <tbody> 
+                
+                {props.isComparisonEnabled && 
+                <tr><td>weight</td><td>time</td></tr>}
+                {props.isComparisonEnabled && 
+                <tr><td>weight</td><td>time</td></tr>}
+
                 <tr>
                     <td colSpan={2} > 
                         {isStandardNotation ? 

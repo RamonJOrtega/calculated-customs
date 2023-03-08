@@ -9,13 +9,13 @@ export default function AboutPage() {
     return(
         <div className= {inter.className}>
             
-            <div className="overlayContainer">
+            <div className={styles.overlayContainer}>
                 <Image
                 src="/red mitsubishi volk wheels background.jpg"
                 alt="Vercel Logo"
                 className={styles.vercelLogo}
-                width={200}
-                height={200}
+                fill
+                objectFit='cover'
                 priority
                 />
                 <div className="titleOverlay"><h1> About Us </h1></div>

@@ -22,7 +22,14 @@ interface WheelResultProps {
     return(
         <>
             <div id="wheelResult"> 
-                <input placeholder="need more input" className="result" id="wheelRes" type="number" disabled value={wheelInertia}/> 
+                <input 
+                    placeholder="need more input" 
+                    className="result" 
+                    id="wheelRes" 
+                    type="number"
+                    disabled 
+                    value={wheelInertia}
+                /> 
             </div>
         </>
     )

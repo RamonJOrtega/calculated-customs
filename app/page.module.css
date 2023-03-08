@@ -309,3 +309,12 @@
   display: flex;
   justify-content: space-between;
 }
+
+.overlayContainer {
+  overflow: hidden;
+  
+}
+
+.titleOverlay {
+  height: 300px;
+}

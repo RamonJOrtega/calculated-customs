@@ -38,6 +38,7 @@ export default function ComparisonCalculator () {
         <>
             <h3 >Rotational Inertia Calculator<span>-&gt;</span> </h3>
             <InertiaCalculator  
+            isComparisonEnabled={isComparisonEnabled}
             tireDiameter={tireDiameter1} setTireDiameter={setTireDiameter1}
             tireWeight={tireWeight1} setTireWeight={setTireWeight1}
             wheelWeight={wheelWeight1} setWheelWeight = {setWheelWeight1}
@@ -63,6 +64,7 @@ export default function ComparisonCalculator () {
                 
                 />
                 <InertiaCalculator  
+                isComparisonEnabled={isComparisonEnabled}
                 tireDiameter={tireDiameter2} setTireDiameter={setTireDiameter2}
                 tireWeight={tireWeight2} setTireWeight={setTireWeight2}
                 wheelWeight={wheelWeight2} setWheelWeight = {setWheelWeight2}
