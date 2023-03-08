@@ -3,6 +3,7 @@ import "../globals.css"
 import styles from '../page.module.css'
 import { Inter } from 'next/font/google'
 import pagePicture from "../../public/red mitsubishi volk wheels background.jpg"
+import president from "../../public/presidentImage.jpg"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,12 +13,15 @@ export default function AboutPage() {
         <div className={styles.center}>
             <div className= {inter.className}>
                 <h1> About Us </h1>
-                    <Image
-                    src={pagePicture}
-                    alt="red mitsubishi volk wheels"
-                    placeholder='blur'
-                    />
+                    <div className={styles.overlayContainer}>
+                        <Image
+                        src={pagePicture}
+                        alt="red mitsubishi volk wheels"
+                        placeholder='blur'
+                        />
            
+                    </div>
+                <br></br>
                 <p> 
                     It’s REALLY hard to compare wheel tire combinations. 
                     Calculated Customs is here to help. <br></br>
@@ -36,16 +40,18 @@ export default function AboutPage() {
                     <br></br>
                     The commissions generated will be used to add more calculators and products to our website. 
                 </p>
-                    <Image
-                    src="/presidentImage.jpg"
-                    alt="President Image"
-                    width={200}
-                    height={200}
-                    priority
-                    />
-                <h6>Ramon Ortega</h6>
+                    <div className={styles.centeredPicture}>
+                        <Image
+                        src={president}
+                        alt="President Image"
+                        priority
+                        height={150}
+                        />
+                    </div>
+                
                 <p >
-                    The President of Calculated Customs. <br></br>
+                    <h6>Ramon Ortega</h6>
+                    The president of Calculated Customs. <br></br>
                     M.S. in Mechanical Engineering, <br></br>
                     8-year Gas Turbine Engineer, <br></br>
                     and software developer when not obsessing over wheels.

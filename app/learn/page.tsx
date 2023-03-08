@@ -10,17 +10,16 @@ export default function LearnPage() {
     return(
      
         <div className={styles.center}>
-            
             <div className={inter.className}>
+                
             <h1>Calculating Wheel and Tire Rotational Performance</h1>
-            
-
+            <div className={styles.overlayContainer}>
                 <Image 
                     src={pagePicture}
                     alt="Rohana Wheel"
                     placeholder="blur"
                 />
-                
+            </div> 
                 <h2>Why Trust Our Calculators? </h2>
                 <p> 
                     Calculating Rotational Inertia of complex wheel and tire shapes isn’t easy. <br></br>

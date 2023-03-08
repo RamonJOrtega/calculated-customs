@@ -41,10 +41,12 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(20%, auto)); 
-  width: var(--max-width);
+  grid-template-columns: repeat(6, minmax(16.67%, auto)); 
+ width: var(--max-width);
   max-width: 100%;
 }
+
+
 
 .footer {
   display: flex;
@@ -312,17 +314,33 @@
 }
 
 .overlayContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   overflow: hidden;
+  max-height: 400px;
+  max-width: 1000px;
+  border-radius: 20px;
   
 }
 
-.titleOverlay {
-  height: 300px;
+.centeredPicture {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height: 150px;
+  width: 150px;
+  border-radius: 75px;
 }
 
 .radioStack{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: space-around;
 }
 

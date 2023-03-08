@@ -24,10 +24,11 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <main className={styles.main}>
-          <NavBar />
-          {children}
+          
+            <NavBar />
+            {children}
+          
           <Footer />
-
         </main>
       </body>
     </html>

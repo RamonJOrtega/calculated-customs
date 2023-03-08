@@ -19,7 +19,7 @@ export default function PrivacyPolicyPage() {
     <p>
         Information we collect includes both information you knowingly and actively provide us when using or participating in any of our services and promotions, and any information automatically sent by your devices in the course of accessing our products and services.
     </p>
-    <h4 >Log Data</h4>\
+    <h4 >Log Data</h4>
     <p  >
         When you visit our website, our servers may automatically log the standard data provided by your web browser. It may include your device’s Internet Protocol (IP) address, your browser type and version, the pages you visit, the time and date of your visit, the time spent on each page, other details about your visit, and technical details that occur in conjunction with any errors you may encounter.
     </p>
