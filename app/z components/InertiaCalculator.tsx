@@ -25,16 +25,18 @@ interface inertiaCalculatorProps {
     setTotalInertiaResult: any   
     isComparisonEnabled: boolean
     vehicleWeightIsKnown: boolean
-    setVehicleWeightIsKnown: boolean
+    setVehicleWeightIsKnown: any
     vehicleWeight: string
     currentZeroSixtyTime: string
     setVehicleWeight: any
     setCurrentZeroSixtyTime: any
     currentZeroSixtyTimeIsKnown: boolean
     setCurrentZeroSixtyTimeIsKnown: any
+    isSecondCard: boolean
 }
 const InertiaCalculator: React.FC<inertiaCalculatorProps> = (props) => {
 
+    
     const [isStandardNotation, setIsStandardNotation] = React.useState(true)
     const [tireWidth, setTireWidth] = React.useState("")
     const [aspectRatio, setAspectRatio] = React.useState("")
@@ -127,13 +129,13 @@ const InertiaCalculator: React.FC<inertiaCalculatorProps> = (props) => {
                             setWheelInertiaResult={setWheelInertiaResult} /> </td>
                         <td align="center"><div className={styles.postFix}> kg&#x2022;m<sup>2</sup></div></td>
                     </tr>
-                    {props.isComparisonEnabled &&  <tr>
+                    {props.isComparisonEnabled && props.isSecondCard && <tr>
                         <td colSpan={2}><FieldTitle title={"Current Vehicle Weight"} /></td>
                         <td colSpan={1}rowSpan={2}> <KnownRadioButton isKnown={props.vehicleWeightIsKnown} setIsKnown={props.setVehicleWeightIsKnown} /></td>
                         <td colSpan={2} rowSpan={2}> <KnownRadioButton isKnown={props.currentZeroSixtyTimeIsKnown} setIsKnown={props.setCurrentZeroSixtyTimeIsKnown} /></td>
                         <td colSpan={2}><FieldTitle title={"Current 0-60 Time"} /></td> 
                     </tr>}
-                    {props.isComparisonEnabled && <tr>
+                    {props.isComparisonEnabled && props.isSecondCard && <tr>
                         <td ><FieldInput value={props.vehicleWeight} placeHolder={"4000"} setValue={props.setVehicleWeight}/></td>
                         <td className={styles.postFix}>pound</td>
                         <td><FieldInput value={props.currentZeroSixtyTime} placeHolder={"6.0"} setValue={props.setCurrentZeroSixtyTime}/></td>
