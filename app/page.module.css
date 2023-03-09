@@ -285,7 +285,7 @@
   font-size: 1rem;
   font-weight: bold;
   margin-left: .3rem;
-  border-bottom: 1px dotted #fde047; /* If you want dots under the hoverable text */
+  border: #262626
 }
 
 /* Tooltip text */
