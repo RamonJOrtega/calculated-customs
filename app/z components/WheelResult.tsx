@@ -24,8 +24,7 @@ interface WheelResultProps {
             <div id="wheelResult"> 
                 <input 
                     placeholder="need more input" 
-                    className="result" 
-                    id="wheelRes" 
+                    className={styles.Result}
                     type="number"
                     disabled 
                     value={wheelInertia}

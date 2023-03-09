@@ -106,3 +106,32 @@ a {
     color-scheme: dark;
   }
 }
+
+@keyframes swoopDown {
+  from{bottom:15px; right:5px;}
+  to{bottom:0px; right: 0px;}
+}
+
+div{
+    position: relative;
+    animation-name: swoopDown;
+    animation-duration: 1s;
+}
+
+input[type=checkbox] {
+  display: inline;
+  height: 1rem;
+  accent-color: #fde047;
+  border-radius: 5px;
+  border: none;
+  /* margin-left: 3px; */
+}
+
+input {
+  border-radius: 10px;
+  height: 2rem;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+}

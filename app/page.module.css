@@ -46,8 +46,6 @@
   max-width: 100%;
 }
 
-
-
 .footer {
   display: flex;
   flex-direction: space-between;
@@ -283,28 +281,40 @@
 .tooltip {
   position: relative;
   display: inline-block;
-  color:  #ca8a04;
+  color:  #d8be3c;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: .3rem;
   border-bottom: 1px dotted #fde047; /* If you want dots under the hoverable text */
 }
 
 /* Tooltip text */
 .tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
+  display: none;
+  width: 10rem;
   background-color: #fde047;
   color: slategray;
   text-align: center;
   padding: 5px 0;
-  border-radius: 6px;
+  border-radius: 5px;
+  
  
   /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
+  right: .5rem;
+  top: 1.2rem;
+  animation: fadeIn 1s;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
-  visibility: visible;
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0}
+  to { opacity: 1}
 }
 
 .zeroToSixtyInfo {
@@ -344,3 +354,39 @@
   justify-content: space-around;
 }
 
+.Tire{
+  letter-spacing: .05em;
+  font-size: 1em;
+}
+
+.num {      
+  width: 90%;
+  min-width: 30px;
+  border-radius: 5px;
+  height: 2em;
+  border: none;
+  /* margin-right: 5px; */
+  font-size: 1em;
+  
+}
+
+.Result {
+  background: #fde047;
+  color: white; 
+  margin-left:
+ } 
+
+.CalcBody {
+  /* background-image: url("./background.jpg"); */
+  background-color: transparent;
+
+  margin-top: 50px;
+  color: white;
+  font-weight: bold;
+  font-family: Roboto, sans-serif;
+}
+
+.postFix{
+  color: darkgrey;
+  font-size: .8em;
+}

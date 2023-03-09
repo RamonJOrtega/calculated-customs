@@ -21,8 +21,7 @@ interface TotalResultProps {
             <div id="totalResult"> 
                 <input 
                     placeholder="need more input" 
-                    className="result" 
-                    id="totalRes" 
+                    className={styles.Result} 
                     type="number" 
                     disabled 
                     value={totalInertia}/> 

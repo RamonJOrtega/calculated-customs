@@ -3,7 +3,6 @@ import styles from './page.module.css'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 
-import FieldTitle from './z components/FieldTitle'
 import ComparisonCalculator from './z components/ComparisonCalculator'
 
 const inter = Inter({ subsets: ['latin'] })

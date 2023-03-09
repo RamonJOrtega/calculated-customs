@@ -37,8 +37,8 @@ interface TireResultProps {
   
     return(
         <>
-            <div id="TireResult"> 
-                <input placeholder="need more input" className="result" id="tireRes" type="number" disabled value={tireResult}/> 
+            <div > 
+                <input placeholder="need more input" className={styles.Result}id="tireRes" type="number" disabled value={tireResult}/> 
             </div>
         </>
     )
