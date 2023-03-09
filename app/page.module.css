@@ -312,6 +312,7 @@
   z-index: 1;
   right: .5rem;
   top: 1.2rem;
+  
   animation: fadeIn 1s;
 }
 
@@ -325,11 +326,7 @@
   to { opacity: 1}
 }
 
-.zeroToSixtyInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+
 
 .overlayContainer {
   display: flex;
@@ -379,10 +376,30 @@
 }
 
 .Result {
-  background: #fde047;
-  color: white; 
-  margin-left:
+  background-image: linear-gradient(to right, #fffbeb, #fef08a);
+
+  /* background: #fde047; */
+  /* color: white;  */
+  
  } 
+
+ .zeroToSixtyResult {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+.slowerResult {
+  background-image: linear-gradient(to right, #fffbeb,#ca8a04);
+
+  color:#c2410c;
+}
+.fasterResult {
+  background-image: linear-gradient(to right, #fffbeb, #fef08a);
+
+  color: #15803d;
+
+}
 
 .CalcBody {
   /* background-image: url("./background.jpg"); */

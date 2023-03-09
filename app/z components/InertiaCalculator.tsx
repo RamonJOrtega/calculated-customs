@@ -37,7 +37,7 @@ interface inertiaCalculatorProps {
 const InertiaCalculator: React.FC<inertiaCalculatorProps> = (props) => {
 
     
-    const [isStandardNotation, setIsStandardNotation] = React.useState(true)
+    const [isStandardNotation, setIsStandardNotation] = React.useState(false)
     const [tireWidth, setTireWidth] = React.useState("")
     const [aspectRatio, setAspectRatio] = React.useState("")
 
@@ -51,38 +51,33 @@ const InertiaCalculator: React.FC<inertiaCalculatorProps> = (props) => {
                 <tbody> 
 
                 <tr>
-                    <td colSpan={2} > 
-                        {isStandardNotation ? 
-                            (<FieldTitle title="&nbsp; Tire Width" />) :
-                            (<FieldTitle title="&nbsp;Tire Diameter"/> )
+                    <td colSpan={2} > {isStandardNotation ? 
+                        (<FieldTitle title="&nbsp; Tire Width" />) :
+                        (<FieldTitle title="&nbsp;Tire Diameter"/> )
                         }
                     </td>
-                    <td colSpan={3} > 
-                        {isStandardNotation ? 
-                            (<FieldTitle title="Aspect Ratio"/>) : 
-                            (<FieldTitle title="Standard Notation" tipText="Optionally use standard notation to get tire diameter" />)
+                    <td colSpan={3} > {isStandardNotation ? 
+                        (<FieldTitle title="Aspect Ratio"/>) : 
+                        (<FieldTitle title="Standard Notation" tipText="Optionally use standard notation to get tire diameter" />)
                         }
                     </td>
                     <td colSpan={2} > <FieldTitle title="Wheel Diameter"/> </td>
                 </tr>
 
                 <tr>
-                    <td> 
-                        {isStandardNotation ? 
-                            (<FieldInput value={tireWidth} list={"widthList"} placeHolder={"input mm"} inputId="tireWid" setValue={setTireWidth}/>):
-                            (<FieldInput value={props.tireDiameter} placeHolder={"input dia."} inputId="tireDia" setValue={props.setTireDiameter}/>)
+                    <td> {isStandardNotation ? 
+                        (<FieldInput value={tireWidth} list={"widthList"} placeHolder={"input mm"} inputId="tireWid" setValue={setTireWidth}/>):
+                        (<FieldInput value={props.tireDiameter} placeHolder={"input dia."} inputId="tireDia" setValue={props.setTireDiameter}/>)
                         } 
                     </td>
-                    <td align="center">
-                        {isStandardNotation ? 
-                            (<div>/</div>) : 
-                            (<div className={styles.postFix}>inch</div>)
+                    <td align="center"> {isStandardNotation ? 
+                        (<div>/</div>) : 
+                        (<div className={styles.postFix}>inch</div>)
                         }
                     </td>
-                    <td colSpan={1}>
-                        {isStandardNotation ? 
-                            (<FieldInput value={aspectRatio} list={"aspectList"} placeHolder={"input %"} inputId="aspRat" setValue={setAspectRatio} isStandardNotation={isStandardNotation} />): 
-                            (<StandarNotationCheckBox setTireDiameter={props.setTireDiameter} isStandardNotation={isStandardNotation} setIsStandardNotation={setIsStandardNotation}  />)
+                    <td colSpan={1}> {isStandardNotation ? 
+                        (<FieldInput value={aspectRatio} list={"aspectList"} placeHolder={"input %"} inputId="aspRat" setValue={setAspectRatio} isStandardNotation={isStandardNotation} />): 
+                        (<StandarNotationCheckBox setTireDiameter={props.setTireDiameter} isStandardNotation={isStandardNotation} setIsStandardNotation={setIsStandardNotation}  />)
                         }          
                     </td>
                     <td align="center" colSpan={2 }><div > R </div></td>
@@ -96,6 +91,7 @@ const InertiaCalculator: React.FC<inertiaCalculatorProps> = (props) => {
                     <td colSpan={2}> <FieldTitle title="Wheel Weight" /> </td>
 
                 </tr>
+
                 <tr>
                     <td> <FieldInput value={props.tireWeight} placeHolder={"input wt."} inputId="tireWt" setValue={props.setTireWeight}/> </td>
                     <td align="center"><div className={styles.postFix}> pound </div> </td>
@@ -105,11 +101,13 @@ const InertiaCalculator: React.FC<inertiaCalculatorProps> = (props) => {
                     <td align="center"><div className={styles.postFix}> pound </div> </td>
 
                 </tr>
+
                 <tr>
                     <td colSpan={2}> <FieldTitle title="Tire Inertia" />  </td>
                     <td colSpan={3}> <FieldTitle title="Total Rotational Inertia" tipText="Also called moment of inertia or rotating mass."/> </td>
                     <td colSpan={2}> <FieldTitle title="Wheel Inertia" /> </td>
                 </tr>
+
                 <tr>
                     <td > <TireResult 
                         setTireDiameter={props.setTireDiameter} setTireInertiaResult={setTireInertiaResult} 
@@ -129,6 +127,7 @@ const InertiaCalculator: React.FC<inertiaCalculatorProps> = (props) => {
                             setWheelInertiaResult={setWheelInertiaResult} /> </td>
                         <td align="center"><div className={styles.postFix}> kg&#x2022;m<sup>2</sup></div></td>
                     </tr>
+
                     {props.isComparisonEnabled && props.isSecondCard && <tr>
                         <td colSpan={2}><FieldTitle title={"Current Vehicle Weight"} /></td>
                         <td colSpan={1}rowSpan={2}> <KnownRadioButton isKnown={props.vehicleWeightIsKnown} setIsKnown={props.setVehicleWeightIsKnown} /></td>

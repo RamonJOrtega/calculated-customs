@@ -42,46 +42,30 @@ const percentInc: string = (100*(T2-T1)/T1).toFixed(1);
 const secondsFaster: string = (currentZeroToSixtyTime-(T2/T1)*currentZeroToSixtyTime).toFixed(2)
 const secondsSlower: string = ((currentZeroToSixtyTime-(T2/T1)*currentZeroToSixtyTime)*(-1)).toFixed(2)
 
-let percentDecMessage:string = percentDec + " time decrease";
+let percentDecMessage:string = percentDec + "% time decrease";
 let percentIncMessage:string = percentInc + " time increase";
 let secondsFasterMessage:string = secondsFaster + " seconds faster";
 let secondsSlowerMessage:string = secondsSlower + " seconds slower";
 
-
-percentDecMessage = (percentDec !== "Nan") ? percentDecMessage : "need more input" ;
-percentIncMessage = (percentInc !== "Nan") ? percentIncMessage : "need more input"
-secondsFasterMessage = (secondsFaster !== "Nan") ? secondsFasterMessage : "need more input"
-secondsSlowerMessage = (secondsSlower !== "Nan") ? secondsSlowerMessage : "need more input"
-
-
-console.log(percentDec+ " : percent Dec, " + secondsSlower + " : seconds faster")
+percentDecMessage = (percentDec !== "NaN") ? percentDecMessage : "need more input" ;
+percentIncMessage = (percentInc !== "NaN") ? percentIncMessage : "need more input"
+secondsFasterMessage = (secondsFaster !== "NaN") ? secondsFasterMessage : "need more input"
+secondsSlowerMessage = (secondsSlower !== "NaN") ? secondsSlowerMessage : "need more input"
 
     return(
         < >
-        
             {T1 > T2 ? 
-                (<div className={styles.zeroToSixtyInfo}> 
-                    <input 
-                        disabled value={percentDecMessage}
-                    />  
-                    <input disabled value={secondsFasterMessage}
-                    />  
+                (<div className={styles.zeroToSixtyResult}> 
+                    <input className={styles.fasterResult} value={percentDecMessage} disabled/>  
+                    <input className={styles.fasterResult} value={secondsFasterMessage}disabled/>  
                 </div>) 
                 : 
-                (<div className={styles.zeroToSixtyInfo}> 
-                    <input 
-                        disabled 
-                        value={percentIncMessage}
-                    />  
-                    <input 
-                        disabled 
-                        value={secondsSlowerMessage}/> 
+                (<div className={styles.zeroToSixtyResult}> 
+                    <input className={styles.slowerResult} value={percentIncMessage} disabled />  
+                    <input className={styles.slowerResult} value={secondsSlowerMessage} disabled/> 
                 </div>)
             }
-            
-           
-            
-          
+
         </>
     )
 }
