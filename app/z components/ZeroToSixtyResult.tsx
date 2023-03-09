@@ -37,20 +37,21 @@ const T1 = (4 * (inertia1 / tireRadius1)) +  (mass_current_car_on_current_wheels
 const T2 = (4 * inertia2 /tireRadius2) + (mass_alt_car_on_alt_wheels)*tireRadius2  
 console.log(T1+ " : T1,       " + T2 + " : T2")
 
-const percentDec = ((100*(T1-T2)/T1).toFixed(1));
-const percentInc = (100*(T2-T1)/T1).toFixed(1);
-const secondsFaster = (currentZeroToSixtyTime-(T2/T1)*currentZeroToSixtyTime).toFixed(2)
-const secondsSlower = ((currentZeroToSixtyTime-(T2/T1)*currentZeroToSixtyTime)*(-1)).toFixed(2)
+const percentDec: string = ((100*(T1-T2)/T1).toFixed(1));
+const percentInc: string = (100*(T2-T1)/T1).toFixed(1);
+const secondsFaster: string = (currentZeroToSixtyTime-(T2/T1)*currentZeroToSixtyTime).toFixed(2)
+const secondsSlower: string = ((currentZeroToSixtyTime-(T2/T1)*currentZeroToSixtyTime)*(-1)).toFixed(2)
 
 let percentDecMessage:string = percentDec + " time decrease";
 let percentIncMessage:string = percentInc + " time increase";
 let secondsFasterMessage:string = secondsFaster + " seconds faster";
 let secondsSlowerMessage:string = secondsSlower + " seconds slower";
 
-percentDecMessage = percentDec ? percentDecMessage : "need more input" ;
-percentIncMessage = percentInc ? percentIncMessage : "need more input"
-secondsFasterMessage = secondsFaster ? secondsFasterMessage : "need more input"
-secondsSlowerMessage = secondsSlower ? secondsSlowerMessage : "need more input"
+
+percentDecMessage = (percentDec !== "Nan") ? percentDecMessage : "need more input" ;
+percentIncMessage = (percentInc !== "Nan") ? percentIncMessage : "need more input"
+secondsFasterMessage = (secondsFaster !== "Nan") ? secondsFasterMessage : "need more input"
+secondsSlowerMessage = (secondsSlower !== "Nan") ? secondsSlowerMessage : "need more input"
 
 
 console.log(percentDec+ " : percent Dec, " + secondsSlower + " : seconds faster")
@@ -61,26 +62,20 @@ console.log(percentDec+ " : percent Dec, " + secondsSlower + " : seconds faster"
             {T1 > T2 ? 
                 (<div className={styles.zeroToSixtyInfo}> 
                     <input 
-                        placeholder="need more input"
-                        className='result'
-                        id="wheelRes"
-                        disabled 
-                        value={percentDec}
+                        disabled value={percentDecMessage}
                     />  
-                    <input 
-                        disabled 
-                        value={secondsFaster}
+                    <input disabled value={secondsFasterMessage}
                     />  
                 </div>) 
                 : 
                 (<div className={styles.zeroToSixtyInfo}> 
                     <input 
                         disabled 
-                        value={percentInc}
+                        value={percentIncMessage}
                     />  
                     <input 
                         disabled 
-                        value={secondsSlower}/> 
+                        value={secondsSlowerMessage}/> 
                 </div>)
             }
             
