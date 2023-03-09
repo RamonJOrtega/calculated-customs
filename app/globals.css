@@ -134,6 +134,8 @@ input {
   text-align: center;
   font-weight: bold;
   font-size: 1rem;
+  min-width: 60px;
+  width: 90%
 }
 
 input::-webkit-outer-spin-button,
@@ -144,4 +146,9 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
   /* Firefox */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
