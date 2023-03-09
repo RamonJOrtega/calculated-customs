@@ -39,6 +39,13 @@
   font-family: var(--font-mono);
 }
 
+.gridSponsors {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(25%, auto)); 
+ width: var(--max-width);
+  max-width: 100%;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(16.67%, auto)); 
@@ -79,7 +86,7 @@
 }
 
 .center {
-
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
