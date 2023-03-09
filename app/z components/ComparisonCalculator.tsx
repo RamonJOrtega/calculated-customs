@@ -6,6 +6,7 @@ import styles from '../page.module.css'
 import { Inter } from 'next/font/google'
 import InertiaCalculator from "./InertiaCalculator"
 import ZeroToSixtyResult from "./ZeroToSixtyResult"
+import { isPropertySignature } from "typescript"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,6 +17,7 @@ export default function ComparisonCalculator () {
 
     const [isComparisonEnabled, setIsCamparisonEnabled] = React.useState(false)
     const [isInertiaCalculatorEnabled, setIsInertiaCalculatorEnabled] = React.useState(true)
+    const [isSecondCard, setIsSecondCard] = React.useState(false)
 
 
     const [tireDiameter1, setTireDiameter1] =  React.useState("")
@@ -42,6 +44,7 @@ export default function ComparisonCalculator () {
             </button>
             {isInertiaCalculatorEnabled && (
               <InertiaCalculator  
+              isSecondCard={false}
               currentZeroSixtyTimeIsKnown={currentZeroSixtyTimeIsKnown} 
               vehicleWeightIsKnown={vehicleWeightIsKnown}
               currentZeroSixtyTime={currentZeroSixtyTime} 
@@ -58,13 +61,17 @@ export default function ComparisonCalculator () {
               />
             )}
               
-            <button className={styles.card} onClick={()=>{setIsCamparisonEnabled(!isComparisonEnabled)}} >
+            <button className={styles.card} onClick={()=>{
+              setIsCamparisonEnabled(!isComparisonEnabled)
+              setIsSecondCard(!isSecondCard)
+              }} >
               <h3 className={inter.className}>Calculate Rational Inertia for 2nd Wheel/Tire </h3>
               <h3 className={inter.className}>to Compare Wheel 0-60 Time <span>-&gt;</span></h3>
             </button>
             {isComparisonEnabled &&
               (<div>
-                <InertiaCalculator  
+                <InertiaCalculator
+                isSecondCard={isSecondCard}  
                 currentZeroSixtyTimeIsKnown={currentZeroSixtyTimeIsKnown} 
                 vehicleWeightIsKnown={vehicleWeightIsKnown}
                 currentZeroSixtyTime={currentZeroSixtyTime} 

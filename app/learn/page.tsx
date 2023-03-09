@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function LearnPage() {
     return(
      
-        <div className={styles.center}>
+        <div>
             <div className={inter.className}>
                 
             <h1>Calculating Wheel and Tire Rotational Performance</h1>
