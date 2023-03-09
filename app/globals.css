@@ -151,4 +151,5 @@ input[type=number] {
 table {
   width: 100%;
   border-collapse: collapse;
+  padding: 0;
 }

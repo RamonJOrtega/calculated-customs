@@ -10,8 +10,6 @@ import { isPropertySignature } from "typescript"
 
 const inter = Inter({ subsets: ['latin'] })
 
-
-
 export default function ComparisonCalculator () {
 
 

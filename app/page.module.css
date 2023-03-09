@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   min-height: 100vh;
 }
 
@@ -54,8 +54,10 @@
 }
 
 .footer {
-  display: flex;
-  flex-direction: space-between;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(16.67%, auto)); 
+  width: var(--max-width);
+  max-width: 100%;
 }
 
 .card {

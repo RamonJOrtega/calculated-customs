@@ -8,37 +8,38 @@ const inter = Inter({ subsets: ['latin'] })
 export default function NavBar() {
     
     return(
-        <>
+        < >
+
             <nav className={styles.footer}>
-            <Link href="/">
+                <Link href="/">
                     <div className={styles.card}>
-                        <h6 className={inter.className}>Home<span>-&gt;</span> </h6>
+                        <h6 className={inter.className}>Home </h6>
                     </div>
                 </Link>
                 
                 <Link href="/learn">
                     <div className={styles.card}>
-                        <h6 className={inter.className}>Learn <span>-&gt;</span> </h6>
+                        <h6 className={inter.className}>Learn  </h6>
                     </div>
                 </Link>
                 <Link href="/about">
                     <div className={styles.card}>
-                        <h6 className={inter.className}>About <span>-&gt;</span> </h6>
+                        <h6 className={inter.className}>About  </h6>
                     </div>
                 </Link>
                 <Link href="/contact">
                     <div className={styles.card}>
-                        <h6 className={inter.className}>Contact <span>-&gt;</span> </h6>
+                        <h6 className={inter.className}>Contact  </h6>
                     </div>
                 </Link>
                 <Link href="/terms-and-conditions">
                     <div className={styles.card}>
-                        <h6 className={inter.className}>Terms and Conditions <span>-&gt;</span> </h6>
+                        <h6 className={inter.className}>Terms and Conditions  </h6>
                     </div>
                 </Link>
                 <Link href="/privacy-policy">
                     <div className={styles.card}>
-                        <h6 className={inter.className}>Privacy Policy <span>-&gt;</span> </h6>
+                        <h6 className={inter.className}>Privacy Policy  </h6>
                     </div>
                 </Link>
             </nav>
