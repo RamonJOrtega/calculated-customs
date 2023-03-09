@@ -42,7 +42,7 @@ export default function ComparisonCalculator () {
             </button>
             {isInertiaCalculatorEnabled && (
               <InertiaCalculator  
-              isSecondCard={false}
+              isSecondCard={isSecondCard}
               currentZeroSixtyTimeIsKnown={currentZeroSixtyTimeIsKnown} 
               vehicleWeightIsKnown={vehicleWeightIsKnown}
               currentZeroSixtyTime={currentZeroSixtyTime} 
@@ -69,7 +69,7 @@ export default function ComparisonCalculator () {
             {isComparisonEnabled &&
               (<div>
                 <InertiaCalculator
-                isSecondCard={isSecondCard}  
+                isSecondCard={false}  
                 currentZeroSixtyTimeIsKnown={currentZeroSixtyTimeIsKnown} 
                 vehicleWeightIsKnown={vehicleWeightIsKnown}
                 currentZeroSixtyTime={currentZeroSixtyTime} 
