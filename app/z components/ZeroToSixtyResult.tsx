@@ -42,10 +42,15 @@ const percentInc = (100*(T2-T1)/T1).toFixed(1);
 const secondsFaster = (currentZeroToSixtyTime-(T2/T1)*currentZeroToSixtyTime).toFixed(2)
 const secondsSlower = ((currentZeroToSixtyTime-(T2/T1)*currentZeroToSixtyTime)*(-1)).toFixed(2)
 
-const percentDecMessage = percentDec + " time decrease"
-const percentIncMessage = percentInc + " time increase"
-const secondsFasterMessage = secondsFaster + " seconds faster"
-const secondsSlowerMessage = secondsSlower + " seconds slower"
+let percentDecMessage:string = percentDec + " time decrease";
+let percentIncMessage:string = percentInc + " time increase";
+let secondsFasterMessage:string = secondsFaster + " seconds faster";
+let secondsSlowerMessage:string = secondsSlower + " seconds slower";
+
+percentDecMessage = percentDec ? percentDecMessage : "need more input" ;
+percentIncMessage = percentInc ? percentIncMessage : "need more input"
+secondsFasterMessage = secondsFaster ? secondsFasterMessage : "need more input"
+secondsSlowerMessage = secondsSlower ? secondsSlowerMessage : "need more input"
 
 
 console.log(percentDec+ " : percent Dec, " + secondsSlower + " : seconds faster")
