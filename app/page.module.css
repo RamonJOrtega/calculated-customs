@@ -61,7 +61,7 @@
 }
 
 .card {
-  padding: 1rem 1.2rem;
+  padding: .7rem;
   border-radius: var(--border-radius);
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
@@ -298,21 +298,18 @@
 
 /* Tooltip text */
 .tooltip .tooltiptext {
+  color:#262626;
   display: none;
   width: 10rem;
-  background-color: #fde047;
-  color: slategray;
+  background-image: linear-gradient(to right, #fffbeb, #fef08a);
   text-align: center;
-  padding: 5px 0;
-  border-radius: 5px;
-  
- 
+  padding: .25rem;
+  border-radius: var(--border-radius);
   /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
-  right: .5rem;
   top: 1.2rem;
-  
+  right: -5rem;
   animation: fadeIn 1s;
 }
 
@@ -335,7 +332,7 @@
   overflow: hidden;
   max-height: 400px;
   max-width: 1000px;
-  border-radius: 20px;
+  border-radius: var(--border-radius);
   
 }
 
@@ -367,7 +364,7 @@
 .num {      
   width: 90%;
   min-width: 30px;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   height: 2em;
   border: none;
   /* margin-right: 5px; */
@@ -375,13 +372,64 @@
   
 }
 
+.checkbox {
+  display: inline;
+  max-width: 2rem;
+  accent-color: #fde047;
+  border-radius: 5px;
+  border: none;
+  
+ }
+.radio {
+  display: inline;
+  height: 1rem;
+  accent-color: #fde047;
+  border-radius: 5px;
+  border: none;
+  /* margin-left: 3px; */
+}
+
+.num {
+  margin: .25rem;
+  border-radius: 10px;
+  height: 2rem;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  min-width: 40px;
+  width: 90%;
+}
+
 .Result {
   background-image: linear-gradient(to right, #fffbeb, #fef08a);
-
-  /* background: #fde047; */
-  /* color: white;  */
+  margin: .25rem;
+  border-radius: 10px;
+  height: 2rem;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  min-width: 40px;
+  width: 90%;
   
  } 
+
+ .header {
+  background: linear-gradient(to right, #facc15,#b45309);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* background: #fde047; */
+  /* color: white;  */
+  text-align: left;
+ } 
+
+ .fieldTitle {
+  text-align: left;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+ }
 
  .zeroToSixtyResult {
   display: flex;
@@ -391,11 +439,29 @@
 }
 .slowerResult {
   background-image: linear-gradient(to right, #fffbeb,#ca8a04);
+  margin: .25rem;
+  border-radius: 10px;
+  height: 2rem;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  min-width: 40px;
+
 
   color:#c2410c;
 }
 .fasterResult {
   background-image: linear-gradient(to right, #fffbeb, #fef08a);
+  margin: .25rem;
+  border-radius: 10px;
+  height: 2rem;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  min-width: 40px;
+
 
   color: #15803d;
 

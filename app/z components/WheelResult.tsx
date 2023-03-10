@@ -23,7 +23,7 @@ interface WheelResultProps {
         <>
             <div id="wheelResult"> 
                 <input 
-                    placeholder="need more input" 
+                    placeholder="0.0" 
                     className={styles.Result}
                     type="number"
                     disabled 

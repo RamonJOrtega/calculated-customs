@@ -15,20 +15,22 @@ interface KnownRadioButtonProps {
         <>
            <div className={styles.radioStack}> 
                 <label>
-                    <input type="radio" value="known" 
+                    <input className={styles.radio}
+                    type="radio" value="known" 
                     checked={props.isKnown}
                     onChange={()=>{
                         props.setIsKnown(!props.isKnown)
                     }}/>
-                        <span className="postFix1"> Known </span>
+                        <span className={styles.postFix}> Known </span>
                 </label>
                 <label>
-                    <input type="radio" value="unknown"
+                    <input className={styles.radio}
+                    type="radio" value="unknown"
                     checked={!props.isKnown}
                     onChange={()=>{
                         props.setIsKnown(!props.isKnown)
                     }}/>
-                        <span className="postFix1"> Unknown </span>
+                        <span className={styles.postFix}> Unknown </span>
                 </label>
             </div>     
 

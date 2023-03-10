@@ -11,11 +11,16 @@
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
-    #16abff33 0deg,
+    #fffbeb 0deg,
+    #fef3c7 55deg,
+    #fef08a 120deg,
+    #fde047 160deg,
+    transparent 360deg
+    /* #16abff33 0deg,
     #0885ff33 55deg,
     #54d6ff33 120deg,
     #0071ff33 160deg,
-    transparent 360deg
+    transparent 360deg */
   );
   --secondary-glow: radial-gradient(
     rgba(255, 255, 255, 1),
@@ -46,7 +51,7 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
 
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+    --primary-glow: radial-gradient(#fde047, rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(
       to bottom right,
       rgba(1, 65, 255, 0),
@@ -118,26 +123,7 @@ div{
     animation-duration: 1s;
 }
 
-input[type=checkbox] {
-  display: inline;
-  height: 1rem;
-  accent-color: #fde047;
-  border-radius: 5px;
-  border: none;
-  /* margin-left: 3px; */
-}
 
-input {
-  margin: .25rem;
-  border-radius: 10px;
-  height: 2rem;
-  border: none;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1rem;
-  min-width: 60px;
-  width: 90%
-}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

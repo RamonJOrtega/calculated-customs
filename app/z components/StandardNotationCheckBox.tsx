@@ -16,7 +16,8 @@ interface StandardNotationCheckBoxProps {
         <>
 
            <div> 
-            <input 
+           <span>
+            <input className={styles.checkbox}
                 type="checkbox"
                 checked={props.isStandardNotation}
                 onChange={()=>{
@@ -24,7 +25,9 @@ interface StandardNotationCheckBoxProps {
                     props.setTireDiameter("")
                     }
                 }/> 
-                <span className="postFix1"> ex. 325/40R22 </span> 
+                </span>
+            <div className={styles.postFix}> ex. 325/40R22 </div> 
+                
             </div>     
 
         </>

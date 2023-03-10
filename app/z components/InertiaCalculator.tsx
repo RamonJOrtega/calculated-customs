@@ -58,7 +58,7 @@ const InertiaCalculator: React.FC<inertiaCalculatorProps> = (props) => {
                     </td>
                     <td colSpan={3} > {isStandardNotation ? 
                         (<FieldTitle title="Aspect Ratio"/>) : 
-                        (<FieldTitle title="Standard Notation" tipText="Optionally use standard notation to get tire diameter" />)
+                        (<FieldTitle title="Standard Notation" tipText="optionally use standard notation to set tire diameter" />)
                         }
                     </td>
                     <td colSpan={2} > <FieldTitle title="Wheel Diameter"/> </td>
@@ -87,7 +87,7 @@ const InertiaCalculator: React.FC<inertiaCalculatorProps> = (props) => {
 
                 <tr>
                     <td colSpan={2}> <FieldTitle title="&nbsp;  Tire Weight" /> </td>
-                    <td colSpan={3}> {isStandardNotation && (<FieldTitle title="Standard Notation" tipText="Optional. Use standard notation to get tire diameter" />)} </td>
+                    <td colSpan={3}> {isStandardNotation && (<FieldTitle title="Standard Notation" tipText="Optionally use standard notation to set tire diameter" />)} </td>
                     <td colSpan={2}> <FieldTitle title="Wheel Weight" /> </td>
 
                 </tr>
@@ -104,7 +104,7 @@ const InertiaCalculator: React.FC<inertiaCalculatorProps> = (props) => {
 
                 <tr>
                     <td colSpan={2}> <FieldTitle title="Tire Inertia" />  </td>
-                    <td colSpan={3}> <FieldTitle title="Total Rotational Inertia" tipText="Also called moment of inertia or rotating mass."/> </td>
+                    <td colSpan={3}> <FieldTitle title="Total Rotational Inertia" tipText="Also called moment of inertia or rotating mass. Keep it low to go faster!"/> </td>
                     <td colSpan={2}> <FieldTitle title="Wheel Inertia" /> </td>
                 </tr>
 
@@ -140,6 +140,7 @@ const InertiaCalculator: React.FC<inertiaCalculatorProps> = (props) => {
                         <td><FieldInput value={props.currentZeroSixtyTime} placeHolder={"6.0"} setValue={props.setCurrentZeroSixtyTime}/></td>
                         <td className={styles.postFix}>second</td>
                     </tr>}
+                    <tr><td colSpan={7}><br></br></td></tr>
                     </tbody>
             </table>
            

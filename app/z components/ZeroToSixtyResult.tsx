@@ -35,7 +35,6 @@ const  mass_alt_car_on_alt_wheels = ((vehicleWeight - 4*(tireWeight1 + wheelWeig
 
 const T1 = (4 * (inertia1 / tireRadius1)) +  (mass_current_car_on_current_wheels * tireRadius1) 
 const T2 = (4 * inertia2 /tireRadius2) + (mass_alt_car_on_alt_wheels)*tireRadius2  
-console.log(T1+ " : T1,       " + T2 + " : T2")
 
 const percentDec: string = ((100*(T1-T2)/T1).toFixed(1));
 const percentInc: string = (100*(T2-T1)/T1).toFixed(1);
@@ -47,10 +46,10 @@ let percentIncMessage:string = percentInc + " time increase";
 let secondsFasterMessage:string = secondsFaster + " seconds faster";
 let secondsSlowerMessage:string = secondsSlower + " seconds slower";
 
-percentDecMessage = (percentDec !== "NaN") ? percentDecMessage : "need more input" ;
-percentIncMessage = (percentInc !== "NaN") ? percentIncMessage : "need more input"
-secondsFasterMessage = (secondsFaster !== "NaN") ? secondsFasterMessage : "need more input"
-secondsSlowerMessage = (secondsSlower !== "NaN") ? secondsSlowerMessage : "need more input"
+percentDecMessage = (percentDec !== "NaN") ? percentDecMessage : "input more to compare 0-60 %" 
+percentIncMessage = (percentInc !== "NaN") ? percentIncMessage : "input more to compare 0-60 %"
+secondsFasterMessage = (secondsFaster !== "NaN") ? secondsFasterMessage : "input more to compare 0-60 time"
+secondsSlowerMessage = (secondsSlower !== "NaN") ? secondsSlowerMessage : "input more to compare 0-60 time"
 
     return(
         < >

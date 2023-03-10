@@ -20,13 +20,13 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
     return(
         <div > 
             <span>
-            <input 
+            <input className={styles.num}
                 onChange={
                     (e)=>{
                     props.setValue(e.target.value)
                     }
                 }
-                className="num" 
+     
                 id={props.inputId} 
                 type="number" 
                 list={props.list} 

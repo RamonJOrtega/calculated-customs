@@ -9,7 +9,7 @@ import Image from 'next/image';
 export default function FieldTitle(props: any) {
     
     return(
-            <div>  
+            <div className={styles.fieldTitle}>  
                 {props.title} 
                 {props.tipText && (
                     <span className={styles.tooltip}>&#x24D8;

@@ -35,7 +35,7 @@ export default function ComparisonCalculator () {
         <>
             
             <button className={styles.card} onClick={()=>{setIsInertiaCalculatorEnabled(!isInertiaCalculatorEnabled)}} >
-            <h3 className={inter.className} >Calculate Rotational Inertia for 1 Wheel/Tire<span>-&gt;</span> </h3>
+            <div className={inter.className}><h3 className={styles.header}>Calculate Rotational Inertia  (Single Setup) <span>-&gt;</span></h3> </div>
             </button>
             {isInertiaCalculatorEnabled && (
               <InertiaCalculator  
@@ -60,8 +60,8 @@ export default function ComparisonCalculator () {
               setIsCamparisonEnabled(!isComparisonEnabled)
               setIsSecondCard(!isSecondCard)
               }} >
-              <h3 className={inter.className}>Calculate Rational Inertia for 2nd Wheel/Tire </h3>
-              <h3 className={inter.className}>to Compare Wheel 0-60 Time <span>-&gt;</span></h3>
+              <div className={inter.className}><h3 className={styles.header}>Calculate Rotational Inertia (Second Setup) </h3> </div>
+              <div className={inter.className}><h3 className={styles.header}>Compares Wheel 0-60 Time <span>-&gt;</span></h3></div>
             </button>
             {isComparisonEnabled &&
               (<div>
