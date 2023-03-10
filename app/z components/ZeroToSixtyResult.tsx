@@ -41,10 +41,10 @@ const percentInc: string = (100*(T2-T1)/T1).toFixed(1);
 const secondsFaster: string = (currentZeroToSixtyTime-(T2/T1)*currentZeroToSixtyTime).toFixed(2)
 const secondsSlower: string = ((currentZeroToSixtyTime-(T2/T1)*currentZeroToSixtyTime)*(-1)).toFixed(2)
 
-let percentDecMessage:string = percentDec + "% time decrease";
-let percentIncMessage:string = percentInc + " time increase";
-let secondsFasterMessage:string = secondsFaster + " seconds faster";
-let secondsSlowerMessage:string = secondsSlower + " seconds slower";
+let percentDecMessage:string = "0-60mph | " + percentDec + "% second 0-60 time decrease";
+let percentIncMessage:string = "0-60mph | "+ percentInc  + "% second 0-60 time increase";
+let secondsFasterMessage:string = "0-60mph | " + secondsFaster + " seconds faster";
+let secondsSlowerMessage:string = "0-60mph | " + secondsSlower + " seconds slower";
 
 percentDecMessage = (percentDec !== "NaN") ? percentDecMessage : "input more to compare 0-60 %" 
 percentIncMessage = (percentInc !== "NaN") ? percentIncMessage : "input more to compare 0-60 %"
