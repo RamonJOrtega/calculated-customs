@@ -23,17 +23,12 @@ export default function Home() {
             <br></br>
             <p className={styles.card}>
               Browse and purchase &#160;
-             
               <span><a href="https://www.tkqlhce.com/click-100641204-10377976">wheels</a></span> 
-             
               &#160; &#160;and &#160;
-             
               <span><a href="https://www.kqzyfj.com/click-100641204-10377851">tires. </a></span>&#160;   
-            
               Enter sizes and weights below.
               Calculate the fastest combinations!
               <br></br> <br></br>
-              
               Large, heavy combinations have lots of Rotational Inertia which significantly slows acceleration and 0-60 times.
               <br></br> <br></br>
               The lower the number, the faster the setup.

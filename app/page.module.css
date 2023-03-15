@@ -412,7 +412,7 @@
   font-size: 1rem;
   min-width: 40px;
   width: 90%;
-  
+
  } 
 
  .header {
@@ -429,6 +429,7 @@
   font-weight: bold;
   display: flex;
   justify-content: flex-start;
+  margin-right: .5rem;
  }
 
  .zeroToSixtyResult {
