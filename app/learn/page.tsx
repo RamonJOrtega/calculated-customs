@@ -10,9 +10,6 @@ export default function LearnPage() {
     return(
      
         <div>
-            <div className={styles.center}>
-                
-                <h1>Calculating Wheel and Tire Rotational Performance</h1>
                 <div className={styles.overlayContainer}>
                     <Image 
                         src={pagePicture}
@@ -20,6 +17,11 @@ export default function LearnPage() {
                         placeholder="blur"
                     />
                 </div > 
+
+            <div className={styles.center}>
+                
+                <h1>Calculating Wheel and Tire Rotational Performance</h1>
+               
                     <div className={inter.className}>
                     <h2>Why Trust Our Calculators? </h2>
                     <p> 

@@ -331,8 +331,8 @@
   justify-content: center;
   overflow: hidden;
   max-height: 400px;
-  max-width: 1000px;
-  border-radius: var(--border-radius);
+  width: var(--max-width);
+  /* border-radius: var(--border-radius); */
   
 }
 

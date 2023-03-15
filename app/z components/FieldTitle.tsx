@@ -13,8 +13,8 @@ export default function FieldTitle(props: any) {
                 {props.title} 
                 {props.tipText && (
                     <span className={styles.tooltip}>&#x24D8;
-                    <span className={styles.tooltiptext}>{props.tipText}</span>
-                </span>
+                        <span className={styles.tooltiptext}>{props.tipText}</span>
+                    </span>
                 )}
             </div>
     )
