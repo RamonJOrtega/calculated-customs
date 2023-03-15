@@ -80,7 +80,11 @@ const InertiaCalculator: React.FC<inertiaCalculatorProps> = (props) => {
                         (<StandarNotationCheckBox setTireDiameter={props.setTireDiameter} isStandardNotation={isStandardNotation} setIsStandardNotation={setIsStandardNotation}  />)
                         }          
                     </td>
-                    <td align="center" colSpan={2 }><div > R </div></td>
+                    <td align="center" colSpan={2 }> {isStandardNotation ?
+                        (<div > R </div>) :
+                        (<div></div>)
+                        }
+                    </td>
                     <td> <FieldInput value={wheelDiameter} placeHolder={"input dia. > tire"} inputId="wheelDia" setValue={setWheelDiameter}/> </td>
                     <td align="center"><div className={styles.postFix}> inch </div></td>
                 </tr>
