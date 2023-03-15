@@ -11,7 +11,8 @@ const inter = Inter({ subsets: ['latin'] })
 export default function SocialLinks() {
     
     return(
-        < > 
+        <div className={styles.card}>
+        <div className={styles.flexCenter} > 
            
                 
                     <Link href="https://youtube.com/channel/UCazq-Zh2hxOYou0geTXhOTA">
@@ -28,7 +29,8 @@ export default function SocialLinks() {
                     </Link>
                 
          
-        </> 
+        </ div> 
+        </div>
     )
 }
 

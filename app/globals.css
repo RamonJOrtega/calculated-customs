@@ -103,7 +103,7 @@ body {
 
 a {
   color: inherit;
-  text-decoration:underline;
+  text-decoration:bold;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -26,8 +26,8 @@ export default function Home() {
               <span><a href="https://www.tkqlhce.com/click-100641204-10377976">wheels</a></span> 
               &#160; &#160;and &#160;
               <span><a href="https://www.kqzyfj.com/click-100641204-10377851">tires. </a></span>&#160;   
-              Enter size and and weight.
-              Calculate the fastest combinations!
+              Enter size and  weight.
+              Calculate the fastest combination!
               <br></br> <br></br>
               Large, heavy combos create large Rotational Inertia numbers.
               <br></br> <br></br>
@@ -45,7 +45,7 @@ export default function Home() {
             <br></br>
             <p>
               Compare 2 wheel and tire combinations at once to quantify the 0-60mph time difference. <br></br> <br></br>
-              You will noticeably FEEL acceleration benefits by lowering rotational inertia. (even by small amounts of 0.1 kg&#x2022;m<sup>2</sup>). 
+              You will noticeably FEEL acceleration benefits by lowering Rotational Inertia (even by small amounts of 0.1 kg&#x2022;m<sup>2</sup>). 
             </p>
 
           </div>
