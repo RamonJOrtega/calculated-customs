@@ -404,20 +404,20 @@
 
 .fieldInput {
   margin: .25rem;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   height: 2rem;
   border: none;
   text-align: center;
   font-weight: bold;
   font-size: 1rem;
   min-width: 40px;
-  width: 100%;
+  width: 90%;
 }
 
 .Result {
   background-image: linear-gradient(to right, #fffbeb, #fef08a);
   margin: .25rem;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   height: 2rem;
   border: none;
   text-align: center;
