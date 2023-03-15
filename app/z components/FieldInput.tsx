@@ -50,8 +50,7 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
     
     return(
         <div > 
-            <span>
-            <input className={styles.num}
+            <input className={styles.fieldInput}
                 type = 'number'
                 max = {max}
                 min = {min}
@@ -63,7 +62,6 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
                 placeholder={props.placeHolder}
                 value = {props.value}
             /> 
-            </span>
             {props.list==="widthList" && (
                 <datalist id="widthList" >
                     <option value="105"></option><option value="115"></option><option value="125"></option><option value="135"></option>
