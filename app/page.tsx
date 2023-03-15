@@ -19,19 +19,19 @@ export default function Home() {
       <div >
         <div className={styles.center}>
           <div className={inter.className}>
-            <h1>KNOW WHAT TO EXPECT FROM YOUR WHEELS AND TIRES</h1>
+            <h2>KNOW WHAT TO EXPECT FROM YOUR WHEELS AND TIRES</h2>
             <br></br>
             <p className={styles.card}>
-              Browse and purchase &#160;
+              Browse &#160;
               <span><a href="https://www.tkqlhce.com/click-100641204-10377976">wheels</a></span> 
               &#160; &#160;and &#160;
               <span><a href="https://www.kqzyfj.com/click-100641204-10377851">tires. </a></span>&#160;   
-              Enter sizes and weights below.
+              Enter size and and weight.
               Calculate the fastest combinations!
               <br></br> <br></br>
-              Large, heavy combinations have lots of Rotational Inertia which significantly slows acceleration and 0-60 times.
+              Large, heavy combos create large Rotational Inertia numbers.
               <br></br> <br></br>
-              The lower the number, the faster the setup.
+              The lower the number, the faster your zero-to-sixty time.
             </p>
            
             <br></br>
@@ -41,21 +41,12 @@ export default function Home() {
               </div>
             </div>
             <p>
-              This is the ONLY online calculator that shows the the affects of 2 combinations of wheel/tire tire setups at the same time.
-            </p>
-            <br></br>
-            <p>
+              Calculated Customs compares 2 combinations of wheel and tire setups at the same time.
               You won't find another online calculator that quantifies the 0-60mph time difference. 
+              You will noticeably FEEL acceleration, braking, and cornering benefits by choosing wheels and tires that lower rotational inertia (even by small amounts of 0.1 square meter kilograms). 
+
             </p>
-            <br></br>
-            <p>
-              Acceleration, braking, and cornering will all benefit from choosing the right combination of weights and sizes.
-            </p>
-            <br></br>
-            <p>
-              You will noticeably FEEL performance benefits from lowering rotational inertia (even by small amounts of 0.1 square meter kilograms). 
-            </p>
-            <br></br>
+
           </div>
 
         </div> 
