@@ -11,21 +11,24 @@ const inter = Inter({ subsets: ['latin'] })
 export default function SocialLinks() {
     
     return(
-        <div > 
+        < > 
            
-                <div className={styles.card}>
+                
                     <Link href="https://youtube.com/channel/UCazq-Zh2hxOYou0geTXhOTA">
+                    <div className={styles.card}>
                         <h3 className={inter.className}> <span> <AiOutlineYoutube /></span> </h3>
+                    </div>
                     </Link>
-                </div>
-                <div className={styles.card}>
+               
+                
                     <Link href="https://www.instagram.com/calculatedcustoms">
+                    <div className={styles.card}>
                         <h3 className={inter.className}> <span> <AiOutlineInstagram /></span> </h3>
+                    </div>
                     </Link>
-                </div>
+                
          
-            
-        </div> 
+        </> 
     )
 }
 

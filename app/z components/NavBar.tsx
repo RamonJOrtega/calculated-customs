@@ -4,6 +4,7 @@ import Link from  'next/link';
 import '../globals.css'
 import Image from 'next/image';
 import SocialLinks from './SocialLinks';
+import { AiOutlineInstagram, AiOutlineYoutube } from 'react-icons/ai';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -39,6 +40,16 @@ export default function NavBar() {
                         <h5 className={inter.className}>Contact <span>-&gt;</span> </h5>
                     </div>
                 </Link>
+                {/* <Link href="https://youtube.com/channel/UCazq-Zh2hxOYou0geTXhOTA">
+                    <div className={styles.card}>
+                        <h3 className={inter.className}> <span> <AiOutlineYoutube /></span> </h3>
+                    </div>
+                </Link>
+                <Link href="https://www.instagram.com/calculatedcustoms">
+                <div className={styles.card}>
+                    <h3 className={inter.className}> <span> <AiOutlineInstagram /></span> </h3>
+                </div>
+                </Link> */}
                 <SocialLinks />
             </nav>
         </>
