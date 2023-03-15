@@ -51,7 +51,7 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
     return(
         <div > 
             <span>
-            <input className={styles.fieldInput}
+            <input className={styles.num}
                 type = 'number'
                 max = {max}
                 min = {min}
@@ -59,9 +59,8 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
                 id={props.inputId} 
                 list={props.list} 
                 onClick={()=>{props.setValue("")}}
-            
-                placeholder={props.placeHolder}
                 onInput={handleInput}
+                placeholder={props.placeHolder}
                 value = {props.value}
             /> 
             </span>

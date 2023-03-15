@@ -68,12 +68,12 @@
   transition: background 200ms, border 200ms;
 }
 .cardCalculator {
-  color: white;
   padding: .7rem;
   border-radius: var(--border-radius);
-  background: #171717;
+  background: rgba(var(--cardCalculator-rgb),0.95);
   border: 1px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
+  color: white;
 }
 
 .card span {
@@ -188,6 +188,13 @@
   }
 
   .card:hover span {
+    transform: translateX(4px);
+  }
+  .cardCalculator:hover {
+    background: rgba(var(--cardCalculator-rgb), 1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
+  .cardCalculator:hover span {
     transform: translateX(4px);
   }
 }
@@ -402,7 +409,7 @@
   /* margin-left: 3px; */
 }
 
-.fieldInput {
+.num {
   margin: .25rem;
   border-radius: var(--border-radius);
   height: 2rem;
@@ -411,10 +418,10 @@
   font-weight: bold;
   font-size: 1rem;
   min-width: 40px;
-  width: 90%;
+  width: 100%;
 }
 
-.Result {
+.result {
   background-image: linear-gradient(to right, #fffbeb, #fef08a);
   margin: .25rem;
   border-radius: var(--border-radius);
@@ -424,7 +431,7 @@
   font-weight: bold;
   font-size: 1rem;
   min-width: 40px;
-  width: 90%;
+  width: 95%;
 
  } 
 
