@@ -67,6 +67,14 @@
   border: 1px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
 }
+.cardCalculator {
+  color: white;
+  padding: .7rem;
+  border-radius: var(--border-radius);
+  background: #171717;
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+  transition: background 200ms, border 200ms;
+}
 
 .card span {
   display: inline-block;

@@ -35,7 +35,7 @@ export default function Home() {
             </p>
            
             <br></br>
-            <div className={styles.card}>
+            <div className={styles.cardCalculator}>
               <div >
                   <ComparisonCalculator  />
               </div>
@@ -44,7 +44,6 @@ export default function Home() {
               Calculated Customs compares 2 combinations of wheel and tire setups at the same time.
               You won't find another online calculator that quantifies the 0-60mph time difference. 
               You will noticeably FEEL acceleration, braking, and cornering benefits by choosing wheels and tires that lower rotational inertia (even by small amounts of 0.1 square meter kilograms). 
-
             </p>
 
           </div>
