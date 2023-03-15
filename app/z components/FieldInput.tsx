@@ -4,6 +4,7 @@ import Link from  'next/link';
 import '../globals.css'
 import Image from 'next/image';
 import { Props } from 'next/script';
+import { useRef } from 'react';
 
 
 interface FieldInputProps {
@@ -18,25 +19,29 @@ interface FieldInputProps {
 
 const FieldInput: React.FC<FieldInputProps> = (props) => {
 
-    const handleInput =(event: React.FormEvent<HTMLInputElement>) :void => {
-        const input = event.currentTarget;
-            if (props.list === "aspectList") {
-                console.log("aspect list is here")
-                console.log(input.value.length)
-                const lastNum = parseInt(input.value) % 10;
-                console.log("last Num : " + lastNum)
-                if (input.value.length === 1) {(lastNum > 0) || (props.setValue(input.value))}
-                if (input.value.length === 2) {(lastNum === 0) || (lastNum === 5) || (props.setValue(''))}
-            } else if (props.list === 'widthList') {
-                const lastNum = parseFloat(input.value)% 10
-                if (input.value.length == 1) {(lastNum>0 && lastNum<10)|| props.setValue(input.value='')}
-              //2nd tire number can anything
-                if (input.value.length == 3) {(lastNum == 0 || lastNum ==5)||props.setValue(input.value='')}
-            } else {
+    const inputRef = useRef<HTMLInputElement>(null);
+    //event: React.FormEvent<HTMLInputElement>
+    const handleInput =() :void => {
+
+        //const input = event.currentTarget;
+
+            // if (props.list === "aspectList") {
+            //     console.log("aspect list is here")
+            //     console.log(input.value.length)
+            //     const lastNum = parseInt(input.value) % 10;
+            //     console.log("last Num : " + lastNum)
+            //     if (input.value.length === 1) {(lastNum > 0) || (props.setValue(input.value))}
+            //     if (input.value.length === 2) {(lastNum === 0) || (lastNum === 5) || (props.setValue(''))}
+            // } else if (props.list === 'widthList') {
+            //     const lastNum = parseFloat(input.value)% 10
+            //     if (input.value.length == 1) {(lastNum>0 && lastNum<10)|| props.setValue(input.value='')}
+            //   //2nd tire number can anything
+            //     if (input.value.length == 3) {(lastNum == 0 || lastNum ==5)||props.setValue(input.value='')}
+            // } else {
 
             console.log(props.list)
-                if (parseFloat(input.value) < 0 ) {props.setValue('')} else {props.setValue(input.value)}
-        }
+            if (inputRef.current) 
+            {  inputRef.current.validity.valid ? props.setValue(inputRef.current.value) : props.setValue('')}
             
             
     }
@@ -47,10 +52,11 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
         <div > 
             <span>
             <input className={styles.num}
+                type = 'number'
                 max = {max}
                 min = {min}
+                ref = {inputRef}
                 id={props.inputId} 
-                type="number" 
                 list={props.list} 
                 onClick={()=>{props.setValue("")}}
             
