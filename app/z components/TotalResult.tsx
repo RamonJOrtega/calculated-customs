@@ -21,7 +21,7 @@ interface TotalResultProps {
             <div id="totalResult"> 
                 <input 
                     placeholder="0.0" 
-                    className={styles.Result} 
+                    className={styles.result} 
                     type="number" 
                     disabled 
                     value={totalInertia}/> 
