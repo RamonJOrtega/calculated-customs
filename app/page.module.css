@@ -59,6 +59,7 @@
 }
 
 .card {
+  text-align: center;
   padding: .7rem;
   border-radius: var(--border-radius);
   background: rgba(var(--card-rgb), 0);
@@ -380,7 +381,7 @@
 
 .flexCenter {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .Tire{
