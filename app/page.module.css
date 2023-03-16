@@ -60,6 +60,7 @@
 {
   text-align: left;
   max-width: 1000px;
+  margin-left: 1rem;
 }
 
 .card {
@@ -374,7 +375,6 @@
 }
 
 .fillFitPosition{
-  object-position: 50% 50%;
   object-fit: "cover";
 }
 

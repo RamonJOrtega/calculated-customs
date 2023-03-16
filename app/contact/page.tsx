@@ -11,16 +11,19 @@ const inter = Inter({ subsets: ['latin'] })
 export default function ContactPage() {
     return(
         <div>
-            <div className={styles.overlayContainer}>
+            <div className={styles.pageImage}>
                     <Image
                         src={pagePicture}
                         alt="Widebody Lamborghini"
                         placeholder="blur"
-                        height={800}
+                         fill={true}
+                        objectFit="cover"
+                        sizes="(max-width: 1000px) 100vw, (max-width: 900px) 50vw, 33vw"
+                      
                     />
                  </div>
             <div className={styles.center}>
-                <div className={styles.pushLeft}>
+                <div className={styles.pageTe}>
                     <div className={inter.className}>
                     
                         <Link href="https://www.instagram.com/calculatedcustoms">

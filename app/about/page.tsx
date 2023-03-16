@@ -25,9 +25,9 @@ export default function LearnPage() {
                     <div className={inter.className}>
                         <br></br>
                         <h1 >ABOUT US</h1>
-                        <br></br>
+                        
                        
-                        <p > 
+                        <p className={styles.card} > 
                                      Find your &#160;<span><a href="https://www.tkqlhce.com/click-100641204-10377976">wheels.</a> &#160; </span>
                                     Find your &#160;<span><a href="https://www.kqzyfj.com/click-100641204-10377851">tires</a>. &#160; </span>
                                     <span><a href="/"> Compare.</a></span>
