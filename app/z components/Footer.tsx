@@ -11,35 +11,15 @@ export default function NavBar() {
         < >
 
             <nav className={styles.footer}>
-                <Link href="/">
-                    <div className={styles.card}>
-                        <h6 className={inter.className}>Home </h6>
-                    </div>
-                </Link>
                 
-                <Link href="/learn">
-                    <div className={styles.card}>
-                        <h6 className={inter.className}>Learn  </h6>
-                    </div>
-                </Link>
-                <Link href="/about">
-                    <div className={styles.card}>
-                        <h6 className={inter.className}>About  </h6>
-                    </div>
-                </Link>
-                <Link href="/contact">
-                    <div className={styles.card}>
-                        <h6 className={inter.className}>Contact  </h6>
-                    </div>
-                </Link>
                 <Link href="/terms-and-conditions">
                     <div className={styles.card}>
-                        <h6 className={inter.className}>Terms and Conditions  </h6>
+                        <h5 className={inter.className}>Terms and Conditions  </h5>
                     </div>
                 </Link>
                 <Link href="/privacy-policy">
                     <div className={styles.card}>
-                        <h6 className={inter.className}>Privacy Policy  </h6>
+                        <h5 className={inter.className}>Privacy Policy  </h5>
                     </div>
                 </Link>
             </nav>

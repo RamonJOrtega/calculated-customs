@@ -52,10 +52,8 @@
 }
 
 .footer {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(16.67%, auto)); 
-  width: var(--max-width);
-  max-width: 100%;
+  display: flex;
+  flex-direction: space-between;
 }
 
 .card {
