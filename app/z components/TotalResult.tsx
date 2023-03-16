@@ -18,7 +18,7 @@ interface TotalResultProps {
     props.setTotalInertiaResult(totalInertia)
     return(
         <>
-            <div id="totalResult"> 
+            <div > 
                 <input 
                     placeholder="0.0" 
                     className={styles.result} 

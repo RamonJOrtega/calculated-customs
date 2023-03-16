@@ -108,7 +108,7 @@ const InertiaCalculator: React.FC<inertiaCalculatorProps> = (props) => {
 
                 <tr>
                     <td colSpan={2}> <FieldTitle title="&nbsp; Tire Inertia" />  </td>
-                    <td colSpan={3}> <FieldTitle title="Total Rotational Inertia" tipText="Also called moment of inertia or rotating mass. Keep it low to go faster!"/> </td>
+                    <td colSpan={3}> <FieldTitle title="Total Inertia" tipText="Also called moment of inertia or rotating mass. Keep it low to go faster!"/> </td>
                     <td colSpan={2}> <FieldTitle title="Wheel Inertia" /> </td>
                 </tr>
 

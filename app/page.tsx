@@ -43,7 +43,7 @@ export default function Home() {
             </div>
 
             <br></br>
-            <p>
+            <p className={styles.card}>
               Compare 2 wheel and tire combinations at once to quantify the zero-to-sixty time difference. <br></br> <br></br>
               You will noticeably FEEL acceleration benefits by lowering Rotational Inertia (even by 0.1 kg&#x2022;m<sup>2</sup>). 
             </p>

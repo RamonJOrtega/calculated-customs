@@ -483,23 +483,11 @@
   font-weight: bold;
   font-size: 1rem;
   min-width: 40px;
-
-
   color: #15803d;
 
 }
 
-.CalcBody {
-  /* background-image: url("./background.jpg"); */
-  background-color: transparent;
-
-  margin-top: 50px;
-  color: white;
-  font-weight: bold;
-  font-family: Roboto, sans-serif;
-}
-
 .postFix{
-  color: darkgrey;
+  color: rgb(129, 128, 128);
   font-size: .8em;
 }

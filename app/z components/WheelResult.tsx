@@ -20,7 +20,7 @@ interface WheelResultProps {
   
     return(
         <>
-            <div id="wheelResult"> 
+            <div> 
                 <input 
                     placeholder="0.0" 
                     className={styles.result}

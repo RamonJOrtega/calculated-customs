@@ -6,7 +6,8 @@
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 255, 251, 235; 
+  /* 214, 219, 220;  NEXT defualt*/
   --background-end-rgb: 255, 255, 255;
 
   --primary-glow: conic-gradient(
@@ -50,7 +51,7 @@
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-end-rgb: 23, 23, 23;
 
     --primary-glow: radial-gradient(#fde047, rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(
