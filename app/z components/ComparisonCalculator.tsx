@@ -34,9 +34,16 @@ export default function ComparisonCalculator () {
     return (
         <>
             
-            <button className={styles.card} onClick={()=>{setIsInertiaCalculatorEnabled(!isInertiaCalculatorEnabled)}} >
-            <div className={inter.className}><h3 className={styles.header}>Calculate Rotational Inertia  (Single Setup) <span>-&gt;</span></h3> </div>
-            </button>
+            <span>
+              <button className={styles.card} onClick={()=>{setIsInertiaCalculatorEnabled(!isInertiaCalculatorEnabled)}} >
+              <div className={inter.className}>
+                <h3 className={styles.header}>
+                    Calculate Rotational Inertia  (Single Setup) -&gt;
+                  </h3> 
+                </div>
+             </button>
+             </span>
+            
             {isInertiaCalculatorEnabled && (
               <InertiaCalculator  
               isSecondCard={isSecondCard}
@@ -55,14 +62,13 @@ export default function ComparisonCalculator () {
               totalInertiaResult = {totalInertiaResult1} setTotalInertiaResult = {setTotalInertiaResult1}
               />
             )}
-              
-            <button className={styles.card} onClick={()=>{
-              setIsCamparisonEnabled(!isComparisonEnabled)
-              setIsSecondCard(!isSecondCard)
-              }} >
+            <span>
+            <button className={styles.card} onClick={()=>{setIsCamparisonEnabled(!isComparisonEnabled); setIsSecondCard(!isSecondCard)}} >
               <div className={inter.className}><h3 className={styles.header}>Calculate Rotational Inertia (Second Setup) </h3> </div>
-              <div className={inter.className}><h3 className={styles.header}>Compares Wheel 0-60 Time <span>-&gt;</span></h3></div>
+              <div className={inter.className}><h3 className={styles.header}>Compares Wheel 0-60 Time -&gt; &#160; </h3></div>
             </button>
+
+            </span>
             {isComparisonEnabled &&
               (<div>
                 <InertiaCalculator
