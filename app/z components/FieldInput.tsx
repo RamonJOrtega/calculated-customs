@@ -18,42 +18,42 @@ interface FieldInputProps {
 }
 
 const FieldInput: React.FC<FieldInputProps> = (props) => {
+    const MIN = 0
+    let MAX = 500
 
     const inputRef = useRef<HTMLInputElement>(null);
-    //event: React.FormEvent<HTMLInputElement>
+
     const handleInput =() :void => {
+        if (!inputRef.current) {return}
+        inputRef.current.validity.valid ? props.setValue(inputRef.current.value) : props.setValue('')
 
-        //const input = event.currentTarget;
 
-            // if (props.list === "aspectList") {
-            //     console.log("aspect list is here")
-            //     console.log(input.value.length)
-            //     const lastNum = parseInt(input.value) % 10;
-            //     console.log("last Num : " + lastNum)
-            //     if (input.value.length === 1) {(lastNum > 0) || (props.setValue(input.value))}
-            //     if (input.value.length === 2) {(lastNum === 0) || (lastNum === 5) || (props.setValue(''))}
-            // } else if (props.list === 'widthList') {
-            //     const lastNum = parseFloat(input.value)% 10
-            //     if (input.value.length == 1) {(lastNum>0 && lastNum<10)|| props.setValue(input.value='')}
-            //   //2nd tire number can anything
-            //     if (input.value.length == 3) {(lastNum == 0 || lastNum ==5)||props.setValue(input.value='')}
-            // } else {
+            if (props.list === "aspectList") {
+                console.log("aspect list is here")
+                console.log(inputRef.current.value.length)
+                const lastNum = parseInt(inputRef.current.value) % 10;
+                console.log("last Num : " + lastNum)
+                if (inputRef.current.value.length === 1) {(lastNum > 0) || (props.setValue(inputRef.current.value))}
+                if (inputRef.current.value.length === 2) {(lastNum === 0) || (lastNum === 5) || (props.setValue(''))}
+            }
+            if (props.list === 'widthList') {
+                const lastNum = parseFloat(inputRef.current.value)% 10
+                if (inputRef.current.value.length == 1) {(lastNum>0 && lastNum<10)|| props.setValue(inputRef.current.value='')}
+              //2nd tire number can anything
+                if (inputRef.current.value.length == 3) {(lastNum == 0 || lastNum ==5)||props.setValue(inputRef.current.value='')}
+            } 
+                        
+        }
+    
 
-            console.log(props.list)
-            if (inputRef.current) 
-            {  inputRef.current.validity.valid ? props.setValue(inputRef.current.value) : props.setValue('')}
-            
-            
-    }
-    const min = 0
-    const max = 100
+    
     
     return(
         <div > 
             <input className={styles.fieldInput}
                 type = 'number'
-                max = {max}
-                min = {min}
+                max = {MAX}
+                min = {MIN}
                 ref = {inputRef}
                 id={props.inputId} 
                 list={props.list} 
