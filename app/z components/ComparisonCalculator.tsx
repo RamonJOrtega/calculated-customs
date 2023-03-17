@@ -34,7 +34,7 @@ export default function ComparisonCalculator () {
     return (
         <>
             
-            <span>
+            <span className={styles.secondaryDark}>
               <button className={styles.card} onClick={()=>{setIsInertiaCalculatorEnabled(!isInertiaCalculatorEnabled)}} >
               <div className={inter.className}>
                 <h3 className={styles.header}>
@@ -62,12 +62,11 @@ export default function ComparisonCalculator () {
               totalInertiaResult = {totalInertiaResult1} setTotalInertiaResult = {setTotalInertiaResult1}
               />
             )}
-            <span>
-            <button className={styles.card} onClick={()=>{setIsCamparisonEnabled(!isComparisonEnabled); setIsSecondCard(!isSecondCard)}} >
-              <div className={inter.className}><h3 className={styles.header}>Calculate Rotational Inertia (Second Setup) </h3> </div>
-              <div className={inter.className}><h3 className={styles.header}>Compares Wheel 0-60 Time -&gt; &#160; </h3></div>
-            </button>
-
+            <span className={styles.secondaryDark}>
+              <button className={styles.card} onClick={()=>{setIsCamparisonEnabled(!isComparisonEnabled); setIsSecondCard(!isSecondCard)}} >
+                <div className={inter.className}><h3 className={styles.header}>Calculate Rotational Inertia (Second Setup) </h3> </div>
+                <div className={inter.className}><h3 className={styles.header}>Compares Wheel 0-60 Time -&gt; &#160; </h3></div>
+              </button>
             </span>
             {isComparisonEnabled &&
               (<div>

@@ -23,7 +23,7 @@ interface TireResultProps {
 
     function calcTireDiaFromStandardNotation():void{
         const sideWallHeight_in = parseFloat(props.aspectRatio)/100 * parseFloat(props.tireWidth)/25.4;
-        props.setTireDiameter((props.wheelDiameter) + 2*sideWallHeight_in)
+        props.setTireDiameter(parseFloat(props.wheelDiameter) + 2*sideWallHeight_in)
       }
     function calcTireDiaFromTireWheelDiaNotation():void{
         const tireRad_m = parseFloat(props.tireDiameter) * 0.0254/2;                           // console.log('tire radius in meters: ' + tireRad_m)

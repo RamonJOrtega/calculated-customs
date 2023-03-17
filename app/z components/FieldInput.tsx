@@ -19,7 +19,7 @@ interface FieldInputProps {
 
 const FieldInput: React.FC<FieldInputProps> = (props) => {
     const MIN = 0
-    let MAX = 500
+    const MAX = 500
 
     const inputRef = useRef<HTMLInputElement>(null);
 

@@ -380,7 +380,6 @@
 
 .aboutImage
 {
-  
   height: 100px;
   width: 100px;
   border-radius: var(--border-radius);
@@ -440,7 +439,7 @@
   font-weight: bold;
   font-size: 1rem;
   min-width: 40px;
-  width: 95%;
+  width: 90%;
 }
 
 .result {
@@ -453,7 +452,7 @@
   font-weight: bold;
   font-size: 1rem;
   min-width: 40px;
-  width: 95%;
+  width: 90%;
 
  } 
 
@@ -472,7 +471,7 @@
 
  .fieldTitle {
   text-align: left;
-  font-weight: bold;
+  
   display: flex;
   justify-content: flex-start;
   margin-right: .5rem;
@@ -516,3 +515,9 @@
   color: rgb(129, 128, 128);
   font-size: .8em;
 }
+
+.secondaryDark{
+  background-color: rgb(50, 50, 50);
+  border-radius: var(--border-radius);
+
+} 

@@ -9,10 +9,12 @@ interface TotalResultProps {
     setTotalInertiaResult: any;
 }
  const TotalResult: React.FC<TotalResultProps> = (props) => {
-    let tireInertia = "";
-    let wheelInertia = "";
-    tireInertia = (props.tireInertiaResult)
-    wheelInertia = (props.wheelInertiaResult)
+    let tireInertia = "0";
+    let wheelInertia = "0";
+    if(props.tireInertiaResult !== "NaN") {tireInertia = (props.tireInertiaResult)}
+    if(props.tireInertiaResult !== "NaN") {wheelInertia = (props.wheelInertiaResult)}
+    console.log("tire inertia "+ tireInertia)  
+    console.log("wheel inertia "+ wheelInertia)  
 
     const totalInertia = (parseFloat(tireInertia) + parseFloat(wheelInertia)).toFixed(1)
     props.setTotalInertiaResult(totalInertia)
