@@ -20,10 +20,13 @@ export default function ComparisonCalculator () {
     const [tireDiameter2, setTireDiameter2] = React.useState("20")
     const [tireWeight1, setTireWeight1] =  React.useState("")
     const [tireWeight2, setTireWeight2] = React.useState("20")
+
+    const [wheelWeight1, setWheelWeight1] = React.useState("")
+    const [wheelWeight2, setWheelWeight2] = React.useState("15") 
+    
     const [totalInertiaResult1, setTotalInertiaResult1] = React.useState("")
     const [totalInertiaResult2, setTotalInertiaResult2] =  React.useState("")
-    const [wheelWeight1, setWheelWeight1] = React.useState("")
-    const [wheelWeight2, setWheelWeight2] = React.useState("15")  
+    
 
     const [vehicleWeightIsKnown, setVehicleWeightIsKnown] = React.useState(false)
     const [currentZeroSixtyTimeIsKnown, setCurrentZeroSixtyTimeIsKnown] = React.useState(true)
