@@ -16,6 +16,10 @@ interface TireResultProps {
     
 }
  const TireResult: React.FC<TireResultProps> = (props) => {
+    const METER_PER_INCH = 0.0254
+    const KILOGRAM_PER_POUND = 0.453592
+    const SIDEWALL_MASS_PERCENTAGE = 0.25
+    const TREAD_MASS_PERCENTAGE = 0.75
     
     let tireResult: string = "";
     if (props.isStandardNotation ) {calcTireDiaFromStandardNotation()}
@@ -26,11 +30,11 @@ interface TireResultProps {
         props.setTireDiameter(parseFloat(props.wheelDiameter) + 2*sideWallHeight_in)
       }
     function calcTireDiaFromTireWheelDiaNotation():void{
-        const tireRad_m = parseFloat(props.tireDiameter) * 0.0254/2;                           // console.log('tire radius in meters: ' + tireRad_m)
-        const tireMass_kg = parseFloat(props.tireWeight) * 0.453592;                          // console.log('tire mass in kilograms: ' + tireMass_kg)
-        const treadInertia = 0.75 * tireMass_kg * tireRad_m * tireRad_m                     // console.log('treadInertia in kg*m^2: ' + treadInertia)
-        const wheelRad_m = parseFloat(props.wheelDiameter) * 0.0254 / 2
-        const sidewallInertia = 0.25 * (1/2) * tireMass_kg * (tireRad_m * tireRad_m + wheelRad_m * wheelRad_m)// console.log('sidewallInertia in kg*m^2: ' + sidewallInertia)
+        const tireRad_m = parseFloat(props.tireDiameter) * METER_PER_INCH/2                          // console.log('tire radius in meters: ' + tireRad_m)
+        const tireMass_kg = parseFloat(props.tireWeight) * KILOGRAM_PER_POUND                         // console.log('tire mass in kilograms: ' + tireMass_kg)
+        const treadInertia = TREAD_MASS_PERCENTAGE* tireMass_kg * tireRad_m * tireRad_m                     // console.log('treadInertia in kg*m^2: ' + treadInertia)
+        const wheelRad_m = parseFloat(props.wheelDiameter) * METER_PER_INCH / 2
+        const sidewallInertia = SIDEWALL_MASS_PERCENTAGE * (1/2) * tireMass_kg * (tireRad_m * tireRad_m + wheelRad_m * wheelRad_m)// console.log('sidewallInertia in kg*m^2: ' + sidewallInertia)
         tireResult = (treadInertia + sidewallInertia).toFixed(1)
         props.setTireInertiaResult(tireResult)
     }
