@@ -23,8 +23,8 @@ export default function Home() {
             <br></br>
             <p className={styles.card}>
               
-              <span  className={styles.card}><a href="https://www.tkqlhce.com/click-100641204-10377976">Browse Wheels.</a></span> 
-              <span className={styles.card}><a href="https://www.kqzyfj.com/click-100641204-10377851">Browse Tires. </a></span>&#160;   
+              <span  className={styles.card}><a href="https://www.tkqlhce.com/click-100641204-10377976"><strong>Browse Wheels.</strong></a></span> 
+              <span className={styles.card}><a href="https://www.kqzyfj.com/click-100641204-10377851"><strong>Browse Tires.</strong> </a></span>&#160;   
               <br></br>
               Enter size and  weight.
               Calculate the fastest combination!
