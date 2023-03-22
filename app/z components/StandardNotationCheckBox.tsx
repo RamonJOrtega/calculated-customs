@@ -9,7 +9,7 @@ interface StandardNotationCheckBoxProps {
     setIsStandardNotation: any;
     setTireDiameter: any;
     setTireWidth: any;
-    setAspectRatio: any;
+    setAspectRatio?: any;
 }
 
  const StandarNotationCheckBox: React.FC<StandardNotationCheckBoxProps> = (props) => {

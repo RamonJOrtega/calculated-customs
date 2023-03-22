@@ -29,18 +29,15 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
 
 
             if (props.list === "aspectList") {
-                console.log("aspect list is here")
-                console.log(inputRef.current.value.length)
                 const lastNum = parseInt(inputRef.current.value) % 10;
-                console.log("last Num : " + lastNum)
                 if (inputRef.current.value.length === 1) {(lastNum > 0) || (props.setValue(inputRef.current.value))}
                 if (inputRef.current.value.length === 2) {(lastNum === 0) || (lastNum === 5) || (props.setValue(''))}
             }
             if (props.list === 'widthList') {
                 const lastNum = parseFloat(inputRef.current.value)% 10
                 if (inputRef.current.value.length == 1) {(lastNum>0 && lastNum<10)|| props.setValue(inputRef.current.value='')}
-              //2nd tire number can anything
                 if (inputRef.current.value.length == 3) {(lastNum == 0 || lastNum ==5)||props.setValue(inputRef.current.value='')}
+                //2nd tire number can anything
             } 
                         
         }

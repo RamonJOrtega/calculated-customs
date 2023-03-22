@@ -340,15 +340,16 @@
   border-radius: var(--border-radius);
   /* Position the tooltip text - see examples below! */
   position: absolute;
-  z-index: 1;
+  z-index: 999;
   top: 1.2rem;
   right: -5rem;
-  animation: fadeIn 1s;
+  animation: fadeIn 1s; 
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   display: block;
+  position: absolute;
 }
 
 @keyframes fadeIn {
@@ -440,6 +441,7 @@
   font-size: 1rem;
   min-width: 40px;
   width: 90%;
+  z-index: 1;
 }
 
 .result {
@@ -453,6 +455,7 @@
   font-size: 1rem;
   min-width: 40px;
   width: 90%;
+  z-index: 1;
 
  } 
 
@@ -475,12 +478,14 @@
   display: flex;
   justify-content: flex-start;
   margin-right: .5rem;
+  z-index: 1;
  }
 
  .zeroToSixtyResult {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 1;
   
 }
 .slowerResult {
@@ -496,6 +501,7 @@
 
 
   color:#c2410c;
+  z-index: 1;
 }
 .fasterResult {
   background-image: linear-gradient(to right, #fffbeb, #fef08a);
@@ -508,12 +514,14 @@
   font-size: 1rem;
   min-width: 40px;
   color: #15803d;
+  z-index: 1;
 
 }
 
 .postFix{
   color: rgb(129, 128, 128);
   font-size: .8em;
+  z-index: 1;
 }
 
 .secondaryDark{
