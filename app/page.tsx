@@ -22,10 +22,10 @@ export default function Home() {
             <h1>KNOW WHAT TO EXPECT FROM YOUR WHEELS AND TIRES</h1>
             <br></br>
             <p className={styles.card}>
-              Browse &#160;
-              <span><a href="https://www.tkqlhce.com/click-100641204-10377976">wheels</a></span> 
-              &#160; &#160;and &#160;
-              <span><a href="https://www.kqzyfj.com/click-100641204-10377851">tires. </a></span>&#160;   
+              
+              <span  className={styles.card}><a href="https://www.tkqlhce.com/click-100641204-10377976">Browse Wheels.</a></span> 
+              <span className={styles.card}><a href="https://www.kqzyfj.com/click-100641204-10377851">Browse Tires. </a></span>&#160;   
+              <br></br>
               Enter size and  weight.
               Calculate the fastest combination!
               <br></br> <br></br>
