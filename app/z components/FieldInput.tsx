@@ -49,19 +49,22 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
     
     
     return(
+        
         <div > 
-            <input className={styles.fieldInput}
-                type = 'number'
-                max = {MAX}
-                min = {MIN}
-                ref = {inputRef}
-                id={props.inputId} 
-                list={props.list} 
-                onClick={()=>{props.setValue("")}}
-                onInput={handleInput}
-                placeholder={props.placeHolder}
-                value = {props.value}
-            /> 
+            {props.value && (
+                <input className={styles.fieldInput}
+                    type = 'number'
+                    max = {MAX}
+                    min = {MIN}
+                    ref = {inputRef}
+                    id={props.inputId} 
+                    list={props.list} 
+                    onClick={()=>{props.setValue("")}}
+                    onInput={handleInput}
+                    placeholder={props.placeHolder}
+                    value = {props.value}
+                /> 
+            )}
             {props.list==="widthList" && (
                 <datalist id="widthList" >
                     <option value="105"></option><option value="115"></option><option value="125"></option><option value="135"></option>

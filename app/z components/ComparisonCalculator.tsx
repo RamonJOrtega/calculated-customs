@@ -104,10 +104,6 @@ export default function ComparisonCalculator () {
                 wheelWeight2={wheelWeight2}            
                 /> 
               </div>)}
-            
-            
-            
-            
         </>
     )
      
