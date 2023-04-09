@@ -18,20 +18,26 @@ const inter = Inter({ subsets: ['latin'] })
 
 const MainCalculator: React.FC= (props) => {
     
-const [calcVariables, setCalcVariables] = React.useState(
+const [calcVars, setCalcVars] = React.useState(
     {
         "tireDia1" : "", "tireWt1" : "", "tireAsp1" : "", "tireWd1" : "", "tireInertia1" : "",
         "tireDia2" : "", "tireWt2" : "", "tireAsp2" : "", "tireWd2" : "", "tireInertia2" : "",
 
         "wheelDia1" : "", "wheelWt1" : "", "wheelInertia1" : "",
         "wheelDia2" : "", "wheelWt2" : "", "wheelInertia2" : "",
-        
+//vehicle wiehgt and 0-60
+
         "totalInertia1" : "", "totalInertia2" : ""
     }
 );
+const [visible, setVisible] = React.useState(
+    {
+        "isStandardNotation1" : false, "isStandardNotation2" : false, 
+        "isComparisonEnabled" : false, 
+    }
+);
 
-const [tireDiameter, setWheelDiameter] = React.useState("")
-const [is2ndSetupEnabled, setIs2ndSetupEnabled] = React.useState(false)
+
 
     const calculatorLayout: {
                                 title1: string, title2:string, title3:string, 
@@ -53,9 +59,9 @@ const [is2ndSetupEnabled, setIs2ndSetupEnabled] = React.useState(false)
                                             title1: "Tire Diameter", 
                                             title2: "Standard Notation", 
                                             title3: "Wheel Diameter",
-                                            value1: tireDiameter,
+                                            value1: calcVars.tireDia1,
                                             value2: "check",
-                                            value3: wheelDiameter,
+                                            value3: calcVars.wheelDia1,
                                             unit1:  "inch",
                                             unit2:   "",  
                                             unit3:  "inch"
