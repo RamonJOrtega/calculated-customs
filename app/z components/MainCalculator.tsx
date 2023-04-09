@@ -21,11 +21,12 @@ const MainCalculator: React.FC= (props) => {
 const [calcVariables, setCalcVariables] = React.useState(
     {
         "tireDia1" : "", "tireWt1" : "", "tireAsp1" : "", "tireWd1" : "", "tireInertia1" : "",
-        "wheelDia1" : "", "wheelWt1" : "", "wheelInertia1" : "",
-        "totalInertia1" : "",
         "tireDia2" : "", "tireWt2" : "", "tireAsp2" : "", "tireWd2" : "", "tireInertia2" : "",
+
+        "wheelDia1" : "", "wheelWt1" : "", "wheelInertia1" : "",
         "wheelDia2" : "", "wheelWt2" : "", "wheelInertia2" : "",
-        "totalInertia2" : ""
+        
+        "totalInertia1" : "", "totalInertia2" : ""
     }
 );
 
