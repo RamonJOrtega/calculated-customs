@@ -18,8 +18,19 @@ const inter = Inter({ subsets: ['latin'] })
 
 const MainCalculator: React.FC= (props) => {
     
+const [calcVariables, setCalcVariables] = React.useState(
+    {
+        "tireDia1" : "", "tireWt1" : "", "tireAsp1" : "", "tireWd1" : "", "tireInertia1" : "",
+        "wheelDia1" : "", "wheelWt1" : "", "wheelInertia1" : "",
+        "totalInertia1" : "",
+        "tireDia2" : "", "tireWt2" : "", "tireAsp2" : "", "tireWd2" : "", "tireInertia2" : "",
+        "wheelDia2" : "", "wheelWt2" : "", "wheelInertia2" : "",
+        "totalInertia2" : ""
+    }
+);
 
-const [tireDiameter, setTireDiameter] = React.useState("")
+const [tireDiameter, setWheelDiameter] = React.useState("")
+const [is2ndSetupEnabled, setIs2ndSetupEnabled] = React.useState(false)
 
     const calculatorLayout: {
                                 title1: string, title2:string, title3:string, 
@@ -29,21 +40,21 @@ const [tireDiameter, setTireDiameter] = React.useState("")
                                         {
                                             title1: "Setup Combo 1", 
                                             title2: "Calculate Rotational Inertia", 
-                                            title3: "Wheel Diameter",
+                                            title3: "",
                                             value1: "",
                                             value2: "",
                                             value3: "",
                                             unit1:  "",
-                                            unit2:   "",  
+                                            unit2:  "",  
                                             unit3:  ""
                                         },
                                         {
                                             title1: "Tire Diameter", 
                                             title2: "Standard Notation", 
                                             title3: "Wheel Diameter",
-                                            value1: "tireDiameter",
+                                            value1: tireDiameter,
                                             value2: "check",
-                                            value3: "wheelDiameter",
+                                            value3: wheelDiameter,
                                             unit1:  "inch",
                                             unit2:   "",  
                                             unit3:  "inch"
@@ -84,9 +95,9 @@ const [tireDiameter, setTireDiameter] = React.useState("")
                                         {
                                             title1: "Setup Combo 2", 
                                             title2: "Calculate Rotational Inertia and Compare 0-60", 
-                                            title3: "Wheel Diameter",
+                                            title3: "",
                                             value1: "",
-                                            value2: "",
+                                            value2: "false",
                                             value3: "",
                                             unit1:  "",
                                             unit2:   "",  
@@ -145,17 +156,17 @@ const [tireDiameter, setTireDiameter] = React.useState("")
         <table>
             {calculatorLayout.map((row)=>(
                 <tbody key={row.title1.split(" ").slice(-1)[0]}> 
-                <tr>
-                    <td colSpan={2}><FieldTitle title={row.title1}/> </td>
-                    <td colSpan={2}><FieldTitle title={row.title2}/> </td>
-                    <td colSpan={2}><FieldTitle title={row.title3}/> </td>                  
-                </tr>
                     <tr>
-                        <td><FieldInput value={row.value1} setValue={setTireDiameter}/> </td>
+                        <td colSpan={2}><FieldTitle title={row.title1}/> </td>
+                        <td colSpan={2}><FieldTitle title={row.title2}/> </td>
+                        <td colSpan={2}><FieldTitle title={row.title3}/> </td>                  
+                    </tr>
+                    <tr>
+                        <td><FieldInput value={row.value1} setValue={setWheelDiameter}/> </td>
                         <td>{row.unit1}</td>
-                        <td><FieldInput value={row.value2} setValue={setTireDiameter}/> </td>
+                        <td><FieldInput value={row.value2} setValue={setWheelDiameter}/> </td>
                         <td>{row.unit2}</td>
-                        <td><FieldInput value={row.value3} setValue={setTireDiameter}/> </td>
+                        <td><FieldInput value={row.value3} setValue={setWheelDiameter}/> </td>
                         <td>{row.unit3}</td>                  
                     </tr>
                 </tbody>
