@@ -25,7 +25,8 @@ const [calcVars, setCalcVars] = React.useState(
 
         "wheelDia1" : "", "wheelWt1" : "", "wheelInertia1" : "",
         "wheelDia2" : "", "wheelWt2" : "", "wheelInertia2" : "",
-//vehicle wiehgt and 0-60
+
+        "vehicleWt" : "4000", "currentZeroSixtyTime" : "6.0",
 
         "totalInertia1" : "", "totalInertia2" : ""
     }
