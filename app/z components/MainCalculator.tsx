@@ -31,12 +31,13 @@ const [calcVars, setCalcVars] = React.useState(
         "totalInertia1" : "", "totalInertia2" : ""
     }
 );
-const [visible, setVisible] = React.useState(
-    {
-        "isStandardNotation1" : false, "isStandardNotation2" : false, 
-        "isComparisonEnabled" : false, 
-    }
-);
+
+const [isStandardNotation1, setIsStandardNotation1] = React.useState(false);
+const [isStandardNotation2, setIsStandardNotation2] = React.useState(false);
+const [isComparisonEnabled, setIsCamparisonEnabled] = React.useState(false);
+
+
+
 
 
 
