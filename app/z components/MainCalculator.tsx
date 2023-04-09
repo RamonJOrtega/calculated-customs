@@ -17,44 +17,38 @@ const inter = Inter({ subsets: ['latin'] })
 
 
 const MainCalculator = () => {
-    
+    const [isStandardNotation1, setIsStandardNotation1] = React.useState(false);
+    const [isStandardNotation2, setIsStandardNotation2] = React.useState(false);
+    const [isComparisonEnabled, setIsCamparisonEnabled] = React.useState(false);
     const [calcVars, setCalcVars] = React.useState<Record<string, string>>(
         {
         "tireDia1" : "", "tireWt1" : "", "tireAsp1" : "", "tireWd1" : "", "tireInertia1" : "",
         "tireDia2" : "", "tireWt2" : "", "tireAsp2" : "", "tireWd2" : "", "tireInertia2" : "",
-
         "wheelDia1" : "", "wheelWt1" : "", "wheelInertia1" : "",
         "wheelDia2" : "", "wheelWt2" : "", "wheelInertia2" : "",
-
         "vehicleWt" : "4000", "currentZeroSixtyTime" : "6.0",
-
         "totalInertia1" : "", "totalInertia2" : ""
     }
-);
-
-const [isStandardNotation1, setIsStandardNotation1] = React.useState(false);
-const [isStandardNotation2, setIsStandardNotation2] = React.useState(false);
-const [isComparisonEnabled, setIsCamparisonEnabled] = React.useState(false);
-
+)
 
     const calculatorLayout: {
         title1: string, title2:string, title3:string, 
         value1: string, value2: string, value3: string,
-        setValue1: (newValue: {sting:string}) => void,  
-        setValue2: (newValue: {sting:string}) => void, 
-        setValue3: (newValue: {sting:string}) => void,
+        setValue1: null | ((newValue: {sting:string}) => void),  
+        setValue2: null | ((newValue: {sting:string}) => void), 
+        setValue3: null | ((newValue: {sting:string}) => void),
         unit1: string, unit2: string, unit3:string,
         }[] =   [
                     {
                         title1: "Setup Combo 1", 
                         title2: "Calculate Rotational Inertia", 
                         title3: "",
-                        value1: calcVars.tireDia1,
+                        value1: "",
                         value2: "",
-                        value3: calcVars.wheelDia1,
-                        setValue1: setCalcVars,
-                        setValue2: setCalcVars,
-                        setValue3: setCalcVars,
+                        value3: "",
+                        setValue1: null,
+                        setValue2: null,
+                        setValue3: null,
                         unit1:  "",
                         unit2:  "",  
                         unit3:  ""
