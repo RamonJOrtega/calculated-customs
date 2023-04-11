@@ -6,7 +6,6 @@ import Image from 'next/image';
 import { Props } from 'next/script';
 import { useRef } from 'react';
 
-
 interface FieldInputProps {
     setValue: any
     tipText?: string
@@ -26,7 +25,6 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
         if (!inputRef.current) {return}
         inputRef.current.validity.valid ? props.setValue(inputRef.current.value) : props.setValue('')
 
-
             if (props.list === "aspectList") {
                 console.log("aspect list is here")
                 console.log(inputRef.current.value.length)
@@ -41,14 +39,9 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
               //2nd tire number can anything
                 if (inputRef.current.value.length == 3) {(lastNum == 0 || lastNum ==5)||props.setValue(inputRef.current.value='')}
             } 
-                        
         }
     
-
-    
-    
     return(
-        
         <div > 
             {props.value && (
                 <input className={styles.fieldInput}
