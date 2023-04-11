@@ -8,7 +8,6 @@ import { useRef } from 'react';
 
 interface FieldInputProps {
     setValue: any
-    tipText?: string
     isStandardNotation?: boolean
     list?: string
     placeHolder?: string
@@ -49,7 +48,6 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
                     max = {MAX}
                     min = {MIN}
                     ref = {inputRef}
-                    id={props.inputId} 
                     list={props.list} 
                     onClick={()=>{props.setValue("")}}
                     onInput={handleInput}
