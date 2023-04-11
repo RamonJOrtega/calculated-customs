@@ -32,76 +32,74 @@ const MainCalculator = () => {
     const calculatorLayout: {
         title1: string, title2:string, title3:string, 
         value1: string, value2: string, value3: string,
-        setValue1: null | ((newValue: {sting:string}) => void),  
-        setValue2: null | ((newValue: {sting:string}) => void), 
-        setValue3: null | ((newValue: {sting:string}) => void),
+        setValue: null | ((newValue: {sting:string}) => void),  
         unit1: string, unit2: string, unit3:string,
-        }[] =   [
-                    {
-                        title1: "Setup Combo 1", title2: "Calculate Rotational Inertia",  title3: "",
-                        value1: "",             value2: "",                             value3: "",
-                        setValue1: null, setValue2: null, setValue3: null,
-                        unit1:  "", unit2:  "",  unit3:  ""
-                    },
-                    {
-                        title1: "Tire Diameter",    title2: "Standard Notation",title3: "Wheel Diameter",
-                        value1: calcVars.tireDia1,  value2: "check",            value3: calcVars.wheelDia1,
-                        setValue1: setCalcVars,     setValue2: setCalcVars,     setValue3: setCalcVars,
-                        unit1:  "inch",unit2:   "",  unit3:  "inch"
-                    },
-                    {
-                        title1: "Tire Weight",      title2: "",                 title3: "Wheel Weight",
-                        value1: calcVars.tireWt1 ,  value2: "",                 value3: calcVars.wheelWt1,
-                        setValue1: setCalcVars,     setValue2: setCalcVars,     setValue3: setCalcVars,
-                        unit1: "pound",             unit2: "",                  unit3: "pound"
-                    },
-                    {
-                        title1: "Tire Inertia",     title2: "Total Inertia",    title3: "Wheel Inertia",
-                        value1: "tireResult",       value2: "totalResult",      value3: "wheelResult",
-                        setValue1: setCalcVars,setValue2: setCalcVars,
-                        setValue3: setCalcVars,
-                        unit1: "kgm2",unit2: "kgm2",unit3: "kgm2"
-                    },
-                    {
-                        title1: "Vehecle Weight Known", title2: "", title3: "Current 0-60 Time",
-                        value1: "vehicleWeight",value2: "", value3: "currentZeroToSixtyTime",
-                        setValue1: setCalcVars,setValue2: setCalcVars,setValue3: setCalcVars,
-                        unit1: "pound",unit2: "", unit3: "second"
-                    },
-                    {
-                        title1: "Setup Combo 2", title2: "Calculate Rotational Inertia and Compare 0-60", title3: "",
-                        value1: "",value2: "false",value3: "",
-                        setValue1: setCalcVars,setValue2: setCalcVars,setValue3: setCalcVars,
-                        unit1:  "",unit2:   "",  unit3:  ""
-                    },
+        }[] = 
+            [
+                {
+                    title1: "Setup Combo 1", title2: "Calculate Rotational Inertia",  title3: "",
+                    value1: "",             value2: "",                             value3: "",
+                    unit1:  "", unit2:  "",  unit3:  "",
+                    setValue: null
+                },
+                {
+                    title1: "Tire Diameter",    title2: "Standard Notation",title3: "Wheel Diameter",
+                    value1: calcVars.tireDia1,  value2: "check",            value3: calcVars.wheelDia1,
+                    unit1:  "inch",unit2:   "",  unit3:  "inch",
+                    setValue: setCalcVars
+                },
+                {
+                    title1: "Tire Weight",      title2: "",                 title3: "Wheel Weight",
+                    value1: calcVars.tireWt1 ,  value2: "",                 value3: calcVars.wheelWt1,
+                    unit1: "pound",             unit2: "",                  unit3: "pound",
+                    setValue: setCalcVars
+                },
+                {
+                    title1: "Tire Inertia",     title2: "Total Inertia",    title3: "Wheel Inertia",
+                    value1: "tireResult",       value2: "totalResult",      value3: "wheelResult",
+                    unit1: "kgm2",unit2: "kgm2",unit3: "kgm2",
+                    setValue:setCalcVars
+                },
+                {
+                    title1: "Vehecle Weight Known", title2: "", title3: "Current 0-60 Time",
+                    value1: "vehicleWeight",value2: "", value3: "currentZeroToSixtyTime",
+                    unit1: "pound",unit2: "", unit3: "second",
+                    setValue: setCalcVars
+                },
+                {
+                    title1: "Setup Combo 2", title2: "Calculate Rotational Inertia and Compare 0-60", title3: "",
+                    value1: "",value2: "false",value3: "",
+                    unit1:  "",unit2:   "",  unit3:  "",
+                    setValue: setCalcVars
+                },
+        
+                {
+                    title1: "Tire Diameter", title2: "Standard Notation", title3: "Wheel Diameter",
+                    value1: "tireDiameter",value2: "check",value3: "wheelDiameter",
+                    unit1:  "inch",unit2:   "",  unit3:  "inch",
+                    setValue: setCalcVars
+                },
+                {
+                    title1: "Tire Weight", title2: "", title3: "Wheel Weight",
+                    value1: calcVars.tireWt,value2: "",value3: "wheelWeight",
+                    unit1: "pound",unit2: "",unit3: "pound",
+                    setValue: setCalcVars
+                },
+                {
+                    title1: "Tire Inertia", title2: "Total Inertia", title3: "Wheel Inertia",
+                    value1: "tireResult",value2: "totalResult",value3: "wheelResult",
+                    unit1: "kgm2",unit2: "kgm2",unit3: "kgm2",
+                    setValue: setCalcVars
+                },
+                {
+                    title1: "0-60 %", title2: "Total Inertia", title3: "Wheel Inertia",
+                    value1: "tireResult",value2: "totalResult",value3: "wheelResult",
+                    unit1: "kgm2",unit2: "kgm2",unit3: "kgm2",
+                    setValue: setCalcVars
+                }
             
-                    {
-                        title1: "Tire Diameter", title2: "Standard Notation", title3: "Wheel Diameter",
-                        value1: "tireDiameter",value2: "check",value3: "wheelDiameter",
-                        setValue1: setCalcVars,setValue2: setCalcVars,setValue3: setCalcVars,
-                        unit1:  "inch",unit2:   "",  unit3:  "inch"
-                    },
-                    {
-                        title1: "Tire Weight", title2: "", title3: "Wheel Weight",
-                        value1: calcVars.tireWt,value2: "",value3: "wheelWeight",
-                        setValue1: setCalcVars,setValue2: setCalcVars,setValue3: setCalcVars,
-                        unit1: "pound",unit2: "",unit3: "pound"
-                    },
-                    {
-                        title1: "Tire Inertia", title2: "Total Inertia", title3: "Wheel Inertia",
-                        value1: "tireResult",value2: "totalResult",value3: "wheelResult",
-                        setValue1: setCalcVars,setValue2: setCalcVars,setValue3: setCalcVars,
-                        unit1: "kgm2",unit2: "kgm2",unit3: "kgm2"
-                    },
-                    {
-                        title1: "0-60 %", title2: "Total Inertia", title3: "Wheel Inertia",
-                        value1: "tireResult",value2: "totalResult",value3: "wheelResult",
-                        setValue1: setCalcVars,setValue2: setCalcVars,setValue3: setCalcVars,
-                        unit1: "kgm2",unit2: "kgm2",unit3: "kgm2"
-                    }
-                
-                ]
-     
+            ]
+    
     return (
         <table>
             {calculatorLayout.map((row, index)=>(
