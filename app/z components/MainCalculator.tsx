@@ -32,8 +32,8 @@ const MainCalculator = () => {
     const calculatorLayout: {
         title1: string, title2:string, title3:string, 
         value1: string, value2: string, value3: string,
-        setValue: null | ((newValue: {sting:string}) => void),  
         unit1: string, unit2: string, unit3:string,
+        setValue: null | ((newValue: {sting:string}) => void)
         }[] = 
             [
                 {
@@ -97,7 +97,6 @@ const MainCalculator = () => {
                     unit1: "kgm2",          unit2: "kgm2",          unit3: "kgm2",
                     setValue: setCalcVars
                 }
-            
             ]
     
     return (

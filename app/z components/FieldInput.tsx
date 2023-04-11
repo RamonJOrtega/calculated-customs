@@ -11,7 +11,6 @@ interface FieldInputProps {
     setValue: any
     tipText?: string
     isStandardNotation?: boolean
-    inputId?: string
     list?: string
     placeHolder?: string
     value: string
