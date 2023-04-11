@@ -109,11 +109,11 @@ const MainCalculator = () => {
                         <td colSpan={2}><FieldTitle title={row.title3}/> </td>                  
                     </tr>
                     <tr>
-                        <td><FieldInput value={row.value1} setValue={row.setValue}/> </td>
+                        <td><FieldInput value={row.value1} setValue={row.setValue} title = {row.title1}/> </td>
                         <td>{row.unit1}</td>
-                        <td><FieldInput value={row.value2} setValue={row.setValue}/> </td>
+                        <td><FieldInput value={row.value2} setValue={row.setValue} title = {row.title2}/> </td>
                         <td>{row.unit2}</td>
-                        <td><FieldInput value={row.value3} setValue={row.setValue}/> </td>
+                        <td><FieldInput value={row.value3} setValue={row.setValue} title = {row.title3}/> </td>
                         <td>{row.unit3}</td>                  
                     </tr>
                 </tbody>

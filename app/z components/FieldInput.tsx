@@ -11,7 +11,8 @@ interface FieldInputProps {
     isStandardNotation?: boolean
     list?: string
     placeHolder?: string
-    value: string
+    value: string,
+    title: string
 }
 
 const FieldInput: React.FC<FieldInputProps> = (props) => {
