@@ -37,9 +37,9 @@ const MainCalculator = () => {
         }[] = 
             [
                 {
-                    title1: "Setup Combo 1", title2: "Calculate Rotational Inertia",  title3: "",
-                    value1: "",             value2: "",                             value3: "",
-                    unit1:  "", unit2:  "",  unit3:  "",
+                    title1: "Setup Combo 1",    title2: "Calculate Rotational Inertia",  title3: "",
+                    value1: "",                 value2: "",                             value3: "",
+                    unit1:  "", unit2:  "",     unit3:  "",
                     setValue: null
                 },
                 {
@@ -57,20 +57,20 @@ const MainCalculator = () => {
                 {
                     title1: "Tire Inertia",     title2: "Total Inertia",    title3: "Wheel Inertia",
                     value1: "tireResult",       value2: "totalResult",      value3: "wheelResult",
-                    unit1: "kgm2",unit2: "kgm2",unit3: "kgm2",
+                    unit1: "kgm2",              unit2: "kgm2",              unit3: "kgm2",
                     setValue:setCalcVars
                 },
                 {
                     title1: "Vehecle Weight Known", title2: "", title3: "Current 0-60 Time",
                     value1: "vehicleWeight",        value2: "", value3: "currentZeroToSixtyTime",
-                    unit1: "pound",                 unit2: "", unit3: "second",
+                    unit1: "pound",                 unit2: "",  unit3: "second",
                     setValue: setCalcVars
                 },
                 {
                     title1: "Setup Combo 2", title2: "Calculate Rotational Inertia and Compare 0-60", title3: "",
                     value1: "",             value2: "false",                                        value3: "",
                     unit1:  "",             unit2:   "",                                            unit3:  "",
-                    setValue: setCalcVars
+                    setValue: null
                 },
         
                 {
@@ -102,18 +102,18 @@ const MainCalculator = () => {
     return (
         <table>
             {calculatorLayout.map((row, index)=>(
-                <tbody key={"row" + index + row.title1.split(" ").slice(-1)[0]}> 
+                <tbody key={"row" + index}> 
                     <tr>
                         <td colSpan={2}><FieldTitle title={row.title1}/> </td>
                         <td colSpan={2}><FieldTitle title={row.title2}/> </td>
                         <td colSpan={2}><FieldTitle title={row.title3}/> </td>                  
                     </tr>
                     <tr>
-                        <td><FieldInput value={row.value1} setValue={setCalcVars}/> </td>
+                        <td><FieldInput value={row.value1} setValue={row.setValue}/> </td>
                         <td>{row.unit1}</td>
-                        <td><FieldInput value={row.value2} setValue={setCalcVars}/> </td>
+                        <td><FieldInput value={row.value2} setValue={row.setValue}/> </td>
                         <td>{row.unit2}</td>
-                        <td><FieldInput value={row.value3} setValue={setCalcVars}/> </td>
+                        <td><FieldInput value={row.value3} setValue={row.setValue}/> </td>
                         <td>{row.unit3}</td>                  
                     </tr>
                 </tbody>
