@@ -12,6 +12,7 @@ import styles from '../page.module.css'
 import { Inter } from 'next/font/google'
 import KnownRadioButton from "./KnownRadioButton"
 import { Main } from "next/document"
+import CalcInput from "./CalcInput"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,17 +22,17 @@ const MainCalculator = () => {
     const [isStandardNotation2, setIsStandardNotation2] = React.useState(false);
     const [isComparisonEnabled, setIsCamparisonEnabled] = React.useState(false);
     const [calcVars, setCalcVars] = React.useState<Record<string, string>>({
-        "tireDia1" : "", "tireWt1" : "", "tireAsp1" : "", "tireWd1" : "", "tireInertia1" : "",
-        "tireDia2" : "", "tireWt2" : "", "tireAsp2" : "", "tireWd2" : "", "tireInertia2" : "",
-        "wheelDia1" : "", "wheelWt1" : "", "wheelInertia1" : "",
-        "wheelDia2" : "", "wheelWt2" : "", "wheelInertia2" : "",
+        "tireDia1" : "0", "tireWt1" : "0", "tireAsp1" : "55", "tireWd1" : "205", "tireInertia1" : "0",
+        "tireDia2" : "0", "tireWt2" : "0", "tireAsp2" : "0", "tireWd2" : "0", "tireInertia2" : "0",
+        "wheelDia1" : "0", "wheelWt1" : "0", "wheelInertia1" : "0",
+        "wheelDia2" : "0", "wheelWt2" : "0", "wheelInertia2" : "0",
         "vehicleWt" : "4000", "currentZeroSixtyTime" : "6.0",
-        "totalInertia1" : "", "totalInertia2" : ""
+        "totalInertia1" : "0", "totalInertia2" : "0"
     })
 
     const calculatorLayout: {
         title1: string, title2:string, title3:string, 
-        value1: string, value2: string, value3: string,
+        value1: string  | boolean, value2: string | boolean,  value3: string  | boolean,
         unit1: string, unit2: string, unit3:string,
         setValue: null | ((newValue: {sting:string}) => void)
         }[] = 
@@ -44,7 +45,13 @@ const MainCalculator = () => {
                 },
                 {
                     title1: "Tire Diameter",    title2: "Standard Notation",title3: "Wheel Diameter",
-                    value1: calcVars.tireDia1,  value2: "check",            value3: calcVars.wheelDia1,
+                    value1: calcVars.tireDia1,  value2: false,            value3: calcVars.wheelDia1,
+                    unit1:  "inch",unit2:   "",  unit3:  "inch",
+                    setValue: setCalcVars
+                },
+                {
+                    title1: "Tire Width",    title2: "Aspect Ratio",title3: "",
+                    value1: calcVars.tireWd1,    value2: "",            value3: calcVars.wheelDia1,
                     unit1:  "inch",unit2:   "",  unit3:  "inch",
                     setValue: setCalcVars
                 },
@@ -56,13 +63,13 @@ const MainCalculator = () => {
                 },
                 {
                     title1: "Tire Inertia",     title2: "Total Inertia",    title3: "Wheel Inertia",
-                    value1: "tireResult",       value2: "totalResult",      value3: "wheelResult",
+                    value1: calcVars.tireInertia1,       value2: calcVars.totalInertia1,      value3: calcVars.wheelInertia1,
                     unit1: "kgm2",              unit2: "kgm2",              unit3: "kgm2",
                     setValue:setCalcVars
                 },
                 {
                     title1: "Vehecle Weight Known", title2: "", title3: "Current 0-60 Time",
-                    value1: "vehicleWeight",        value2: "", value3: "currentZeroToSixtyTime",
+                    value1: "vehicleWeight",        value2: "", value3: calcVars.currentZeroSixtyTime,
                     unit1: "pound",                 unit2: "",  unit3: "second",
                     setValue: setCalcVars
                 },
@@ -75,7 +82,7 @@ const MainCalculator = () => {
         
                 {
                     title1: "Tire Diameter", title2: "Standard Notation", title3: "Wheel Diameter",
-                    value1: "tireDiameter", value2: "check",                value3: "wheelDiameter",
+                    value1: calcVars.tireDiameter2, value2: "",                value3: "wheelDiameter",
                     unit1:  "inch",unit2:   "",  unit3:  "inch",
                     setValue: setCalcVars
                 },
@@ -87,13 +94,13 @@ const MainCalculator = () => {
                 },
                 {
                     title1: "Tire Inertia", title2: "Total Inertia", title3: "Wheel Inertia",
-                    value1: "tireResult",   value2: "totalResult",  value3: "wheelResult",
+                    value1: "",   value2: "totalResult",  value3: "wheelResult",
                     unit1: "kgm2",          unit2: "kgm2",          unit3: "kgm2",
                     setValue: setCalcVars
                 },
                 {
                     title1: "0-60 %",       title2: "Total Inertia",title3: "Wheel Inertia",
-                    value1: "tireResult",   value2: "totalResult",  value3: "wheelResult",
+                    value1: "",   value2: "totalResult",  value3: "wheelResult",
                     unit1: "kgm2",          unit2: "kgm2",          unit3: "kgm2",
                     setValue: setCalcVars
                 }
@@ -109,11 +116,11 @@ const MainCalculator = () => {
                         <td colSpan={2}><FieldTitle title={row.title3}/> </td>                  
                     </tr>
                     <tr>
-                        <td><FieldInput value={row.value1} setValue={row.setValue} title = {row.title1}/> </td>
+                        <td><CalcInput value={row.value1} setValue={row.setValue} title = {row.title1}/> </td>
                         <td>{row.unit1}</td>
-                        <td><FieldInput value={row.value2} setValue={row.setValue} title = {row.title2}/> </td>
+                        <td><CalcInput value={row.value2} setValue={row.setValue} title = {row.title2}/> </td>
                         <td>{row.unit2}</td>
-                        <td><FieldInput value={row.value3} setValue={row.setValue} title = {row.title3}/> </td>
+                        <td><CalcInput value={row.value3} setValue={row.setValue} title = {row.title3}/> </td>
                         <td>{row.unit3}</td>                  
                     </tr>
                 </tbody>
