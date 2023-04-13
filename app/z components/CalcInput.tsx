@@ -9,9 +9,9 @@ import { useRef } from 'react';
 interface FieldInputProps {
     setValue: any
     isStandardNotation?: boolean
-    list?: string
+    list?: string 
     placeHolder?: string
-    value: string,
+    value: string | boolean,
     title: string
 }
 
