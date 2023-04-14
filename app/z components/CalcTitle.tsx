@@ -15,21 +15,25 @@ export default function FieldTitle(props: any) {
 
     return(
             <div className={styles.fieldTitle}>  
+
                 {props.title} 
-                {props.title === "Standard Notation" && (
+
+                {(props.title === "Standard Notation") && (
                     <span className={styles.tooltip}>&#x24D8;
                         <span className={styles.tooltiptext}>
                             {tireTipText}
                         </span>
                     </span>
                 )}
-                {props.title === "Total Inertia" && (
+
+                {(props.title === "Total Inertia") && (
                     <span className={styles.tooltip}>&#x24D8;
                         <span className={styles.tooltiptext}>
-                            {tireTipText}
+                            {intertiaTipText}
                         </span>
                     </span>
                 )}
+
             </div>
     )
 }
