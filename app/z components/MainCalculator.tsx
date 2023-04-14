@@ -3,7 +3,7 @@
 import TireResult from "./TireResult"
 import TotalResult from "./TotalResult"
 import WheelResult from "./WheelResult"
-import React, { SetStateAction } from "react"
+import React, { SetStateAction, useEffect } from "react"
 import FieldInput  from "./FieldInput"  ;
 import StandarNotationCheckBox from "./StandardNotationCheckBox";
 import Link from "next/link"
@@ -123,6 +123,20 @@ const MainCalculator = () => {
 
                 },
             ]
+
+    const handleStandardNotationChange1 = () => {
+       setTireDia1("")
+       setTireWd1("")
+       setTireAsp1("")
+    }
+    const handleStandardNotationChange2 = () => {
+        setTireDia2("")
+        setTireWd2("")
+        setTireAsp2("")
+     }
+
+    useEffect(() => {handleStandardNotationChange1},[isStandardNotation1])
+    useEffect(() => {handleStandardNotationChange2},[isStandardNotation2])
     
     return (
         <table>

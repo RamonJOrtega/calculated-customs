@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Props } from 'next/script';
 import { useRef } from 'react';
 
+
 interface FieldInputProps {
     setValue: any
     isStandardNotation?: boolean
@@ -42,8 +43,24 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
         }
     
     return(
-        <div > 
-            {props.value && (
+        <div> 
+            {typeof(props.value) === "boolean" && (
+                <div>
+                    <span>
+                        <input 
+                            className={styles.checkbox}
+                            type="checkbox"
+                            checked={props.isStandardNotation}
+                            onChange={()=>{
+                                props.setValue(!props.isStandardNotation)
+                                }
+                            }/> 
+                        </span>
+                    <div className={styles.postFix}> ex. 325/40R22 </div> 
+                </div>
+            )}
+
+            {typeof(props.value)==="string" && (
                 <input className={styles.fieldInput}
                     type = 'number'
                     max = {MAX}
@@ -56,7 +73,7 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
                     value = {props.value}
                 /> 
             )}
-            {props.title=== "Tire Width" && (
+            {(props.title === "Tire Width") && (
                 <datalist id="widthList" >
                     <option value="105"></option><option value="115"></option><option value="125"></option><option value="135"></option>
                     <option value="145"></option><option value="155"></option><option value="165"></option><option value="175"></option>
@@ -68,7 +85,7 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
                     <option value="405"></option>
                 </datalist>
             )}
-            {props.title==="Aspect Ratio" && (
+            {(props.title ==="Aspect Ratio") && (
                 <datalist id="aspectList" >
                     <option value="10"></option><option value="15"></option><option value="20"></option><option value="25"></option>
                     <option value="30"></option><option value="35"></option><option value="40"></option><option value="45"></option>
