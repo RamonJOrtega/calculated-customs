@@ -5,6 +5,7 @@ import '../globals.css'
 import Image from 'next/image';
 
 interface CalcInputProps {
+    isVisible: boolean
     title: string
     isStandardNotatation: boolean
 }

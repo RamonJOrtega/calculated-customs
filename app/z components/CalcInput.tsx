@@ -8,11 +8,12 @@ import { useRef } from 'react';
 
 
 interface FieldInputProps {
+    isVisible: boolean
     setValue: any
     isStandardNotation?: boolean
     list?: string 
     placeHolder?: string
-    value: string | boolean,
+    value: string | boolean
     title: string
 }
 
