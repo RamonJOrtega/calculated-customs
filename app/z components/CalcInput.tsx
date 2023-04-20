@@ -56,8 +56,10 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
                                 props.setValue(!props.isStandardNotation)
                                 }
                             }/> 
-                        </span>
-                    <div className={styles.postFix}> ex. 325/40R22 </div> 
+                    </span>
+                    <div className={styles.postFix}> 
+                        ex. 325/40R22 
+                    </div> 
                 </div>
             )}
 

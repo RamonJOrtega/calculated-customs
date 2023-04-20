@@ -79,7 +79,7 @@ const MainCalculator = () => {
                     title1: "Tire Weight",      title2: "",                 title3: "Wheel Weight",
                     value1: tireWt1 ,           value2: "",                 value3: wheelWt1,
                     unit1: "pound",             unit2: "",                  unit3: "pound",
-                    setValue1: setTireWt1,      setValue2: null,            setValue3: ,
+                    setValue1: setTireWt1,      setValue2: null,            setValue3: setWheelWt1,
                     isVisible1: true,           isVisible2: true,                       isVisible3: false
                 },
                 {
@@ -140,6 +140,7 @@ const MainCalculator = () => {
        setTireDia1("")
        setTireWd1("")
        setTireAsp1("")
+       calculatorLayout
     }
     const handleStandardNotationChange2 = () => {
         setTireDia2("")
@@ -160,11 +161,11 @@ const MainCalculator = () => {
                         <td colSpan={2}><CalcTitle title={row.title3}/> </td>                  
                     </tr>
                     <tr>
-                        <td><CalcInput value={row.value1} setValue={row.setValue1} title = {row.title1}/> </td>
+                        <td><CalcInput value={row.value1} setValue={row.setValue1} title = {row.title1} isVisible={row.isVisible1}/> </td>
                         <td>{row.unit1}</td>
-                        <td><CalcInput value={row.value2} setValue={row.setValue2} title = {row.title2}/> </td>
+                        <td><CalcInput value={row.value2} setValue={row.setValue2} title = {row.title2} isVisible={row.isVisible2}/> </td>
                         <td>{row.unit2}</td>
-                        <td><CalcInput value={row.value3} setValue={row.setValue3} title = {row.title3}/> </td>
+                        <td><CalcInput value={row.value3} setValue={row.setValue3} title = {row.title3} isVisible={row.isVisible3}/> </td>
                         <td>{row.unit3}</td>                  
                     </tr>
                 </tbody>
