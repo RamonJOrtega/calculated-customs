@@ -15,26 +15,30 @@ export default function FieldTitle(props: any) {
     const intertiaTipText = "Also called moment of inertia or rotating mass. Keep it low to go faster!"
 
     return(
+        props.isVisible ? (
             <div className={styles.fieldTitle}>  
 
-                {props.title} 
+            {props.title} 
 
-                {(props.title === "Standard Notation") && (
-                    <span className={styles.tooltip}>&#x24D8;
-                        <span className={styles.tooltiptext}>
-                            {tireTipText}
-                        </span>
+            {(props.title === "Standard Notation") && (
+                <span className={styles.tooltip}>&#x24D8;
+                    <span className={styles.tooltiptext}>
+                        {tireTipText}
                     </span>
-                )}
+                </span>
+            )}
 
-                {(props.title === "Total Inertia") && (
-                    <span className={styles.tooltip}>&#x24D8;
-                        <span className={styles.tooltiptext}>
-                            {intertiaTipText}
-                        </span>
+            {(props.title === "Total Inertia") && (
+                <span className={styles.tooltip}>&#x24D8;
+                    <span className={styles.tooltiptext}>
+                        {intertiaTipText}
                     </span>
-                )}
+                </span>
+            )}
 
-            </div>
+        </div>
+
+        ) : null
+
     )
 } 
