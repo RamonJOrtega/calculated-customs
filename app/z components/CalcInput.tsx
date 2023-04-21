@@ -53,7 +53,11 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
                             type="checkbox"
                             checked={props.isStandardNotation}
                             onChange={()=>{
+                                console.log(!props.isStandardNotation)
                                 props.setValue(!props.isStandardNotation)
+                                console.log(!props.isStandardNotation)
+
+
                                 }
                             }/> 
                     </span>

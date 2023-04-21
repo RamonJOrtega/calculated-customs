@@ -140,7 +140,10 @@ const MainCalculator = () => {
        setTireDia1("")
        setTireWd1("")
        setTireAsp1("")
-       calculatorLayout
+       calculatorLayout[2].isVisible1 = false;
+       calculatorLayout[2].isVisible2 = false;
+       console.log("changed")
+
     }
     const handleStandardNotationChange2 = () => {
         setTireDia2("")
@@ -156,9 +159,9 @@ const MainCalculator = () => {
             {calculatorLayout.map((row, index)=>(
                 <tbody key={"row" + index}> 
                     <tr>
-                        <td colSpan={2}><CalcTitle title={row.title1}/> </td>
-                        <td colSpan={2}><CalcTitle title={row.title2}/> </td>
-                        <td colSpan={2}><CalcTitle title={row.title3}/> </td>                  
+                        <td colSpan={2}><CalcTitle title={row.title1} isVisible={row.isVisible1}/> </td>
+                        <td colSpan={2}><CalcTitle title={row.title2} isVisible={row.isVisible2}/> </td>
+                        <td colSpan={2}><CalcTitle title={row.title3} isVisible={row.isVisible3}/> </td>                  
                     </tr>
                     <tr>
                         <td><CalcInput value={row.value1} setValue={row.setValue1} title = {row.title1} isVisible={row.isVisible1}/> </td>

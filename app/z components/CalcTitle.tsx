@@ -25,5 +25,5 @@ export default function FieldTitle(props: any) {
             </span>
           )}
         </div>
-      ) : null;
-    }
+    ) : null;
+}
