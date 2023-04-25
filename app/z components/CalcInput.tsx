@@ -7,7 +7,7 @@ import { Props } from 'next/script';
 import { useRef } from 'react';
 
 
-interface FieldInputProps {
+interface CalcInputProps {
     isVisible: boolean
     setValue: any
     list?: string 
@@ -16,7 +16,7 @@ interface FieldInputProps {
     title: string
 }
 
-const FieldInput: React.FC<FieldInputProps> = (props) => {
+const CalcInput: React.FC<CalcInputProps> = (props) => {
     const MIN = 0
     const MAX = 500
 
@@ -100,5 +100,5 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
         </div> 
     )
 }
-export default FieldInput
+export default CalcInput
 
