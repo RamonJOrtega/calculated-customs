@@ -10,7 +10,6 @@ import { useRef } from 'react';
 interface FieldInputProps {
     isVisible: boolean
     setValue: any
-    isStandardNotation?: boolean
     list?: string 
     placeHolder?: string
     value: string | boolean
@@ -51,13 +50,10 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
                         <input 
                             className={styles.checkbox}
                             type="checkbox"
-                            checked={props.isStandardNotation}
+                            checked={props.value}
                             onChange={()=>{
-                                console.log(!props.isStandardNotation)
-                                props.setValue(!props.isStandardNotation)
-                                console.log(!props.isStandardNotation)
-
-
+                                console.log(!props.value)
+                                props.setValue(!props.value)
                                 }
                             }/> 
                     </span>
@@ -106,5 +102,3 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
 }
 export default FieldInput
 
-//list="widthList" maxLength={3} step="1"
-//list="aspectList" maxLength={3} step="1" 
