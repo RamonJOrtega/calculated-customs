@@ -54,13 +54,7 @@ const MainCalculator = () => {
         isVisible1: boolean, isVisible2: boolean, isVisible3: boolean
         }[] = 
             [
-                {
-                    title1: "Setup Combo 1",    title2: "Calculate Rotational Inertia",  title3: "",
-                    value1: "",                 value2: "",                             value3: "",
-                    unit1:  "", unit2:  "",     unit3:  "",
-                    setValue1: null,            setValue2: null,                        setValue3: null,
-                    isVisible1: true,           isVisible2: true,                       isVisible3: false
-                },
+                
                 {
                     title1: "Tire Diameter",    title2: "Standard Notation",title3: "Wheel Diameter",
                     value1: tireDia1,           value2: isStandardNotation1,value3: wheelDia1,
@@ -161,8 +155,16 @@ const MainCalculator = () => {
     
     return (
         <table>
+                <tbody>
+                    <tr>
+                        <td colSpan={2} >Setup Combo 1 </td>
+                        <td colSpan={2}>Calculate Rotational Inertia</td>
+                        <td colSpan={2}> </td>
+                    </tr>
+                </tbody>
             {calculatorLayout.map((row, index)=>(
                 <tbody key={"row" + index}> 
+                    
                     <tr>
                         <td colSpan={2}><CalcTitle title={row.title1} isVisible={row.isVisible1}/> </td>
                         <td colSpan={2}><CalcTitle title={row.title2} isVisible={row.isVisible2}/> </td>
