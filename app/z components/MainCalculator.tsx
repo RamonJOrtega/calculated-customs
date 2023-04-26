@@ -97,6 +97,9 @@ const MainCalculator = () => {
                     setValue1: setVehicleWt,        setValue2: null,    setValue3: setCurrentZeroSixtyTime,
                     isVisible1: true,           isVisible2: true,                       isVisible3: false
                 },
+
+
+
                 {
                     title1: "Setup Combo 2", title2: "Calculate Rotational Inertia and Compare 0-60", title3: "",
                     value1: "",             value2:  isComparisonEnabled,                            value3: "",
@@ -110,14 +113,14 @@ const MainCalculator = () => {
                     value1: tireDia2,           value2: isStandardNotation2,value3: wheelDia2,
                     unit1:  "inch",             unit2:   "",                unit3:  "inch",
                     setValue1: setTireDia2,     setValue2: setIsStandardNotation2, setValue3: setWheelDia2,
-                    isVisible1: true,           isVisible2: true,                       isVisible3: false
+                    isVisible1: !isStandardNotation2,           isVisible2: !isStandardNotation2,                       isVisible3: !isStandardNotation2
                 },
                 {
                     title1: "Tire Width",    title2: "Aspect Ratio",        title3: "Wheel Diameter",
                     value1: tireWd2,            value2: tireAsp2,               value3: wheelDia2,
                     unit1:  "/",             unit2:"R",                     unit3:  "inch",
                     setValue1: setTireWd2,      setValue2: setTireAsp2, setValue3: setWheelDia2,
-                    isVisible1: true,           isVisible2: true,                       isVisible3: false
+                    isVisible1: isStandardNotation2,           isVisible2: isStandardNotation2,                       isVisible3: isStandardNotation2
                 },
                 {
                     title1: "Tire Weight",      title2: "",                 title3: "Wheel Weight",
@@ -149,6 +152,8 @@ const MainCalculator = () => {
         setTireDia2("")
         setTireWd2("")
         setTireAsp2("")
+        calculatorLayout[8].isVisible1 = false;
+       calculatorLayout[8].isVisible2 = false;
      }
 
     useEffect(() => {handleStandardNotationChange1},[isStandardNotation1])

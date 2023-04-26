@@ -42,7 +42,7 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
             } 
         }
     
-    return(
+    return props.isVisible ? (
         <div> 
             {typeof(props.value) === "boolean" && (
                 <div>
@@ -98,7 +98,7 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
                 </datalist>
             )}
         </div> 
-    )
+    ) : null
 }
 export default CalcInput
 
