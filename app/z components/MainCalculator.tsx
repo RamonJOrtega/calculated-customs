@@ -66,7 +66,7 @@ const MainCalculator = () => {
                     value1: tireDia1,           value2: isStandardNotation1,value3: wheelDia1,
                     unit1:  "inch",             unit2:   "",                unit3:  "inch",
                     setValue1: setTireDia1,     setValue2: setIsStandardNotation1, setValue3: setWheelDia1,
-                    isVisible1: true,           isVisible2: true,                       isVisible3: false
+                    isVisible1: true,           isVisible2: true,                       isVisible3: true
                 },
                 {
                     title1: "Tire Width",       title2: "Aspect Ratio",     title3: "Wheel Diameter",
