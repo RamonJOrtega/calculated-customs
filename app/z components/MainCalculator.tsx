@@ -87,7 +87,7 @@ const MainCalculator = () => {
                     value1: tireInertia1,           value2: totalInertia1,      value3: wheelInertia1,
                     unit1: "kgm2",                  unit2: "kgm2",              unit3: "kgm2",
                     setValue1: setTireInertia1, setValue2: setTotalInertia1, setValue3: setWheelInertia1,
-                    isVisible1: true,           isVisible2: true,                       isVisible3: false
+                    isVisible1: true,           isVisible2: true,                       isVisible3: true
 
                 },
                 {
@@ -113,28 +113,28 @@ const MainCalculator = () => {
                     value1: tireDia2,           value2: isStandardNotation2,value3: wheelDia2,
                     unit1:  "inch",             unit2:   "",                unit3:  "inch",
                     setValue1: setTireDia2,     setValue2: setIsStandardNotation2, setValue3: setWheelDia2,
-                    isVisible1: !isStandardNotation2,           isVisible2: !isStandardNotation2,                       isVisible3: !isStandardNotation2
+                    isVisible1: !isStandardNotation2,    isVisible2: !isStandardNotation2,       isVisible3: !isStandardNotation2
                 },
                 {
                     title1: "Tire Width",    title2: "Aspect Ratio",        title3: "Wheel Diameter",
                     value1: tireWd2,            value2: tireAsp2,               value3: wheelDia2,
                     unit1:  "/",             unit2:"R",                     unit3:  "inch",
                     setValue1: setTireWd2,      setValue2: setTireAsp2, setValue3: setWheelDia2,
-                    isVisible1: isStandardNotation2,           isVisible2: isStandardNotation2,                       isVisible3: isStandardNotation2
+                    isVisible1: isStandardNotation2,           isVisible2: isStandardNotation2,     isVisible3: isStandardNotation2
                 },
                 {
                     title1: "Tire Weight",      title2: "",                 title3: "Wheel Weight",
                     value1: tireWt2 ,           value2: "",                 value3: wheelWt2,
                     unit1: "pound",             unit2: "",                  unit3: "pound",
-                    setValue1: setTireWt2, setValue2: null,                 setValue3: setWheelWt2,
-                    isVisible1: true,           isVisible2: true,                       isVisible3: false
+                    setValue1: setTireWt2,      setValue2: null,            setValue3: setWheelWt2,
+                    isVisible1: true,           isVisible2: true,           isVisible3: false
                 },
                 {
                     title1: "Tire Inertia",         title2: "Total Inertia",        title3: "Wheel Inertia",
-                    value1: tireInertia2,  value2: totalInertia2, value3: wheelInertia2,
-                    unit1: "kgm2",              unit2: "kgm2",              unit3: "kgm2",
-                    setValue1: setTireInertia2, setValue2: setTotalInertia2, setValue3: setWheelInertia2,
-                    isVisible1: true,           isVisible2: true,                       isVisible3: false
+                    value1: tireInertia2,           value2: totalInertia2,          value3: wheelInertia2,
+                    unit1: "kgm2",                  unit2: "kgm2",                  unit3: "kgm2",
+                    setValue1: setTireInertia2,     setValue2: setTotalInertia2,    setValue3: setWheelInertia2,
+                    isVisible1: true,               isVisible2: true,               isVisible3: true
 
                 },
             ]
