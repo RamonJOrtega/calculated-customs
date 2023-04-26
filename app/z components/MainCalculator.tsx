@@ -80,7 +80,7 @@ const MainCalculator = () => {
                     value1: tireWt1 ,           value2: "",                 value3: wheelWt1,
                     unit1: "pound",             unit2: "",                  unit3: "pound",
                     setValue1: setTireWt1,      setValue2: null,            setValue3: setWheelWt1,
-                    isVisible1: true,           isVisible2: true,                       isVisible3: false
+                    isVisible1: true,           isVisible2: true,                       isVisible3: true
                 },
                 {
                     title1: "Tire Inertia",         title2: "Total Inertia",    title3: "Wheel Inertia",
@@ -127,7 +127,7 @@ const MainCalculator = () => {
                     value1: tireWt2 ,           value2: "",                 value3: wheelWt2,
                     unit1: "pound",             unit2: "",                  unit3: "pound",
                     setValue1: setTireWt2,      setValue2: null,            setValue3: setWheelWt2,
-                    isVisible1: true,           isVisible2: true,           isVisible3: false
+                    isVisible1: true,           isVisible2: true,           isVisible3: true
                 },
                 {
                     title1: "Tire Inertia",         title2: "Total Inertia",        title3: "Wheel Inertia",
