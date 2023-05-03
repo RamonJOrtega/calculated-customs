@@ -6,13 +6,15 @@ import Image from 'next/image';
 import { Props } from 'next/script';
 import { useRef } from 'react';
 
+
 interface FieldInputProps {
     setValue: any
+    tipText?: string
     isStandardNotation?: boolean
+    inputId?: string
     list?: string
     placeHolder?: string
-    value: string,
-    title: string
+    value: string
 }
 
 const FieldInput: React.FC<FieldInputProps> = (props) => {
@@ -25,37 +27,38 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
         if (!inputRef.current) {return}
         inputRef.current.validity.valid ? props.setValue(inputRef.current.value) : props.setValue('')
 
+
             if (props.list === "aspectList") {
-                console.log("aspect list is here")
-                console.log(inputRef.current.value.length)
                 const lastNum = parseInt(inputRef.current.value) % 10;
-                console.log("last Num : " + lastNum)
                 if (inputRef.current.value.length === 1) {(lastNum > 0) || (props.setValue(inputRef.current.value))}
                 if (inputRef.current.value.length === 2) {(lastNum === 0) || (lastNum === 5) || (props.setValue(''))}
             }
             if (props.list === 'widthList') {
                 const lastNum = parseFloat(inputRef.current.value)% 10
                 if (inputRef.current.value.length == 1) {(lastNum>0 && lastNum<10)|| props.setValue(inputRef.current.value='')}
-              //2nd tire number can anything
                 if (inputRef.current.value.length == 3) {(lastNum == 0 || lastNum ==5)||props.setValue(inputRef.current.value='')}
+                //2nd tire number can anything
             } 
+                        
         }
     
-    return props.isVisible ? (
+
+    
+    
+    return(
         <div > 
-            {props.value && (
-                <input className={styles.fieldInput}
-                    type = 'number'
-                    max = {MAX}
-                    min = {MIN}
-                    ref = {inputRef}
-                    list={props.list} 
-                    onClick={()=>{props.setValue("")}}
-                    onInput={handleInput}
-                    placeholder={props.placeHolder}
-                    value = {props.value}
-                /> 
-            )}
+            <input className={styles.fieldInput}
+                type = 'number'
+                max = {MAX}
+                min = {MIN}
+                ref = {inputRef}
+                id={props.inputId} 
+                list={props.list} 
+                onClick={()=>{props.setValue("")}}
+                onInput={handleInput}
+                placeholder={props.placeHolder}
+                value = {props.value}
+            /> 
             {props.list==="widthList" && (
                 <datalist id="widthList" >
                     <option value="105"></option><option value="115"></option><option value="125"></option><option value="135"></option>
@@ -78,8 +81,7 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
                 </datalist>
             )}
         </div> 
-    ) : null
-    
+    )
 }
 export default FieldInput
 

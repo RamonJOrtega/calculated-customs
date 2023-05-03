@@ -92,7 +92,7 @@ const MainCalculator = () => {
                     value1: vehicleWt,              value2: "",         value3: currentZeroSixtyTime,
                     unit1: "pound",                 unit2: "",          unit3: "second",
                     setValue1: setVehicleWt,        setValue2: null,    setValue3: setCurrentZeroSixtyTime,
-                    isVisible1: isComparisonEnabled,           isVisible2: isComparisonEnabled,                       isVisible3: isComparisonEnabled
+                    isVisible1: isComparisonEnabled,  isVisible2: isComparisonEnabled,   isVisible3: isComparisonEnabled
                 },
 
               
@@ -164,7 +164,7 @@ const MainCalculator = () => {
                         <td colSpan={2}> </td>
                     </tr>
                 </tbody>
-            {calcLayout2.map((row, index)=>(
+            {isComparisonEnabled &&calcLayout2.map((row, index)=>(
                 <tbody key={"row" + index}> 
                     <tr>
                         <td colSpan={2}><CalcTitle title={row.title1} isVisible={row.isVisible1}/> </td>
