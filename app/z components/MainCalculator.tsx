@@ -60,21 +60,21 @@ const MainCalculator = () => {
                     value1: tireDia1,           value2: isStandardNotation1,value3: wheelDia1,
                     unit1:  "inch",             unit2:   "",                unit3:  "inch",
                     setValue1: setTireDia1,     setValue2: setIsStandardNotation1, setValue3: setWheelDia1,
-                    isVisible1: true,           isVisible2: true,                       isVisible3: true
+                    isVisible1: !isStandardNotation1,   isVisible2: !isStandardNotation1,     isVisible3: !isStandardNotation1
                 },
                 {
                     title1: "Tire Width",       title2: "Aspect Ratio",     title3: "Wheel Diameter",
                     value1: tireWd1,            value2: tireAsp1,           value3: wheelDia1,
                     unit1:  "/",                unit2:"R",                  unit3:  "inch",
                     setValue1: setTireWd1,      setValue2: setTireAsp1, setValue3: setWheelDia1,
-                    isVisible1: true,           isVisible2: true,                       isVisible3: false
+                    isVisible1: isStandardNotation1, isVisible2: isStandardNotation1,    isVisible3: isStandardNotation1
                 },
                 {
-                    title1: "Tire Weight",      title2: "",                 title3: "Wheel Weight",
-                    value1: tireWt1 ,           value2: "",                 value3: wheelWt1,
+                    title1: "Tire Weight",      title2: "Standard Notation",                 title3: "Wheel Weight",
+                    value1: tireWt1 ,           value2: isStandardNotation1,                 value3: wheelWt1,
                     unit1: "pound",             unit2: "",                  unit3: "pound",
-                    setValue1: setTireWt1,      setValue2: null,            setValue3: setWheelWt1,
-                    isVisible1: true,           isVisible2: true,                       isVisible3: true
+                    setValue1: setTireWt1,      setValue2: setIsStandardNotation1,            setValue3: setWheelWt1,
+                    isVisible1: true,           isVisible2: isStandardNotation1,                       isVisible3: true
                 },
                 {
                     title1: "Tire Inertia",         title2: "Total Inertia",    title3: "Wheel Inertia",
@@ -91,8 +91,6 @@ const MainCalculator = () => {
                     setValue1: setVehicleWt,        setValue2: null,    setValue3: setCurrentZeroSixtyTime,
                     isVisible1: true,           isVisible2: true,                       isVisible3: false
                 },
-
-
 
                 {
                     title1: "Setup Combo 2", title2: "Calculate Rotational Inertia and Compare 0-60", title3: "",
