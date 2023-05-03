@@ -94,44 +94,51 @@ const MainCalculator = () => {
                     isVisible1: true,           isVisible2: true,                       isVisible3: false
                 },
 
-                {
-                    title1: "Setup Combo 2", title2: "Calculate Rotational Inertia and Compare 0-60", title3: "",
-                    value1: "",             value2:  isComparisonEnabled,                            value3: "",
-                    unit1:  "",             unit2:   "",                                            unit3:  "",
-                    setValue1: null, setValue2: null, setValue3: null,
-                    isVisible1: true,           isVisible2: true,                       isVisible3: false
-                },
-        
-                {
-                    title1: "Tire Diameter",    title2: "Standard Notation",title3: "Wheel Diameter",
-                    value1: tireDia2,           value2: isStandardNotation2,value3: wheelDia2,
-                    unit1:  "inch",             unit2:   "",                unit3:  "inch",
-                    setValue1: setTireDia2,     setValue2: setIsStandardNotation2, setValue3: setWheelDia2,
-                    isVisible1: !isStandardNotation2,    isVisible2: !isStandardNotation2,       isVisible3: !isStandardNotation2
-                },
-                {
-                    title1: "Tire Width",    title2: "Aspect Ratio",        title3: "Wheel Diameter",
-                    value1: tireWd2,            value2: tireAsp2,               value3: wheelDia2,
-                    unit1:  "/",             unit2:"R",                     unit3:  "inch",
-                    setValue1: setTireWd2,      setValue2: setTireAsp2, setValue3: setWheelDia2,
-                    isVisible1: isStandardNotation2,           isVisible2: isStandardNotation2,     isVisible3: isStandardNotation2
-                },
-                {
-                    title1: "Tire Weight",      title2: "Aspect Ratio",                 title3: "Wheel Weight",
-                    value1: tireWt2 ,           value2: isStandardNotation2,                 value3: wheelWt2,
-                    unit1: "pound",             unit2: "",                  unit3: "pound",
-                    setValue1: setTireWt2,      setValue2: setIsStandardNotation2,            setValue3: setWheelWt2,
-                    isVisible1: true,           isVisible2: isStandardNotation2,           isVisible3: true
-                },
-                {
-                    title1: "Tire Inertia",         title2: "Total Inertia",        title3: "Wheel Inertia",
-                    value1: tireInertia2,           value2: totalInertia2,          value3: wheelInertia2,
-                    unit1: "kgm2",                  unit2: "kgm2",                  unit3: "kgm2",
-                    setValue1: setTireInertia2,     setValue2: setTotalInertia2,    setValue3: setWheelInertia2,
-                    isVisible1: true,               isVisible2: true,               isVisible3: true
-
-                },
+              
             ]
+    const calcLayout2: CalculatorLayout[] = 
+    [
+        
+
+        {
+            title1: "Setup Combo 2", title2: "Calculate Rotational Inertia and Compare 0-60", title3: "",
+            value1: "",             value2:  isComparisonEnabled,                            value3: "",
+            unit1:  "",             unit2:   "",                                            unit3:  "",
+            setValue1: null, setValue2: null, setValue3: null,
+            isVisible1: true,           isVisible2: true,                       isVisible3: false
+        },
+
+        {
+            title1: "Tire Diameter",    title2: "Standard Notation",title3: "Wheel Diameter",
+            value1: tireDia2,           value2: isStandardNotation2,value3: wheelDia2,
+            unit1:  "inch",             unit2:   "",                unit3:  "inch",
+            setValue1: setTireDia2,     setValue2: setIsStandardNotation2, setValue3: setWheelDia2,
+            isVisible1: !isStandardNotation2,    isVisible2: !isStandardNotation2,       isVisible3: !isStandardNotation2
+        },
+        {
+            title1: "Tire Width",    title2: "Aspect Ratio",        title3: "Wheel Diameter",
+            value1: tireWd2,            value2: tireAsp2,               value3: wheelDia2,
+            unit1:  "/",             unit2:"R",                     unit3:  "inch",
+            setValue1: setTireWd2,      setValue2: setTireAsp2, setValue3: setWheelDia2,
+            isVisible1: isStandardNotation2,           isVisible2: isStandardNotation2,     isVisible3: isStandardNotation2
+        },
+        {
+            title1: "Tire Weight",      title2: "Aspect Ratio",                 title3: "Wheel Weight",
+            value1: tireWt2 ,           value2: isStandardNotation2,                 value3: wheelWt2,
+            unit1: "pound",             unit2: "",                  unit3: "pound",
+            setValue1: setTireWt2,      setValue2: setIsStandardNotation2,            setValue3: setWheelWt2,
+            isVisible1: true,           isVisible2: isStandardNotation2,           isVisible3: true
+        },
+        {
+            title1: "Tire Inertia",         title2: "Total Inertia",        title3: "Wheel Inertia",
+            value1: tireInertia2,           value2: totalInertia2,          value3: wheelInertia2,
+            unit1: "kgm2",                  unit2: "kgm2",                  unit3: "kgm2",
+            setValue1: setTireInertia2,     setValue2: setTotalInertia2,    setValue3: setWheelInertia2,
+            isVisible1: true,               isVisible2: true,               isVisible3: true
+
+        },
+    ]
+    
 
     
     return (
@@ -144,6 +151,24 @@ const MainCalculator = () => {
                     </tr>
                 </tbody>
             {calcLayout1.map((row, index)=>(
+                <tbody key={"row" + index}> 
+                    
+                    <tr>
+                        <td colSpan={2}><CalcTitle title={row.title1} isVisible={row.isVisible1}/> </td>
+                        <td colSpan={2}><CalcTitle title={row.title2} isVisible={row.isVisible2}/> </td>
+                        <td colSpan={2}><CalcTitle title={row.title3} isVisible={row.isVisible3}/> </td>                  
+                    </tr>
+                    <tr>
+                        <td><CalcInput value={row.value1} setValue={row.setValue1} title = {row.title1} isVisible={row.isVisible1}/> </td>
+                        <td>{row.unit1}</td>
+                        <td><CalcInput value={row.value2} setValue={row.setValue2} title = {row.title2} isVisible={row.isVisible2}/> </td>
+                        <td>{row.unit2}</td>
+                        <td><CalcInput value={row.value3} setValue={row.setValue3} title = {row.title3} isVisible={row.isVisible3}/> </td>
+                        <td>{row.unit3}</td>                  
+                    </tr>
+                </tbody>
+            ))}
+            {calcLayout2.map((row, index)=>(
                 <tbody key={"row" + index}> 
                     
                     <tr>
