@@ -98,16 +98,6 @@ const MainCalculator = () => {
             ]
     const calcLayout2: CalculatorLayout[] = 
     [
-        
-
-        {
-            title1: "Setup Combo 2", title2: "Calculate Rotational Inertia and Compare 0-60", title3: "",
-            value1: "",             value2:  isComparisonEnabled,                            value3: "",
-            unit1:  "",             unit2:   "",                                            unit3:  "",
-            setValue1: null, setValue2: null, setValue3: null,
-            isVisible1: true,           isVisible2: true,                       isVisible3: false
-        },
-
         {
             title1: "Tire Diameter",    title2: "Standard Notation",title3: "Wheel Diameter",
             value1: tireDia2,           value2: isStandardNotation2,value3: wheelDia2,
@@ -140,7 +130,6 @@ const MainCalculator = () => {
     ]
     
 
-    
     return (
         <table>
                 <tbody>
@@ -168,6 +157,13 @@ const MainCalculator = () => {
                     </tr>
                 </tbody>
             ))}
+                <tbody>
+                    <tr>
+                        <td colSpan={2} >Setup Combo 2 </td>
+                        <td colSpan={2}>Calculate Rotational Inertia and Compare 0-60</td>
+                        <td colSpan={2}> </td>
+                    </tr>
+                </tbody>
             {calcLayout2.map((row, index)=>(
                 <tbody key={"row" + index}> 
                     
