@@ -13,6 +13,7 @@ import KnownRadioButton from "./KnownRadioButton"
 import { Main } from "next/document"
 import CalcInput from "./CalcInput"
 import CalcTitle from "./CalcTitle"
+import CalcUnit from "./CalcUnit"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -141,7 +142,6 @@ const MainCalculator = () => {
                 </tbody>
             {calcLayout1.map((row, index)=>(
                 <tbody key={"row" + index}> 
-                    
                     <tr>
                         <td colSpan={2}><CalcTitle title={row.title1} isVisible={row.isVisible1}/> </td>
                         <td colSpan={2}><CalcTitle title={row.title2} isVisible={row.isVisible2}/> </td>
@@ -149,11 +149,11 @@ const MainCalculator = () => {
                     </tr>
                     <tr>
                         <td><CalcInput value={row.value1} setValue={row.setValue1} title = {row.title1} isVisible={row.isVisible1}/> </td>
-                        <td>{row.unit1}</td>
+                        <td><CalcUnit unit = {row.unit1} isVisible = {row.isVisible1}/></td>
                         <td><CalcInput value={row.value2} setValue={row.setValue2} title = {row.title2} isVisible={row.isVisible2}/> </td>
-                        <td>{row.unit2}</td>
+                        <td><CalcUnit unit = {row.unit2} isVisible = {row.isVisible2} /></td>
                         <td><CalcInput value={row.value3} setValue={row.setValue3} title = {row.title3} isVisible={row.isVisible3}/> </td>
-                        <td>{row.unit3}</td>                  
+                        <td><CalcUnit unit = {row.unit3} isVisible = {row.isVisible3} /></td>                  
                     </tr>
                 </tbody>
             ))}
@@ -166,7 +166,6 @@ const MainCalculator = () => {
                 </tbody>
             {calcLayout2.map((row, index)=>(
                 <tbody key={"row" + index}> 
-                    
                     <tr>
                         <td colSpan={2}><CalcTitle title={row.title1} isVisible={row.isVisible1}/> </td>
                         <td colSpan={2}><CalcTitle title={row.title2} isVisible={row.isVisible2}/> </td>
@@ -174,11 +173,11 @@ const MainCalculator = () => {
                     </tr>
                     <tr>
                         <td><CalcInput value={row.value1} setValue={row.setValue1} title = {row.title1} isVisible={row.isVisible1}/> </td>
-                        <td>{row.unit1}</td>
+                        <td><CalcUnit unit = {row.unit1} isVisible = {row.isVisible1} /></td>
                         <td><CalcInput value={row.value2} setValue={row.setValue2} title = {row.title2} isVisible={row.isVisible2}/> </td>
-                        <td>{row.unit2}</td>
+                        <td><CalcUnit unit = {row.unit2} isVisible = {row.isVisible2} /></td>
                         <td><CalcInput value={row.value3} setValue={row.setValue3} title = {row.title3} isVisible={row.isVisible3}/> </td>
-                        <td>{row.unit3}</td>                  
+                        <td><CalcUnit unit = {row.unit3} isVisible = {row.isVisible3} /></td>                  
                     </tr>
                 </tbody>
             ))}
