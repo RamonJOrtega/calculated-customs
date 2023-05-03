@@ -41,7 +41,7 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
             } 
         }
     
-    return(
+    return props.isVisible ? (
         <div > 
             {props.value && (
                 <input className={styles.fieldInput}
@@ -78,7 +78,8 @@ const FieldInput: React.FC<FieldInputProps> = (props) => {
                 </datalist>
             )}
         </div> 
-    )
+    ) : null
+    
 }
 export default FieldInput
 
