@@ -43,8 +43,8 @@ const MainCalculator = () => {
     const [totalInertia2, setTotalInertia2] = React.useState("0")
     const [vehicleWt, setVehicleWt] = React.useState("0")
     const [currentZeroSixtyTime, setCurrentZeroSixtyTime] = React.useState("0")
-  
-    const calculatorLayout: {
+
+    interface CalculatorLayout {
         title1: string, title2:string, title3:string, 
         value1: string  | boolean, value2: string | boolean,  value3: string  | boolean,
         unit1: string, unit2: string, unit3:string,
@@ -52,7 +52,9 @@ const MainCalculator = () => {
         setValue2: React.Dispatch<React.SetStateAction<string>> | React.Dispatch<React.SetStateAction<boolean>>| null,
         setValue3: React.Dispatch<React.SetStateAction<string>> | React.Dispatch<React.SetStateAction<boolean>>| null,
         isVisible1: boolean, isVisible2: boolean, isVisible3: boolean
-        }[] = 
+    }
+  
+    const calcLayout1: CalculatorLayout[] = 
             [
                 
                 {
@@ -141,7 +143,7 @@ const MainCalculator = () => {
                         <td colSpan={2}> </td>
                     </tr>
                 </tbody>
-            {calculatorLayout.map((row, index)=>(
+            {calcLayout1.map((row, index)=>(
                 <tbody key={"row" + index}> 
                     
                     <tr>
