@@ -131,25 +131,6 @@ const MainCalculator = () => {
                 },
             ]
 
-    const handleStandardNotationChange1 = () => {
-       setTireDia1("")
-       setTireWd1("")
-       setTireAsp1("")
-       calculatorLayout[2].isVisible1 = false;
-       calculatorLayout[2].isVisible2 = false;
-       console.log("changed")
-
-    }
-    const handleStandardNotationChange2 = () => {
-        setTireDia2("")
-        setTireWd2("")
-        setTireAsp2("")
-        calculatorLayout[8].isVisible1 = false;
-       calculatorLayout[8].isVisible2 = false;
-     }
-
-    useEffect(() => {handleStandardNotationChange1},[isStandardNotation1])
-    useEffect(() => {handleStandardNotationChange2},[isStandardNotation2])
     
     return (
         <table>
