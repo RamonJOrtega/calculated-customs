@@ -92,7 +92,7 @@ const MainCalculator = () => {
                     value1: vehicleWt,              value2: "",         value3: currentZeroSixtyTime,
                     unit1: "pound",                 unit2: "",          unit3: "second",
                     setValue1: setVehicleWt,        setValue2: null,    setValue3: setCurrentZeroSixtyTime,
-                    isVisible1: true,           isVisible2: true,                       isVisible3: false
+                    isVisible1: isComparisonEnabled,           isVisible2: isComparisonEnabled,                       isVisible3: isComparisonEnabled
                 },
 
               
