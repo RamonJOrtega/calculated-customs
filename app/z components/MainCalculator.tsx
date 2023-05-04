@@ -130,9 +130,11 @@ const MainCalculator = () => {
     ]
     
     useEffect(() => {
-
-    setWheelInertia1(calculateWheelInertia(wheelDia1, wheelWt1).toString());
-      }, [wheelDia1, wheelWt1]);
+        setWheelInertia1(calculateWheelInertia(wheelDia1, wheelWt1).toString());
+    }, [wheelDia1, wheelWt1]);
+    useEffect(() => {
+        setWheelInertia1(calculateWheelInertia(wheelDia1, wheelWt1).toString());
+    }, [wheelDia2, wheelWt2]);
 
     return (
         <table>
