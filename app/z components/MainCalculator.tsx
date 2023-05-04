@@ -15,6 +15,7 @@ import CalcInput from "./CalcInput"
 import CalcTitle from "./CalcTitle"
 import CalcUnit from "./CalcUnit"
 import * as C from '../constants'
+import { calculateWheelInertia } from "../calculations"
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -129,13 +130,8 @@ const MainCalculator = () => {
     ]
     
     useEffect(() => {
-    const wheelRad_m = parseFloat(wheelDia1) * C.METER_PER_INCH / 2                                  //  console.log('wheel radius in meters: ' + wheelRad_m)
-    const wheelMass_kg = parseFloat(wheelWt1) * C. KILOGRAM_PER_POUND                                  //console.log('tire mass in kilograms: ' + wheelMass_kg)
-    const spokeInertia = C.SPOKE_MASS_PERCENTAGE* (1/2) * wheelMass_kg * (wheelRad_m*wheelRad_m +C.HUB_RADIUS_METERS *C.HUB_RADIUS_METERS)  //console.log("spokeInertia is " + spokeInertia)
-    const hubInertia = C.HUB_MASS_PERCENTAGE * (1/2) * wheelMass_kg *C. HUB_RADIUS_METERS *C.HUB_RADIUS_METERS                              //console.log("hub inertia is " + hubInertia)
-    const rimInertia = C.RIM_MASS_PERCENTAGE * wheelMass_kg * wheelRad_m * wheelRad_m                            //console.log("RIM inertia is " + rimInertia)
-    const wheelInertia = (rimInertia + spokeInertia + hubInertia).toFixed(1)
-    setWheelInertia1(wheelInertia);
+
+    setWheelInertia1(calculateWheelInertia(wheelDia1, wheelWt1).toString());
       }, [wheelDia1, wheelWt1]);
 
     return (
