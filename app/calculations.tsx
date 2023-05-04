@@ -15,13 +15,18 @@ export const calculateWheelInertia = (wheelDia: string, wheelWt: string): string
 export const calculateTotalInertia = (tireInertia: string, wheelInertia: string): string => {
     tireInertia = (tireInertia ==="") ? "0" : tireInertia
     wheelInertia = (wheelInertia ==="") ? "0" : wheelInertia
+    tireInertia = (tireInertia ==="") ? "0" : tireInertia
+    wheelInertia = (wheelInertia ==="") ? "0" : wheelInertia
     const totalInertia = (parseFloat(tireInertia) + parseFloat(wheelInertia)).toFixed(1)
     return totalInertia.toString()
 }
 
 export const calculateTireInertia = (tireDia: string, tireWt: string, wheelDia: string): string => {
+    tireDia = (tireDia ==="") ? "0" : tireDia
+    tireWt = (tireWt ==="") ? "0" : tireWt
+    wheelDia = (wheelDia ==="") ? "0" : wheelDia
     const tireRad_m = parseFloat(tireDia) * C.METER_PER_INCH/2                          // console.log('tire radius in meters: ' + tireRad_m)
-    const tireMass_kg = parseFloat(tireWt) * C.KILOGRAM_PER_POUND                         // console.log('tire mass in kilograms: ' + tireMass_kg)
+    const tireMass_kg = parseFloat(tireWt) * C.KILOGRAM_PER_POUND                        // console.log('tire mass in kilograms: ' + tireMass_kg)
     const treadInertia = C.TREAD_MASS_PERCENTAGE* tireMass_kg * tireRad_m * tireRad_m                     // console.log('treadInertia in kg*m^2: ' + treadInertia)
     const wheelRad_m = parseFloat(wheelDia) * C.METER_PER_INCH / 2
     const sidewallInertia = C.SIDEWALL_MASS_PERCENTAGE * (1/2) * tireMass_kg * (tireRad_m * tireRad_m + wheelRad_m * wheelRad_m)// console.log('sidewallInertia in kg*m^2: ' + sidewallInertia)
