@@ -44,6 +44,11 @@ const MainCalculator = () => {
     const [totalInertia2, setTotalInertia2] = React.useState("0")
     const [vehicleWt, setVehicleWt] = React.useState("0")
     const [currentZeroSixtyTime, setCurrentZeroSixtyTime] = React.useState("0")
+    const [isVehicleWeightKnown, setIsVehicleWeightKnown] = React.useState(false)
+    const [isZeroToSixtyTimeKnown, setIsZeroToSixtyTimeKnown] = React.useState(false)
+
+
+
 
     interface CalculatorLayout {
         title1: string, title2:string, title3:string, 
@@ -88,12 +93,13 @@ const MainCalculator = () => {
 
                 },
                 {
-                    title1: "Vehecle Weight Known", title2: "",         title3: "Current 0-60 Time",
+                    title1: "Vehecle Weight",       title2: "",         title3: "Current 0-60 Time",
                     value1: vehicleWt,              value2: "",         value3: currentZeroSixtyTime,
                     unit1: "pound",                 unit2: "",          unit3: "second",
                     setValue1: setVehicleWt,        setValue2: null,    setValue3: setCurrentZeroSixtyTime,
-                    isVisible1: isComparisonEnabled,  isVisible2: isComparisonEnabled,   isVisible3: isComparisonEnabled
+                    isVisible1: isComparisonEnabled,  isVisible2: false,   isVisible3: isComparisonEnabled
                 },
+                
 
               
             ]
