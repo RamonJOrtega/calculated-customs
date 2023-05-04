@@ -14,6 +14,8 @@ import { Main } from "next/document"
 import CalcInput from "./CalcInput"
 import CalcTitle from "./CalcTitle"
 import CalcUnit from "./CalcUnit"
+import * as C from '../constants'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -44,11 +46,6 @@ const MainCalculator = () => {
     const [totalInertia2, setTotalInertia2] = React.useState("0")
     const [vehicleWt, setVehicleWt] = React.useState("0")
     const [currentZeroSixtyTime, setCurrentZeroSixtyTime] = React.useState("0")
-    const [isVehicleWeightKnown, setIsVehicleWeightKnown] = React.useState(false)
-    const [isZeroToSixtyTimeKnown, setIsZeroToSixtyTimeKnown] = React.useState(false)
-
-
-
 
     interface CalculatorLayout {
         title1: string, title2:string, title3:string, 
@@ -62,7 +59,6 @@ const MainCalculator = () => {
   
     const calcLayout1: CalculatorLayout[] = 
             [
-                
                 {
                     title1: "Tire Diameter",    title2: "Standard Notation",title3: "Wheel Diameter",
                     value1: tireDia1,           value2: isStandardNotation1,value3: wheelDia1,
@@ -99,9 +95,6 @@ const MainCalculator = () => {
                     setValue1: setVehicleWt,        setValue2: null,    setValue3: setCurrentZeroSixtyTime,
                     isVisible1: isComparisonEnabled,  isVisible2: false,   isVisible3: isComparisonEnabled
                 },
-                
-
-              
             ]
     const calcLayout2: CalculatorLayout[] = 
     [
@@ -132,10 +125,18 @@ const MainCalculator = () => {
             unit1: "kgm2",                  unit2: "kgm2",                  unit3: "kgm2",
             setValue1: setTireInertia2,     setValue2: setTotalInertia2,    setValue3: setWheelInertia2,
             isVisible1: true,               isVisible2: true,               isVisible3: true
-
         },
     ]
     
+    useEffect(() => {
+    const wheelRad_m = parseFloat(wheelDia1) * C.METER_PER_INCH / 2                                  //  console.log('wheel radius in meters: ' + wheelRad_m)
+    const wheelMass_kg = parseFloat(wheelWt1) * C. KILOGRAM_PER_POUND                                  //console.log('tire mass in kilograms: ' + wheelMass_kg)
+    const spokeInertia = C.SPOKE_MASS_PERCENTAGE* (1/2) * wheelMass_kg * (wheelRad_m*wheelRad_m +C.HUB_RADIUS_METERS *C.HUB_RADIUS_METERS)  //console.log("spokeInertia is " + spokeInertia)
+    const hubInertia = C.HUB_MASS_PERCENTAGE * (1/2) * wheelMass_kg *C. HUB_RADIUS_METERS *C.HUB_RADIUS_METERS                              //console.log("hub inertia is " + hubInertia)
+    const rimInertia = C.RIM_MASS_PERCENTAGE * wheelMass_kg * wheelRad_m * wheelRad_m                            //console.log("RIM inertia is " + rimInertia)
+    const wheelInertia = (rimInertia + spokeInertia + hubInertia).toFixed(1)
+    setWheelInertia1(wheelInertia);
+      }, [wheelDia1, wheelWt1]);
 
     return (
         <table>
