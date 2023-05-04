@@ -129,15 +129,10 @@ const MainCalculator = () => {
         },
     ]
     
-    useEffect(() => {
-        setWheelInertia1(calculateWheelInertia(wheelDia1, wheelWt1));
-    }, [wheelDia1, wheelWt1]);
-    useEffect(() => {
-        setWheelInertia1(calculateWheelInertia(wheelDia1, wheelWt1));
-    }, [wheelDia2, wheelWt2]);
-    useEffect(() => {
-        setTotalInertia1(calculateTotalInertia(tireInertia1, wheelInertia1));
-    }, [tireInertia1, wheelInertia1]);
+    useEffect(() => {setWheelInertia1(calculateWheelInertia(wheelDia1, wheelWt1))}, [wheelDia1, wheelWt1]);
+    useEffect(() => {setWheelInertia2(calculateWheelInertia(wheelDia2, wheelWt2))}, [wheelDia2, wheelWt2]);
+    useEffect(() => {setTotalInertia1(calculateTotalInertia(tireInertia1, wheelInertia1))}, [tireInertia1, wheelInertia1]);
+    useEffect(() => {setTotalInertia2(calculateTotalInertia(tireInertia2, wheelInertia2))}, [tireInertia2, wheelInertia2]);
 
     return (
         <table>
