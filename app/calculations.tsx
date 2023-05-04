@@ -28,3 +28,9 @@ export const calculateTireInertia = (tireDia: string, tireWt: string, wheelDia: 
     const tireInertia = (treadInertia + sidewallInertia).toFixed(1)
     return tireInertia.toString()
 }
+
+export const calculateTireDiameterFromStandardNotation = (aspectRatio: string, tireWidth: string, wheelDiameter: string): string => {
+    const sideWallHeight_in = parseFloat(aspectRatio)/100 * parseFloat(tireWidth)/25.4
+    const tireDiameter = (parseFloat(wheelDiameter) + 2*sideWallHeight_in)
+    return tireDiameter.toString()
+}
