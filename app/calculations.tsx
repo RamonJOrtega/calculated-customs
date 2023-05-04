@@ -13,6 +13,8 @@ export const calculateWheelInertia = (wheelDia: string, wheelWt: string): string
 }
 
 export const calculateTotalInertia = (tireInertia: string, wheelInertia: string): string => {
+    tireInertia = (tireInertia ==="") ? "0" : tireInertia
+    wheelInertia = (wheelInertia ==="") ? "0" : wheelInertia
     const totalInertia = (parseFloat(tireInertia) + parseFloat(wheelInertia)).toFixed(1)
     return totalInertia.toString()
 }

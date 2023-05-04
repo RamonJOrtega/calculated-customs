@@ -15,7 +15,7 @@ import CalcInput from "./CalcInput"
 import CalcTitle from "./CalcTitle"
 import CalcUnit from "./CalcUnit"
 import * as C from '../constants'
-import { calculateWheelInertia } from "../calculations"
+import { calculateTotalInertia, calculateWheelInertia } from "../calculations"
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -130,11 +130,14 @@ const MainCalculator = () => {
     ]
     
     useEffect(() => {
-        setWheelInertia1(calculateWheelInertia(wheelDia1, wheelWt1).toString());
+        setWheelInertia1(calculateWheelInertia(wheelDia1, wheelWt1));
     }, [wheelDia1, wheelWt1]);
     useEffect(() => {
-        setWheelInertia1(calculateWheelInertia(wheelDia1, wheelWt1).toString());
+        setWheelInertia1(calculateWheelInertia(wheelDia1, wheelWt1));
     }, [wheelDia2, wheelWt2]);
+    useEffect(() => {
+        setTotalInertia1(calculateTotalInertia(tireInertia1, wheelInertia1));
+    }, [tireInertia1, wheelInertia1]);
 
     return (
         <table>
