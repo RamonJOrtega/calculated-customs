@@ -15,7 +15,7 @@ import CalcInput from "./CalcInput"
 import CalcTitle from "./CalcTitle"
 import CalcUnit from "./CalcUnit"
 import * as C from '../constants'
-import { calculateTireInertia, calculateTotalInertia, calculateWheelInertia } from "../calculations"
+import { calculateTireDiameterFromStandardNotation, calculateTireInertia, calculateTotalInertia, calculateWheelInertia } from "../calculations"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -129,8 +129,13 @@ const MainCalculator = () => {
     
     useEffect(() => {setWheelInertia1(calculateWheelInertia(wheelDia1, wheelWt1))}, [wheelDia1, wheelWt1]);
     useEffect(() => {setWheelInertia2(calculateWheelInertia(wheelDia2, wheelWt2))}, [wheelDia2, wheelWt2]);
-    useEffect(() => {setTireInertia1(calculateTireInertia(tireDia1, tireWt1, wheelDia1))}, [tireDia1, tireWt1]);
-    useEffect(() => {setTireInertia2(calculateTireInertia(tireDia2, tireWt2, wheelDia2))}, [tireDia2, tireWt2]);
+
+    useEffect(() => {setTireInertia1(calculateTireInertia(tireDia1, tireWt1, wheelDia1))}, [tireDia1, tireWt1, wheelDia1]);
+    useEffect(() => {setTireInertia2(calculateTireInertia(tireDia2, tireWt2, wheelDia2))}, [tireDia2, tireWt2, wheelDia2]);
+
+    useEffect(() => {setTireDia1(calculateTireDiameterFromStandardNotation(tireAsp1, tireWd1, wheelDia1))}, [tireAsp1, tireWd1, wheelDia1]);
+    useEffect(() => {setTireDia2(calculateTireDiameterFromStandardNotation(tireAsp2, tireWd2, wheelDia2))}, [tireAsp2, tireWd2, wheelDia2]);
+    
     useEffect(() => {setTotalInertia1(calculateTotalInertia(tireInertia1, wheelInertia1))}, [tireInertia1, wheelInertia1]);
     useEffect(() => {setTotalInertia2(calculateTotalInertia(tireInertia2, wheelInertia2))}, [tireInertia2, wheelInertia2]);
 
