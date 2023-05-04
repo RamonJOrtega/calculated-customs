@@ -9,5 +9,10 @@ export const calculateWheelInertia = (wheelDia: string, wheelWt: string): string
     const hubInertia = wheelDia == "0" ? 0 : C.HUB_MASS_PERCENTAGE * (1/2) * wheelMass_kg *C.HUB_RADIUS_METERS *C.HUB_RADIUS_METERS                              //console.log("hub inertia is " + hubInertia)
     const rimInertia = C.RIM_MASS_PERCENTAGE * wheelMass_kg * wheelRad_m * wheelRad_m                            //console.log("RIM inertia is " + rimInertia)
     const wheelInertia = (rimInertia + spokeInertia + hubInertia).toFixed(1)
-    return wheelInertia
+    return wheelInertia.toString()
+}
+
+export const calculateTotalInertia = (tireInertia: string, wheelInertia: string): string => {
+    const totalInertia = (parseFloat(tireInertia) + parseFloat(wheelInertia)).toFixed(1)
+    return totalInertia.toString()
 }
