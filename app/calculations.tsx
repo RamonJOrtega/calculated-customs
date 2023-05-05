@@ -1,6 +1,6 @@
 import * as C from "./constants"
 
-export const calculateWheelInertia = (wheelDia: string, wheelWt: string): string => {
+export const calcWheelInertia = (wheelDia: string, wheelWt: string): string => {
     [wheelDia, wheelWt] = [wheelDia || "0", wheelWt || "0"]
     const wheelRad_m = parseFloat(wheelDia) * C.METER_PER_INCH / 2                                  //  console.log('wheel radius in meters: ' + wheelRad_m)
     const wheelMass_kg = parseFloat(wheelWt) * C.KILOGRAM_PER_POUND                                  //console.log('tire mass in kilograms: ' + wheelMass_kg)
@@ -11,7 +11,7 @@ export const calculateWheelInertia = (wheelDia: string, wheelWt: string): string
     return wheelInertia.toString()
 }
 
-export const calculateTotalInertia = (tireInertia: string, wheelInertia: string): string => {
+export const calcTotalInertia = (tireInertia: string, wheelInertia: string): string => {
     [tireInertia, wheelInertia] = [tireInertia || "0", wheelInertia || "0"]
     tireInertia = (tireInertia ==="") ? "0" : tireInertia
     wheelInertia = (wheelInertia ==="") ? "0" : wheelInertia
@@ -21,7 +21,7 @@ export const calculateTotalInertia = (tireInertia: string, wheelInertia: string)
     return totalInertia.toString()
 }
 
-export const calculateTireInertia = (tireDia: string, tireWt: string, wheelDia: string): string => {
+export const calcTireInertia = (tireDia: string, tireWt: string, wheelDia: string): string => {
     [tireDia, tireWt, wheelDia] = [tireDia || "0", tireWt || "0", wheelDia || "0"]
     const tireRad_m = parseFloat(tireDia) * C.METER_PER_INCH/2                          // console.log('tire radius in meters: ' + tireRad_m)
     const tireMass_kg = parseFloat(tireWt) * C.KILOGRAM_PER_POUND                        // console.log('tire mass in kilograms: ' + tireMass_kg)
@@ -32,9 +32,9 @@ export const calculateTireInertia = (tireDia: string, tireWt: string, wheelDia: 
     return tireInertia.toString()
 }
 
-export const calculateTireDiameterFromStandardNotation = (aspectRatio: string, tireWidth: string, wheelDiameter: string): string => {
-    [aspectRatio, tireWidth, wheelDiameter] = [aspectRatio || "0", tireWidth || "0", wheelDiameter || "0"];
-    const sideWallHeight_in = parseFloat(aspectRatio)/100 * parseFloat(tireWidth)/25.4
-    const tireDiameter = (parseFloat(wheelDiameter) + 2*sideWallHeight_in)
+export const calcTireDiaFromStdNotation = (aspRat: string, tireWd: string, wheelDia: string, currentTireDia: string): string => {
+    [aspRat, tireWd, wheelDia] = [aspRat || "0", tireWd || "0", wheelDia || "0"];
+    const sideWallHeight_in = parseFloat(aspRat)/100 * parseFloat(tireWd)/25.4
+    const tireDiameter = (parseFloat(wheelDia) + 2*sideWallHeight_in)
     return tireDiameter.toString()
 }
