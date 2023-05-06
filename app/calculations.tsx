@@ -35,13 +35,7 @@ export const calcTireInertia = (tireDia: string, tireWt: string, wheelDia: strin
 
 export const calcTireDiaFromStdNotation = (aspRat: string, tireWd: string, wheelDia: string): string => {
     if (aspRat === "0" || tireWd === "0" || wheelDia === "0") {return "0"}
-    console.log("aspRat:", aspRat);
-    console.log("tireWd:", tireWd);
-    console.log("wheelDia:", wheelDia);
     const sideWallHeight_in =  parseFloat(aspRat) / 100 * parseFloat(tireWd) / 25.4;
-    console.log("sideWallHeight_in:", sideWallHeight_in);
     const tireDiameter =  (parseFloat(wheelDia) + 2 * sideWallHeight_in).toFixed(1)
-  
-    console.log("tireDiameter:", tireDiameter);
     return tireDiameter;
 }
