@@ -130,14 +130,12 @@ const MainCalculator = () => {
     useEffect(() => {setWheelInertia1(calcWheelInertia(wheelDia1, wheelWt1))}, [wheelDia1, wheelWt1])
     useEffect(() => {setWheelInertia2(calcWheelInertia(wheelDia2, wheelWt2))}, [wheelDia2, wheelWt2])
 
-    useEffect(() => {setTireInertia1(calcTireInertia(tireDia1, tireWt1, wheelDia1))}, [tireDia1, tireWt1, wheelDia1])
-    useEffect(() => {setTireInertia2(calcTireInertia(tireDia2, tireWt2, wheelDia2))}, [tireDia2, tireWt2, wheelDia2])
-
-    useEffect(() => {setTireDia1(calcTireDiaFromStdNotation(tireAsp1, tireWd1, wheelDia1, tireDia1))}, [tireAsp1, tireWd1, wheelDia1])
-    useEffect(() => {setTireDia2(calcTireDiaFromStdNotation(tireAsp2, tireWd2, wheelDia2, tireDia2))}, [tireAsp2, tireWd2, wheelDia2])
+    useEffect(() => {setTireInertia1(calcTireInertia(tireDia1, tireWt1, wheelDia1, isStandardNotation1, tireAsp1, tireWd1))}, [tireDia1, tireWt1, wheelDia1, isStandardNotation1, tireAsp1, tireWd1])
+    useEffect(() => {setTireInertia2(calcTireInertia(tireDia2, tireWt2, wheelDia2, isStandardNotation2, tireAsp2, tireWd2))}, [tireDia2, tireWt2, wheelDia2, isStandardNotation2, tireAsp2, tireWd2])
     
     useEffect(() => {setTotalInertia1(calcTotalInertia(tireInertia1, wheelInertia1))}, [tireInertia1, wheelInertia1])
     useEffect(() => {setTotalInertia2(calcTotalInertia(tireInertia2, wheelInertia2))}, [tireInertia2, wheelInertia2])
+
 
     return (
         <table>
