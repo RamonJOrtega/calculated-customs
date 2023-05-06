@@ -16,6 +16,7 @@ import CalcTitle from "./CalcTitle"
 import CalcUnit from "./CalcUnit"
 import * as C from '../constants'
 import { calcTireDiaFromStdNotation, calcTireInertia, calcTotalInertia, calcWheelInertia } from "../calculations"
+import ZeroToSixtyResult from "./ZeroToSixtyResult"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,18 +24,18 @@ const MainCalculator = () => {
     const [isStandardNotation1, setIsStandardNotation1] = React.useState(false)
     const [isStandardNotation2, setIsStandardNotation2] = React.useState(false)
     const [isComparisonEnabled, setIsCamparisonEnabled] = React.useState(false)
-    const [tireDia1, setTireDia1] = React.useState("0")
-    const [tireWt1, setTireWt1] = React.useState("0")
-    const [tireAsp1, setTireAsp1] = React.useState("0")
-    const [tireWd1, setTireWd1] = React.useState("0")
+    const [tireDia1, setTireDia1] = React.useState("33")
+    const [tireWt1, setTireWt1] = React.useState("50")
+    const [tireAsp1, setTireAsp1] = React.useState("")
+    const [tireWd1, setTireWd1] = React.useState("12.5")
     const [tireInertia1, setTireInertia1] = React.useState("0")
     const [tireDia2, setTireDia2] = React.useState("0")
     const [tireWt2, setTireWt2] = React.useState("0")
     const [tireAsp2, setTireAsp2] = React.useState("0")
     const [tireWd2, setTireWd2] = React.useState("0")
     const [tireInertia2, setTireInertia2] = React.useState("0")
-    const [wheelDia1, setWheelDia1] = React.useState("0")
-    const [wheelWt1, setWheelWt1] = React.useState("0")
+    const [wheelDia1, setWheelDia1] = React.useState("22")
+    const [wheelWt1, setWheelWt1] = React.useState("30")
     //const [wheelWd1, setWheelWd1] = React.useState("0") not used YET
     const [wheelInertia1, setWheelInertia1] = React.useState("0")
     const [wheelDia2, setWheelDia2] = React.useState("0")
@@ -46,6 +47,7 @@ const MainCalculator = () => {
     const [vehicleWt, setVehicleWt] = React.useState("0")
     const [currentZeroSixtyTime, setCurrentZeroSixtyTime] = React.useState("0")
 
+    let newZeroToSixty = {change: "faster",  percent: 100}
     interface CalculatorLayout {
         title1: string, title2:string, title3:string, 
         value1: string  | boolean, value2: string | boolean,  value3: string  | boolean,
@@ -88,7 +90,7 @@ const MainCalculator = () => {
 
                 },
                 {
-                    title1: "Vehecle Weight",       title2: "",         title3: "Current 0-60 Time",
+                    title1: "Vehicle Weight",       title2: "",         title3: "Current 0-60 Time",
                     value1: vehicleWt,              value2: "",         value3: currentZeroSixtyTime,
                     unit1: "pound",                 unit2: "",          unit3: "second",
                     setValue1: setVehicleWt,        setValue2: null,    setValue3: setCurrentZeroSixtyTime,
@@ -125,6 +127,7 @@ const MainCalculator = () => {
             setValue1: setTireInertia2,     setValue2: setTotalInertia2,    setValue3: setWheelInertia2,
             isVisible1: true,               isVisible2: true,               isVisible3: true
         },
+
     ]
     
     useEffect(() => {setWheelInertia1(calcWheelInertia(wheelDia1, wheelWt1))}, [wheelDia1, wheelWt1])
@@ -135,6 +138,8 @@ const MainCalculator = () => {
     
     useEffect(() => {setTotalInertia1(calcTotalInertia(tireInertia1, wheelInertia1))}, [tireInertia1, wheelInertia1])
     useEffect(() => {setTotalInertia2(calcTotalInertia(tireInertia2, wheelInertia2))}, [tireInertia2, wheelInertia2])
+
+    useEffect(() => {setTotalInertia2(calcTotalInertia(tireInertia2, wheelInertia2))}, [totalInertia1, totalInertia2])
 
 
     return (
@@ -170,7 +175,7 @@ const MainCalculator = () => {
                         <td colSpan={2}> </td>
                     </tr>
                 </tbody>
-            {isComparisonEnabled &&calcLayout2.map((row, index)=>(
+            {isComparisonEnabled && calcLayout2.map((row, index)=>(
                 <tbody key={"row" + index}> 
                     <tr>
                         <td colSpan={2}><CalcTitle title={row.title1} isVisible={row.isVisible1}/> </td>
@@ -185,8 +190,24 @@ const MainCalculator = () => {
                         <td><CalcInput value={row.value3} setValue={row.setValue3} title = {row.title3} isVisible={row.isVisible3}/> </td>
                         <td><CalcUnit unit = {row.unit3} isVisible = {row.isVisible3} /></td>                  
                     </tr>
+
                 </tbody>
             ))}
+            {isComparisonEnabled && (
+                <tbody>
+                    <tr>
+                        <td colSpan={6}>
+                            <ZeroToSixtyResult 
+                            vehicleWeight={vehicleWt}           currentZeroSixtyTime = {currentZeroSixtyTime}
+                            totalInertiaResult1={totalInertia1} totalInertiaResult2={totalInertia2}
+                            tireWeight1={tireWt1}               tireWeight2={tireWt2}
+                            tireDiameter1={tireDia1}            tireDiameter2={tireDia2}
+                            wheelWeight1={wheelWt1}             wheelWeight2={wheelWt2}            
+                            /> 
+                        </td>
+                    </tr>
+                </tbody>
+            )}
         </table>
     )
 }
