@@ -29,7 +29,7 @@ const MainCalculator = () => {
     const [tireAsp1, setTireAsp1] = React.useState("")
     const [tireWd1, setTireWd1] = React.useState("0")
     const [tireInertia1, setTireInertia1] = React.useState("0")
-    const [tireDia2, setTireDia2] = React.useState("29.92")
+    const [tireDia2, setTireDia2] = React.useState("30.8")
     const [tireWt2, setTireWt2] = React.useState("40")
     const [tireAsp2, setTireAsp2] = React.useState("40")
     const [tireWd2, setTireWd2] = React.useState("285")
