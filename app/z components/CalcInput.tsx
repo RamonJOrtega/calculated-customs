@@ -25,21 +25,21 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
     const handleInput =() :void => {
         if (!inputRef.current) {return}
         inputRef.current.validity.valid ? props.setValue(inputRef.current.value) : props.setValue('')
+        
 
-            if (props.title === "Aspect Ratio") {
-                console.log("aspect list is here")
-                console.log(inputRef.current.value.length)
-                const lastNum = parseInt(inputRef.current.value) % 10;
-                console.log("last Num : " + lastNum)
-                if (inputRef.current.value.length === 1) {(lastNum > 0) || (props.setValue(inputRef.current.value))}
-                if (inputRef.current.value.length === 2) {(lastNum === 0) || (lastNum === 5) || (props.setValue(''))}
-            }
-            if (props.title === "Tire Width") {
-                const lastNum = parseFloat(inputRef.current.value)% 10
-                if (inputRef.current.value.length == 1) {(lastNum>0 && lastNum<10)|| props.setValue(inputRef.current.value='')}
-              //2nd tire number can anything
-                if (inputRef.current.value.length == 3) {(lastNum == 0 || lastNum ==5)||props.setValue(inputRef.current.value='')}
-            } 
+        if (props.title === "Aspect Ratio") {
+            const lastNum = parseInt(inputRef.current.value) % 10;
+            if (inputRef.current.value.length === 1) {(lastNum > 0) || (props.setValue(inputRef.current.value))}
+            if (inputRef.current.value.length === 2) {(lastNum === 0) || (lastNum === 5) || (props.setValue(''))}
+        }
+        if (props.title === "Tire Width") {
+            const lastNum = parseFloat(inputRef.current.value)% 10
+            if (inputRef.current.value.length == 1) {(lastNum>0 && lastNum<10)|| props.setValue(inputRef.current.value='')}
+            //2nd tire number can anything
+            if (inputRef.current.value.length == 3) {(lastNum == 0 || lastNum ==5)||props.setValue(inputRef.current.value='')}
+        } 
+
+
         }
     
     return props.isVisible ? (

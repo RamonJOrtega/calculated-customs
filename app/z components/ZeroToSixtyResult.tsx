@@ -44,7 +44,7 @@ const secondsFaster: string = (currentZeroToSixtyTime-(T2/T1)*currentZeroToSixty
 const secondsSlower: string = ((currentZeroToSixtyTime-(T2/T1)*currentZeroToSixtyTime)*(-1)).toFixed(2)
 
 let percentDecMessage:string = "0-60mph | " + percentDec + "%  time decrease";
-let percentIncMessage:string = "0-60mph | "+ percentInc  + "%   time increase";
+let percentIncMessage:string = "0-60mph | "+ percentInc  + "%  time increase";
 let secondsFasterMessage:string = "0-60mph | " + secondsFaster + " seconds faster";
 let secondsSlowerMessage:string = "0-60mph | " + secondsSlower + " seconds slower";
 
@@ -53,28 +53,28 @@ percentIncMessage = (percentInc !== "NaN") ? percentIncMessage : "input more to 
 secondsFasterMessage = (secondsFaster !== "NaN") ? secondsFasterMessage : "input more to compare 0-60 time"
 secondsSlowerMessage = (secondsSlower !== "NaN") ? secondsSlowerMessage : "input more to compare 0-60 time"
 
-console.log('tireRadius1:', tireRadius1);
-console.log('tireRadius2:', tireRadius2);
-console.log('tireWeight1:', tireWeight1);
-console.log('tireWeight2:', tireWeight2);
-console.log('wheelWeight1:', wheelWeight1);
-console.log('wheelWeight2:', wheelWeight2);
-console.log('inertia1:', inertia1);
-console.log('inertia2:', inertia2);
-console.log('vehicleWeight:', vehicleWeight);
-console.log('currentZeroToSixtyTime:', currentZeroToSixtyTime);
+// console.log('tireRadius1:', tireRadius1);
+// console.log('tireRadius2:', tireRadius2);
+// console.log('tireWeight1:', tireWeight1);
+// console.log('tireWeight2:', tireWeight2);
+// console.log('wheelWeight1:', wheelWeight1);
+// console.log('wheelWeight2:', wheelWeight2);
+// console.log('inertia1:', inertia1);
+// console.log('inertia2:', inertia2);
+// console.log('vehicleWeight:', vehicleWeight);
+// console.log('currentZeroToSixtyTime:', currentZeroToSixtyTime);
 
-console.log('mass_current_car_on_current_wheels:', mass_current_car_on_current_wheels);
-console.log('mass_alt_car_on_alt_wheels:', mass_alt_car_on_alt_wheels);
+// console.log('mass_current_car_on_current_wheels:', mass_current_car_on_current_wheels);
+// console.log('mass_alt_car_on_alt_wheels:', mass_alt_car_on_alt_wheels);
 
-console.log('T1:', T1);
-console.log('T2:', T2);
+// console.log('T1:', T1);
+// console.log('T2:', T2);
 
 
-console.log('percentDec:', percentDec);
-console.log('percentInc:', percentInc);
-console.log('secondsFaster:', secondsFaster);
-console.log('secondsSlower:', secondsSlower);
+// console.log('percentDec:', percentDec);
+// console.log('percentInc:', percentInc);
+// console.log('secondsFaster:', secondsFaster);
+// console.log('secondsSlower:', secondsSlower);
 
     return(
         < >
