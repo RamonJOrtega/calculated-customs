@@ -21,9 +21,9 @@ import ZeroToSixtyResult from "./ZeroToSixtyResult"
 const inter = Inter({ subsets: ['latin'] })
 
 const MainCalculator = () => {
-    const [isStandardNotation1, setIsStandardNotation1] = React.useState(false)
-    const [isStandardNotation2, setIsStandardNotation2] = React.useState(true)
-    const [isComparisonEnabled, setIsCamparisonEnabled] = React.useState(false)
+    const [isStdNotation1, setIsStdNotation1] = React.useState(false)
+    const [isStdNotation2, setIsStdNotation2] = React.useState(true)
+    const [isCompareEnabled, setIsCamparisonEnabled] = React.useState(false)
     const [tireDia1, setTireDia1] = React.useState("33")
     const [tireWt1, setTireWt1] = React.useState("50")
     const [tireAsp1, setTireAsp1] = React.useState("")
@@ -62,24 +62,24 @@ const MainCalculator = () => {
         [
             {
                 title1: "Tire Diameter",    title2: "Standard Notation",title3: "Wheel Diameter",
-                value1: tireDia1,           value2: isStandardNotation1,value3: wheelDia1,
+                value1: tireDia1,           value2: isStdNotation1,value3: wheelDia1,
                 unit1:  "inch",             unit2:   "",                unit3:  "inch",
-                setValue1: setTireDia1,     setValue2: setIsStandardNotation1, setValue3: setWheelDia1,
-                isVisible1: !isStandardNotation1,   isVisible2: !isStandardNotation1,     isVisible3: !isStandardNotation1
+                setValue1: setTireDia1,     setValue2: setIsStdNotation1, setValue3: setWheelDia1,
+                isVisible1: !isStdNotation1,   isVisible2: !isStdNotation1,     isVisible3: !isStdNotation1
             },
             {
                 title1: "Tire Width",       title2: "Aspect Ratio",     title3: "Wheel Diameter",
                 value1: tireWd1,            value2: tireAsp1,           value3: wheelDia1,
                 unit1:  "/",                unit2:"R",                  unit3:  "inch",
                 setValue1: setTireWd1,      setValue2: setTireAsp1, setValue3: setWheelDia1,
-                isVisible1: isStandardNotation1, isVisible2: isStandardNotation1,    isVisible3: isStandardNotation1
+                isVisible1: isStdNotation1, isVisible2: isStdNotation1,    isVisible3: isStdNotation1
             },
             {
                 title1: "Tire Weight",      title2: "Standard Notation",                 title3: "Wheel Weight",
-                value1: tireWt1 ,           value2: isStandardNotation1,                 value3: wheelWt1,
+                value1: tireWt1 ,           value2: isStdNotation1,                 value3: wheelWt1,
                 unit1: "pound",             unit2: "",                  unit3: "pound",
-                setValue1: setTireWt1,      setValue2: setIsStandardNotation1,            setValue3: setWheelWt1,
-                isVisible1: true,           isVisible2: isStandardNotation1,                       isVisible3: true
+                setValue1: setTireWt1,      setValue2: setIsStdNotation1,            setValue3: setWheelWt1,
+                isVisible1: true,           isVisible2: isStdNotation1,                       isVisible3: true
             },
             {
                 title1: "Tire Inertia",         title2: "Total Inertia",    title3: "Wheel Inertia",
@@ -94,31 +94,31 @@ const MainCalculator = () => {
                 value1: vehicleWt,              value2: "",         value3: currentZeroSixtyTime,
                 unit1: "pound",                 unit2: "",          unit3: "second",
                 setValue1: setVehicleWt,        setValue2: null,    setValue3: setCurrentZeroSixtyTime,
-                isVisible1: isComparisonEnabled,  isVisible2: false,   isVisible3: isComparisonEnabled
+                isVisible1: isCompareEnabled,  isVisible2: false,   isVisible3: isCompareEnabled
             },
         ]
     const calcLayout2: CalculatorLayout[] = 
     [
         {
             title1: "Tire Diameter",    title2: "Standard Notation",title3: "Wheel Diameter",
-            value1: tireDia2,           value2: isStandardNotation2,value3: wheelDia2,
+            value1: tireDia2,           value2: isStdNotation2,value3: wheelDia2,
             unit1:  "inch",             unit2:   "",                unit3:  "inch",
-            setValue1: setTireDia2,     setValue2: setIsStandardNotation2, setValue3: setWheelDia2,
-            isVisible1: !isStandardNotation2,    isVisible2: !isStandardNotation2,       isVisible3: !isStandardNotation2
+            setValue1: setTireDia2,     setValue2: setIsStdNotation2, setValue3: setWheelDia2,
+            isVisible1: !isStdNotation2,    isVisible2: !isStdNotation2,       isVisible3: !isStdNotation2
         },
         {
             title1: "Tire Width",    title2: "Aspect Ratio",        title3: "Wheel Diameter",
             value1: tireWd2,            value2: tireAsp2,               value3: wheelDia2,
             unit1:  "/",             unit2:"R",                     unit3:  "inch",
             setValue1: setTireWd2,      setValue2: setTireAsp2, setValue3: setWheelDia2,
-            isVisible1: isStandardNotation2,           isVisible2: isStandardNotation2,     isVisible3: isStandardNotation2
+            isVisible1: isStdNotation2,           isVisible2: isStdNotation2,     isVisible3: isStdNotation2
         },
         {
             title1: "Tire Weight",      title2: "Aspect Ratio",                 title3: "Wheel Weight",
-            value1: tireWt2 ,           value2: isStandardNotation2,                 value3: wheelWt2,
+            value1: tireWt2 ,           value2: isStdNotation2,                 value3: wheelWt2,
             unit1: "pound",             unit2: "",                  unit3: "pound",
-            setValue1: setTireWt2,      setValue2: setIsStandardNotation2,            setValue3: setWheelWt2,
-            isVisible1: true,           isVisible2: isStandardNotation2,           isVisible3: true
+            setValue1: setTireWt2,      setValue2: setIsStdNotation2,            setValue3: setWheelWt2,
+            isVisible1: true,           isVisible2: isStdNotation2,           isVisible3: true
         },
         {
             title1: "Tire Inertia",         title2: "Total Inertia",        title3: "Wheel Inertia",
@@ -133,8 +133,8 @@ const MainCalculator = () => {
     useEffect(() => {setWheelInertia1(calcWheelInertia(wheelDia1, wheelWt1))}, [wheelDia1, wheelWt1])
     useEffect(() => {setWheelInertia2(calcWheelInertia(wheelDia2, wheelWt2))}, [wheelDia2, wheelWt2])
 
-    useEffect(() => {setTireInertia1(calcTireInertia(tireDia1, tireWt1, wheelDia1, isStandardNotation1, tireAsp1, tireWd1))}, [tireDia1, tireWt1, wheelDia1, isStandardNotation1, tireAsp1, tireWd1])
-    useEffect(() => {setTireInertia2(calcTireInertia(tireDia2, tireWt2, wheelDia2, isStandardNotation2, tireAsp2, tireWd2))}, [tireDia2, tireWt2, wheelDia2, isStandardNotation2, tireAsp2, tireWd2])
+    useEffect(() => {setTireInertia1(calcTireInertia(tireDia1, tireWt1, wheelDia1, isStdNotation1, tireAsp1, tireWd1))}, [tireDia1, tireWt1, wheelDia1, isStdNotation1, tireAsp1, tireWd1])
+    useEffect(() => {setTireInertia2(calcTireInertia(tireDia2, tireWt2, wheelDia2, isStdNotation2, tireAsp2, tireWd2))}, [tireDia2, tireWt2, wheelDia2, isStdNotation2, tireAsp2, tireWd2])
     
     useEffect(() => {setTotalInertia1(calcTotalInertia(tireInertia1, wheelInertia1))}, [tireInertia1, wheelInertia1])
     useEffect(() => {setTotalInertia2(calcTotalInertia(tireInertia2, wheelInertia2))}, [tireInertia2, wheelInertia2])
@@ -171,11 +171,11 @@ const MainCalculator = () => {
                 <tbody>
                     <tr>
                         <td colSpan={2} >Setup Combo 2 </td>
-                        <td colSpan={2}><button onClick={()=>{setIsCamparisonEnabled(!isComparisonEnabled)}}>Calculate Rotational Inertia and Compare 0-60</button></td>
+                        <td colSpan={2}><button onClick={()=>{setIsCamparisonEnabled(!isCompareEnabled)}}>Calculate Rotational Inertia and Compare 0-60</button></td>
                         <td colSpan={2}> </td>
                     </tr>
                 </tbody>
-            {isComparisonEnabled && calcLayout2.map((row, index)=>(
+            {isCompareEnabled && calcLayout2.map((row, index)=>(
                 <tbody key={"row" + index}> 
                     <tr>
                         <td colSpan={2}><CalcTitle title={row.title1} isVisible={row.isVisible1}/> </td>
@@ -193,7 +193,7 @@ const MainCalculator = () => {
 
                 </tbody>
             ))}
-            {isComparisonEnabled && (
+            {isCompareEnabled && (
                 <tbody>
                     <tr>
                         <td colSpan={6}>

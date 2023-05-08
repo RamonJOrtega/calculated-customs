@@ -36,7 +36,6 @@ export const calcTireDiaFromStdNotation = (aspRat: string, tireWd: string, wheel
     if (aspRat === "0" || tireWd === "0" || wheelDia === "0") {return "0"}
     const sideWallHeight_in =  parseFloat(aspRat) / 100 * parseFloat(tireWd) / 25.4;
     const tireDiameter =  (parseFloat(wheelDia) + 2 * sideWallHeight_in).toFixed(1)
-    console.log(tireDiameter)
     return tireDiameter;
 }
 
