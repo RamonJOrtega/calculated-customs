@@ -44,8 +44,8 @@ const MainCalculator = () => {
     const [wheelInertia2, setWheelInertia2] = React.useState("0")
     const [totalInertia1, setTotalInertia1] = React.useState("0")
     const [totalInertia2, setTotalInertia2] = React.useState("0")
-    const [vehicleWt, setVehicleWt] = React.useState("0")
-    const [currentZeroSixtyTime, setCurrentZeroSixtyTime] = React.useState("0")
+    const [vehicleWt, setVehicleWt] = React.useState("4000")
+    const [currentZeroSixtyTime, setCurrentZeroSixtyTime] = React.useState("4.6")
 
     let newZeroToSixty = {change: "faster",  percent: 100}
     interface CalculatorLayout {
