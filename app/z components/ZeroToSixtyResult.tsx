@@ -43,8 +43,8 @@ const percentInc: string = (100*(T2-T1)/T1).toFixed(1);
 const secondsFaster: string = (currentZeroToSixtyTime-(T2/T1)*currentZeroToSixtyTime).toFixed(2)
 const secondsSlower: string = ((currentZeroToSixtyTime-(T2/T1)*currentZeroToSixtyTime)*(-1)).toFixed(2)
 
-let percentDecMessage:string = "0-60mph | " + percentDec + "% second 0-60 time decrease";
-let percentIncMessage:string = "0-60mph | "+ percentInc  + "% second 0-60 time increase";
+let percentDecMessage:string = "0-60mph | " + percentDec + "%  time decrease";
+let percentIncMessage:string = "0-60mph | "+ percentInc  + "%   time increase";
 let secondsFasterMessage:string = "0-60mph | " + secondsFaster + " seconds faster";
 let secondsSlowerMessage:string = "0-60mph | " + secondsSlower + " seconds slower";
 
