@@ -15,7 +15,7 @@ import CalcInput from "./CalcInput"
 import CalcTitle from "./CalcTitle"
 import CalcUnit from "./CalcUnit"
 import * as C from '../constants'
-import { calcTireDiaFromStdNotation, calcTireInertia, calcTotalInertia, calcWheelInertia } from "../calculations"
+import {calcTireInertia, calcTotalInertia, calcWheelInertia } from "../calculations"
 import ZeroToSixtyResult from "./ZeroToSixtyResult"
 
 const inter = Inter({ subsets: ['latin'] })
