@@ -29,7 +29,7 @@ const MainCalculator = () => {
     const [tireAsp1, setTireAsp1] = React.useState("")
     const [tireWd1, setTireWd1] = React.useState("0")
     const [tireInertia1, setTireInertia1] = React.useState("0")
-    const [tireDia2, setTireDia2] = React.useState("0")
+    const [tireDia2, setTireDia2] = React.useState("29.92")
     const [tireWt2, setTireWt2] = React.useState("40")
     const [tireAsp2, setTireAsp2] = React.useState("65")
     const [tireWd2, setTireWd2] = React.useState("285")
@@ -116,7 +116,7 @@ const MainCalculator = () => {
         {
             title1: "Tire Weight",      title2: "Aspect Ratio",                 title3: "Wheel Weight",
             value1: tireWt2 ,           value2: isStdNotation2,                 value3: wheelWt2,
-            unit1: "pound",             unit2: "",                  unit3: "pound",
+            unit1: "pound",             unit2: "",                              unit3: "pound",
             setValue1: setTireWt2,      setValue2: setIsStdNotation2,            setValue3: setWheelWt2,
             isVisible1: true,           isVisible2: isStdNotation2,           isVisible3: true
         },
@@ -127,7 +127,6 @@ const MainCalculator = () => {
             setValue1: setTireInertia2,     setValue2: setTotalInertia2,    setValue3: setWheelInertia2,
             isVisible1: true,               isVisible2: true,               isVisible3: true
         },
-
     ]
     
     useEffect(() => {setWheelInertia1(calcWheelInertia(wheelDia1, wheelWt1))}, [wheelDia1, wheelWt1])
@@ -202,7 +201,8 @@ const MainCalculator = () => {
                             totalInertiaResult1={totalInertia1} totalInertiaResult2={totalInertia2}
                             tireWeight1={tireWt1}               tireWeight2={tireWt2}
                             tireDiameter1={tireDia1}            tireDiameter2={tireDia2}
-                            wheelWeight1={wheelWt1}             wheelWeight2={wheelWt2}            
+                            wheelWeight1={wheelWt1}             wheelWeight2={wheelWt2}
+                            // isStdNotation1={isStdNotation1}     isStdNotation2={isStdNotation2}
                             /> 
                         </td>
                     </tr>

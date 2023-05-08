@@ -19,8 +19,9 @@ export const calcTotalInertia = (tireInertia: string, wheelInertia: string): str
 
 export const calcTireInertia = (tireDia: string, tireWt: string, wheelDia: string, isStdNtn: boolean, aspRat: string, tireWd: string): string => {
     [tireDia, tireWt, wheelDia, aspRat, tireWd] = [tireDia || "0", tireWt || "0", wheelDia || "0", aspRat || "0", tireWd || "0"]
+    const calcTireDia =  calcTireDiaFromStdNotation(aspRat, tireWd, wheelDia)
     if (isStdNtn) {
-        tireDia = calcTireDiaFromStdNotation(aspRat, tireWd, wheelDia)
+        tireDia = calcTireDia
     }
         const tireRad_m = parseFloat(tireDia) * C.METER_PER_INCH/2                          // console.log('tire radius in meters: ' + tireRad_m)
         const tireMass_kg = parseFloat(tireWt) * C.KILOGRAM_PER_POUND                        // console.log('tire mass in kilograms: ' + tireMass_kg)

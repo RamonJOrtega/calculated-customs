@@ -16,7 +16,9 @@ interface ZeroToSixtyResultProps {
     tireDiameter1: string;
     tireDiameter2: string;
     wheelWeight1: string;
-    wheelWeight2: string;    
+    wheelWeight2: string;
+    // isStdNotation1: boolean;
+    // isStdNotation2: boolean;
 }
 const ZeroToSixtyResult: React.FC<ZeroToSixtyResultProps> = (props) => {
 const tireRadius1 = parseFloat(props.tireDiameter1)*0.0254/2 //convert from Diameter[in] to Radius[m]
@@ -51,6 +53,29 @@ percentIncMessage = (percentInc !== "NaN") ? percentIncMessage : "input more to 
 secondsFasterMessage = (secondsFaster !== "NaN") ? secondsFasterMessage : "input more to compare 0-60 time"
 secondsSlowerMessage = (secondsSlower !== "NaN") ? secondsSlowerMessage : "input more to compare 0-60 time"
 
+console.log('tireRadius1:', tireRadius1);
+console.log('tireRadius2:', tireRadius2);
+console.log('tireWeight1:', tireWeight1);
+console.log('tireWeight2:', tireWeight2);
+console.log('wheelWeight1:', wheelWeight1);
+console.log('wheelWeight2:', wheelWeight2);
+console.log('inertia1:', inertia1);
+console.log('inertia2:', inertia2);
+console.log('vehicleWeight:', vehicleWeight);
+console.log('currentZeroToSixtyTime:', currentZeroToSixtyTime);
+
+console.log('mass_current_car_on_current_wheels:', mass_current_car_on_current_wheels);
+console.log('mass_alt_car_on_alt_wheels:', mass_alt_car_on_alt_wheels);
+
+console.log('T1:', T1);
+console.log('T2:', T2);
+
+
+console.log('percentDec:', percentDec);
+console.log('percentInc:', percentInc);
+console.log('secondsFaster:', secondsFaster);
+console.log('secondsSlower:', secondsSlower);
+
     return(
         < >
             {T1 > T2 ? 
@@ -69,4 +94,6 @@ secondsSlowerMessage = (secondsSlower !== "NaN") ? secondsSlowerMessage : "input
     )
 }
 
+
 export default ZeroToSixtyResult;
+
