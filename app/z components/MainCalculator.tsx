@@ -23,7 +23,7 @@ const inter = Inter({ subsets: ['latin'] })
 const MainCalculator = () => {
     const [isStdNotation1, setIsStdNotation1] = React.useState(false)
     const [isStdNotation2, setIsStdNotation2] = React.useState(true)
-    const [isCompareEnabled, setIsCamparisonEnabled] = React.useState(false)
+    const [isCompareEnabled, setIsCampareEnabled] = React.useState(false)
     const [tireDia1, setTireDia1] = React.useState("33")
     const [tireWt1, setTireWt1] = React.useState("50")
     const [tireAsp1, setTireAsp1] = React.useState("")
@@ -55,7 +55,6 @@ const MainCalculator = () => {
     
     useEffect(() => {setTotalInertia1(calcTotalInertia(tireInertia1, wheelInertia1))}, [tireInertia1, wheelInertia1])
     useEffect(() => {setTotalInertia2(calcTotalInertia(tireInertia2, wheelInertia2))}, [tireInertia2, wheelInertia2])
-
 
     let newZeroToSixty = {change: "faster",  percent: 100}
     interface CalculatorLayout {
@@ -168,7 +167,7 @@ const MainCalculator = () => {
                 <tbody>
                     <tr>
                         <td colSpan={2} >Setup Combo 2 </td>
-                        <td colSpan={2}><button onClick={()=>{setIsCamparisonEnabled(!isCompareEnabled)}}>Calculate Rotational Inertia and Compare 0-60</button></td>
+                        <td colSpan={2}><button onClick={()=>{setIsCampareEnabled(!isCompareEnabled)}}>Calculate Rotational Inertia and Compare 0-60</button></td>
                         <td colSpan={2}> </td>
                     </tr>
                 </tbody>
