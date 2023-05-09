@@ -46,6 +46,16 @@ const MainCalculator = () => {
     const [totalInertia2, setTotalInertia2] = React.useState("0")
     const [vehicleWt, setVehicleWt] = React.useState("4000")
     const [currentZeroSixtyTime, setCurrentZeroSixtyTime] = React.useState("4.6")
+        
+    useEffect(() => {setWheelInertia1(calcWheelInertia(wheelDia1, wheelWt1))}, [wheelDia1, wheelWt1])
+    useEffect(() => {setWheelInertia2(calcWheelInertia(wheelDia2, wheelWt2))}, [wheelDia2, wheelWt2])
+
+    useEffect(() => {setTireInertia1(calcTireInertia(tireDia1, tireWt1, wheelDia1, isStdNotation1, tireAsp1, tireWd1))}, [tireDia1, tireWt1, wheelDia1, isStdNotation1, tireAsp1, tireWd1])
+    useEffect(() => {setTireInertia2(calcTireInertia(tireDia2, tireWt2, wheelDia2, isStdNotation2, tireAsp2, tireWd2))}, [tireDia2, tireWt2, wheelDia2, isStdNotation2, tireAsp2, tireWd2])
+    
+    useEffect(() => {setTotalInertia1(calcTotalInertia(tireInertia1, wheelInertia1))}, [tireInertia1, wheelInertia1])
+    useEffect(() => {setTotalInertia2(calcTotalInertia(tireInertia2, wheelInertia2))}, [tireInertia2, wheelInertia2])
+
 
     let newZeroToSixty = {change: "faster",  percent: 100}
     interface CalculatorLayout {
@@ -128,18 +138,6 @@ const MainCalculator = () => {
             isVisible1: true,               isVisible2: true,               isVisible3: true
         },
     ]
-    
-    useEffect(() => {setWheelInertia1(calcWheelInertia(wheelDia1, wheelWt1))}, [wheelDia1, wheelWt1])
-    useEffect(() => {setWheelInertia2(calcWheelInertia(wheelDia2, wheelWt2))}, [wheelDia2, wheelWt2])
-
-    useEffect(() => {setTireInertia1(calcTireInertia(tireDia1, tireWt1, wheelDia1, isStdNotation1, tireAsp1, tireWd1))}, [tireDia1, tireWt1, wheelDia1, isStdNotation1, tireAsp1, tireWd1])
-    useEffect(() => {setTireInertia2(calcTireInertia(tireDia2, tireWt2, wheelDia2, isStdNotation2, tireAsp2, tireWd2))}, [tireDia2, tireWt2, wheelDia2, isStdNotation2, tireAsp2, tireWd2])
-    
-    useEffect(() => {setTotalInertia1(calcTotalInertia(tireInertia1, wheelInertia1))}, [tireInertia1, wheelInertia1])
-    useEffect(() => {setTotalInertia2(calcTotalInertia(tireInertia2, wheelInertia2))}, [tireInertia2, wheelInertia2])
-
-    useEffect(() => {setTotalInertia2(calcTotalInertia(tireInertia2, wheelInertia2))}, [totalInertia1, totalInertia2])
-
 
     return (
         <table>
