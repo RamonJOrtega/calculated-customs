@@ -396,11 +396,7 @@
   border-radius: 75px;
 }
 
-.radioStack{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+
 
 .flexCenter {
   display: flex;
@@ -422,14 +418,7 @@
   border: none;
   
  }
-.radio {
-  display: inline;
-  height: 1rem;
-  accent-color: #fde047;
-  border-radius: 5px;
-  border: none;
-  /* margin-left: 3px; */
-}
+
 
 .fieldInput {
   margin: .25rem;
