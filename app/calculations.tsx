@@ -29,7 +29,6 @@ export const calcTireInertia = (tireDia: string, tireWt: string, wheelDia: strin
         const sidewallInertia = (tireDia === "0") ? 0 : C.SIDEWALL_MASS_PERCENTAGE * (1/2) * tireMass_kg * (tireRad_m * tireRad_m + wheelRad_m * wheelRad_m)//console.log('sidewallInertia in kg*m^2: ' + sidewallInertia)
         const tireInertia = (treadInertia + sidewallInertia).toFixed(1)
         return tireInertia
-    
 }
 
 const calcTireDiaFromStdNotation = (aspRat: string, tireWd: string, wheelDia: string): string => {

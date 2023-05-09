@@ -76,6 +76,16 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
                     value = {props.value}
                 /> 
             )}
+               {typeof(props.value)==="string" && props.title.includes("Inertia") && (
+                <input className={styles.result}
+                    type = 'number'
+                    ref = {inputRef}
+                    disabled
+                    onInput={handleInput}
+                    placeholder={props.placeHolder}
+                    value = {props.value} 
+                /> 
+            )}
             {(props.title === "Tire Width") && (
                 <datalist id="widthList" >
                     <option value="105"></option><option value="115"></option><option value="125"></option><option value="135"></option>

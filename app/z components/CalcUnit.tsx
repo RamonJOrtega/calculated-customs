@@ -11,10 +11,14 @@ interface CalcUnitProps {
 }
 
 export default function CalcUnit(props: any) {
-
     return props.isVisible ? (
-        <div className={styles.postFix}>
-          {props.unit}
-        </div>
+      <div className={styles.postFix}>
+        {props.unit === "kgm2" ? (
+          <span>kg&bull;m<sup>2</sup></span>
+        ) : (
+          props.unit
+        )}
+      </div>
     ) : null;
-}
+  }
+  

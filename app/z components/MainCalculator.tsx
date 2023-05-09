@@ -143,7 +143,17 @@ const MainCalculator = () => {
                 <tbody>
                     <tr>
                         <td colSpan={2} >Setup Combo 1 </td>
-                        <td colSpan={2}>Calculate Rotational Inertia</td>
+                        <td colSpan={2}>
+                            <span className={styles.secondaryDark}>
+                                <button className={styles.card}  >
+                                    <div className={inter.className}>
+                                        <h3 className={styles.header}>
+                                            Calculate Rotational Inertia -&gt;
+                                        </h3> 
+                                    </div>
+                                </button>
+                            </span>
+                        </td>
                         <td colSpan={2}> </td>
                     </tr>
                 </tbody>
@@ -167,7 +177,17 @@ const MainCalculator = () => {
                 <tbody>
                     <tr>
                         <td colSpan={2} >Setup Combo 2 </td>
-                        <td colSpan={2}><button onClick={()=>{setIsCampareEnabled(!isCompareEnabled)}}>Calculate Rotational Inertia and Compare 0-60</button></td>
+                        <td colSpan={2}>
+                                <span className={styles.secondaryDark}>
+                                    <button className={styles.card} onClick={()=>{setIsCampareEnabled(!isCompareEnabled)}} >
+                                        <div className={inter.className}>
+                                            <h3 className={styles.header}>
+                                                Compare 0-60 Time -&gt;
+                                            </h3> 
+                                        </div>
+                                    </button>
+                                </span>
+                        </td>
                         <td colSpan={2}> </td>
                     </tr>
                 </tbody>
