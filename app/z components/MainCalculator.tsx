@@ -175,6 +175,7 @@ const MainCalculator = () => {
                 </tbody>
             ))}
                 <tbody>
+                <tr>    <td colSpan={6}> &nbsp;  </td>   </tr>
                     <tr>
                         <td colSpan={2} >Setup Combo 2 </td>
                         <td colSpan={2}>
@@ -191,6 +192,7 @@ const MainCalculator = () => {
                         <td colSpan={2}> </td>
                     </tr>
                 </tbody>
+
             {isCompareEnabled && calcLayout2.map((row, index)=>(
                 <tbody key={"row" + index}> 
                     <tr>
