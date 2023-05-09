@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic'
 import Link from 'next/link'
 
 import ComparisonCalculator from './z components/ComparisonCalculator'
+import MainCalculator from './z components/MainCalculator'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -38,7 +39,7 @@ export default function Home() {
 
             <div className={styles.cardCalculator}>
               <div >
-                  <ComparisonCalculator  />
+                  <MainCalculator  />
               </div>
             </div>
 
