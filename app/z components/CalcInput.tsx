@@ -51,10 +51,7 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
                             className={styles.checkbox}
                             type="checkbox"
                             checked={props.value}
-                            onChange={()=>{
-                                console.log(!props.value)
-                                props.setValue(!props.value)
-                                }
+                            onChange={()=>{props.setValue(!props.value)}
                             }/> 
                     </span>
                     <div className={styles.postFix}> 
@@ -63,28 +60,31 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
                 </div>
             )}
 
-            {typeof(props.value)==="string" && (
-                <input className={styles.fieldInput}
-                    type = 'number'
-                    max = {MAX}
-                    min = {MIN}
-                    ref = {inputRef}
-                    list={props.list} 
-                    onClick={()=>{props.setValue("")}}
-                    onInput={handleInput}
-                    placeholder={props.placeHolder}
-                    value = {props.value}
-                /> 
-            )}
-               {typeof(props.value)==="string" && props.title.includes("Inertia") && (
-                <input className={styles.result}
-                    type = 'number'
-                    ref = {inputRef}
+            {(props.title.includes("Inertia")) ? (
+                <input
+                    className={styles.result}
+                    type="number"
+                    ref={inputRef}
                     disabled
                     onInput={handleInput}
                     placeholder={props.placeHolder}
-                    value = {props.value} 
-                /> 
+                    value={props.value}
+                />
+                ) : (
+                <input
+                    className={styles.fieldInput}
+                    type="number"
+                    max={MAX}
+                    min={MIN}
+                    ref={inputRef}
+                    list={props.list}
+                    onClick={() => {
+                    props.setValue("");
+                    }}
+                    onInput={handleInput}
+                    placeholder={props.placeHolder}
+                    value={props.value}
+                />
             )}
             {(props.title === "Tire Width") && (
                 <datalist id="widthList" >

@@ -24,6 +24,7 @@ const MainCalculator = () => {
     const [isStdNotation1, setIsStdNotation1] = React.useState(false)
     const [isStdNotation2, setIsStdNotation2] = React.useState(true)
     const [isCompareEnabled, setIsCampareEnabled] = React.useState(false)
+    const [isSetup1, setIsSetup1] = React.useState(true)
     const [tireDia1, setTireDia1] = React.useState("33")
     const [tireWt1, setTireWt1] = React.useState("50")
     const [tireAsp1, setTireAsp1] = React.useState("")
@@ -142,10 +143,10 @@ const MainCalculator = () => {
         <table>
                 <tbody>
                     <tr>
-                        <td colSpan={2} >Setup Combo 1 </td>
+                        <td colSpan={2} className={styles.fieldTitle}>Setup Combo 1 </td>
                         <td colSpan={2}>
                             <span className={styles.secondaryDark}>
-                                <button className={styles.card}  >
+                                <button className={styles.card} onClick={()=>{setIsSetup1(!isSetup1)}}  >
                                     <div className={inter.className}>
                                         <h3 className={styles.header}>
                                             Calculate Rotational Inertia -&gt;
@@ -157,7 +158,7 @@ const MainCalculator = () => {
                         <td colSpan={2}> </td>
                     </tr>
                 </tbody>
-            {calcLayout1.map((row, index)=>(
+            {isSetup1 &&  calcLayout1.map((row, index)=>(
                 <tbody key={"row" + index}> 
                     <tr>
                         <td colSpan={2}><CalcTitle title={row.title1} isVisible={row.isVisible1}/> </td>
@@ -177,7 +178,7 @@ const MainCalculator = () => {
                 <tbody>
                 <tr>    <td colSpan={6}> &nbsp;  </td>   </tr>
                     <tr>
-                        <td colSpan={2} >Setup Combo 2 </td>
+                        <td colSpan={2} className={styles.fieldTitle} >Setup Combo 2 </td>
                         <td colSpan={2}>
                                 <span className={styles.secondaryDark}>
                                     <button className={styles.card} onClick={()=>{setIsCampareEnabled(!isCompareEnabled)}} >
