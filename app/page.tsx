@@ -3,15 +3,9 @@ import styles from './page.module.css'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 
-import ComparisonCalculator from './z components/ComparisonCalculator'
 import MainCalculator from './z components/MainCalculator'
 
 const inter = Inter({ subsets: ['latin'] })
-
-const InertiaCalculator = dynamic(() => import('./z components/InertiaCalculator'), {
-  ssr:false
-})
-
 
 export default function Home() {
 
