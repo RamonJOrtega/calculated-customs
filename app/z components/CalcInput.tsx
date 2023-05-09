@@ -48,37 +48,21 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
         <div>
             <span>
                 <input 
-                    className={styles.checkbox}
-                    type="checkbox"
-                    checked={props.value}
+                    className={styles.checkbox} type="checkbox" checked={props.value}
                     onChange={()=>{props.setValue(!props.value)}
                     }/> 
             </span>
-            <div className={styles.postFix}> 
-                ex. 325/40R22 
-            </div> 
+            <div className={styles.postFix}> ex. 325/40R22 </div> 
         </div>
     );
   } else if (typeof props.value === 'string') {
     if (props.title.includes("Inertia")) {
       inputElement = (
-        <input
-            className={styles.result}
-            disabled
-            type="number"
-            value={props.value}
-        />
-      );
+        <input className={styles.result} disabled type="number" value={props.value} />);
     } else {
       inputElement = (
-        <input
-            className={styles.fieldInput}
-            type="number"
-            ref={inputRef}
-            onInput={handleInput}
-            placeholder={props.placeHolder}
-            value={props.value}
-        />
+        <input className={styles.fieldInput} type="number" ref={inputRef} onInput={handleInput} 
+        placeholder={props.placeHolder} value={props.value}/>
       );
     }
   }
