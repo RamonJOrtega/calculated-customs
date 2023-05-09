@@ -11,6 +11,7 @@ import CalcUnit from "./CalcUnit"
 import * as C from '../constants'
 import {calcTireInertia, calcTotalInertia, calcWheelInertia } from "../calculations"
 import ZeroToSixtyResult from "./ZeroToSixtyResult"
+import WheelSVG from "./WheelSVG"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -172,7 +173,7 @@ const TestCalculator = () => {
                 <tbody>
                 <tr>    <td colSpan={6}> &nbsp;  </td>   </tr>
                     <tr>
-                        <td colSpan={2} className={styles.fieldTitle} >Setup Combo 2 </td>
+                        <td colSpan={2} className={styles.fieldTitle} >{WheelSVG} </td>
                         <td colSpan={2}>
                                 <span className={styles.secondaryDark}>
                                     <button className={styles.card} onClick={()=>{setIsCampareEnabled(!isCompareEnabled)}} >

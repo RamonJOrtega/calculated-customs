@@ -4,7 +4,7 @@ import styles from './page.module.css'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 
-import MainCalculator from '../z components/MainCalculator'
+import TestCalculator from '../z components/TestCalculator'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <> 
       
-        <MainCalculator />
+        <TestCalculator />
 
     </>
   )
