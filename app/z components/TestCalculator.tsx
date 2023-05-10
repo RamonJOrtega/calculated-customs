@@ -173,7 +173,7 @@ const TestCalculator = () => {
                 <tbody>
                 <tr>    <td colSpan={6}> &nbsp;  </td>   </tr>
                     <tr>
-                        <td colSpan={2} className={styles.fieldTitle} >{WheelSVG} </td>
+                        <td colSpan={2} className={styles.fieldTitle} ><WheelSVG isVisible = {true} tireDia = {32.2} wheelDia = {20} /> </td>
                         <td colSpan={2}>
                                 <span className={styles.secondaryDark}>
                                     <button className={styles.card} onClick={()=>{setIsCampareEnabled(!isCompareEnabled)}} >
