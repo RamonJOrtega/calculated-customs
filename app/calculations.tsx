@@ -17,11 +17,9 @@ export const calcTotalInertia = (tireInertia: string, wheelInertia: string): str
     return totalInertia
 }
 
-export const calcTireInertia = (tireDia: string, tireWt: string, wheelDia: string, isStdNtn: boolean, aspRat: string, tireWd: string): string => {
-    [tireDia, tireWt, wheelDia, aspRat, tireWd] = [tireDia || "0", tireWt || "0", wheelDia || "0", aspRat || "0", tireWd || "0"]
-    if (isStdNtn) {
-        tireDia = calcTireDiaFromStdNotation(aspRat, tireWd, wheelDia)
-    }
+export const calcTireInertia = (tireDia: string, tireWt: string, wheelDia: string): string => {
+    [tireDia, tireWt, wheelDia] = [tireDia || "0", tireWt || "0", wheelDia || "0"]
+
         const tireRad_m = parseFloat(tireDia) * C.METER_PER_INCH/2                           //console.log('tire radius in meters: ' + tireRad_m)
         const tireMass_kg = parseFloat(tireWt) * C.KILOGRAM_PER_POUND                         //console.log('tire mass in kilograms: ' + tireMass_kg)
         const treadInertia = C.TREAD_MASS_PERCENTAGE* tireMass_kg * tireRad_m * tireRad_m     //console.log('treadInertia in kg*m^2: ' + treadInertia)
@@ -31,10 +29,10 @@ export const calcTireInertia = (tireDia: string, tireWt: string, wheelDia: strin
         return tireInertia
 }
 
-const calcTireDiaFromStdNotation = (aspRat: string, tireWd: string, wheelDia: string): string => {
+export const calcTireDiaFromStdNotation = (wheelDia: string ,aspRat: string, tireWd: string): string => {
     if (aspRat === "0" || tireWd === "0" || wheelDia === "0") {return "0"}
     const sideWallHeight_in =  parseFloat(aspRat) / 100 * parseFloat(tireWd) / 25.4;
-    const tireDiameter_in =  (parseFloat(wheelDia) + 2 * sideWallHeight_in).toString()
+    const tireDiameter_in =  (parseFloat(wheelDia) + 2 * sideWallHeight_in).toFixed(1)
     return tireDiameter_in;
 }
 
