@@ -62,7 +62,7 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
     } else {
       inputElement = (
         <input className={styles.fieldInput} type="number" ref={inputRef} onInput={handleInput} 
-        placeholder={props.placeHolder} value={props.value}  onClick={()=>{props.setValue("")}} />
+        placeholder={props.placeHolder} value={props.value}  onClick={()=>{props.setValue("")}} list = {props.title} />
       );
     }
   }
@@ -71,7 +71,7 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
         <div> 
             {inputElement}
             {(props.title === "Tire Width") && (
-                <datalist id="list" >
+                <datalist id={props.title} >
                     <option value="105"></option><option value="115"></option><option value="125"></option><option value="135"></option>
                     <option value="145"></option><option value="155"></option><option value="165"></option><option value="175"></option>
                     <option value="185"></option><option value="195"></option><option value="205"></option><option value="215"></option>
@@ -83,7 +83,7 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
                 </datalist>
             )}
             {(props.title ==="Aspect Ratio") && (
-                <datalist id="list" >
+                <datalist id={props.title} >
                     <option value="10"></option><option value="15"></option><option value="20"></option><option value="25"></option>
                     <option value="30"></option><option value="35"></option><option value="40"></option><option value="45"></option>
                     <option value="50"></option><option value="55"></option><option value="60"></option><option value="75"></option>
