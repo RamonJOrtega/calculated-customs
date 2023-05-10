@@ -27,12 +27,12 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
         inputRef.current.validity.valid ? props.setValue(inputRef.current.value) : props.setValue('')
         
 
-        if (props.title === "Aspect Ratio") {
+        if (props.title === "Aspect Ratio [%]") {
             const lastNum = parseInt(inputRef.current.value) % 10;
             if (inputRef.current.value.length === 1) {(lastNum > 0) || (props.setValue(inputRef.current.value))}
             if (inputRef.current.value.length === 2) {(lastNum === 0) || (lastNum === 5) || (props.setValue(''))}
         }
-        if (props.title === "Tire Width") {
+        if (props.title === "Tire Width [mm]") {
             const lastNum = parseFloat(inputRef.current.value)% 10
             if (inputRef.current.value.length == 1) {(lastNum>0 && lastNum<10)|| props.setValue(inputRef.current.value='')}
             //2nd tire number can anything
@@ -70,7 +70,7 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
     return props.isVisible ? (
         <div> 
             {inputElement}
-            {(props.title === "Tire Width") && (
+            {(props.title === "Tire Width [mm]") && (
                 <datalist id={props.title} >
                     <option value="105"></option><option value="115"></option><option value="125"></option><option value="135"></option>
                     <option value="145"></option><option value="155"></option><option value="165"></option><option value="175"></option>
@@ -82,7 +82,7 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
                     <option value="405"></option>
                 </datalist>
             )}
-            {(props.title ==="Aspect Ratio") && (
+            {(props.title ==="Aspect Ratio [%]") && (
                 <datalist id={props.title} >
                     <option value="10"></option><option value="15"></option><option value="20"></option><option value="25"></option>
                     <option value="30"></option><option value="35"></option><option value="40"></option><option value="45"></option>

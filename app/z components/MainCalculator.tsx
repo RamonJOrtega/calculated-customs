@@ -73,7 +73,7 @@ const TestCalculator = () => {
                 isVisible1: !isStdNotation1,   isVisible2: !isStdNotation1,     isVisible3: !isStdNotation1
             },
             {
-                title1: "Tire Width",       title2: "Aspect Ratio",     title3: "Wheel Diameter",
+                title1: "Tire Width [mm]",       title2: "Aspect Ratio [%]",     title3: "Wheel Diameter",
                 value1: tireWd1,            value2: tireAsp1,           value3: wheelDia1,
                 unit1:  "/",                unit2:"R",                  unit3:  "inch",
                 setValue1: setTireWd1,      setValue2: setTireAsp1, setValue3: setWheelDia1,
@@ -112,14 +112,14 @@ const TestCalculator = () => {
             isVisible1: !isStdNotation2,    isVisible2: !isStdNotation2,       isVisible3: !isStdNotation2
         },
         {
-            title1: "Tire Width",    title2: "Aspect Ratio",        title3: "Wheel Diameter",
+            title1: "Tire Width [mm]",    title2: "Aspect Ratio [%]",        title3: "Wheel Diameter",
             value1: tireWd2,            value2: tireAsp2,               value3: wheelDia2,
             unit1:  "/",             unit2:"R",                     unit3:  "inch",
             setValue1: setTireWd2,      setValue2: setTireAsp2, setValue3: setWheelDia2,
             isVisible1: isStdNotation2,           isVisible2: isStdNotation2,     isVisible3: isStdNotation2
         },
         {
-            title1: "Tire Weight",      title2: "Aspect Ratio",                 title3: "Wheel Weight",
+            title1: "Tire Weight",      title2: "Aspect Ratio [%]",                 title3: "Wheel Weight",
             value1: tireWt2 ,           value2: isStdNotation2,                 value3: wheelWt2,
             unit1: "pound",             unit2: "",                              unit3: "pound",
             setValue1: setTireWt2,      setValue2: setIsStdNotation2,            setValue3: setWheelWt2,
