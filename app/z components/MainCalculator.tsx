@@ -1,15 +1,9 @@
 'use client'
 
-import TireResult from "./TireResult"
-import TotalResult from "./TotalResult"
-import WheelResult from "./WheelResult"
 import React, { SetStateAction, useEffect } from "react"
-import FieldInput  from "./FieldInput"  
-import StandarNotationCheckBox from "./StandardNotationCheckBox"
 import Link from "next/link"
 import styles from '../page.module.css'
 import { Inter } from 'next/font/google'
-import KnownRadioButton from "./KnownRadioButton"
 import { Main } from "next/document"
 import CalcInput from "./CalcInput"
 import CalcTitle from "./CalcTitle"
@@ -17,10 +11,11 @@ import CalcUnit from "./CalcUnit"
 import * as C from '../constants'
 import {calcTireInertia, calcTotalInertia, calcWheelInertia } from "../calculations"
 import ZeroToSixtyResult from "./ZeroToSixtyResult"
+import WheelSVG from "./WheelSVG"
 
 const inter = Inter({ subsets: ['latin'] })
 
-const MainCalculator = () => {
+const TestCalculator = () => {
     const [isStdNotation1, setIsStdNotation1] = React.useState(false)
     const [isStdNotation2, setIsStdNotation2] = React.useState(true)
     const [isCompareEnabled, setIsCampareEnabled] = React.useState(false)
@@ -143,19 +138,17 @@ const MainCalculator = () => {
         <table>
                 <tbody>
                     <tr>
-                        <td colSpan={2} className={styles.fieldTitle}>Setup Combo 1 </td>
-                        <td colSpan={2}>
+                        <td colSpan={6}>
                             <span className={styles.secondaryDark}>
                                 <button className={styles.card} onClick={()=>{setIsSetup1(!isSetup1)}}  >
                                     <div className={inter.className}>
                                         <h3 className={styles.header}>
-                                            Calculate Rotational Inertia -&gt;
+                                            Calculate Combo 1 -&gt;
                                         </h3> 
                                     </div>
                                 </button>
                             </span>
                         </td>
-                        <td colSpan={2}> </td>
                     </tr>
                 </tbody>
             {isSetup1 &&  calcLayout1.map((row, index)=>(
@@ -178,19 +171,17 @@ const MainCalculator = () => {
                 <tbody>
                 <tr>    <td colSpan={6}> &nbsp;  </td>   </tr>
                     <tr>
-                        <td colSpan={2} className={styles.fieldTitle} >Setup Combo 2 </td>
-                        <td colSpan={2}>
+                        <td colSpan={6}>
                                 <span className={styles.secondaryDark}>
                                     <button className={styles.card} onClick={()=>{setIsCampareEnabled(!isCompareEnabled)}} >
                                         <div className={inter.className}>
                                             <h3 className={styles.header}>
-                                                Compare 0-60 Time -&gt;
+                                                Compare Combo 2 -&gt;
                                             </h3> 
                                         </div>
                                     </button>
                                 </span>
                         </td>
-                        <td colSpan={2}> </td>
                     </tr>
                 </tbody>
 
@@ -232,4 +223,4 @@ const MainCalculator = () => {
     )
 }
 
-export default MainCalculator
+export default TestCalculator

@@ -138,19 +138,17 @@ const TestCalculator = () => {
         <table>
                 <tbody>
                     <tr>
-                        <td colSpan={2} className={styles.fieldTitle}>Setup Combo 1 </td>
-                        <td colSpan={2}>
+                        <td colSpan={6}>
                             <span className={styles.secondaryDark}>
                                 <button className={styles.card} onClick={()=>{setIsSetup1(!isSetup1)}}  >
                                     <div className={inter.className}>
                                         <h3 className={styles.header}>
-                                            Calculate Rotational Inertia -&gt;
+                                            Calculate Combo 1 -&gt;
                                         </h3> 
                                     </div>
                                 </button>
                             </span>
                         </td>
-                        <td colSpan={2}> </td>
                     </tr>
                 </tbody>
             {isSetup1 &&  calcLayout1.map((row, index)=>(
@@ -173,19 +171,17 @@ const TestCalculator = () => {
                 <tbody>
                 <tr>    <td colSpan={6}> &nbsp;  </td>   </tr>
                     <tr>
-                        <td colSpan={2} className={styles.fieldTitle} ><WheelSVG isVisible = {true} tireDia = {32.2} wheelDia = {20} /> </td>
-                        <td colSpan={2}>
+                        <td colSpan={6}>
                                 <span className={styles.secondaryDark}>
                                     <button className={styles.card} onClick={()=>{setIsCampareEnabled(!isCompareEnabled)}} >
                                         <div className={inter.className}>
                                             <h3 className={styles.header}>
-                                                Compare 0-60 Time -&gt;
+                                                Compare Combo 2 -&gt;
                                             </h3> 
                                         </div>
                                     </button>
                                 </span>
                         </td>
-                        <td colSpan={2}> </td>
                     </tr>
                 </tbody>
 
