@@ -46,16 +46,18 @@ const MainCalculator = () => {
     useEffect(() => {setWheelInertia1(calcWheelInertia(wheelDia1, wheelWt1))}, [wheelDia1, wheelWt1])
     useEffect(() => {setWheelInertia2(calcWheelInertia(wheelDia2, wheelWt2))}, [wheelDia2, wheelWt2])
 
-    useEffect(() => {setTireDia1(calcTireDiaFromStdNotation(wheelDia1, tireAsp1, tireWd1))}, [wheelDia1, tireAsp1, tireWd1, isStdNotation1])
-    useEffect(() => {setTireDia2(calcTireDiaFromStdNotation(wheelDia2, tireAsp2, tireWd2))}, [wheelDia2, tireAsp2, tireWd2, isStdNotation2])
-
     useEffect(() => {setTireInertia1(calcTireInertia(tireDia1, tireWt1, wheelDia1))}, [tireDia1, tireWt1, wheelDia1 ] )
-    useEffect(() => {setTireInertia2(calcTireInertia(tireDia2, tireWt2, wheelDia2))}, [tireDia2, tireWt2, wheelDia2])
-    
-    
+    useEffect(() => {setTireInertia2(calcTireInertia(tireDia2, tireWt2, wheelDia2))}, [tireDia2, tireWt2, wheelDia2] )
 
     useEffect(() => {setTotalInertia1(calcTotalInertia(tireInertia1, wheelInertia1))}, [tireInertia1, wheelInertia1])
     useEffect(() => {setTotalInertia2(calcTotalInertia(tireInertia2, wheelInertia2))}, [tireInertia2, wheelInertia2])
+
+    useEffect(() => {if (isStdNotation1) {setTireDia1(calcTireDiaFromStdNotation(wheelDia1, tireAsp1, tireWd1))}}, [wheelDia1, tireAsp1, tireWd1, isStdNotation1])
+    useEffect(() => {if (isStdNotation2) {setTireDia2(calcTireDiaFromStdNotation(wheelDia2, tireAsp2, tireWd2))}}, [wheelDia2, tireAsp2, tireWd2, isStdNotation2])
+
+    
+    
+
 
     let newZeroToSixty = {change: "faster",  percent: 100}
     interface CalculatorLayout {

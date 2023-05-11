@@ -17,8 +17,7 @@ interface CalcInputProps {
 }
 
 const CalcInput: React.FC<CalcInputProps> = (props) => {
-    const MIN = 0
-    const MAX = 500
+
 
     const inputRef = useRef<HTMLInputElement>(null);
 
@@ -62,7 +61,7 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
     } else {
       inputElement = (
         <input className={styles.fieldInput} type="number" ref={inputRef} onInput={handleInput} 
-        placeholder={props.placeHolder} value={props.value}  onClick={()=>{props.setValue("")}} list = {props.title} />
+        placeholder={props.placeHolder} value={props.value}  onClick={()=>{props.setValue("")}} list = {props.title} max="500" min="0" step = "0.1"/>
       );
     }
   }
