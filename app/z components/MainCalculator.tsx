@@ -15,7 +15,7 @@ import WheelSVG from "./WheelSVG"
 
 const inter = Inter({ subsets: ['latin'] })
 
-const TestCalculator = () => {
+const MainCalculator = () => {
     const [isStdNotation1, setIsStdNotation1] = React.useState(false)
     const [isStdNotation2, setIsStdNotation2] = React.useState(true)
     const [isCompareEnabled, setIsCampareEnabled] = React.useState(false)
@@ -228,6 +228,6 @@ const TestCalculator = () => {
     )
 }
 
-export default TestCalculator
+export default MainCalculator
 
 
