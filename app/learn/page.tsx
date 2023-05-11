@@ -24,7 +24,7 @@ export default function LearnPage() {
                 <div className={styles.pageTextLeft}>
                     <div className={inter.className}>
                         <br></br>
-                        <h1 >CALCULATING WHEEL AND TIRE PERFORMANCE</h1>
+                        <h1 className={styles.header} >CALCULATING WHEEL AND TIRE PERFORMANCE</h1>
                         <br></br>
                     
                         <h3> How Accurate Are Our Calculators? </h3>

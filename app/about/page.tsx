@@ -24,7 +24,7 @@ export default function LearnPage() {
                 <div className={styles.pageTextLeft}>
                     <div className={inter.className}>
                         <br></br>
-                        <h1 >ABOUT US</h1>
+                        <h1 className={styles.header}>ABOUT US</h1>
                         
                        
                         <p className={styles.card} > 
