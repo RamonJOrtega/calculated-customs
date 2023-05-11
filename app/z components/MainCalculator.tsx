@@ -20,10 +20,10 @@ const TestCalculator = () => {
     const [isStdNotation2, setIsStdNotation2] = React.useState(true)
     const [isCompareEnabled, setIsCampareEnabled] = React.useState(false)
     const [isSetup1, setIsSetup1] = React.useState(true)
-    const [tireDia1, setTireDia1] = React.useState("33")
-    const [tireWt1, setTireWt1] = React.useState("50")
-    const [tireAsp1, setTireAsp1] = React.useState("")
-    const [tireWd1, setTireWd1] = React.useState("0")
+    const [tireDia1, setTireDia1] = React.useState("32.1")
+    const [tireWt1, setTireWt1] = React.useState("55")
+    const [tireAsp1, setTireAsp1] = React.useState("45")
+    const [tireWd1, setTireWd1] = React.useState("285")
     const [tireInertia1, setTireInertia1] = React.useState("0")
     const [tireDia2, setTireDia2] = React.useState("30.8")
     const [tireWt2, setTireWt2] = React.useState("40")
@@ -46,11 +46,11 @@ const TestCalculator = () => {
     useEffect(() => {setWheelInertia1(calcWheelInertia(wheelDia1, wheelWt1))}, [wheelDia1, wheelWt1])
     useEffect(() => {setWheelInertia2(calcWheelInertia(wheelDia2, wheelWt2))}, [wheelDia2, wheelWt2])
 
-    useEffect(() => {setTireDia1(calcTireDiaFromStdNotation(wheelDia1, tireAsp1, tireWd1))}, [wheelDia1, tireAsp1, tireWd1])
-    useEffect(() => {setTireDia2(calcTireDiaFromStdNotation(wheelDia2, tireAsp2, tireWd2))}, [ wheelDia2, tireAsp2, tireWd2])
+    useEffect(() => {setTireDia1(calcTireDiaFromStdNotation(wheelDia1, tireAsp1, tireWd1))}, [wheelDia1, tireAsp1, tireWd1, isStdNotation1])
+    useEffect(() => {setTireDia2(calcTireDiaFromStdNotation(wheelDia2, tireAsp2, tireWd2))}, [wheelDia2, tireAsp2, tireWd2, isStdNotation2])
 
-    useEffect(() => {setTireInertia1(calcTireInertia(tireDia1, tireWt1, wheelDia1))}, [tireDia1, tireWt1, wheelDia1, isStdNotation1] )
-    useEffect(() => {setTireInertia2(calcTireInertia(tireDia2, tireWt2, wheelDia2))}, [tireDia2, tireWt2, wheelDia2, isStdNotation2])
+    useEffect(() => {setTireInertia1(calcTireInertia(tireDia1, tireWt1, wheelDia1))}, [tireDia1, tireWt1, wheelDia1 ] )
+    useEffect(() => {setTireInertia2(calcTireInertia(tireDia2, tireWt2, wheelDia2))}, [tireDia2, tireWt2, wheelDia2])
     
     
 
