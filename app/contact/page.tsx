@@ -28,7 +28,7 @@ export default function ContactPage() {
                     
                         <Link href="https://www.instagram.com/calculatedcustoms">
                         <div className={styles.card}>
-                            <h1 className={inter.className}> DM Us on Instagram <span> <AiOutlineInstagram /></span> </h1>
+                            <h1 className={styles.header}> DM Us on Instagram <span> <AiOutlineInstagram /></span> </h1>
                         </div>
                         </Link>
                         <br></br>
