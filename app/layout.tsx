@@ -6,6 +6,8 @@ import Image from 'next/image';
 import NavBar from './z components/NavBar';
 import Footer from './z components/Footer'
 import SocialLinks from './z components/SocialLinks'
+import { Analytics } from '@vercel/analytics/react';
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,6 +30,7 @@ export default function RootLayout({
             <NavBar />
             {children}      
             <Footer />
+            <Analytics />
         </main>
       </body>
     </html>
