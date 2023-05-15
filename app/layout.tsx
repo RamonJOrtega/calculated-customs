@@ -1,11 +1,8 @@
 import { Inter } from 'next/font/google'
 import styles from './page.module.css'
-import Link from  'next/link';
 import './globals.css'
-import Image from 'next/image';
 import NavBar from './z components/NavBar';
 import Footer from './z components/Footer'
-import SocialLinks from './z components/SocialLinks'
 import { Analytics } from '@vercel/analytics/react';
 
 
