@@ -396,12 +396,9 @@
   border-radius: 75px;
 }
 
-
-
 .flexCenter {
   display: flex;
   justify-content: center;
-  
 }
 
 .Tire{
@@ -409,16 +406,13 @@
   font-size: 1em;
 }
 
-
 .checkbox {
   display: inline;
   max-width: 2rem;
   accent-color: #fde047;
   border-radius: 5px;
   border: none;
-  
  }
-
 
 .fieldInput {
   margin: .25rem;
@@ -446,7 +440,6 @@
   width: 90%;
   z-index: 1;
   color:rgb(50, 50, 50);
-
  } 
 
  .header {
@@ -476,8 +469,8 @@
   flex-direction: column;
   justify-content: space-between;
   z-index: 1;
-  
 }
+
 .slowerResult {
   background-image: linear-gradient(to right, #fffbeb,#ca8a04);
   margin: .25rem;
@@ -488,8 +481,6 @@
   font-weight: bold;
   font-size: 1rem;
   min-width: 40px;
-
-
   color:#c2410c;
   z-index: 1;
 }
@@ -505,7 +496,6 @@
   min-width: 40px;
   color: #15803d;
   z-index: 1;
-
 }
 
 .postFix{
@@ -517,7 +507,6 @@
 .secondaryDark{
   background-color: rgb(50, 50, 50);
   border-radius: var(--border-radius);
-
 } 
 
 
