@@ -61,7 +61,7 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
     } else {
       inputElement = (
         <input className={styles.fieldInput} type="number" ref={inputRef} onInput={handleInput} pattern="[0-9.]"
-        placeholder={props.placeHolder} value={props.value}  onClick={()=>{props.setValue("")}} list = {props.title} max="10000" min="0" step = "0.1"/>
+        placeholder={props.placeHolder} value={props.value}  onClick={()=>{props.setValue("")}} list = {props.title} max="500" min="0" step = "0.1"/>
       );
     }
   }
