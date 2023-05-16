@@ -3,7 +3,7 @@ import styles from './page.module.css'
 import './globals.css'
 import NavBar from './z components/NavBar';
 import Footer from './z components/Footer'
-import { Analytics } from '@vercel/analytics/react';
+//import { Analytics } from '@vercel/analytics/react';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -27,7 +27,7 @@ export default function RootLayout({
             <NavBar />
             {children}      
             <Footer />
-            <Analytics />
+            {/* <Analytics /> */}
         </main>
       </body>
     </html>
