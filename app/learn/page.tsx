@@ -60,8 +60,8 @@ export default function LearnPage() {
                             <li>
                                 <p > 
                                     <strong>All 4 wheels and tires are the same size.</strong> <br></br>
-                                    Most vehicles are manufactured this way. 
-                                    If you want staggered calculator functionality in the future. Let us know! <br></br><br></br>
+                                    Most vehicles are manufactured this way, but staggered fitment calculators will be available in the future.
+                                    <br></br><br></br>
                                 </p>
                             </li>
                             <li>
