@@ -1,7 +1,5 @@
 import Image from "next/image"
 import torqueExplanation from "./Torque explanation.png"
-import "../globals.css"
-import styles from "../page.module.css"
 import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 

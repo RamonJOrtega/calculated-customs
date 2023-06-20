@@ -1,16 +1,13 @@
 import Image from "next/image"
-import "../globals.css"
-import styles from "../page.module.css"
-import { Inter } from 'next/font/google'
+import {  } from 'next/font/google'
 import pagePicture from "../../public/red mitsubishi volk wheels background.jpg"
 import president from "../../public/presidentImage.jpg"
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function LearnPage() {
     return(
         <div>
-            <div className={styles.pageImage}>
+            <div >
                 <Image 
                     src={pagePicture}
                     alt="Rohana Wheel"
@@ -20,14 +17,14 @@ export default function LearnPage() {
                 />
             </div> 
 
-            <div className={styles.center}>
-                <div className={styles.pageTextLeft}>
-                    <div className={inter.className}>
+            <div >
+                <div >
+                    <div >
                         <br></br>
-                        <h1 className={styles.header}>ABOUT US</h1>
+                        <h1 >ABOUT US</h1>
                         
                        
-                        <p className={styles.card} > 
+                        <p  > 
                                      Find your &#160;<span><a href="https://www.tkqlhce.com/click-100641204-10377976">wheels.</a> &#160; </span>
                                     Find your &#160;<span><a href="https://www.kqzyfj.com/click-100641204-10377851">tires</a>. &#160; </span>
                                     <span><a href="/"> Compare.</a></span>
@@ -53,8 +50,8 @@ export default function LearnPage() {
                         </p>
                     </div>
                  </div>
-                 <div className={styles.flexSponsors}>
-                <div className={styles.card}>
+                 <div >
+                <div >
                     <a  href="https://www.tkqlhce.com/click-100641204-10376887" target="_top">
                         <span>
                             <img src="https://www.ftjcfx.com/image-100641204-10376887" width="88" height="31" alt="Tirerack.com- Revolutionizing Tire Buying" />
@@ -62,7 +59,7 @@ export default function LearnPage() {
                     </a> 
                 </div>
 
-                <div className={styles.card}>
+                <div >
                     <a href="https://www.tkqlhce.com/click-100641204-13375597" target="_top">
                         <span>
                             <img src="https://www.awltovhc.com/image-100641204-13375597"  height="31" alt="" />
@@ -70,7 +67,7 @@ export default function LearnPage() {
                     </a> 
                 </div>
 
-                <div className={styles.card}>
+                <div >
                     <a href="https://www.anrdoezrs.net/click-100641204-15280193" target="_top">
                         <span>
                             <img src="https://www.awltovhc.com/image-100641204-15280193" width="88" height="31" alt="Hoonigan" />
@@ -78,7 +75,7 @@ export default function LearnPage() {
                     </a> 
                 </div>
 
-                <div className={styles.card}>
+                <div >
                     <a href="https://www.kqzyfj.com/click-100641204-15280215" target="_top">
                         <span>
                             <img src="https://www.tqlkg.com/image-100641204-15280215" width="88" height="31" alt="Throtl" />
@@ -87,7 +84,7 @@ export default function LearnPage() {
                 </div>
             </div>
             <br></br> <br></br>
-            <div className={styles.centeredPicture}>
+            <div >
                         <Image
                         src={president}
                         alt="President Image"
@@ -96,7 +93,7 @@ export default function LearnPage() {
                         />
                 </div>
                 
-                <div className={inter.className}>
+                <div >
                         <br></br>
                         <h5>Ramon Ortega</h5>
                         <br></br>

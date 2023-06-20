@@ -1,7 +1,5 @@
 import { Inter } from 'next/font/google'
-import styles from '../page.module.css'
 import Link from  'next/link';
-import '../globals.css'
 import Image from 'next/image';
 import SocialLinks from './SocialLinks';
 import { AiOutlineInstagram, AiOutlineYoutube } from 'react-icons/ai';
@@ -12,9 +10,11 @@ export default function NavigationBar() {
     
     return(
         <>
-            <nav className={styles.grid}>
-                <Link href="/">
-                    <div className={styles.card}>
+            <nav>
+                <ul >
+                <li >
+                    <Link href="/">
+                    <div >
                         <h3>      
                         CALCULATED CUSTOMS <span> 
                                 <Image src="/logo.svg" 
@@ -24,25 +24,35 @@ export default function NavigationBar() {
                             </span> 
                         </h3>
                     </div>
-                </Link>
-                <Link href="/learn">
-                    <div className={styles.card}>
-                        <h5 className={inter.className}>Learn <span>-&gt;</span> </h5>
+                </Link></li>
+                <li >
+                    <Link href="/learn">
+                    <div >
+                        <h5 >Learn <span>-&gt;</span> </h5>
                     </div>
-                </Link>
-                <Link href="/about">
-                    <div className={styles.card}>
-                        <h5 className={inter.className}>About <span>-&gt;</span> </h5>
-                    </div>
-                </Link>
-                <Link href="/contact">
-                    <div className={styles.card}>
-                        <h5 className={inter.className}>Contact <span>-&gt;</span> </h5>
-                    </div>
-                </Link>
-          
-                <SocialLinks />
+                    </Link>
+                </li>
+                <li > 
+                    <Link href="/about">
+                        <div >
+                            <h5 >About <span>-&gt;</span> </h5>
+                        </div>
+                    </Link>
+                </li>
+                <li >
+                    <Link href="/contact">
+                        <div >
+                            <h5 >Contact <span>-&gt;</span> </h5>
+                        </div>
+                    </Link>
+                </li>
+                <li>
+                    <SocialLinks />
+                </li>
+                </ul>
+           
             </nav>
+    
         </>
     )
 }

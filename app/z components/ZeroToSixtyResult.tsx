@@ -1,7 +1,5 @@
 import { Inter } from 'next/font/google'
-import styles from '../page.module.css'
 import Link from  'next/link';
-import '../globals.css'
 import Image from 'next/image';
 import { parse } from 'path';
 import { isConstructorDeclaration } from 'typescript';
@@ -56,14 +54,14 @@ secondsSlowerMessage = (secondsSlower !== "NaN") ? secondsSlowerMessage : "input
     return(
         < >
             {T1 > T2 ? 
-                (<div className={styles.zeroToSixtyResult}> 
-                    <input className={styles.fasterResult} value={percentDecMessage} disabled/>  
-                    <input className={styles.fasterResult} value={secondsFasterMessage}disabled/>  
+                (<div > 
+                    <input  value={percentDecMessage} disabled/>  
+                    <input  value={secondsFasterMessage}disabled/>  
                 </div>) 
                 : 
-                (<div className={styles.zeroToSixtyResult}> 
-                    <input className={styles.slowerResult} value={percentIncMessage} disabled />  
-                    <input className={styles.slowerResult} value={secondsSlowerMessage} disabled/> 
+                (<div > 
+                    <input  value={percentIncMessage} disabled />  
+                    <input  value={secondsSlowerMessage} disabled/> 
                 </div>)
             }
 

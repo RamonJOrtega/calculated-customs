@@ -1,20 +1,17 @@
-import { Inter } from 'next/font/google'
-import styles from '../page.module.css'
+import {  } from 'next/font/google'
 import Link from  'next/link';
-import '../globals.css'
 import Image from 'next/image';
 import SocialLinks from './SocialLinks';
 import { AiOutlineInstagram, AiOutlineYoutube } from 'react-icons/ai';
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function NavBar() {
     
     return(
         <>
-            <nav className={styles.grid}>
+            <nav >
                 <Link href="/">
-                    <div className={styles.card}>
+                    <div >
                         <h3>      
                         CALCULATED CUSTOMS <span> 
                                 <Image src="/logo.svg" 
@@ -26,18 +23,18 @@ export default function NavBar() {
                     </div>
                 </Link>
                 <Link href="/learn">
-                    <div className={styles.card}>
-                        <h5 className={inter.className}>Learn <span>-&gt;</span> </h5>
+                    <div >
+                        <h5 >Learn <span>-&gt;</span> </h5>
                     </div>
                 </Link>
                 <Link href="/about">
-                    <div className={styles.card}>
-                        <h5 className={inter.className}>About <span>-&gt;</span> </h5>
+                    <div >
+                        <h5 >About <span>-&gt;</span> </h5>
                     </div>
                 </Link>
                 <Link href="/contact">
-                    <div className={styles.card}>
-                        <h5 className={inter.className}>Contact <span>-&gt;</span> </h5>
+                    <div >
+                        <h5 >Contact <span>-&gt;</span> </h5>
                     </div>
                 </Link>
           

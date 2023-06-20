@@ -1,15 +1,12 @@
 import Image from "next/image"
-import "../globals.css"
-import styles from "../page.module.css"
-import { Inter } from 'next/font/google'
+import { } from 'next/font/google'
 import pagePicture from "../../public/Rohana Wheel.jpg"
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function LearnPage() {
     return(
         <div>
-            <div className={styles.pageImage}>
+            <div >
                 <Image 
                     src={pagePicture}
                     alt="Rohana Wheel"
@@ -20,11 +17,11 @@ export default function LearnPage() {
          
             </div> 
 
-            <div className={styles.center}>
-                <div className={styles.pageTextLeft}>
-                    <div className={inter.className}>
+            <div >
+                <div >
+                    <div >
                         <br></br>
-                        <h1 className={styles.header} >CALCULATING WHEEL AND TIRE PERFORMANCE</h1>
+                        <h1 ={.header} >CALCULATING WHEEL AND TIRE PERFORMANCE</h1>
                         <br></br>
                     
                         <h3> How Accurate Are Our Calculators? </h3>
@@ -87,7 +84,7 @@ export default function LearnPage() {
                         <p >
                           
                             Rotational Inertia= Mass × Rotation Radius² (I=mr²). <br></br>
-                            Rotational Inertia increases directly with with mass (m) but EXPONENTIALLY with the distance (r) of every rotating component point from center.
+                            Rotational Inertia increases directly with with mass (m) but EXPONENTIALLY with the distance (r) of every rotating component point from .
                             This is why adding rotating weight is much worse than adding stationary weight to a vehicle. <br></br> 
                             </p> 
                             <p >

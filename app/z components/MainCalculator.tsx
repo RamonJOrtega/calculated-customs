@@ -2,7 +2,6 @@
 
 import React, { SetStateAction, useEffect } from "react"
 import Link from "next/link"
-import styles from '../page.module.css'
 import { Inter } from 'next/font/google'
 import { Main } from "next/document"
 import CalcInput from "./CalcInput"
@@ -146,10 +145,10 @@ const MainCalculator = () => {
                 <tbody>
                     <tr>
                         <td colSpan={6}>
-                            <span className={styles.secondaryDark}>
-                                <button className={styles.card} onClick={()=>{setIsSetup1(!isSetup1)}}  >
-                                    <div className={inter.className}>
-                                        <h3 className={styles.header}>
+                            <span >
+                                <button  onClick={()=>{setIsSetup1(!isSetup1)}}  >
+                                    <div >
+                                        <h3 >
                                             Calculate Combo 1 -&gt;
                                         </h3> 
                                     </div>
@@ -179,10 +178,10 @@ const MainCalculator = () => {
                 <tr>    <td colSpan={6}> &nbsp;  </td>   </tr>
                     <tr>
                         <td colSpan={6}>
-                                <span className={styles.secondaryDark}>
-                                    <button className={styles.card} onClick={()=>{setIsCampareEnabled(!isCompareEnabled)}} >
-                                        <div className={inter.className}>
-                                            <h3 className={styles.header}>
+                                <span >
+                                    <button  onClick={()=>{setIsCampareEnabled(!isCompareEnabled)}} >
+                                        <div >
+                                            <h3 >
                                                 Compare Combo 2 -&gt;
                                             </h3> 
                                         </div>

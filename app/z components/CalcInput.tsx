@@ -1,7 +1,5 @@
 import { Inter } from 'next/font/google'
-import styles from '../page.module.css'
 import Link from  'next/link';
-import '../globals.css'
 import Image from 'next/image';
 import { Props } from 'next/script';
 import { useRef } from 'react';
@@ -47,20 +45,20 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
         <div>
             <span>
                 <input 
-                    className={styles.checkbox} type="checkbox" checked={props.value}
+                    type="checkbox" checked={props.value}
                     onChange={()=>{props.setValue(!props.value)}
                     }/> 
             </span>
-            <div className={styles.postFix}> ex. 325/40R22 </div> 
+            <div> ex. 325/40R22 </div> 
         </div>
     );
   } else if (typeof props.value === 'string') {
     if (props.title.includes("Inertia")) {
       inputElement = (
-        <input className={styles.result} disabled type="number" value={props.value}  onClick={()=>{props.setValue("")}}/>);
+        <input disabled type="number" value={props.value}  onClick={()=>{props.setValue("")}}/>);
     } else {
       inputElement = (
-        <input className={styles.fieldInput} type="number" ref={inputRef} onInput={handleInput} pattern="[0-9.]"
+        <input type="number" ref={inputRef} onInput={handleInput} pattern="[0-9.]"
         placeholder={props.placeHolder} value={props.value}  onClick={()=>{props.setValue("")}} list = {props.title} max="500" min="0" step = "0.1"/>
       );
     }
