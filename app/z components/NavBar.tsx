@@ -13,11 +13,12 @@ export default function NavBar() {
                 <Link href="/">
                     <div >
                         <h3 className='flex items-center'>      
-                        CALCULATED CUSTOMS <span> 
+                        CALCULATED CUSTOMS <span className="ml-2"> 
                                 <Image src="/logo.svg" 
                                 alt="calculated customs logo" 
                                 width={25} 
-                                height={25} priority />
+                                height={25} 
+                                priority />
                             </span> 
                         </h3>
                     </div>
