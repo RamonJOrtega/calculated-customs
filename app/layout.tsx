@@ -1,6 +1,8 @@
 import { Inter } from 'next/font/google'
 import NavBar from './z components/NavBar';
 import Footer from './z components/Footer'
+import './globals.css'
+
 import { Analytics } from '@vercel/analytics/react';
 
 
@@ -20,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <main >
+        <main className='bg-black text-slate-300'>
             <NavBar />
             {children}      
             <Footer />

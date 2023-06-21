@@ -9,8 +9,8 @@ export default function NavBar() {
     
     return(
         <>
-            <nav >
-                <Link href="/">
+            <nav className='flex justify-around flex-wrap'>
+                <Link className='flex 1 0 1000px' href="/">
                     <div >
                         <h3>      
                         CALCULATED CUSTOMS <span> 
@@ -22,17 +22,17 @@ export default function NavBar() {
                         </h3>
                     </div>
                 </Link>
-                <Link href="/learn">
+                <Link className='flex' href="/learn">
                     <div >
                         <h5 >Learn <span>-&gt;</span> </h5>
                     </div>
                 </Link>
-                <Link href="/about">
+                <Link className='flex' href="/about">
                     <div >
                         <h5 >About <span>-&gt;</span> </h5>
                     </div>
                 </Link>
-                <Link href="/contact">
+                <Link className='flex' href="/contact">
                     <div >
                         <h5 >Contact <span>-&gt;</span> </h5>
                     </div>
