@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+main {
+    max-width: 1980px;
+}
+
+p, h1, h2, h3, h4, h5 {
+    text-align: justify;
+}

@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <> 
       <div >
-        <div className='text-center'>
+        <div >
           <div className={inter.className}>
             <h1 >KNOW WHAT TO EXPECT FROM YOUR WHEELS AND TIRES</h1>
             <br></br>
