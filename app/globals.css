@@ -112,6 +112,10 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+main {
+  margin: 2%
+}
 /* a {
   position: relative;
   text-decoration: none;
@@ -186,6 +190,3 @@ table {
   border: #fde047;
 }
 
-section {
-  margin: 2%;
-}  
