@@ -112,10 +112,18 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-
 a {
-  color: inherit;
+  position: relative;
   text-decoration: none;
+  /* background-image: linear-gradient(to right, #CD7F32, #B87333, #A76734); */
+  background-image: linear-gradient(to right, #facc15,#b45309);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+}
+
+.gradient-underline:hover {
+  background-size: 10
 }
 
 
