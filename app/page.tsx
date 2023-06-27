@@ -11,9 +11,7 @@ export default function Home() {
 
   return (
     <> 
-      <div >
-        <div >
-          <div className={inter.className}>
+      <section >
             <h1 >KNOW WHAT TO EXPECT FROM YOUR WHEELS AND TIRES</h1>
             <br></br>
             <p >
@@ -43,10 +41,8 @@ export default function Home() {
               You will noticeably FEEL acceleration benefits by lowering Rotational Inertia (even by 0.1 kg&#x2022;m<sup>2</sup>). 
             </p>
 
-          </div>
 
-        </div> 
-      </div>
+      </section>
     </>
   )
 }

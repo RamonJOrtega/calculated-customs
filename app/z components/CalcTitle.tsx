@@ -17,8 +17,8 @@ export default function FieldTitle(props: any) {
         <div className="relative">
           {props.title}
           {(props.title === "Standard Notation" || props.title === "Total Inertia") && (
-            <span className="ml-2 relative group"> 
-              &#x24D8; 
+            <span className="ml-2 relative group text-yellow-400 " > 
+              <strong>&#x24D8;</strong>
               <span className="absolute z-10 hidden group-hover:block bg-yellow-400 text-slate-900 text-sm px-2 py-1 rounded-md mt-2" >
                 {props.title === "Standard Notation" ? tireTipText : intertiaTipText}
               </span>
