@@ -10,9 +10,9 @@ export default function NavBar() {
     return(
         <>
             <nav className='flex justify-between flex-wrap'>
-                <Link href="/">
+                <Link href="/" >
                     <div >
-                        <h3 className='flex items-center'>      
+                        <h3 className='flex items-center undecorated'>      
                         CALCULATED CUSTOMS <span className="ml-2"> 
                                 <Image src="/logo.svg" 
                                 alt="calculated customs logo" 
