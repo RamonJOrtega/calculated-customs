@@ -18,11 +18,11 @@ export default function Home() {
               
               <span><a href="https://www.tkqlhce.com/click-100641204-10377976"><strong>Browse Wheels.</strong></a></span> &#160;   
               <span ><a href="https://www.kqzyfj.com/click-100641204-10377851"><strong>Browse Tires.</strong> </a></span>
-              <br></br>
-              Enter size and  weight.
-              Calculate the fastest combination!
+              <br></br><br></br>
+              Enter size and weight.
+              Calculate the fastest combo!
               <br></br> <br></br>
-              Large, heavy combos create large Rotational Inertia numbers.
+              Large, heavy combinations have large rotational inertia numbers.
               <br></br> <br></br>
               The lower the number, the faster your zero-to-sixty time.
             </p>

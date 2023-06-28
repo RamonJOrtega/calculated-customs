@@ -16,13 +16,11 @@ interface CalcInputProps {
 
 const CalcInput: React.FC<CalcInputProps> = (props) => {
 
-
     const inputRef = useRef<HTMLInputElement>(null);
 
     const handleInput =() :void => {
         if (!inputRef.current) {return}
         inputRef.current.validity.valid ? props.setValue(inputRef.current.value) : props.setValue('')
-        
 
         if (props.title === "Aspect Ratio %") {
             const lastNum = parseInt(inputRef.current.value) % 10;
@@ -35,34 +33,29 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
             //2nd tire number can anything
             if (inputRef.current.value.length == 3) {(lastNum == 0 || lastNum ==5)||props.setValue(inputRef.current.value='')}
         } 
-
-
     }
+
     let inputElement = null;
 
-  if (typeof props.value === 'boolean') {
-    inputElement = (
-        <div>
-            <span>
-                <input 
-                    type="checkbox" checked={props.value}
-                    onChange={()=>{props.setValue(!props.value)}
-                    }/> 
-            </span>
-            <div> ex. 325/40R22 </div> 
-        </div>
-    );
-  } else if (typeof props.value === 'string') {
-    if (props.title.includes("Inertia")) {
-      inputElement = (
-        <input disabled type="number" value={props.value}  onClick={()=>{props.setValue("")}}/>);
-    } else {
-      inputElement = (
-        <input type="number" ref={inputRef} onInput={handleInput} pattern="[0-9.]"
-        placeholder={props.placeHolder} value={props.value}  onClick={()=>{props.setValue("")}} list = {props.title} max="500" min="0" step = "0.1"/>
-      );
+    if (typeof props.value === 'boolean') {
+        inputElement = (
+            <div className='flex items-center'>
+                <input type="checkbox" checked={props.value} onChange={()=>{props.setValue(!props.value)}}/> 
+                <div className='ml-2'> ex. 325/40R22 </div> 
+            </div>
+        );
+    } else if (typeof props.value === 'string') {
+        if (props.title.includes("Inertia")) {
+        inputElement = (
+            <input className='bg-gradient-to-r from-yellow-400 to-amber-700 bg-clip-text text-transparent font-bold'
+            disabled type="number" value={props.value}  onClick={()=>{props.setValue("")}}/>);
+        } else {
+        inputElement = (
+            <input type="number" ref={inputRef} onInput={handleInput} pattern="[0-9.]"
+            placeholder={props.placeHolder} value={props.value}  onClick={()=>{props.setValue("")}} list = {props.title} max="500" min="0" step = "0.1"/>
+        );
+        }
     }
-  }
     
     return props.isVisible ? (
         <div> 

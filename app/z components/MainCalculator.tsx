@@ -148,7 +148,8 @@ const MainCalculator = () => {
                             <span >
                                 <button  onClick={()=>{setIsSetup1(!isSetup1)}}  >
                                     <div >
-                                        <h3 >
+                                        <h3 className="bg-gradient-to-r from-amber-50 to-yellow-200
+                              text-neutral-900 text-sm font-bold px-2 py-1 rounded-md mt-2">
                                             Calculate Combo 1 -&gt;
                                         </h3> 
                                     </div>
@@ -181,7 +182,8 @@ const MainCalculator = () => {
                                 <span >
                                     <button  onClick={()=>{setIsCampareEnabled(!isCompareEnabled)}} >
                                         <div >
-                                            <h3 >
+                                            <h3 className="bg-gradient-to-r from-amber-50 to-yellow-200
+                              text-neutral-900 text-sm font-bold px-2 py-1 rounded-md mt-2">
                                                 Compare Combo 2 -&gt;
                                             </h3> 
                                         </div>
