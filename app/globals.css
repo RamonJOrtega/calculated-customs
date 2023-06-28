@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-p, h1, h2, h3, h4, h5 {
-    text-align: justify;
-}
-
 :root {
   --max-width: 1980px;
   --border-radius: 8px;
@@ -114,22 +108,22 @@ body {
 }
 
 main {
-  margin: 2%
+  margin: 2%;
+  max-width: var(--max-width);
+  min-width: 1em;
 }
-/* a {
-  position: relative;
-  text-decoration: none;
-  background-image: linear-gradient(to right, #facc15,#b45309);
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  background-size: 100% .5em;
-  mask-image: url(tire-tracks.png);
-  mask-size: contain;
-} */
 
 
-
-
+h1 {
+  font-weight:bold;
+  font-size: 2rem;
+  background: linear-gradient(to right, #facc15,#b45309);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* background: #fde047; */
+  /* color: white;  */
+  text-align: left;
+}
 
 
 @media (prefers-color-scheme: dark) {

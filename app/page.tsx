@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <> 
-      <section >
+      <section className='flex flex-col items-center'>
             <h1 >KNOW WHAT TO EXPECT FROM YOUR WHEELS AND TIRES</h1>
             <br></br>
             <p >
