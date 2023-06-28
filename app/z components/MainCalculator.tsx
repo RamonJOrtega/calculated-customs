@@ -145,16 +145,12 @@ const MainCalculator = () => {
                 <tbody>
                     <tr>
                         <td colSpan={6}>
-                            <span >
-                                <button  onClick={()=>{setIsSetup1(!isSetup1)}}  >
-                                    <div >
-                                        <h3 className="bg-gradient-to-r from-amber-50 to-yellow-200
-                              text-neutral-900 text-sm font-bold px-2 py-1 rounded-md mt-2">
-                                            Calculate Combo 1 -&gt;
-                                        </h3> 
-                                    </div>
-                                </button>
-                            </span>
+                            <button  onClick={()=>{setIsSetup1(!isSetup1)}}  >
+                                <h3 className="bg-gradient-to-r from-amber-50 to-yellow-200
+                        text-neutral-900 text-sm font-bold px-2 py-1 rounded-md mt-2">
+                                    Calculate Combo 1 -&gt;
+                                </h3> 
+                            </button>
                         </td>
                     </tr>
                 </tbody>
@@ -179,16 +175,12 @@ const MainCalculator = () => {
                 <tr>    <td colSpan={6}> &nbsp;  </td>   </tr>
                     <tr>
                         <td colSpan={6}>
-                                <span >
-                                    <button  onClick={()=>{setIsCampareEnabled(!isCompareEnabled)}} >
-                                        <div >
-                                            <h3 className="bg-gradient-to-r from-amber-50 to-yellow-200
-                              text-neutral-900 text-sm font-bold px-2 py-1 rounded-md mt-2">
-                                                Compare Combo 2 -&gt;
-                                            </h3> 
-                                        </div>
-                                    </button>
-                                </span>
+                            <button  onClick={()=>{setIsCampareEnabled(!isCompareEnabled)}} >
+                                    <h3 className="bg-gradient-to-r from-amber-50 to-yellow-200
+                                    text-neutral-900 text-sm font-bold px-2 py-1 rounded-md mt-2">
+                                        Compare Combo 2 -&gt;
+                                    </h3> 
+                            </button>
                         </td>
                     </tr>
                 </tbody>

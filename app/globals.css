@@ -113,6 +113,10 @@ main {
   min-width: 1em;
 }
 
+nav {
+  font-weight: bold;
+}
+
 
 h1 {
   font-weight:bold;
