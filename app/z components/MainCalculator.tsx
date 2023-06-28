@@ -141,7 +141,7 @@ const MainCalculator = () => {
     ]
 
     return (
-        <table className="text-left">
+        <table className="text-left w-full">
                 <tbody>
                     <tr>
                         <td colSpan={6}>

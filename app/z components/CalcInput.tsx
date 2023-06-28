@@ -47,7 +47,7 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
     } else if (typeof props.value === 'string') {
         if (props.title.includes("Inertia")) {
         inputElement = (
-            <input className='bg-gradient-to-r from-yellow-400 to-amber-700 bg-clip-text text-transparent font-bold'
+            <input
             disabled type="number" value={props.value}  onClick={()=>{props.setValue("")}}/>);
         } else {
         inputElement = (

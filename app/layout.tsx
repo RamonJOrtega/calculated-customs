@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-          <main > 
+          <main className='flex flex-col justify-between'> 
             <NavBar />
             {children}      
             <Footer />
