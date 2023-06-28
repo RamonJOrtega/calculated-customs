@@ -23,15 +23,17 @@ export default function LearnPage() {
                         <br></br>
                         <h1  >CALCULATING WHEEL AND TIRE PERFORMANCE</h1>
                         <br></br>
-                    
+
+                       <section>
                         <h3> How Accurate Are Our Calculators? </h3>
-                        <br></br>
-                        <p > 
-                            We used 3D-scans of real-world wheels and tires to calibrate our calculators.
-                            Zero-to-sixty time calculations are currently accurate within 0.4 seconds.
                             <br></br>
-                        </p>
-                        <br></br>
+                            <p > 
+                                We used 3D-scans of real-world wheels and tires to calibrate our calculators.
+                                Zero-to-sixty time calculations are currently accurate within 0.4 seconds.
+                                <br></br>
+                            </p>
+                            <br></br>
+                       </section>
                         <h3>How Are Our Calculators Modeled?</h3>
                         <p >
                             <br></br>

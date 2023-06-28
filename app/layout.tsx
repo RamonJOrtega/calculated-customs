@@ -22,7 +22,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* <main className='bg-black text-slate-300'> */}
           <main > 
             <NavBar />
             {children}      
