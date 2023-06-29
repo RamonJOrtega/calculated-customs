@@ -55,13 +55,13 @@ secondsSlowerMessage = (secondsSlower !== "NaN") ? secondsSlowerMessage : "input
         < >
             {T1 > T2 ? 
                 (<div > 
-                    <input  value={percentDecMessage} disabled/>  
-                    <input  value={secondsFasterMessage}disabled/>  
+                    <input  value={percentDecMessage} disabled  className="bg-gradient-to-r from-yellow-50 to-yellow-800 m-1 rounded-10 h-8 border-none text-center font-bold text-lg min-w-10 text-c2410c z-10"/>  
+                    <input  value={secondsFasterMessage}disabled className="bg-gradient-to-r from-yellow-50 to-yellow-800 m-1 rounded-10 h-8 border-none text-center font-bold text-lg min-w-10 text-c2410c z-10"/>  
                 </div>) 
                 : 
                 (<div > 
-                    <input  value={percentIncMessage} disabled />  
-                    <input  value={secondsSlowerMessage} disabled/> 
+                    <input  value={percentIncMessage} disabled className="bg-gradient-to-r from-yellow-50 to-yellow-700 m-1 rounded-2xl h-8 border-none text-center font-bold text-lg min-w-10 text-green-600 z-10"/>  
+                    <input  value={secondsSlowerMessage} disabled className='class="bg-gradient-to-r from-yellow-50 to-yellow-700 m-1 rounded-2xl h-8 border-none text-center font-bold text-lg min-w-10 text-green-600 z-10"'/> 
                 </div>)
             }
 
