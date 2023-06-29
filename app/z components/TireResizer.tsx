@@ -17,9 +17,23 @@ const CircleResizer: React.FC = () => {
 
   return (
     <div>
-      <svg width={400} height={400}>
+      {/* <svg width={400} height={400}>
         <circle cx={centerX} cy={200} r={radius} fill="blue" />
+      </svg> */}
+      <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+
+
+        
+        <circle 
+            id="tireC"
+            cx={centerX}cy={200} r={radius}
+            fill ="transparent" 
+            stroke='red'
+            stroke-width="2.5"
+            stroke-linecap="round"
+        />
       </svg>
+
       <Draggable
         axis="x"
         onDrag={handleCircleDrag}
@@ -32,7 +46,7 @@ const CircleResizer: React.FC = () => {
             height: '10px',
             background: 'red',
             position: 'absolute',
-            left: `${centerX + radius}px`,
+            left: `${(centerX + radius)}px`,
             top: '200px',
             transform: 'translate(-50%, -50%)',
             cursor: 'ew-resize',
