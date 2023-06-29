@@ -109,6 +109,7 @@ body {
 }
 
 main {
+  font-family: var(--font-mono);
   margin: 2%;
   max-width: var(--max-width);
   min-width: 1em;
@@ -173,6 +174,7 @@ a {
 p a {
   position: relative;
   text-decoration: none;
+  font-weight: normal;
 }
 
 p a::after {

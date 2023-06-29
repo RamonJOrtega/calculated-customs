@@ -6,7 +6,7 @@ import pagePicture from "../../public/Rohana Wheel.jpg"
 export default function LearnPage() {
     return(
         <div>
-            <div >
+            <div className='w-full h-96 overflow-hidden rounded-lg'>
                 <Image 
                     src={pagePicture}
                     alt="Rohana Wheel"
