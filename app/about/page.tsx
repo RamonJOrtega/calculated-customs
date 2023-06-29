@@ -22,8 +22,8 @@ export default function LearnPage() {
                     <br></br>
                     <h1 >ABOUT US</h1>
                     
-                    <p  > 
-                        <a href="https://www.tkqlhce.com/click-100641204-10377976">Find your wheels</a>.&#160;
+                    <p> 
+                    <a href="https://www.tkqlhce.com/click-100641204-10377976">Find your wheels</a>.&#160;
                         <a href="https://www.kqzyfj.com/click-100641204-10377851">Find your tires</a>.&#160;
                         <a href="/">Compare</a>.
                     </p>
