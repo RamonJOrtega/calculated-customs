@@ -112,13 +112,9 @@ main {
   margin: 2%;
   max-width: var(--max-width);
   min-width: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100;
+  height: 100%;
 
 }
-
 
 nav {
   font-weight: bold;
@@ -128,6 +124,9 @@ section {
   margin-bottom: 1em;
 }
 
+input {
+  width: 98%;
+}
 
 
 h1 {
@@ -140,7 +139,6 @@ h1 {
   /* color: white;  */
   text-align: left;
 }
-
 
 @media (prefers-color-scheme: dark) {
   html {
