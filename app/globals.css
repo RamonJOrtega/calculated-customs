@@ -95,7 +95,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   height: 100%;
-
+  align-items: center;
 }
 
 body {
@@ -113,6 +113,10 @@ main {
   max-width: var(--max-width);
   min-width: 1em;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 98%;
 
 }
 
@@ -140,6 +144,11 @@ h1 {
   text-align: left;
 }
 
+h2, h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -155,6 +164,10 @@ div{
     position: relative;
     animation-name: swoopDown;
     animation-duration: 1s;
+}
+
+a {
+  font-weight: bold;
 }
 
 /* a {
