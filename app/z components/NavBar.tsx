@@ -79,12 +79,8 @@ const Navbar = () => {
         <SocialLinks />
       </nav>
       <div className='circle' style={{ transform: `translateX(${circlePosition * 100}px)` }}>
-      <Image src="/logo.svg" 
-                                alt="calculated customs logo" 
-                                width={25} 
-                                height={25} 
-                                priority />
-        </div>
+        <Image src="/logo.svg" alt="calculated customs logo" width={25}  height={25} priority />
+      </div>
     </>
   );
 };
