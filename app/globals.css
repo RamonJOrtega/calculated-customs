@@ -214,3 +214,13 @@ input[type=number] {
   border: #fde047;
 } */
 
+.circle {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  height: 25px;
+  border-radius: 50%;
+  /* //background-color: red; */
+  transition: transform 0.3s ease-in-out;
+}
+
