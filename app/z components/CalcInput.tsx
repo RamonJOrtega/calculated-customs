@@ -46,14 +46,9 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
         );
     } else if (typeof props.value === 'string') {
         if (props.title.includes("Inertia")) {
-        inputElement = (
-            <input
-            disabled type="number" value={props.value}  onClick={()=>{props.setValue("")}}/>);
+            inputElement = (<input disabled type="number" value={props.value}  />);
         } else {
-        inputElement = (
-            <input type="number" ref={inputRef} onInput={handleInput} pattern="[0-9.]"
-            placeholder={props.placeHolder} value={props.value}  onClick={()=>{props.setValue("")}} list = {props.title} max="500" min="0" step = "0.1"/>
-        );
+            inputElement = (<input type="number" ref={inputRef} onInput={handleInput} pattern="[0-9.]" placeholder={props.placeHolder} value={props.value}  onClick={()=>{props.setValue("")}} list = {props.title} max="500" min="0" step = "0.1"/>);
         }
     }
     
