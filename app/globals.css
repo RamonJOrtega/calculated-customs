@@ -5,9 +5,9 @@
 :root {
   --max-width: 1980px;
   --border-radius: 8px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+  /* --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace; */
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 255, 251, 235; 
@@ -215,12 +215,12 @@ input[type=number] {
 } */
 
 .circle {
-  position: absolute;
-  top: 5%;
-  left: 20%;
+  /* width: 100%;
+  position: relative;
+  top: 2%;
+  left: 0%;
   height: 25px;
-  border-radius: 50%;
-  /* //background-color: red; */
+  border-radius: 50%; */
   transition: transform 0.4s ease-in-out;
 }
 
