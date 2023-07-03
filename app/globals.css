@@ -214,13 +214,18 @@ input[type=number] {
   border: #fde047;
 } */
 
-.circle {
+.circle:hover {
   /* width: 100%;
   position: relative;
   top: 2%;
   left: 0%;
   height: 25px;
   border-radius: 50%; */
-  transition: transform 0.4s ease-in-out;
+  animation: swoopRight 1s ease-in;
+
 }
 
+@keyframes swoopRight {
+  from{ right:100px;}
+  to{ right: 0px;}
+}

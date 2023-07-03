@@ -19,29 +19,29 @@ import { SetStateAction, useState } from 'react';
 
 //       <nav className='flex justify-between flex-wrap mb-8 '>
      
-//         <Link href='/' onMouseEnter={() => handleLinkHover(1)} className='mr-6 flex items-center'>
+//         <Link href='/' onMouseEnter={() => handleLinkHover(1)} className='pr-7 flex items-center'>
 //             <h3>
 //               CALCULATED CUSTOMS
 //             </h3>
 
-//             <div className='circle' style={{ transform: `translateX(${circlePosition * 100}%)` }}>
-//             <Image src="/logo.svg" alt="calculated customs logo" width={25} height={25} priority />
+//             <div className='circle' >
+//             <Image src="/logo.svg" alt="calculated customs logo" width={28} height={28} priority />
 
 //             </div>
 //         </Link>
-//         <Link href='/learn' onMouseEnter={() => handleLinkHover(2)} className='mr-6 flex items-center'>
-//             <h5 className='mr-6'>Learn </h5>
+//         <Link href='/learn' onMouseEnter={() => handleLinkHover(2)} className='pr-7 flex items-center'>
+//             <h5 className='mr-7'>Learn </h5>
 
 //         </Link>
-//         <Link href='/about' onMouseEnter={() => handleLinkHover(3)} className='mr-6 flex items-center'>
-//             <h5 className='mr-6'>About </h5>
+//         <Link href='/about' onMouseEnter={() => handleLinkHover(3)} className='mr-7 flex items-center'>
+//             <h5 className='mr-7'>About </h5>
 
 //         </Link>
-//         <Link href='/contact'  onMouseEnter={() => handleLinkHover(4)} className='mr-6 flex items-center'>
-//             <h5 className='mr-6'>Contact              </h5>
+//         <Link href='/contact'  onMouseEnter={() => handleLinkHover(4)} className='mr-7 flex items-center'>
+//             <h5 className='mr-7'>Contact              </h5>
 //         </Link>
 
-//         <div onMouseEnter={() => handleLinkHover(5)} className='mr-6 flex items-center'>
+//         <div onMouseEnter={() => handleLinkHover(5)} className='mr-7 flex items-center'>
 //         <SocialLinks />
 
 //         </div>
@@ -62,27 +62,35 @@ const Navbar = () => {
 
   return (
     <nav className="flex justify-between flex-wrap mb-8">
-      <Link href="/" onMouseEnter={() => handleLinkHover(1)} className="mr-6 flex items-center">
-          CALCULATED CUSTOMS
-        <div className="circle" style={{ transform: `translateX(${circlePosition * 100}%)` }}>
-          {circlePosition === 1 && <Image src="/logo.svg" alt="calculated customs logo" width={25} height={25} priority />}
+      <Link href="/" onMouseEnter={() => handleLinkHover(1)} className="pr-7 flex items-center">
+        <h3>CALCULATED CUSTOMS</h3>
+        <div className="circle" >
+          {circlePosition === 1 ? <Image src="/logo.svg" alt="calculated customs logo" width={28} height={28} priority /> : <div className='h-7 w-7'></div>}
         </div>
       </Link>
-      <Link href="/learn" onMouseEnter={() => handleLinkHover(2)} className="mr-6 flex items-center">
-        <h5 className="mr-6">Learn</h5>
-        {circlePosition === 2 && <Image src="/logo.svg" alt="calculated customs logo" width={25} height={25} priority />}
+      <Link href="/learn" onMouseEnter={() => handleLinkHover(2)} className="pr-7 flex items-center">
+        <h5>Learn</h5>
+        <div className="circle" >
+          {circlePosition === 2 ? <Image src="/logo.svg" alt="calculated customs logo" width={28} height={28} priority /> : <div className='h-7 w-7'></div>}
+        </div>
       </Link>
-      <Link href="/about" onMouseEnter={() => handleLinkHover(3)} className="mr-6 flex items-center">
-        <h5 className="mr-6">About</h5>
-        {circlePosition === 3 && <Image src="/logo.svg" alt="calculated customs logo" width={25} height={25} priority />}
+      <Link href="/about" onMouseEnter={() => handleLinkHover(3)} className="pr-7 flex items-center">
+        <h5 >About</h5>
+        <div className="circle" >
+          {circlePosition === 3 ? <Image src="/logo.svg" alt="calculated customs logo" width={28} height={28} priority /> : <div className='h-7 w-7'></div>}
+        </div>
       </Link>
-      <Link href="/contact" onMouseEnter={() => handleLinkHover(4)} className="mr-6 flex items-center">
-        <h5 className="mr-6">Contact</h5>
-        {circlePosition === 4 && <Image src="/logo.svg" alt="calculated customs logo" width={25} height={25} priority />}
+      <Link href="/contact" onMouseEnter={() => handleLinkHover(4)} className="pr-7 flex items-center">
+        <h5>Contact</h5>
+        <div className="circle" >
+          {circlePosition === 4 ? <Image src="/logo.svg" alt="calculated customs logo" width={28} height={28} priority /> : <div className='h-7 w-7'></div>}
+        </div>
       </Link>
-      <div onMouseEnter={() => handleLinkHover(5)} className="mr-6 flex items-center">
+      <div onMouseEnter={() => handleLinkHover(5)} className="pr-7 flex items-center">
         <SocialLinks />
-        {circlePosition === 5 && <Image src="/logo.svg" alt="calculated customs logo" width={25} height={25} priority />}
+        <div className="circle" >
+          {circlePosition === 5 ? <Image src="/logo.svg" alt="calculated customs logo" width={28} height={28} priority /> : <div className='h-7 w-7'></div>}
+        </div>
       </div>
     </nav>
   );
