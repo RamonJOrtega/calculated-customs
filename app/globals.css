@@ -216,6 +216,8 @@ input[type=number] {
 
 a:hover {
   background: linear-gradient(to right, #facc15,#b45309);
+  background-image: linear-gradient(to right, #FFFBEB, #FCD34D);
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -223,9 +225,11 @@ a:hover {
 a:hover div {
 
   position: relative;
-  animation-name: swoopRight;
-  animation-duration: .8s;
+  /* animation-name: swoopRight;
+  animation-duration: .8s; */
   transform: translateX(5px);
+  transition: transform 300ms;
+
 
 }
 

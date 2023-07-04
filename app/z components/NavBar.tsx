@@ -6,53 +6,6 @@ import SocialLinks from './SocialLinks';
 import { AiOutlineInstagram, AiOutlineYoutube } from 'react-icons/ai';
 import { SetStateAction, useState } from 'react';
 
-
-// const Navbar = () => {
-//   const [circlePosition, setCirclePosition] = useState(0);
-
-//   const handleLinkHover = (index: SetStateAction<number>) => {
-//     setCirclePosition(index);
-//   };
-
-//   return (
-//     <>
-
-//       <nav className='flex justify-between flex-wrap mb-8 '>
-     
-//         <Link href='/' onMouseEnter={() => handleLinkHover(1)} className='pr-1 flex items-center'>
-//             <h3>
-//               CALCULATED CUSTOMS
-//             </h3>
-
-//             <div className='circle' >
-//             <Image src="/logo.svg" alt="calculated customs logo" width={28} height={28} priority />
-
-//             </div>
-//         </Link>
-//         <Link href='/learn' onMouseEnter={() => handleLinkHover(2)} className='pr-1 flex items-center'>
-//             <h5 className='mr-7'>Learn </h5>
-
-//         </Link>
-//         <Link href='/about' onMouseEnter={() => handleLinkHover(3)} className='mr-7 flex items-center'>
-//             <h5 className='mr-7'>About </h5>
-
-//         </Link>
-//         <Link href='/contact'  onMouseEnter={() => handleLinkHover(4)} className='mr-7 flex items-center'>
-//             <h5 className='mr-7'>Contact              </h5>
-//         </Link>
-
-//         <div onMouseEnter={() => handleLinkHover(5)} className='mr-7 flex items-center'>
-//         <SocialLinks />
-
-//         </div>
-//       </nav>
-
-//     </>
-//   );
-// };
-
-// export default Navbar;
-
 const Navbar = () => {
   const [circlePosition, setCirclePosition] = useState(1);
 
@@ -63,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between flex-wrap mb-8">
       <Link href="/" onMouseEnter={() => handleLinkHover(1)} className="pr-1 flex items-center ">
-        <h3>CALCULATED CUSTOMS</h3>
+        <h5>CALCULATED CUSTOMS</h5>
         <div className='m-2'>
           {circlePosition === 1 ? <Image src="/logo.svg" alt="calculated customs logo" width={28} height={28} priority /> : <div className='h-7 w-7'></div>}
         </div>
