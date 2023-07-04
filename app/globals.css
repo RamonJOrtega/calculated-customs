@@ -156,7 +156,7 @@ h2, h3 {
   }
 }
 
-@keyframes swoopDown {
+/* @keyframes swoopDown {
   from{bottom:15px; right:5px;}
   to{bottom:0px; right: 0px;}
 }
@@ -165,7 +165,7 @@ div{
     position: relative;
     animation-name: swoopDown;
     animation-duration: 1s;
-}
+} */
 
 a {
   font-weight: bold;
@@ -214,18 +214,22 @@ input[type=number] {
   border: #fde047;
 } */
 
-.circle:hover {
-  /* width: 100%;
+a:hover {
+  background: linear-gradient(to right, #facc15,#b45309);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a:hover div {
+
   position: relative;
-  top: 2%;
-  left: 0%;
-  height: 25px;
-  border-radius: 50%; */
-  animation: swoopRight 1s ease-in;
+  animation-name: swoopRight;
+  animation-duration: .8s;
+  transform: translateX(5px);
 
 }
 
 @keyframes swoopRight {
-  from{ right:100px;}
-  to{ right: 0px;}
+  from{bottom:0px; right:5px;}
+  to{bottom:0px; right: 0px;}
 }
