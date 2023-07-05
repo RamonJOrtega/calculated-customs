@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { } from 'next/font/google'
 import pagePicture from "../../public/Rohana Wheel.jpg"
+import "../globals.css"
 
 
 export default function LearnPage() {

@@ -39,7 +39,7 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
 
     if (typeof props.value === 'boolean') {
         inputElement = (
-            <div className='flex items-center'>
+            <div className='flex items'>
                 <input type="checkbox" checked={props.value} onChange={()=>{props.setValue(!props.value)}}/> 
                 <div className='ml-2'> ex. 325/40R22 </div> 
             </div>
