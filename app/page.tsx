@@ -13,9 +13,9 @@ export default function Home() {
     <section className='flex flex-col items-center text-center'>
         <h1>KNOW WHAT TO EXPECT FROM YOUR WHEELS AND TIRES</h1>
         <br></br>
-        <p >
-          <span><a href="https://www.tkqlhce.com/click-100641204-10377976"><strong>Browse Wheels.</strong></a></span> &#160;   
-          <span ><a href="https://www.kqzyfj.com/click-100641204-10377851"><strong>Browse Tires.</strong> </a></span>
+        <p className='radius-lg border-1 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-gray-400 duration-300'>
+          <span><a href="https://www.tkqlhce.com/click-100641204-10377976" className='animate-pulse'><strong>Browse Wheels.</strong></a></span> &#160;   
+          <span ><a href="https://www.kqzyfj.com/click-100641204-10377851"className='animate-pulse'><strong>Browse Tires.</strong> </a></span>
           <br></br><br></br>
           Enter size and weight.
           Calculate the fastest combo!
