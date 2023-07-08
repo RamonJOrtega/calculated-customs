@@ -140,8 +140,6 @@ h1 {
   background: linear-gradient(to right, #facc15,#b45309);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* background: #fde047; */
-  /* color: white;  */
   text-align: left;
 }
 
@@ -169,6 +167,10 @@ div{
 
 a {
   font-weight: bold;
+  border-radius: var(--border-radius);
+  background: rgba(var(--card-rgb), 0);
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+  transition: background 200ms, border 200ms;
 }
 
 p a {
@@ -214,26 +216,25 @@ input[type=number] {
   border: #fde047;
 } */
 
-a:hover {
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
   background: linear-gradient(to right, #facc15,#b45309);
   background-image: linear-gradient(to right, #FFFBEB, #FCD34D);
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  }
+
+  p a:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
+
+  a:hover div {
+    position: relative;
+    transform: translateX(5px);
+    transition: transform 300ms;
+}
 }
 
-a:hover div {
-
-  position: relative;
-  /* animation-name: swoopRight;
-  animation-duration: .8s; */
-  transform: translateX(5px);
-  transition: transform 300ms;
-
-
-}
-
-@keyframes swoopRight {
-  from{bottom:0px; right:5px;}
-  to{bottom:0px; right: 0px;}
-}
