@@ -57,12 +57,8 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
     return props.isVisible ? (
         <div> 
             {inputElement}
-            {(props.title === "Tire Width mm") && (
-                <WidthDataList title = {props.title} />
-            )}
-            {(props.title ==="Aspect Ratio %") && (
-                <AspectDataList title = {props.title} />
-            )}
+            {(props.title === "Tire Width mm") && (<WidthDataList title = {props.title} />)}
+            {(props.title ==="Aspect Ratio %") && (<AspectDataList title = {props.title} />)}
         </div> 
     ) : null
 }
