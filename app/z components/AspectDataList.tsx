@@ -1,6 +1,6 @@
 
 interface AspectDataList {
-    aspectRatio: String
+    title: String
 }
 
 export default function AspectDataList(props: any) {
