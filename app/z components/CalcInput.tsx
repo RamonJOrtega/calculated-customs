@@ -32,7 +32,7 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
         if (props.title === "Tire Width mm") {
             const lastNum = parseFloat(inputRef.current.value)% 10
             if (inputRef.current.value.length == 1) {(lastNum>0 && lastNum<10)|| props.setValue(inputRef.current.value='')}
-            //2nd tire number can anything
+            //2nd tire number can be anything
             if (inputRef.current.value.length == 3) {(lastNum == 0 || lastNum ==5)||props.setValue(inputRef.current.value='')}
         } 
     }
@@ -47,9 +47,9 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
             </div>
         );
     } else if (typeof props.value === 'string') {
-        if (props.title.includes("Inertia")) {
+        if (props.title.includes("Inertia")) {  //results elements are special inputs
             inputElement = (<input type="number" value={props.value} disabled />);
-        } else {
+        } else {                                //all other elements are standard inputs
             inputElement = (<input type="number" value={props.value} ref={inputRef} onInput={handleInput} pattern="[0-9.]" placeholder={props.placeHolder}   onClick={()=>{props.setValue("")}} list = {props.title} max="500" min="0" step = "0.1"/>);
         }
     }
