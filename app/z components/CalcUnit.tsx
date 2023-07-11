@@ -10,7 +10,7 @@ interface CalcUnitProps {
 
 export default function CalcUnit(props: any) {
     return props.isVisible ? (
-      <div >
+      <div className= "bg-black text-stone-600" >
         {props.unit === "kgm2" ? (
          <div>kg&bull;m<sup>2</sup></div>
         ) : (
