@@ -41,12 +41,12 @@ export default function LearnPage() {
                 </div>
 
                 <div className="flex flex-row flex-wrap justify-between">
-                    <a  href="https://www.tkqlhce.com/click-100641204-10376887" target="_top">
+                    <a  href="https://www.tkqlhce.com/click-100641204-10376887" target="_top" >
                         <img src="https://www.ftjcfx.com/image-100641204-10376887" width="88" height="31" alt="Tirerack.com- Revolutionizing Tire Buying" />
                     </a> 
 
                     <a href="https://www.tkqlhce.com/click-100641204-13375597" target="_top">
-                        <img src="https://www.awltovhc.com/image-100641204-13375597" width="88"  height="31" alt="" />
+                        <img src="https://www.awltovhc.com/image-100641204-13375597" width="88"  height="31" alt="DiscoutTire.com" />
                     </a> 
 
                     <a href="https://www.anrdoezrs.net/click-100641204-15280193" target="_top">

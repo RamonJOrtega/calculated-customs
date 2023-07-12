@@ -139,6 +139,7 @@ a {
   background: rgba(var(--card-rgb), 0);
   border: 2px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
+  padding: 4px
 }
 
 p a {

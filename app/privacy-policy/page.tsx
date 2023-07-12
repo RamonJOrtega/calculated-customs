@@ -12,6 +12,7 @@ export default function PrivacyPolicyPage() {
     <p>
         Your privacy is important to us. It is Calculated Customs LLC's policy to respect your privacy and comply with any applicable law and regulation regarding any personal information we may collect about you, including across our website, <a href="https://calculatedcustoms.com/"> <span >https://calculatedcustoms.com</span></a>, and other sites we own and operate.
     </p>
+    <br></br>
     <p>This policy is effective as of 15 May 2022 and was last updated on 15 May 2022.</p>
     <h4 >Information We Collect</h4>
     <p>
