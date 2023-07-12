@@ -1,7 +1,5 @@
 import { Inter } from 'next/font/google'
-import styles from '../page.module.css'
 import Link from  'next/link';
-import '../globals.css'
 import Image from 'next/image';
 
 interface CalcUnitProps {
@@ -12,7 +10,7 @@ interface CalcUnitProps {
 
 export default function CalcUnit(props: any) {
     return props.isVisible ? (
-      <div className={styles.postFix}>
+      <div className= "text-neutral-700 text-sm" >
         {props.unit === "kgm2" ? (
          <div>kg&bull;m<sup>2</sup></div>
         ) : (

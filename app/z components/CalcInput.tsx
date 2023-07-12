@@ -1,10 +1,11 @@
 import { Inter } from 'next/font/google'
-import styles from '../page.module.css'
 import Link from  'next/link';
-import '../globals.css'
 import Image from 'next/image';
 import { Props } from 'next/script';
 import { useRef } from 'react';
+import WidthDataList from './WidthDataList';
+import AspectDataList from './AspectDataList';
+import '../globals.css'
 
 
 interface CalcInputProps {
@@ -17,14 +18,13 @@ interface CalcInputProps {
 }
 
 const CalcInput: React.FC<CalcInputProps> = (props) => {
-
+    const compactTitleId = props.title.replace(/[^a-zA-Z]/g, "");
 
     const inputRef = useRef<HTMLInputElement>(null);
 
     const handleInput =() :void => {
         if (!inputRef.current) {return}
         inputRef.current.validity.valid ? props.setValue(inputRef.current.value) : props.setValue('')
-        
 
         if (props.title === "Aspect Ratio %") {
             const lastNum = parseInt(inputRef.current.value) % 10;
@@ -34,62 +34,33 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
         if (props.title === "Tire Width mm") {
             const lastNum = parseFloat(inputRef.current.value)% 10
             if (inputRef.current.value.length == 1) {(lastNum>0 && lastNum<10)|| props.setValue(inputRef.current.value='')}
-            //2nd tire number can anything
+            //2nd tire number can be anything
             if (inputRef.current.value.length == 3) {(lastNum == 0 || lastNum ==5)||props.setValue(inputRef.current.value='')}
         } 
-
-
     }
+
     let inputElement = null;
 
-  if (typeof props.value === 'boolean') {
-    inputElement = (
-        <div>
-            <span>
-                <input 
-                    className={styles.checkbox} type="checkbox" checked={props.value}
-                    onChange={()=>{props.setValue(!props.value)}
-                    }/> 
-            </span>
-            <div className={styles.postFix}> ex. 325/40R22 </div> 
-        </div>
-    );
-  } else if (typeof props.value === 'string') {
-    if (props.title.includes("Inertia")) {
-      inputElement = (
-        <input className={styles.result} disabled type="number" value={props.value}  onClick={()=>{props.setValue("")}}/>);
-    } else {
-      inputElement = (
-        <input className={styles.fieldInput} type="number" ref={inputRef} onInput={handleInput} pattern="[0-9.]"
-        placeholder={props.placeHolder} value={props.value}  onClick={()=>{props.setValue("")}} list = {props.title} max="500" min="0" step = "0.1"/>
-      );
+    if (typeof props.value === 'boolean') {
+        inputElement = (
+            <div className='flex items'>
+                <input className= 'form-checkbox checked:bg-yellow-200' type="checkbox" checked={props.value} onChange={()=>{props.setValue(!props.value)}}/> 
+                <div className='ml-2 text-stone-600 text-sm '> ex. 325/40R22 </div> 
+            </div>
+        );
+    } else if (typeof props.value === 'string') {
+        if (props.title.includes("Inertia")) {  //results elements are special inputs
+            inputElement = (<input className='w-full rounded-md bg-neutral-900 text-yellow-200 font-bold' type="number" value={props.value} disabled />);
+        } else {                                //all other elements are standard inputs
+            inputElement = (<input className='w-full rounded-md bg-neutral-800 font-bold' type="number" value={props.value} ref={inputRef} onInput={handleInput} pattern="[0-9.]" placeholder={props.placeHolder} onClick={()=>{props.setValue("")}} list = {compactTitleId} max="500" min="0" step = "0.1"/>);
+        }
     }
-  }
     
     return props.isVisible ? (
         <div> 
             {inputElement}
-            {(props.title === "Tire Width mm") && (
-                <datalist id={props.title} >
-                    <option value="105"></option><option value="115"></option><option value="125"></option><option value="135"></option>
-                    <option value="145"></option><option value="155"></option><option value="165"></option><option value="175"></option>
-                    <option value="185"></option><option value="195"></option><option value="205"></option><option value="215"></option>
-                    <option value="225"></option><option value="235"></option><option value="245"></option><option value="255"></option>
-                    <option value="265"></option><option value="275"></option><option value="285"></option><option value="295"></option>
-                    <option value="305"></option><option value="315"></option><option value="325"></option><option value="335"></option>
-                    <option value="345"></option><option value="355"></option><option value="375"></option><option value="395"></option>
-                    <option value="405"></option>
-                </datalist>
-            )}
-            {(props.title ==="Aspect Ratio %") && (
-                <datalist id={props.title} >
-                    <option value="10"></option><option value="15"></option><option value="20"></option><option value="25"></option>
-                    <option value="30"></option><option value="35"></option><option value="40"></option><option value="45"></option>
-                    <option value="50"></option><option value="55"></option><option value="60"></option><option value="75"></option>
-                    <option value="80"></option><option value="85"></option><option value="90"></option><option value="95"></option>
-                    <option value="100"></option>
-                </datalist>
-            )}
+            {(props.title === "Tire Width mm") && (<WidthDataList id = {compactTitleId} />)}
+            {(props.title ==="Aspect Ratio %") && (<AspectDataList id = {compactTitleId} />)}
         </div> 
     ) : null
 }

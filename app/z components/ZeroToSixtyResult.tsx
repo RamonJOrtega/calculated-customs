@@ -1,7 +1,5 @@
 import { Inter } from 'next/font/google'
-import styles from '../page.module.css'
 import Link from  'next/link';
-import '../globals.css'
 import Image from 'next/image';
 import { parse } from 'path';
 import { isConstructorDeclaration } from 'typescript';
@@ -56,14 +54,14 @@ secondsSlowerMessage = (secondsSlower !== "NaN") ? secondsSlowerMessage : "input
     return(
         < >
             {T1 > T2 ? 
-                (<div className={styles.zeroToSixtyResult}> 
-                    <input className={styles.fasterResult} value={percentDecMessage} disabled/>  
-                    <input className={styles.fasterResult} value={secondsFasterMessage}disabled/>  
+                (<div > 
+                    <input  value={percentDecMessage} disabled  className="bg-gradient-to-r from-amber-50 to-yellow-200 m-1 rounded-lg h-8 border-none text-center font-bold text-lg min-w-10  text-green-600 z-10 w-full"/>  
+                    <input  value={secondsFasterMessage}disabled className="bg-gradient-to-r from-amber-50 to-yellow-200 m-1 rounded-lg h-8 border-none text-center font-bold text-lg min-w-10  text-green-600 z-10 w-full"/>  
                 </div>) 
                 : 
-                (<div className={styles.zeroToSixtyResult}> 
-                    <input className={styles.slowerResult} value={percentIncMessage} disabled />  
-                    <input className={styles.slowerResult} value={secondsSlowerMessage} disabled/> 
+                (<div > 
+                    <input  value={percentIncMessage} disabled className="bg-gradient-to-r from-yellow-300 to-amber-600 m-1 rounded-lg h-8 border-none text-center font-bold text-lg min-w-10 text-orange-700 z-10 w-full"/>  
+                    <input  value={secondsSlowerMessage} disabled className='bg-gradient-to-r from-yellow-300 to-amber-600 m-1 rounded-lg h-8 border-none text-center font-bold text-lg min-w-10 text-orange-700 z-10 w-full'/> 
                 </div>)
             }
 

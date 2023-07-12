@@ -1,13 +1,11 @@
 import { Inter } from 'next/font/google'
-import styles from './page.module.css'
-import './globals.css'
 import NavBar from './z components/NavBar';
 import Footer from './z components/Footer'
+import './globals.css'
+
 import { Analytics } from '@vercel/analytics/react';
 
-
 const inter = Inter({ subsets: ['latin'] })
-
 
 export const metadata = {
   title: 'Calculated Customs',
@@ -22,8 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <main className={styles.main}>
-          
+          <main > 
             <NavBar />
             {children}      
             <Footer />

@@ -2,7 +2,6 @@
 
 import React, { SetStateAction, useEffect } from "react"
 import Link from "next/link"
-import styles from '../page.module.css'
 import { Inter } from 'next/font/google'
 import { Main } from "next/document"
 import CalcInput from "./CalcInput"
@@ -54,9 +53,6 @@ const MainCalculator = () => {
 
     useEffect(() => {if (isStdNotation1) {setTireDia1(calcTireDiaFromStdNotation(wheelDia1, tireAsp1, tireWd1))}}, [wheelDia1, tireAsp1, tireWd1, isStdNotation1])
     useEffect(() => {if (isStdNotation2) {setTireDia2(calcTireDiaFromStdNotation(wheelDia2, tireAsp2, tireWd2))}}, [wheelDia2, tireAsp2, tireWd2, isStdNotation2])
-
-    
-    
 
 
     let newZeroToSixty = {change: "faster",  percent: 100}
@@ -142,19 +138,16 @@ const MainCalculator = () => {
     ]
 
     return (
-        <table>
+        <table className="text-left w-full bg-neutral-950 rounded-xl" >
                 <tbody>
                     <tr>
                         <td colSpan={6}>
-                            <span className={styles.secondaryDark}>
-                                <button className={styles.card} onClick={()=>{setIsSetup1(!isSetup1)}}  >
-                                    <div className={inter.className}>
-                                        <h3 className={styles.header}>
-                                            Calculate Combo 1 -&gt;
-                                        </h3> 
-                                    </div>
-                                </button>
-                            </span>
+                            <button  onClick={()=>{setIsSetup1(!isSetup1)}}  >
+                                <h3 className="bg-gradient-to-r from-amber-50 to-yellow-200
+                        text-neutral-900 text-sm font-bold px-2 py-1 rounded-md mt-2 ">
+                                    Calculate Combo 1
+                                </h3> 
+                            </button>
                         </td>
                     </tr>
                 </tbody>
@@ -179,15 +172,12 @@ const MainCalculator = () => {
                 <tr>    <td colSpan={6}> &nbsp;  </td>   </tr>
                     <tr>
                         <td colSpan={6}>
-                                <span className={styles.secondaryDark}>
-                                    <button className={styles.card} onClick={()=>{setIsCampareEnabled(!isCompareEnabled)}} >
-                                        <div className={inter.className}>
-                                            <h3 className={styles.header}>
-                                                Compare Combo 2 -&gt;
-                                            </h3> 
-                                        </div>
-                                    </button>
-                                </span>
+                            <button  onClick={()=>{setIsCampareEnabled(!isCompareEnabled)}} >
+                                    <h3 className="text-neutral-900 bg-gradient-to-r from-amber-50 to-yellow-200
+                                     text-sm font-bold px-2 py-1 rounded-md mt-2 animate-pulse ">
+                                        Compare Combo 2
+                                    </h3> 
+                            </button>
                         </td>
                     </tr>
                 </tbody>
@@ -220,7 +210,7 @@ const MainCalculator = () => {
                             tireWeight1={tireWt1}               tireWeight2={tireWt2}
                             tireDiameter1={tireDia1}            tireDiameter2={tireDia2}
                             wheelWeight1={wheelWt1}             wheelWeight2={wheelWt2}
-                            // isStdNotation1={isStdNotation1}     isStdNotation2={isStdNotation2}
+                            // isStdNotation1={isStdNotation1}  isStdNotation2={isStdNotation2}
                             /> 
                         </td>
                     </tr>

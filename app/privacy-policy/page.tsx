@@ -1,7 +1,5 @@
 import Image from "next/image"
 import torqueExplanation from "./Torque explanation.png"
-import "../globals.css"
-import styles from "../page.module.css"
 import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
@@ -10,10 +8,11 @@ export default function PrivacyPolicyPage() {
         <div className={inter.className}>
             
 
-<h2 className={styles.header} >Privacy Policy</h2>
+<h2 >Privacy Policy</h2>
     <p>
         Your privacy is important to us. It is Calculated Customs LLC's policy to respect your privacy and comply with any applicable law and regulation regarding any personal information we may collect about you, including across our website, <a href="https://calculatedcustoms.com/"> <span >https://calculatedcustoms.com</span></a>, and other sites we own and operate.
     </p>
+    <br></br>
     <p>This policy is effective as of 15 May 2022 and was last updated on 15 May 2022.</p>
     <h4 >Information We Collect</h4>
     <p>

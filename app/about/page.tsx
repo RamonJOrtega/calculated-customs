@@ -1,114 +1,86 @@
 import Image from "next/image"
-import "../globals.css"
-import styles from "../page.module.css"
-import { Inter } from 'next/font/google'
-import pagePicture from "../../public/red mitsubishi volk wheels background.jpg"
+import {  } from 'next/font/google'
+import pagePicture from "../../public/gold-audi 4016x6016.jpg"
 import president from "../../public/presidentImage.jpg"
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function LearnPage() {
     return(
         <div>
-            <div className={styles.pageImage}>
-                <Image 
-                    src={pagePicture}
-                    alt="Rohana Wheel"
-                    placeholder="blur"
-                    fill={true}
-                    objectFit="cover"
-                />
+            <div className=' h-96 w-full overflow-hidden rounded-xl content-center flex flex-col justify-center'>
+                <Image src={pagePicture} alt="calclulated customs wheel tire " placeholder="blur" fill={false} />
             </div> 
 
-            <div className={styles.center}>
-                <div className={styles.pageTextLeft}>
-                    <div className={inter.className}>
+            <section >
+                    <div >
+                    <br></br>
+                    <h1 >ABOUT US</h1>
+                    
+                    <p> 
+                    <a href="https://www.tkqlhce.com/click-100641204-10377976">Find your wheels</a>.&#160;
+                        <a href="https://www.kqzyfj.com/click-100641204-10377851">Find your tires</a>.&#160;
+                        <a href="/">Compare</a>.
+                    </p>
+                    <br></br>
+                    
+                    <p >
+                        You’ll KNOW which combo is faster BEFORE you spend thousands of dollars on your whip’s new kicks. <br></br>
+                    </p>
+                    <br></br>
+                    <p >
+                        Support us by clicking affiliate links and purchasing wheels or tires through &#160;
+                        <a href="https://www.jdoqocy.com/click-100641204-10377982">Tire Rack</a>&#160;/&#160;<a href="https://www.tkqlhce.com/click-100641204-13382742">Discount Tire</a>,&#160; 
+                        <a href="https://www.dpbolvw.net/click-100641204-15280196">Hoonigan</a>,&#160; and &#160; 
+                        <a href="https://www.dpbolvw.net/click-100641204-15357094">Throttle</a>.&#160;  
                         <br></br>
-                        <h1 className={styles.header}>ABOUT US</h1>
-                        
-                       
-                        <p className={styles.card} > 
-                                     Find your &#160;<span><a href="https://www.tkqlhce.com/click-100641204-10377976">wheels.</a> &#160; </span>
-                                    Find your &#160;<span><a href="https://www.kqzyfj.com/click-100641204-10377851">tires</a>. &#160; </span>
-                                    <span><a href="/"> Compare.</a></span>
-                        </p>
                         <br></br>
-                       
-                        <p >
-                          
-                            You’ll KNOW which combo is faster BEFORE you spend thousands of dollars on your whip’s new kicks. <br></br>
-
-                        </p>
+                        The commissions generated will be used to add more calculators and products to our website. 
                         <br></br>
-                        <p >
-                       
-                            Support us by clicking affiliate links and purchasing wheels or tires through &#160;
-                            <span><a href="https://www.jdoqocy.com/click-100641204-10377982">Tire Rack</a></span>&#160;/&#160;<span><a href="https://www.tkqlhce.com/click-100641204-13382742">Discount Tire</a>,&#160;</span> 
-                            <span><a href="https://www.dpbolvw.net/click-100641204-15280196">Hoonigan</a>,&#160;</span> and &#160; 
-                            <span><a href="https://www.dpbolvw.net/click-100641204-15357094">Throttle</a>.&#160;</span>  
-                            <br></br>
-                            The commissions generated will be used to add more calculators and products to our website. 
-                            <br></br>
-                            <br></br>                        
-                        </p>
-                    </div>
-                 </div>
-                 <div className={styles.flexSponsors}>
-                <div className={styles.card}>
-                    <a  href="https://www.tkqlhce.com/click-100641204-10376887" target="_top">
-                        <span>
-                            <img src="https://www.ftjcfx.com/image-100641204-10376887" width="88" height="31" alt="Tirerack.com- Revolutionizing Tire Buying" />
-                        </span>
-                    </a> 
+                        <br></br>                        
+                    </p>
                 </div>
 
-                <div className={styles.card}>
+                <div className="flex flex-row flex-wrap justify-between">
+                    <a  href="https://www.tkqlhce.com/click-100641204-10376887" target="_top" >
+                        <img src="https://www.ftjcfx.com/image-100641204-10376887" width="88" height="31" alt="Tirerack.com- Revolutionizing Tire Buying" />
+                    </a> 
+
                     <a href="https://www.tkqlhce.com/click-100641204-13375597" target="_top">
-                        <span>
-                            <img src="https://www.awltovhc.com/image-100641204-13375597"  height="31" alt="" />
-                        </span>
+                        <img src="https://www.awltovhc.com/image-100641204-13375597" width="88"  height="31" alt="DiscoutTire.com" />
                     </a> 
-                </div>
 
-                <div className={styles.card}>
                     <a href="https://www.anrdoezrs.net/click-100641204-15280193" target="_top">
-                        <span>
-                            <img src="https://www.awltovhc.com/image-100641204-15280193" width="88" height="31" alt="Hoonigan" />
-                        </span>
+                        <img src="https://www.awltovhc.com/image-100641204-15280193" width="88" height="31" alt="Hoonigan" />
                     </a> 
-                </div>
 
-                <div className={styles.card}>
                     <a href="https://www.kqzyfj.com/click-100641204-15280215" target="_top">
-                        <span>
-                            <img src="https://www.tqlkg.com/image-100641204-15280215" width="88" height="31" alt="Throtl" />
-                        </span>
+                        <img src="https://www.tqlkg.com/image-100641204-15280215" width="88" height="31" alt="Throtl" />
                     </a> 
                 </div>
-            </div>
+            </section>
+
             <br></br> <br></br>
-            <div className={styles.centeredPicture}>
+                <section className='flex items-center flex-col'>
+                    <div className="overflow-hidden rounded-full">
                         <Image
                         src={president}
                         alt="President Image"
                         height={150}
                         placeholder="blur"
                         />
-                </div>
+                    </div>
                 
-                <div className={inter.className}>
-                        <br></br>
-                        <h5>Ramon Ortega</h5>
-                        <br></br>
-                        <p >
-                            The president of Calculated Customs. <br></br>
-                            M.S. in Mechanical Engineering, 8-year Gas Turbine Engineer, <br></br>
-                            and software developer when not obsessing over wheels.
-                        </p>
-                        <br></br>
-                </div>       
+                    <br></br>
+                    <h5>Ramon Ortega</h5>
+                    <br></br>
+                    <p className="text-center">
+                        The president of Calculated Customs. <br></br>
+                        M.S. in Mechanical Engineering, 8-year Gas Turbine Engineer, <br></br>
+                        and software developer when not obsessing over wheels.
+                    </p>
+                    <br></br>
+                </section>
             </div>   
-        </div>
          
     )
 }
