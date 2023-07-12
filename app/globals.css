@@ -171,6 +171,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 input[type=number] {
+  text-align:center;
   -moz-appearance: textfield;
   /* Firefox */
 }

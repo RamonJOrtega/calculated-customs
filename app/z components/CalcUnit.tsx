@@ -10,7 +10,7 @@ interface CalcUnitProps {
 
 export default function CalcUnit(props: any) {
     return props.isVisible ? (
-      <div className= "text-neutral-700" >
+      <div className= "text-neutral-700 m-px text-sm" >
         {props.unit === "kgm2" ? (
          <div>kg&bull;m<sup>2</sup></div>
         ) : (
