@@ -141,7 +141,7 @@ const MainCalculator = () => {
         <table className="text-left w-full bg-neutral-950 rounded-xl" >
                 <tbody>
                     <tr>
-                        <td colSpan={6}>
+                        <td colSpan={6} className="text-center">
                             <button  onClick={()=>{setIsSetup1(!isSetup1)}}  >
                                 <h3 className="bg-gradient-to-r from-amber-50 to-yellow-200
                         text-neutral-900 text-sm font-bold px-2 py-1 rounded-md mt-2 animate-pulse">
@@ -171,7 +171,7 @@ const MainCalculator = () => {
                 <tbody>
                 <tr>    <td colSpan={6}> &nbsp;  </td>   </tr>
                     <tr>
-                        <td colSpan={6}>
+                        <td colSpan={6} className="text-center">
                             <button  onClick={()=>{setIsCampareEnabled(!isCompareEnabled)}} >
                                     <h3 className="text-neutral-900 bg-gradient-to-r from-amber-50 to-yellow-200
                                      text-sm font-bold px-2 py-1 rounded-md mt-2 animate-pulse text-left">
