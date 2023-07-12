@@ -10,7 +10,7 @@ export default function LearnPage() {
             <div className='relative w-full h-96 overflow-hidden rounded-lg flex flex-col justify-center'>
                 <Image 
                     src={pagePicture}
-                    alt="Rohana Wheel"
+                    alt="white wheels and tires"
                     placeholder="blur"
                     //fill={true}
                     />

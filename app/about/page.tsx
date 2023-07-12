@@ -1,14 +1,14 @@
 import Image from "next/image"
 import {  } from 'next/font/google'
-import pagePicture from "../../public/charger.jpg"
+import pagePicture from "../../public/gold-audi 4016x6016.jpg"
 import president from "../../public/presidentImage.jpg"
 
 
 export default function LearnPage() {
     return(
         <div>
-            <div className=' h-96 overflow-hidden rounded-xl content-center flex flex-col'>
-                <Image src={pagePicture} alt="Rohana Wheel" placeholder="blur" fill={false} />
+            <div className=' h-96 w-full overflow-hidden rounded-xl content-center flex flex-col justify-center'>
+                <Image src={pagePicture} alt="calclulated customs wheel tire " placeholder="blur" fill={false} />
             </div> 
 
             <section >
