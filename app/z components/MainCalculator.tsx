@@ -210,7 +210,7 @@ const MainCalculator = () => {
                             tireWeight1={tireWt1}               tireWeight2={tireWt2}
                             tireDiameter1={tireDia1}            tireDiameter2={tireDia2}
                             wheelWeight1={wheelWt1}             wheelWeight2={wheelWt2}
-                            // isStdNotation1={isStdNotation1}     isStdNotation2={isStdNotation2}
+                            // isStdNotation1={isStdNotation1}  isStdNotation2={isStdNotation2}
                             /> 
                         </td>
                     </tr>

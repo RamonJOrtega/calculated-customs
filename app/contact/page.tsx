@@ -9,12 +9,12 @@ const inter = Inter({ subsets: ['latin'] })
 export default function ContactPage() {
     return(
         <div className='flex flex-col items-center'>
-            <div className='w-96 h-96 overflow-hidden rounded-xl'>
+            <div className='w-full h-128 overflow-hidden rounded-xl justify-center flex flex-col'>
                     <Image
                         src={pagePicture}
                         alt="Widebody Lamborghini"
                         placeholder="blur"
-                         fill={true}
+                         fill={false}
                         objectFit="cover"
                         sizes="(max-width: 1000px) 100vw, (max-width: 900px) 50vw, 33vw"
                     />

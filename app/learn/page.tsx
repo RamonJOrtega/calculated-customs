@@ -7,14 +7,13 @@ import "../globals.css"
 export default function LearnPage() {
     return(
         <div>
-            <div className='w-full h-96 overflow-hidden rounded-lg'>
+            <div className='relative w-full h-96 overflow-hidden rounded-lg'>
                 <Image 
                     src={pagePicture}
                     alt="Rohana Wheel"
                     placeholder="blur"
-                    fill={true}
-                    objectFit="cover"
-                />
+                    //fill={true}
+                    />
         
             </div> 
 
