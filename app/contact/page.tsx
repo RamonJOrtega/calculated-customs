@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import pagePicture from "../../public/widebody.jpg"
+import pagePicture from "../../public/gold-wheel 3840x5760.jpg"
 import { Inter } from 'next/font/google'
 import { AiOutlineInstagram } from 'react-icons/ai'
 import Link from 'next/link'
@@ -9,14 +9,12 @@ const inter = Inter({ subsets: ['latin'] })
 export default function ContactPage() {
     return(
         <div className='flex flex-col items-center'>
-            <div className='w-full overflow-hidden rounded-xl justify-center flex flex-col'>
+            <div className='w-3/4 h-1/4 overflow-hidden rounded-xl justify-center flex flex-col'>
                     <Image
                         src={pagePicture}
                         alt="Widebody Lamborghini"
                         placeholder="blur"
                          fill={false}
-                        objectFit="cover"
-                        sizes="(max-width: 1000px) 100vw, (max-width: 900px) 50vw, 33vw"
                     />
                  </div>
             <div>    
