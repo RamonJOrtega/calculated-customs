@@ -144,7 +144,7 @@ const MainCalculator = () => {
                         <td colSpan={6}>
                             <button  onClick={()=>{setIsSetup1(!isSetup1)}}  >
                                 <h3 className="bg-gradient-to-r from-amber-50 to-yellow-200
-                        text-neutral-900 text-sm font-bold px-2 py-1 rounded-md mt-2 ">
+                        text-neutral-900 text-sm font-bold px-2 py-1 rounded-md mt-2 animate-pulse">
                                     Calculate Combo 1
                                 </h3> 
                             </button>
