@@ -9,7 +9,7 @@ import { SetStateAction, useState } from 'react';
 const Navbar = () => {
   const [circlePosition, setCirclePosition] = useState(1);
 
-  const handleLinkHover = (index) => {
+  const handleLinkHover = (index: SetStateAction<number>) => {
     setCirclePosition(index);
   };
 
