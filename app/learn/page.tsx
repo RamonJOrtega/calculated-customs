@@ -35,7 +35,7 @@ export default function LearnPage() {
             <p >
                 <br></br>
                 Wheel torque rotates a car's tire and produces an opposing torque caused by the friction on the ground. 
-                The friction force is what actually moves the wheels and and the vehicle forward. 
+                The friction force is what actually moves the wheels and the vehicle forward. 
                 We sum all forces and torques and make 4 logical assumptions: <br></br>
             </p>
             <br></br>
@@ -83,7 +83,7 @@ export default function LearnPage() {
             <p >
                 
                 Rotational Inertia= Mass × Rotation Radius² (I=mr²). <br></br>
-                Rotational Inertia increases directly with with mass (m) but EXPONENTIALLY with the distance (r) of every rotating component point from .
+                Rotational Inertia increases directly with mass (m) but EXPONENTIALLY with the distance (r) of every rotating component point from .
                 This is why adding rotating weight is much worse than adding stationary weight to a vehicle. <br></br> 
                 </p> 
                 <p >

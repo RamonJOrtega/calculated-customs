@@ -8,7 +8,7 @@ export default function LearnPage() {
     return(
         <div>
             <div className=' h-96 w-full overflow-hidden rounded-xl content-center flex flex-col justify-center'>
-                <Image src={pagePicture} alt="calclulated customs wheel tire " placeholder="blur" fill={false} />
+                <Image src={pagePicture} alt="calculated customs wheel tire " placeholder="blur" fill={false} />
             </div> 
 
             <section >

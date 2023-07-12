@@ -174,7 +174,7 @@ const MainCalculator = () => {
                         <td colSpan={6}>
                             <button  onClick={()=>{setIsCampareEnabled(!isCompareEnabled)}} >
                                     <h3 className="text-neutral-900 bg-gradient-to-r from-amber-50 to-yellow-200
-                                     text-sm font-bold px-2 py-1 rounded-md mt-2 animate-pulse ">
+                                     text-sm font-bold px-2 py-1 rounded-md mt-2 animate-pulse text-left">
                                         Compare Combo 2
                                     </h3> 
                             </button>
