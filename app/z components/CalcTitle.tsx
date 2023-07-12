@@ -17,7 +17,7 @@ export default function FieldTitle(props: any) {
         <div className="relative text-neutral-600">
           {props.title}
           {(props.title === "Standard Notation" || props.title === "Total Inertia") && (
-            <span className="ml-2 relative group text-yellow-400 " > 
+            <span className="ml-2 relative group text-yellow-200 " > 
               <strong>&#x24D8;</strong>
               <span className="absolute z-10 hidden group-hover:block 
                               bg-gradient-to-r from-amber-50 to-yellow-200

@@ -61,7 +61,7 @@ secondsSlowerMessage = (secondsSlower !== "NaN") ? secondsSlowerMessage : "input
                 : 
                 (<div > 
                     <input  value={percentIncMessage} disabled className="bg-gradient-to-r from-yellow-300 to-amber-600 m-1 rounded-2xl h-8 border-none text-center font-bold text-lg min-w-10 text-orange-700 z-10 w-full"/>  
-                    <input  value={secondsSlowerMessage} disabled className='bg-gradient-to-r from-yellow-300 to-amber-600 m-1 rounded-2xl h-8 border-none text-center font-bold text-lg min-w-10 text-orange-700 z-10 w-full"'/> 
+                    <input  value={secondsSlowerMessage} disabled className='bg-gradient-to-r from-yellow-300 to-amber-600 m-1 rounded-2xl h-8 border-none text-center font-bold text-lg min-w-10 text-orange-700 z-10 w-full'/> 
                 </div>)
             }
 
