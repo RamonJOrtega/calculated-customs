@@ -207,5 +207,12 @@ input[type=number] {
     transform: translateX(5px);
     transition: transform 300ms;
   }
+
+  #TireWidthmm {
+    column-count: 2;
+  }
+  #AspectRatio {
+    column-count: 2;
+  }
 }
 

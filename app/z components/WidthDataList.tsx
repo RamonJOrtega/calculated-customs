@@ -1,11 +1,11 @@
 
 interface WidthDataList {
-    title: String
+    id: String
 }
 
 export default function WidthDataList(props: any) {
     return (
-      <datalist id={props.title} >
+      <datalist id={props.id} >
         <option value="105"></option><option value="115"></option><option value="125"></option><option value="135"></option>
         <option value="145"></option><option value="155"></option><option value="165"></option><option value="175"></option>
         <option value="185"></option><option value="195"></option><option value="205"></option><option value="215"></option>

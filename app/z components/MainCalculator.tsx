@@ -203,7 +203,7 @@ const MainCalculator = () => {
             {isCompareEnabled && (
                 <tbody>
                     <tr>
-                        <td colSpan={6} className = "w-full">
+                        <td colSpan={6}>
                             <ZeroToSixtyResult 
                             vehicleWeight={vehicleWt}           currentZeroSixtyTime = {currentZeroSixtyTime}
                             totalInertiaResult1={totalInertia1} totalInertiaResult2={totalInertia2}
