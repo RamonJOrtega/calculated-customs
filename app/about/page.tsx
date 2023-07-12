@@ -7,7 +7,7 @@ import president from "../../public/presidentImage.jpg"
 export default function LearnPage() {
     return(
         <div>
-            <div className=' h-96 overflow-hidden rounded-xl content-center flex flex-col justify-center'>
+            <div className=' h-96 overflow-hidden rounded-xl content-center flex flex-col'>
                 <Image src={pagePicture} alt="Rohana Wheel" placeholder="blur" fill={false} />
             </div> 
 
