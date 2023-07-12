@@ -44,7 +44,7 @@ const CalcInput: React.FC<CalcInputProps> = (props) => {
         inputElement = (
             <div className='flex items'>
                 <input type="checkbox" checked={props.value} onChange={()=>{props.setValue(!props.value)}}/> 
-                <div className='ml-2'> ex. 325/40R22 </div> 
+                <div className='ml-2 text-stone-600'> ex. 325/40R22 </div> 
             </div>
         );
     } else if (typeof props.value === 'string') {

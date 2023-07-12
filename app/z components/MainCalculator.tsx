@@ -54,9 +54,6 @@ const MainCalculator = () => {
     useEffect(() => {if (isStdNotation1) {setTireDia1(calcTireDiaFromStdNotation(wheelDia1, tireAsp1, tireWd1))}}, [wheelDia1, tireAsp1, tireWd1, isStdNotation1])
     useEffect(() => {if (isStdNotation2) {setTireDia2(calcTireDiaFromStdNotation(wheelDia2, tireAsp2, tireWd2))}}, [wheelDia2, tireAsp2, tireWd2, isStdNotation2])
 
-    
-    
-
 
     let newZeroToSixty = {change: "faster",  percent: 100}
     interface CalculatorLayout {
@@ -141,7 +138,7 @@ const MainCalculator = () => {
     ]
 
     return (
-        <table className="text-left w-full">
+        <table className="text-left w-full bg-neutral-900 rounded-xl" >
                 <tbody>
                     <tr>
                         <td colSpan={6}>
@@ -206,7 +203,7 @@ const MainCalculator = () => {
             {isCompareEnabled && (
                 <tbody>
                     <tr>
-                        <td colSpan={6}>
+                        <td colSpan={6} className = "w-full">
                             <ZeroToSixtyResult 
                             vehicleWeight={vehicleWt}           currentZeroSixtyTime = {currentZeroSixtyTime}
                             totalInertiaResult1={totalInertia1} totalInertiaResult2={totalInertia2}

@@ -14,7 +14,7 @@ export default function FieldTitle(props: any) {
     const intertiaTipText = "Also called moment of inertia or rotating mass. Keep it low to go faster!"
 
     return props.isVisible ? (
-        <div className="relative">
+        <div className="relative text-neutral-600">
           {props.title}
           {(props.title === "Standard Notation" || props.title === "Total Inertia") && (
             <span className="ml-2 relative group text-yellow-400 " > 
