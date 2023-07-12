@@ -1,13 +1,13 @@
 import Image from "next/image"
 import {  } from 'next/font/google'
-import pagePicture from "../../public/red mitsubishi volk wheels background.jpg"
+import pagePicture from "../../public/charger.jpg"
 import president from "../../public/presidentImage.jpg"
 
 
 export default function LearnPage() {
     return(
         <div>
-            <div className=' h-96 overflow-hidden rounded-xl content-center'>
+            <div className=' h-96 overflow-hidden rounded-xl content-center flex flex-col justify-center'>
                 <Image src={pagePicture} alt="Rohana Wheel" placeholder="blur" fill={false} />
             </div> 
 
