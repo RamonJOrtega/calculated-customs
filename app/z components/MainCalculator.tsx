@@ -138,7 +138,7 @@ const MainCalculator = () => {
     ]
 
     return (
-        <table className="text-left w-full bg-neutral-900 rounded-xl" >
+        <table className="text-left w-full bg-neutral-950 rounded-xl" >
                 <tbody>
                     <tr>
                         <td colSpan={6}>
@@ -173,8 +173,8 @@ const MainCalculator = () => {
                     <tr>
                         <td colSpan={6}>
                             <button  onClick={()=>{setIsCampareEnabled(!isCompareEnabled)}} >
-                                    <h3 className="bg-gradient-to-r from-amber-50 to-yellow-200
-                                    text-neutral-900 text-sm font-bold px-2 py-1 rounded-md mt-2 animate-pulse">
+                                    <h3 className="text-neutral-900 bg-gradient-to-r from-amber-50 to-yellow-200
+                                     text-sm font-bold px-2 py-1 rounded-md mt-2 animate-pulse">
                                         Compare Combo 2
                                     </h3> 
                             </button>
