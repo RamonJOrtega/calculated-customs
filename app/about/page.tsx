@@ -22,7 +22,6 @@ export default function LearnPage() {
                         <a href="/">Compare</a>.
                     </p>
                     <br></br>
-                    
                     <p >
                         You’ll KNOW which combo is faster BEFORE you spend thousands of dollars on your whip’s new kicks. <br></br>
                     </p>
