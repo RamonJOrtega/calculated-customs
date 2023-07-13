@@ -3,7 +3,7 @@ import {  } from 'next/font/google'
 import Link from  'next/link';
 import Image from 'next/image';
 import SocialLinks from './SocialLinks';
-import { AiOutlineInstagram, AiOutlineYoutube } from 'react-icons/ai';
+import { AiOutlineInstagram, AiOutlineYoutube } from "react-icons/ai"
 import { SetStateAction, useState } from 'react';
 
 const Navbar = () => {

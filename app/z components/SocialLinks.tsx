@@ -23,9 +23,8 @@ export default function SocialLinks() {
                     <h3 >  <AiOutlineInstagram /> </h3>
                 </div>
             </Link>
+            
 </ div> 
+
     )
 }
-
-//list="widthList" maxLength={3} step="1"
-//list="aspectList" maxLength={3} step="1" 
