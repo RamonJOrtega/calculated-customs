@@ -183,11 +183,14 @@ p a::after {
   -webkit-mask-repeat: repeat-x;
   mask-repeat: repeat-x;
 } 
-/* 
-::selection {
-  background:#171717;
-  color: #FCD34D;
-} */
+
+#TireWidthmm {
+  column-count: 4;
+}
+#AspectRatio {
+  column-count: 4;
+  column-gap: 20px;
+}
 
 
 
@@ -211,15 +214,17 @@ input[type=number] {
   border: #fde047;
 } */
 
+button {
+  padding: 4px;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   a:hover {
   background: linear-gradient(to right, #facc15,#b45309);
   background-image: linear-gradient(to right, #FFFBEB, #FCD34D);
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* background: rgba(var(--card-rgb), 0.1); */
    border: 2px solid rgba(var(--card-border-rgb), 0.15);  
 
 }
@@ -235,12 +240,8 @@ input[type=number] {
     transition: transform 300ms;
   }
 
-  #TireWidthmm {
-    column-count: 4;
-  }
-  #AspectRatio {
-    column-count: 4;
-    column-gap: 20px;
+  button:hover {
+    border: 2px solid rgba(var(--card-border-rgb), 0.15);  
   }
 
 }

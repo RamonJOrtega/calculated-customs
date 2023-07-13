@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function SocialLinks() {
     
     return(
-        <div >
+        <div className='flex'>
         
             <Link href="https://youtube.com/channel/UCazq-Zh2hxOYou0geTXhOTA">
                 <div >
