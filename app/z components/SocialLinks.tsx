@@ -10,25 +10,20 @@ export default function SocialLinks() {
     
     return(
         <div >
-        <div > 
-           
-                
-                    <Link href="https://youtube.com/channel/UCazq-Zh2hxOYou0geTXhOTA">
-                    <div >
-                        <h3 > <span> <AiOutlineYoutube /></span> </h3>
-                    </div>
-                    </Link>
-               
-                
-                    <Link href="https://www.instagram.com/calculatedcustoms">
-                    <div >
-                        <h3 > <span> <AiOutlineInstagram /></span> </h3>
-                    </div>
-                    </Link>
-                
-         
-        </ div> 
-        </div>
+        
+            <Link href="https://youtube.com/channel/UCazq-Zh2hxOYou0geTXhOTA">
+                <div >
+                    <h3 >  <AiOutlineYoutube /> </h3>
+                </div>
+            </Link>
+        
+        
+            <Link href="https://www.instagram.com/calculatedcustoms">
+                <div >
+                    <h3 >  <AiOutlineInstagram /> </h3>
+                </div>
+            </Link>
+</ div> 
     )
 }
 
