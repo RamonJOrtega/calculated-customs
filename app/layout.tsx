@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Calculated Customs',
-  description: 'Calculated Customs: compare Rotational Inertia and Zero-to-sixty (0-60mph) time to select the fastest wheel and tire setup.'
+  description: 'Compare Rotational Inertia and Zero-to-sixty (0-60mph) time to select the fastest wheel and tire setup.'
 }
 
 export default function RootLayout({

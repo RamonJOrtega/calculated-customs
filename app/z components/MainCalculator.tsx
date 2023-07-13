@@ -69,18 +69,18 @@ const MainCalculator = () => {
     const calcLayout1: CalculatorLayout[] = 
         [
             {
-                title1: "Tire Diameter",    title2: "Standard Notation",title3: "Wheel Diameter",
-                value1: tireDia1,           value2: isStdNotation1,value3: wheelDia1,
-                unit1:  "inch",             unit2:   "",                unit3:  "inch",
-                setValue1: setTireDia1,     setValue2: setIsStdNotation1, setValue3: setWheelDia1,
-                isVisible1: !isStdNotation1,   isVisible2: !isStdNotation1,     isVisible3: !isStdNotation1
+                title1: "Tire Diameter",    title2: "Standard Notation",    title3: "Wheel Diameter",
+                value1: tireDia1,           value2: isStdNotation1,         value3: wheelDia1,
+                unit1:  "inch",             unit2:   "",                    unit3:  "inch",
+                setValue1: setTireDia1,     setValue2: setIsStdNotation1,   setValue3: setWheelDia1,
+                isVisible1: !isStdNotation1,   isVisible2: !isStdNotation1, isVisible3: !isStdNotation1
             },
             {
-                title1: "Tire Width mm",  title2: "Aspect Ratio %", title3: "Wheel Diameter",
-                value1: tireWd1,            value2: tireAsp1,           value3: wheelDia1,
-                unit1:  "/",                unit2:"R",                  unit3:  "inch",
-                setValue1: setTireWd1,      setValue2: setTireAsp1, setValue3: setWheelDia1,
-                isVisible1: isStdNotation1, isVisible2: isStdNotation1,    isVisible3: isStdNotation1
+                title1: "Tire Width mm",  title2: "Aspect Ratio %",         title3: "Wheel Diameter",
+                value1: tireWd1,            value2: tireAsp1,               value3: wheelDia1,
+                unit1:  "/",                unit2:"R",                      unit3:  "inch",
+                setValue1: setTireWd1,      setValue2: setTireAsp1,         setValue3: setWheelDia1,
+                isVisible1: isStdNotation1, isVisible2: isStdNotation1,     isVisible3: isStdNotation1
             },
             {
                 title1: "Tire Weight",      title2: "Standard Notation",    title3: "Wheel Weight",
@@ -90,19 +90,19 @@ const MainCalculator = () => {
                 isVisible1: true,           isVisible2: isStdNotation1,     isVisible3: true
             },
             {
-                title1: "Tire Inertia",         title2: "Total Inertia",    title3: "Wheel Inertia",
-                value1: tireInertia1,           value2: totalInertia1,      value3: wheelInertia1,
-                unit1: "kgm2",                  unit2: "kgm2",              unit3: "kgm2",
-                setValue1: setTireInertia1, setValue2: setTotalInertia1, setValue3: setWheelInertia1,
-                isVisible1: true,           isVisible2: true,                       isVisible3: true
+                title1: "Tire Inertia",     title2: "Total Inertia",        title3: "Wheel Inertia",
+                value1: tireInertia1,       value2: totalInertia1,          value3: wheelInertia1,
+                unit1: "kgm2",              unit2: "kgm2",                  unit3: "kgm2",
+                setValue1: setTireInertia1, setValue2: setTotalInertia1,    setValue3: setWheelInertia1,
+                isVisible1: true,           isVisible2: true,                isVisible3: true
 
             },
             {
-                title1: "Vehicle Weight",       title2: "",         title3: "Current 0-60 Time",
-                value1: vehicleWt,              value2: "",         value3: currentZeroSixtyTime,
-                unit1: "pound",                 unit2: "",          unit3: "second",
-                setValue1: setVehicleWt,        setValue2: null,    setValue3: setCurrentZeroSixtyTime,
-                isVisible1: isCompareEnabled,  isVisible2: false,   isVisible3: isCompareEnabled
+                title1: "Vehicle Weight",       title2: "",                 title3: "Current 0-60 Time",
+                value1: vehicleWt,              value2: "",                 value3: currentZeroSixtyTime,
+                unit1: "pound",                 unit2: "",                  unit3: "second",
+                setValue1: setVehicleWt,        setValue2: null,            setValue3: setCurrentZeroSixtyTime,
+                isVisible1: isCompareEnabled,  isVisible2: false,           isVisible3: isCompareEnabled
             },
         ]
     const calcLayout2: CalculatorLayout[] = 
@@ -115,7 +115,7 @@ const MainCalculator = () => {
             isVisible1: !isStdNotation2,isVisible2: !isStdNotation2,    isVisible3: !isStdNotation2
         },
         {
-            title1: "Tire Width mm",  title2: "Aspect Ratio %",     title3: "Wheel Diameter",
+            title1: "Tire Width mm",    title2: "Aspect Ratio %",     title3: "Wheel Diameter",
             value1: tireWd2,            value2: tireAsp2,               value3: wheelDia2,
             unit1:  "/",                unit2:"R",                      unit3:  "inch",
             setValue1: setTireWd2,      setValue2: setTireAsp2,         setValue3: setWheelDia2,
@@ -143,8 +143,7 @@ const MainCalculator = () => {
                     <tr>
                         <td colSpan={6} className="text-center">
                             <button  onClick={()=>{setIsSetup1(!isSetup1)}}  >
-                                <h3 className="bg-gradient-to-r from-amber-50 to-yellow-200
-                        text-neutral-900 text-sm font-bold px-2 py-1 rounded-md animate-pulse">
+                                <h3 className="bg-gradient-to-r from-amber-50 to-yellow-200 text-neutral-900 text-sm font-bold px-2 py-1 rounded-md animate-pulse">
                                     Calculate Combo 1
                                 </h3> 
                             </button>
@@ -173,8 +172,7 @@ const MainCalculator = () => {
                     <tr>
                         <td colSpan={6} className="text-center">
                             <button  onClick={()=>{setIsCampareEnabled(!isCompareEnabled)}} >
-                                    <h3 className="text-neutral-900 bg-gradient-to-r from-amber-50 to-yellow-200
-                                     text-sm font-bold px-2 py-1 rounded-md animate-pulse text-left">
+                                    <h3 className="text-neutral-900 bg-gradient-to-r from-amber-50 to-yellow-200 text-sm font-bold px-2 py-1 rounded-md animate-pulse text-left">
                                         Compare Combo 2
                                     </h3> 
                             </button>
