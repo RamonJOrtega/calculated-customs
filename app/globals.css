@@ -185,8 +185,8 @@ p a::after {
 } 
 
 ::selection {
-  background:#FFFBEB;
-  color: rgb(37, 7, 58); 
+  background:#171717;
+  color: #FCD34D
 }
 
 
