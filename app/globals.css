@@ -184,6 +184,11 @@ p a::after {
   mask-repeat: repeat-x;
 } 
 
+::selection {
+  background:#FFFBEB;
+  color: rgb(37, 7, 58); 
+}
+
 
 
 input::-webkit-outer-spin-button,
@@ -237,5 +242,6 @@ input[type=number] {
     column-count: 4;
     column-gap: 20px;
   }
+
 }
 
