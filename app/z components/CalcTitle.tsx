@@ -14,12 +14,12 @@ interface TipTextSet {
 }
 
 export default function FieldTitle(props: CalcInputProps) {
-    const tireTipText = "Optionally use standard notation to set tire diameter"
-    const intertiaTipText = "Also called moment of inertia or rotating mass. Keep it low to go faster!"
+    const tireTipText = "Optionally use standard notation to set tire diameter."
+    const intertiaTipText = "This rotational inertia is also called moment of inertia or rotating mass. Keep it low to go faster!"
     const vehicleWeightTipText = "Includes current wheels and tires. Average is 4000lb. The lower this weight, the more rotational inertia makes a difference!"
-    
-    const tipTextSet: TipTextSet = {StandardNotation: tireTipText, TotalInertia: intertiaTipText, VehicleWeight: vehicleWeightTipText}
-    const tipTextKey = props.title.replace(' ','')
+    const zeroSixtyTipText = "The longer this time, the less horsepower your car has, and the more rotational inertia makes a difference!"
+    const tipTextSet: TipTextSet = {StandardNotation: tireTipText, TotalInertia: intertiaTipText, VehicleWeight: vehicleWeightTipText, CurrentTime: zeroSixtyTipText}
+    const tipTextKey = props.title.replace(/[^a-zA-Z]/g, ""); //remove any characters that are not a letter
 
 
 
