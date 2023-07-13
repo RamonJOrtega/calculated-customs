@@ -183,11 +183,11 @@ p a::after {
   -webkit-mask-repeat: repeat-x;
   mask-repeat: repeat-x;
 } 
-
+/* 
 ::selection {
   background:#171717;
-  color: #FCD34D
-}
+  color: #FCD34D;
+} */
 
 
 
