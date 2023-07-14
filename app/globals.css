@@ -79,11 +79,11 @@ main {
   margin: 2%;
   max-width: var(--max-width);
   min-width: 1em;
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 98%;
+  /* height: 98%; */
 
 }
 
@@ -159,23 +159,7 @@ p a::after {
   mask-repeat: repeat-x;
 } 
 
- a::after {
-  content: "";
-  position: absolute;
-  bottom: -.4em;
-  left: 0;
-  width: 95%;
-  height: .5em;
-  background-image: linear-gradient(to right, #facc15, #b45309);
-  background-image: linear-gradient(to right, #FFFBEB, #FCD34D);
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  mask-image: url(tire-tracks.png);
-  mask-size: contain;
-  -webkit-mask-repeat: repeat-x;
-  mask-repeat: repeat-x;
-} 
+
 
 #TireWidthmm {
   column-count: 4;
