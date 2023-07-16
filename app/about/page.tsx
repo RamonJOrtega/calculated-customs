@@ -17,9 +17,9 @@ export default function LearnPage() {
                     <h1 >ABOUT US</h1>
                     
                     <p> 
-                    <a href="https://www.tkqlhce.com/click-100641204-10377976">Find your wheels</a>.&#160;
-                        <a href="https://www.kqzyfj.com/click-100641204-10377851">Find your tires</a>.&#160;
-                        <a href="/">Compare</a>.
+                    <a href="https://www.tkqlhce.com/click-100641204-10377976">Find your wheels.</a>&#160;
+                        <a href="https://www.kqzyfj.com/click-100641204-10377851">Find your tires.</a>&#160;
+                        <a href="/">Compare.</a>
                     </p>
                     <br></br>
                     <p >
@@ -27,10 +27,11 @@ export default function LearnPage() {
                     </p>
                     <br></br>
                     <p >
-                        Support us by clicking affiliate links and purchasing wheels or tires through &#160;
-                        <a href="https://www.jdoqocy.com/click-100641204-10377982">Tire Rack</a>&#160;/&#160;<a href="https://www.tkqlhce.com/click-100641204-13382742">Discount Tire</a>,&#160; 
-                        <a href="https://www.dpbolvw.net/click-100641204-15280196">Hoonigan</a>,&#160; and &#160; 
-                        <a href="https://www.dpbolvw.net/click-100641204-15357094">Throttle</a>.&#160;  
+                        Support us by clicking affiliate links and purchasing wheels or tires through
+                        <a href="https://www.jdoqocy.com/click-100641204-10377982">Tire Rack</a>/
+                        <a href="https://www.tkqlhce.com/click-100641204-13382742">Discount Tire,</a>
+                        <a href="https://www.dpbolvw.net/click-100641204-15280196">Hoonigan,</a> and
+                        <a href="https://www.dpbolvw.net/click-100641204-15357094">Throttle,</a>
                         <br></br>
                         <br></br>
                         The commissions generated will be used to add more calculators and products to our website. 
