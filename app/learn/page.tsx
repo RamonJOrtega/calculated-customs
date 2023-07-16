@@ -16,7 +16,6 @@ export default function LearnPage() {
                     />
         
             </div> 
-
             <br></br>
             <h1  >CALCULATING WHEEL AND TIRE PERFORMANCE</h1>
             <br></br>
@@ -26,7 +25,7 @@ export default function LearnPage() {
                 <br></br>
                 <p > 
                     We used 3D-scans of real-world wheels and tires to calibrate our calculators.
-                    Zero-to-sixty time calculations are currently accurate within 0.4 seconds.
+                    Zero-to-sixty time calculations are currently accurate within 0.4 seconds. 
                     <br></br>
                 </p>
                 <br></br>
@@ -73,17 +72,17 @@ export default function LearnPage() {
                 It’s true what gearheads say on the forums: rotating weight is worse than stationary weight. Why is that?  <br></br><br></br>
             </p>
             <p >
-                Force = Mass × Acceleration (F=ma)  <br></br>
+                Force = Mass × Acceleration (<code>F=ma</code>)  <br></br>
                 Cars supply limited force, so adding mass reduces acceleration.  <br></br> <br></br>
             </p>
             <p >
-                Torque = rotational inertia × angular acceleration (T=Iα) <br></br>
+                Torque = rotational inertia × angular acceleration (<code>T=Iα</code>) <br></br>
                 Cars supply limited torque, so adding rotational inertia reduces angular acceleration. <br></br> <br></br>
             </p>
             <p >
                 
-                Rotational Inertia= Mass × Rotation Radius² (I=mr²). <br></br>
-                Rotational Inertia increases directly with mass (m) but EXPONENTIALLY with the distance (r) of every rotating component point from .
+                Rotational Inertia= Mass × Rotation Radius² (<code>I=mr²</code>). <br></br>
+                Rotational Inertia increases directly with mass (<code>m</code>) but EXPONENTIALLY with the distance (<code>r</code>) of every rotating component point from .
                 This is why adding rotating weight is much worse than adding stationary weight to a vehicle. <br></br> 
                 </p> 
                 <p >

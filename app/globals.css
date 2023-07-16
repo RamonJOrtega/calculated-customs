@@ -160,6 +160,14 @@ p a::after {
   mask-repeat: repeat-x;
 } 
 
+code {
+  font-weight: bold;
+  font: ui-monospace;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #facc15, #b45309);
+  letter-spacing: 2px;
+}
 
 
 #TireWidthmm {
