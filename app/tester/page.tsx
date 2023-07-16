@@ -16,6 +16,9 @@ export default function Home() {
   return (
     <> 
        <TireResizer />
+       <svg>
+        <use href = "../public/tire.svg"></use>
+       </svg>
 
     </>
   )
