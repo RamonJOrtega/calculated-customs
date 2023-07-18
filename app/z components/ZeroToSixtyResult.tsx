@@ -1,8 +1,4 @@
-import { Inter } from 'next/font/google'
-import Link from  'next/link';
-import Image from 'next/image';
-import { parse } from 'path';
-import { isConstructorDeclaration } from 'typescript';
+
 
 interface ZeroToSixtyResultProps {
     vehicleWeight: string;
