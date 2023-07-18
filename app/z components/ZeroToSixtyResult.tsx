@@ -15,8 +15,7 @@ interface ZeroToSixtyResultProps {
     tireDiameter2: string;
     wheelWeight1: string;
     wheelWeight2: string;
-    // isStdNotation1: boolean;
-    // isStdNotation2: boolean;
+
 }
 const ZeroToSixtyResult: React.FC<ZeroToSixtyResultProps> = (props) => {
 const tireRadius1 = parseFloat(props.tireDiameter1)*0.0254/2 //convert from Diameter[in] to Radius[m]
