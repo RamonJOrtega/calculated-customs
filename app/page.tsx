@@ -1,6 +1,4 @@
 import { Inter } from 'next/font/google'
-import dynamic from 'next/dynamic'
-import Link from 'next/link'
 import './globals.css'
 
 import MainCalculator from './z components/MainCalculator'

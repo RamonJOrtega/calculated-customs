@@ -1,16 +1,12 @@
 'use client'
 
 import React, { SetStateAction, useEffect } from "react"
-import Link from "next/link"
 import { Inter } from 'next/font/google'
-import { Main } from "next/document"
 import CalcInput from "./CalcInput"
 import CalcTitle from "./CalcTitle"
 import CalcUnit from "./CalcUnit"
-import * as C from '../constants'
 import {calcTireDiaFromStdNotation, calcTireInertia, calcTotalInertia, calcWheelInertia } from "../calculations"
 import ZeroToSixtyResult from "./ZeroToSixtyResult"
-import WheelSVG from "./WheelSVG"
 
 const inter = Inter({ subsets: ['latin'] })
 
