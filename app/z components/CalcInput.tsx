@@ -1,12 +1,7 @@
-import { Inter } from 'next/font/google'
-import Link from  'next/link';
-import Image from 'next/image';
-import { Props } from 'next/script';
 import { useRef } from 'react';
 import WidthDataList from './WidthDataList';
 import AspectDataList from './AspectDataList';
 import '../globals.css'
-
 
 interface CalcInputProps {
     isVisible: boolean
