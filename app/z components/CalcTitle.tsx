@@ -1,9 +1,3 @@
-import { Inter } from 'next/font/google'
-import styles from '../page.module.css'
-import Link from  'next/link';
-import Image from 'next/image';
-import { StringLiteral } from 'typescript';
-
 interface CalcInputProps {
     isVisible: boolean
     title: string
