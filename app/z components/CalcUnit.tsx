@@ -1,7 +1,3 @@
-import { Inter } from 'next/font/google'
-import Link from  'next/link';
-import Image from 'next/image';
-
 interface CalcUnitProps {
     isVisible: boolean
     unit: string
