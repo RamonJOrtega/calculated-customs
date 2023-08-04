@@ -208,10 +208,11 @@ button {
 @media (hover: hover) and (pointer: fine) {
   a:hover {
   background: linear-gradient(to right, #facc15,#b45309);
-  background-image: linear-gradient(to right, #FFFBEB, #FCD34D);
+  /* background-image: linear-gradient(to right, #FFFBEB, #FCD34D); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-   border: 2px solid rgba(var(--card-border-rgb), 0.15);  
+   border: 2px solid rgba(var(--card-border-rgb), 0.15); 
+  
 
 }
 
