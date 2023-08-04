@@ -4,7 +4,6 @@ import { AiOutlineInstagram, AiOutlineYoutube } from "react-icons/ai"
 
 const inter = Inter({ subsets: ['latin'] })
 
-
 export default function SocialLinks() {
     
     return(
@@ -21,9 +20,7 @@ export default function SocialLinks() {
                 <div >
                     <h3 >  <AiOutlineInstagram /> </h3>
                 </div>
-            </Link>
-            
-</ div> 
-
+            </Link>  
+        </ div> 
     )
 }
