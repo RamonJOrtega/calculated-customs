@@ -30,7 +30,11 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
-  --cardCalculator-rgb: 23,23,23
+
+  --inputBackground: #fefce8;
+  --inputText: #404040;
+  --resultBackground: #fef9c3;
+  --resultText: #701A75;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -51,6 +55,13 @@
     --callout-border-rgb: 108, 108, 108;
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
+
+    --inputBackground: #262626;
+    --inputText: white;
+    --resultBackground: #171717;
+    --resultText: #fef08a;
+
+  
   }
 }
 
@@ -190,6 +201,14 @@ input[type=number] {
   text-align:center;
   -moz-appearance: textfield;
   /* Firefox */
+  color:var(--inputText);
+  background-color: var(--inputBackground);
+  font-weight: BOLD;
+  border-radius: 10px;
+}
+input[disabled] {
+  color:var(--resultText);
+  background-color: var(--resultBackground);
 }
 
 /* table {
