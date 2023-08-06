@@ -60,8 +60,6 @@
     --inputText: white;
     --resultBackground: #171717;
     --resultText: #fef08a;
-
-  
   }
 }
 
@@ -207,7 +205,6 @@ input[type=number] {
   border-radius: 10px;
 }
 input[disabled] {
-  color:var(--resultText);
   background-color: var(--resultBackground);
 }
 
