@@ -21,7 +21,7 @@ export default function Home() {
           Enter size and weight.
           Calculate the fastest combo!
           <br></br> <br></br>
-          Large, heavy combinations have large rotational inertia numbers.
+          Small, lightweight combinations have low rotational inertia numbers.
           <br></br> <br></br>
           The lower the number, the faster your zero-to-sixty time.
         </p> 
