@@ -28,9 +28,9 @@
   --card-border-rgb: 131, 134, 135;
 
   --inputBackground: #fefce8;
-  --inputText: #404040;
   --resultBackground: #fef9c3;
-  --resultText: #701A75;
+  --inputText: #eab308;
+  --resultText: #262626
 }
 
 @media (prefers-color-scheme: dark) {
