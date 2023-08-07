@@ -14,11 +14,7 @@
   /* 214, 219, 220;  NEXT defualt*/
   --background-end-rgb: 255, 255, 255;
 
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,#fffbeb 0deg, #fef3c7 55deg, #f8ed99 120deg, #f8e68a 160deg,
-    transparent 360deg
-
-  );
+  --primary-glow: conic-gradient(from 180deg at 50% 50%,#fffbeb 0deg, #fef3c7 55deg, #f8ed99 120deg, #f8e68a 160deg,transparent 360deg);
   --secondary-glow: radial-gradient(rgba(255, 255, 255, 1),  rgba(255, 255, 255, 0));
 
   --tile-start-rgb: 239, 245, 249;
@@ -206,6 +202,7 @@ input[type=number] {
 }
 input[disabled] {
   background-color: var(--resultBackground);
+  color: var(--resultText);
 }
 
 /* table {
