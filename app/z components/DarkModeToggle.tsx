@@ -1,16 +1,30 @@
 
-interface WidthDataList {
-    id: String
+const enableDarkMode = () => {
+  document.body.classList.add('darkMode')
+
+  localStorage.setItem('darkMode', 'ENABLED')
+}
+const disableDarkMode = () => {
+  document.body.classList.remove('darkMode')
+
+  localStorage.setItem('darkMode', 'DISABLED')
+}
+ 
+const handleClick = (darkMode: string | null) => {
+  if (darkMode !=='ENABLED') {
+    enableDarkMode()
+  } else {
+    disableDarkMode()
+  }
 }
 
-const handleClick = () => {
-  console.log('clicked');
-}
 
 export default function DarkModeToggle(props: any) {
-  let darkMode = localStorage.getItem('darkMode');
+  let darkMode = localStorage.getItem('darkMode')
+
 
     return (
-      <button onClick={handleClick}> Dark </button>
-  )}
+      <button onClick={()=> handleClick(darkMode) } > Dark </button>
+    )
+}
   

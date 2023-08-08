@@ -45,7 +45,7 @@ const Navbar = () => {
           {circlePosition === 5 ? <Image src="/logo.svg" alt="calculated customs logo" width={28} height={28} priority /> : <div className='h-7 w-7'></div>}
         </div>
       </div>
-      <DarkModeToggle/>
+      {/* <DarkModeToggle/> */}
     </nav>
   );
 };
