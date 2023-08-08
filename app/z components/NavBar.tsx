@@ -4,6 +4,7 @@ import Link from  'next/link';
 import Image from 'next/image';
 import SocialLinks from './SocialLinks';
 import { SetStateAction, useState } from 'react';
+import DarkModeToggle from './DarkModeToggle';
 
 const Navbar = () => {
   const [circlePosition, setCirclePosition] = useState(1);
@@ -44,6 +45,7 @@ const Navbar = () => {
           {circlePosition === 5 ? <Image src="/logo.svg" alt="calculated customs logo" width={28} height={28} priority /> : <div className='h-7 w-7'></div>}
         </div>
       </div>
+      <DarkModeToggle/>
     </nav>
   );
 };
