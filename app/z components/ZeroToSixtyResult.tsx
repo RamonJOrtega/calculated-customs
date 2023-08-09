@@ -1,5 +1,3 @@
-
-
 interface ZeroToSixtyResultProps {
     vehicleWeight: string;
     currentZeroSixtyTime: string;
