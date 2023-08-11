@@ -30,7 +30,7 @@
   --inputBackground: #fefce8;
   --resultBackground: #fef9c3;
   --inputText: #eab308;
-  --resultText: #262626
+  --resultText: #262626;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -202,7 +202,6 @@ input[type=number] {
 }
 input[disabled] {
   background-color: var(--resultBackground);
-  color: var(--resultText);
 }
 
 /* table {

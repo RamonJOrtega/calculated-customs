@@ -1,14 +1,12 @@
 'use client'
 
-import React, { SetStateAction, useEffect } from "react"
-import { Inter } from 'next/font/google'
 import CalcInput from "./CalcInput"
 import CalcTitle from "./CalcTitle"
 import CalcUnit from "./CalcUnit"
 import {calcTireDiaFromStdNotation, calcTireInertia, calcTotalInertia, calcWheelInertia } from "../calculations"
 import ZeroToSixtyResult from "./ZeroToSixtyResult"
-
-const inter = Inter({ subsets: ['latin'] })
+import { useEffect } from 'react'
+import React from 'react'
 
 const MainCalculator = () => {
     const [isStdNotation1, setIsStdNotation1] = React.useState(false)
