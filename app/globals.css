@@ -188,21 +188,14 @@ code {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-  margin: 0;
 }
 input[type=number] {
   width: 98%;
   text-align:center;
   -moz-appearance: textfield;
   /* Firefox */
-  color:var(--inputText);
-  background-color: var(--inputBackground);
-  font-weight: BOLD;
-  border-radius: 10px;
 }
-input[disabled] {
-  background-color: var(--resultBackground);
-}
+
 
 /* table {
   width: 100%;

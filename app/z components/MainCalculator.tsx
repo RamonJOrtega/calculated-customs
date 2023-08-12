@@ -131,7 +131,9 @@ const MainCalculator = () => {
     ]
 
     return (
-        <table className="text-left w-full bg-neitral-950 rounded-xl" >
+        
+        <table className="text-left w-full bg-neutral-950 rounded-xl" >
+            <th colSpan={6} className="py-3 text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-700">Rotational Inertia and Zerto-to-Sixty Calculator </th>
                 <tbody>
                     <tr>
                         <td colSpan={6} className="text-center">
@@ -165,7 +167,7 @@ const MainCalculator = () => {
                     <tr>
                         <td colSpan={6} className="text-center">
                             <button  onClick={()=>{setIsCampareEnabled(!isCompareEnabled)}} >
-                                    <h3 className="text-neutral-900 bg-gradient-to-r from-amber-50 to-yellow-200 text-sm font-bold px-2 py-1 rounded-md animate-pulse text-left">
+                                    <h3 className="text-neutral-900 bg-gradient-to-r from-amber-50 to-yellow-200 text-sm font-bold px-2 py-1 mb-3 rounded-md animate-pulse text-left">
                                         Compare Combo 2
                                     </h3> 
                             </button>

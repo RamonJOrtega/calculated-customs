@@ -51,8 +51,8 @@ const CalcInput: React.FC<CalcInputProps> = (props: CalcInputProps) => {
             </div>
         );
     } else if (typeof props.value === 'string') {
-        if (props.title.includes("Inertia")) { inputElement = (<input type="number" value={props.value} disabled />);} 
-        else {inputElement = (<input type="number" value={props.value} ref={inputRef} onInput={handleInput} pattern="[0-9.]" placeholder={props.placeHolder} onClick={()=>{props.setValue("")}} list = {compactTitleId} max={maxNums[compactTitleId]} min="0" step = "0.1"/>);}
+        if (props.title.includes("Inertia")) { inputElement = (<input className='mx-1 rounded-md bg-neutral-600 text-yellow-200 font-bold' type="number" value={props.value} disabled />);} 
+        else {inputElement = (<input className='text-white mx-1 w-full rounded-md bg-neutral-800 font-bold' type="number" value={props.value} ref={inputRef} onInput={handleInput} pattern="[0-9.]" placeholder={props.placeHolder} onClick={()=>{props.setValue("")}} list = {compactTitleId} max={maxNums[compactTitleId]} min="0" step = "0.1"/>);}
     }
     
     return props.isVisible ? (

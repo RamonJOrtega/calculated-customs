@@ -48,13 +48,13 @@ secondsSlowerMessage = (secondsSlower !== "NaN") ? secondsSlowerMessage : "input
         < >
             {T1 > T2 ? 
                 (<div > 
-                    <input  value={percentDecMessage} disabled  className="bg-gradient-to-r from-amber-50 to-yellow-200 m-1 rounded-lg h-8 border-none text-center font-bold text-lg min-w-10  text-green-600 z-10 w-full"/>  
-                    <input  value={secondsFasterMessage}disabled className="bg-gradient-to-r from-amber-50 to-yellow-200 m-1 rounded-lg h-8 border-none text-center font-bold text-lg min-w-10  text-green-600 z-10 w-full"/>  
+                    <input  value={percentDecMessage} disabled  className=" mb-3 mt-3 bg-gradient-to-r from-amber-50 to-yellow-200 rounded-lg h-8 border-none text-center font-bold text-lg   text-green-600 z-10 w-full"/>  
+                    <input  value={secondsFasterMessage}disabled className="mb-3 mt-3 bg-gradient-to-r from-amber-50 to-yellow-200 rounded-lg h-8 border-none text-center font-bold text-lg   text-green-600 z-10 w-full"/>  
                 </div>) 
                 : 
                 (<div > 
-                    <input  value={percentIncMessage} disabled className="bg-gradient-to-r from-yellow-300 to-amber-600 m-1 rounded-lg h-8 border-none text-center font-bold text-lg min-w-10 text-orange-700 z-10 w-full"/>  
-                    <input  value={secondsSlowerMessage} disabled className='bg-gradient-to-r from-yellow-300 to-amber-600 m-1 rounded-lg h-8 border-none text-center font-bold text-lg min-w-10 text-orange-700 z-10 w-full'/> 
+                    <input  value={percentIncMessage} disabled className=" mb-3 mt-3 bg-gradient-to-r from-yellow-300 to-amber-600 p-1 rounded-lg h-8 border-none text-center font-bold text-lg  text-orange-700 z-10 w-full"/>  
+                    <input  value={secondsSlowerMessage} disabled className=' mb-3 mt-3 bg-gradient-to-r from-yellow-300 to-amber-600 rounded-lg h-8 border-none text-center font-bold text-lg  text-orange-700 z-10 w-full'/> 
                 </div>)
             }
 
