@@ -132,7 +132,7 @@ const MainCalculator = () => {
 
     return (
         
-        <table className="text-left w-full bg-neutral-950 rounded-xl" >
+        <table className="text-left w-full bg-neutral-900 rounded-xl" >
                 <tbody>
                 <tr > 
                     <td colSpan={6} className="py-3 text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-700 font-bold">Rotational Inertia and Zerto-to-Sixty Calculator</td>
