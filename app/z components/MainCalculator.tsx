@@ -133,8 +133,10 @@ const MainCalculator = () => {
     return (
         
         <table className="text-left w-full bg-neutral-950 rounded-xl" >
-            <th colSpan={6} className="py-3 text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-700">Rotational Inertia and Zerto-to-Sixty Calculator </th>
                 <tbody>
+                <tr > 
+                    <td colSpan={6} className="py-3 text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-700 font-bold">Rotational Inertia and Zerto-to-Sixty Calculator</td>
+                </tr>
                     <tr>
                         <td colSpan={6} className="text-center">
                             <button  onClick={()=>{setIsSetup1(!isSetup1)}}  >
@@ -195,7 +197,7 @@ const MainCalculator = () => {
             ))}
             {isCompareEnabled && (
                 <tbody>
-                    <tr className="text-center">
+                    <tr className="text-centerwwwww">
                         <td colSpan={6}>
                             <ZeroToSixtyResult 
                             vehicleWeight={vehicleWt}           currentZeroSixtyTime = {currentZeroSixtyTime}
