@@ -134,9 +134,9 @@ const MainCalculator = () => {
         
         <table className="text-left w-full bg-neutral-900 rounded-xl" >
                 <tbody>
-                <tr > 
-                    <td colSpan={6} className="py-3 text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-700 font-bold">Rotational Inertia and Zerto-to-Sixty Calculator</td>
-                </tr>
+                    <tr > 
+                        <td colSpan={6} className="py-3 text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-700 font-bold">Rotational Inertia and Zerto-to-Sixty Calculator</td>
+                    </tr>
                     <tr>
                         <td colSpan={6} className="text-center">
                             <button  onClick={()=>{setIsSetup1(!isSetup1)}}  >

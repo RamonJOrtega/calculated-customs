@@ -16,7 +16,7 @@ export default function FieldTitle(props: CalcInputProps) {
     const tipTextKey = props.title.replace(/[^a-zA-Z]/g, ""); //remove any characters that are not a letter
 
     return props.isVisible ? (
-        <div className="relative text-neutral-600 ">
+        <div className="relative text-neutral-600 mx-1">
           {props.title}
           {(tipTextKey in tipTextSet) && (
             <span className="ml-2 relative group text-yellow-200 " > 
