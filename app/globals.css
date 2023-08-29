@@ -148,9 +148,6 @@ p a {
   font-weight: normal;
 }
 
-p {
-  line-height: 2;
-}
 
 p a::after {
   content: "";
