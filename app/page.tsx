@@ -13,10 +13,10 @@ export default function Home() {
         {/* <h1>COMPARE WHEEL AND TIRE SETS | KNOW YOU CHOSE SPEED </h1> */}
         <h1> CHOOSE THE FASTEST WHEEL-TIRE-SET BY INERTIA </h1>
         <br></br>
-        <p  >
+        <p className='space-y-[30px]' >
           <span><a href="https://www.tkqlhce.com/click-100641204-10377976" className='animate-pulse hover:scale-110'><strong>Browse Wheels.</strong></a></span> &#160;   
           <span ><a href="https://www.kqzyfj.com/click-100641204-10377851"className='animate-pulse hover:scale-110'><strong>Browse Tires.</strong> </a></span>
-          Then enter size and weight to calculate the fastest combo!
+          <span > Then enter size and weight to calculate the fastest combo! </span>
           <br></br><br></br>
           </p> 
         <br></br>
