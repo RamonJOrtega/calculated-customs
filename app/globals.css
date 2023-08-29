@@ -103,7 +103,7 @@ section {
 
 h1 {
   font-weight:bold;
-  font-size: 2rem;
+  font-size: 1.75rem;
   background: linear-gradient(to right, #facc15,#b45309);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
