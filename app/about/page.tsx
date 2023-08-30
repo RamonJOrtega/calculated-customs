@@ -78,7 +78,8 @@ export default function LearnPage() {
                         The president of Calculated Customs. <br></br>
                         M.S. in Mechanical Engineering.  <br></br>
                         8-year Gas Turbine Engineer. <br></br>
-                        Software engineer when not obsessing over wheels.
+                        Currently a Software engineer <br></br>
+                        when not obsessing over wheels.
                     </p>
                     </div>
                     
