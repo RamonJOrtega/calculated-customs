@@ -73,11 +73,15 @@ export default function LearnPage() {
                     <br></br>
                     <h5>Ramon Ortega</h5>
                     <br></br>
-                    <p className="text-center">
+                    <div className="flex items-center flex-col">
+                    <p className="text-left">
                         The president of Calculated Customs. <br></br>
-                        M.S. in Mechanical Engineering, 8-year Gas Turbine Engineer, <br></br>
-                        and software developer when not obsessing over wheels.
+                        M.S. in Mechanical Engineering.  <br></br>
+                        8-year Gas Turbine Engineer. <br></br>
+                        Software engineer when not obsessing over wheels.
                     </p>
+                    </div>
+                    
                     <br></br>
                 </section>
             </div>   
