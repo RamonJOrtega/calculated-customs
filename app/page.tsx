@@ -17,7 +17,7 @@ export default function Home() {
           <span><a href="https://www.tkqlhce.com/click-100641204-10377976" className='animate-pulse hover:scale-110'><strong>Browse Wheels.</strong></a></span> &#160;   
           <span ><a href="https://www.kqzyfj.com/click-100641204-10377851"className='animate-pulse hover:scale-110'><strong>Browse Tires.</strong> </a></span>
           <span > Then enter size and weight to calculate the fastest combo! </span>
-          <br></br><br></br>
+          <br></br>
         </p> 
         <br></br>
 
