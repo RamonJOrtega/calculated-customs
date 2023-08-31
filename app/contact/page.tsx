@@ -18,10 +18,11 @@ export default function ContactPage() {
                     />
                  </div>
             <div>    
-                <Link href="https://www.instagram.com/calculatedcustoms" className='flex'>
-                    <h1> DM Us on Instagram  </h1>
-                    <div className='my-auto'> <h1> <AiOutlineInstagram /> </h1></div>
+            <h1  >
+                <Link href="https://www.instagram.com/calculatedcustoms" className='flex px-2'> 
+                     DM Us on Instagram  <div className='my-auto'> <AiOutlineInstagram /></div>  
                 </Link>
+                </h1>
                 <br></br>
                 <h3>Services Offered</h3>
                 <ul >
