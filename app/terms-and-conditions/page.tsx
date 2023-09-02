@@ -16,7 +16,7 @@ export default function TermsAndConditionsPage() {
                 <p>
                     By accessing this website we assume you accept these terms and conditions. 
                     Do not continue to use Calculated Customs if you do not agree to take all of the terms and conditions stated on this page.
-                    </p>
+                </p>
                 <p>
                     The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company’s terms and conditions. 
                     "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. 
@@ -31,19 +31,20 @@ export default function TermsAndConditionsPage() {
                     Our Calculators internal parameters are proprietary. 
                     Calculated Customs LLC claims no liability for inaccuracy of online calculators. 
                     The Calculators, although meticulously created through real-world empirical experimentation, provide estimates only.
-                    </p>
+                </p>
                 <h3 >
                 <br></br>
                 <strong>Cookies</strong>
-                </h3><p>
-                    We employ the use of cookies. 
+                </h3>
+                <p>
+                    Though we do not employ the use of cookies currently, we reserve the right to employ them in the future. 
                     By accessing Calculated Customs, you agreed to use cookies in agreement with the Calculated Customs LLC Privacy Policy.
-                    </p>
+                </p>
                 <p>
                     Most interactive websites use cookies to let us retrieve the user’s details for each visit. 
                     Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. 
                     Some of our affiliate/advertising partners may also use cookies.
-                    </p>
+                </p>
                 <h3 >
                 <br></br>
                 <strong>License</strong>
@@ -51,7 +52,7 @@ export default function TermsAndConditionsPage() {
                     Unless otherwise stated, Calculated Customs LLC and/or its licensors own the intellectual property rights for all material on Calculated Customs. 
                     All intellectual property rights are reserved. 
                     You may access this from Calculated Customs for your own personal use subjected to restrictions set in these terms and conditions.
-                    </p>
+                </p>
                 <p>
                     You must not:
                 </p>
@@ -99,7 +100,6 @@ export default function TermsAndConditionsPage() {
                 </p>
                 </li><li><p>
                     The Comments do not invade any intellectual property right, including without limitation copyright, patent or trademark of any third party;
-
                 </p>
                 </li><li><p>
                     The Comments do not contain any defamatory, libelous, offensive, indecent or otherwise unlawful material which is an invasion of privacy
@@ -116,7 +116,6 @@ export default function TermsAndConditionsPage() {
                 <strong>iFrames</strong>
                 </h3><p>
                     Without prior approval and written permission, you may not create frames around our Webpages that alter in any way the visual presentation or appearance of our Website.
-
                 </p>
                 <h3 >
                 <br></br>
