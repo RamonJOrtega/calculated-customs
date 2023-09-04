@@ -18,12 +18,12 @@ export default function emailSignUp() {
             <br></br>
             <h1>Adding new features a quarter mile at a time</h1>
             <br></br>
-            <h2>Never miss a thing!</h2>
-            <br></br>
+            <h2>Never Miss a Thing!</h2>
                 <p>Enter your email address to get the latest news and exclusive feautres from our website!</p>
                 <p>You'll be the first to know about new calculators and tire and wheel disounts. </p>
                 <p>You'll also gain access exclusive features.</p>
                 <br></br>
+                <h2>Our Promise</h2>
                 <p>We send only impactful content.</p>
                 <p>We will never spam email you.</p> 
                 <p>We will never share your data.</p>
