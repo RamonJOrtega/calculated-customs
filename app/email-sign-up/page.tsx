@@ -20,13 +20,32 @@ export default function emailSignUp() {
             <br></br>
             <h2>Never miss a thing!</h2>
             <br></br>
-                <p>Enter your email address to get the latest news and exclusive feautres from our website.</p>
+                <p>Enter your email address to get the latest news and exclusive feautres from our website!</p>
+                <p>You'll be the first to know about new calculators and tire and wheel disounts. </p>
+                <p>You'll also gain access exclusive features.</p>
+                <br></br>
                 <p>We send only impactful content.</p>
-                <p>We will never span email you.</p> 
-                <p> We will never share your data.</p>
+                <p>We will never spam email you.</p> 
+                <p>We will never share your data.</p>
                 <p>Unsubscribe anytime!</p>
                 <br></br>
             </section>
+
+            <form>
+               <input
+                    type="text"
+                    placeholder="input email address"
+               />
+               <button type="submit" className="bg-gradient-to-r from-amber-50 to-yellow-200 text-neutral-900 text-sm font-bold px-2 py-1 m-1 rounded-md animate-pulse">
+                    Subscribe
+               </button>
+            </form>
+            <form>  
+               <button type="submit" className="bg-gradient-to-r from-amber-50 to-yellow-200 text-neutral-900 text-sm font-bold px-2 py-1 m-1 rounded-md animate-pulse">
+                    Unsubscribe
+               </button>
+            </form>
+            <br></br>
         </div>
          
     )
