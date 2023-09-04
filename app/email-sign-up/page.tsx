@@ -14,17 +14,17 @@ export default function emailSignUp() {
                     placeholder="blur"
                     //fill={true}
                     />
-        
             </div> 
             <br></br>
-            <h1  >Never miss a thing!</h1>
+            <h1>Adding new features a quarter mile at a time</h1>
             <br></br>
-                <p > 
-                    Enter your email address to get the latest news and exclusive feautres from our website.
-                    We will never share your data.
-                    Unsubscribe anytime! 
-                    <br></br>
-                </p>
+            <h2>Never miss a thing!</h2>
+            <br></br>
+                <p>Enter your email address to get the latest news and exclusive feautres from our website.</p>
+                <p>We send only impactful content.</p>
+                <p>We will never span email you.</p> 
+                <p> We will never share your data.</p>
+                <p>Unsubscribe anytime!</p>
                 <br></br>
             </section>
         </div>
