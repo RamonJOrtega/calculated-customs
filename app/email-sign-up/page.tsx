@@ -16,7 +16,7 @@ export default function emailSignUp() {
                     />
             </div> 
             <br></br>
-            <h1>Adding new features a quarter mile at a time</h1>
+            <h1>NEW FEATURES ADDED A QUARTER MILE AT A TIME</h1>
             <br></br>
             <h2>Never Miss a Thing!</h2>
                 <p>Enter your email address to get the latest news and exclusive feautres from our website!</p>
