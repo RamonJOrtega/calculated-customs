@@ -1,7 +1,7 @@
 import { type } from "os"
 
 interface ButtonProps {
-  type: "button" | "submit" | "reset";
+  type: "button" | "submit" | "reset"|undefined;
   onClick?: () => void;
   text: React.ReactNode;
 }

@@ -3,6 +3,7 @@ import {useState} from 'react'
 import Image from "next/image"
 import pagePicture from "../../public/charger.jpg"
 import "../globals.css"
+import ActionButton from '../z components/ActionButton'
 
 
 
@@ -15,7 +16,7 @@ export default function emailSignUp() {
         return emailRegex.test(text)
     }
     
-    const registerEmail = async(emailText:string) => {
+    const registerEmail = async() => {
         // if text is valid, make apost request to pocketbase db, otherwise update state of input to display invalid message
         if (isEmailTextValid(emailText)) {
             await fetch('http://127.0.0.1:8090/api/collections/email_list/records', {
@@ -55,9 +56,7 @@ export default function emailSignUp() {
                                     Subscribe
                             </button>
 
-                            <button type="submit"  className="bg-gradient-to-r from-amber-50 to-yellow-200 text-neutral-900 text-sm font-bold px-2 py-1 m-1 rounded-md animate-pulse">
-                                    Unsubscribe
-                            </button>
+                            <ActionButton type='submit' text='Unsubscribe' onClick={registerEmail}/>
                         </div>
                     </form>
                 </div>
