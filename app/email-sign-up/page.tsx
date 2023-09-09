@@ -52,11 +52,8 @@ export default function emailSignUp() {
                     <form >
                         <input type="text" value={emailText} placeholder='Enter a Valid Email Address' className="w-80 text-center mb-4 rounded-md" onChange={ (e) => setEmailText(e.target.value) }/>
                         <div className="flex flex-wrap justify-between">
-                            <button type="submit" className="bg-gradient-to-r from-amber-50 to-yellow-200 text-neutral-900 text-sm font-bold px-2 py-1 m-1 rounded-md animate-pulse">
-                                    Subscribe
-                            </button>
-
-                            <ActionButton type='submit' text='Unsubscribe' onClick={registerEmail}/>
+                        <ActionButton type='submit' text='Subscribe' onClick={registerEmail}/>
+                        <ActionButton type='submit' text='Unsubscribe' />
                         </div>
                     </form>
                 </div>
