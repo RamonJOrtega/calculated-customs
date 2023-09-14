@@ -5,11 +5,9 @@ import pagePicture from "../../public/charger.jpg"
 import "../globals.css"
 import ActionButton from '../z components/ActionButton'
 
-
-
-
 export default function emailSignUp() {
     const [emailText, setEmailText] = useState('')
+    const [isSuccess, setIsSuccess] = useState(false)
 
     const isEmailTextValid = (text: string) => {
         const emailRegex = /.+@.+\..+/
@@ -19,12 +17,17 @@ export default function emailSignUp() {
     const registerEmail = async() => {
         // if text is valid, make apost request to pocketbase db, otherwise update state of input to display invalid message
         if (isEmailTextValid(emailText)) {
-            await fetch('http://127.0.0.1:8090/api/collections/email_list/records', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({emailText})
-        })} else {
+            await fetch(
+                'http://127.0.0.1:8090/api/collections/email_list/records', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({emailText})
+                }
+            )
+            setIsSuccess(true)
+        } else {
             setEmailText('')
+            setIsSuccess(false)
         }
     }
 
@@ -53,6 +56,7 @@ export default function emailSignUp() {
                         <input type="text" value={emailText} placeholder='Enter a Valid Email Address' className="w-80 text-center mb-4 rounded-md" onChange={ (e) => setEmailText(e.target.value) }/>
                         <div className="flex flex-wrap justify-between">
                         <ActionButton type='submit' text='Subscribe' onClick={registerEmail}/>
+                        {isSuccess && (<div>Success</div>)}
                         <ActionButton type='submit' text='Unsubscribe' />
                         </div>
                     </form>
