@@ -5,6 +5,14 @@ import president from "../../public/presidentImage.jpg"
 
 
 export default function LearnPage() {
+const wheelsLlink = "https://www.tkqlhce.com/click-100641204-10377976"
+const tiresLink = "https://www.kqzyfj.com/click-100641204-10377851"
+const tireRackLink = "https://www.jdoqocy.com/click-100641204-10377982"
+const discountTireLink = "https://www.tkqlhce.com/click-100641204-13382742"
+const hooniganLink = "https://www.dpbolvw.net/click-100641204-15280196"
+const throttleLink = "https://www.dpbolvw.net/click-100641204-15357094"
+
+
     return(
         <div>
             <div className=' h-96 w-full overflow-hidden rounded-xl content-center flex flex-col justify-center'>
@@ -17,8 +25,8 @@ export default function LearnPage() {
                     <h1 >ABOUT US</h1>
                     
                     <p> 
-                    <a href="https://www.tkqlhce.com/click-100641204-10377976">Find your wheels.</a>&#160;
-                        <a href="https://www.kqzyfj.com/click-100641204-10377851">Find your tires.</a>&#160;
+                    <a href={wheelsLlink}>Find your wheels.</a>&#160;
+                        <a href={tiresLink}>Find your tires.</a>&#160;
                         <a href="/">Compare.</a>
                     </p>
                     <br></br>
@@ -27,10 +35,10 @@ export default function LearnPage() {
                     </p>
                     <p className='leading-8'>
                         Support us by clicking affiliate links and purchasing wheels or tires through
-                        <a href="https://www.jdoqocy.com/click-100641204-10377982">Tire Rack</a>/
-                        <a href="https://www.tkqlhce.com/click-100641204-13382742">Discount Tire,</a>
-                        <a href="https://www.dpbolvw.net/click-100641204-15280196">Hoonigan,</a> and
-                        <a href="https://www.dpbolvw.net/click-100641204-15357094">Throttle.</a>
+                        <a href={tireRackLink}>Tire Rack</a>/
+                        <a href={discountTireLink}>Discount Tire,</a>
+                        <a href={hooniganLink}>Hoonigan,</a> and
+                        <a href={throttleLink}>Throttle.</a>
                         <br></br>
                         The commissions generated will be used to add more calculators and products to our website. 
                         <br></br>
