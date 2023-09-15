@@ -25,14 +25,12 @@ export default function LearnPage() {
                     <p >
                         You’ll KNOW which combo is faster BEFORE you spend thousands of dollars on your whip’s new kicks. <br></br>
                     </p>
-                    <br></br>
                     <p className='leading-8'>
                         Support us by clicking affiliate links and purchasing wheels or tires through
                         <a href="https://www.jdoqocy.com/click-100641204-10377982">Tire Rack</a>/
                         <a href="https://www.tkqlhce.com/click-100641204-13382742">Discount Tire,</a>
                         <a href="https://www.dpbolvw.net/click-100641204-15280196">Hoonigan,</a> and
                         <a href="https://www.dpbolvw.net/click-100641204-15357094">Throttle.</a>
-                        <br></br>
                         <br></br>
                         The commissions generated will be used to add more calculators and products to our website. 
                         <br></br>
