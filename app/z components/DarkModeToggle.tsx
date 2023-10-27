@@ -1,31 +1,10 @@
-import { useEffect, useMemo, useState } from 'react';
-
-const enableDarkMode = () => {
-  document.body.classList.add('darkMode');
-
-  localStorage.setItem('darkMode', 'ENABLED');
-};
-const disableDarkMode = () => {
-  document.body.classList.remove('darkMode');
-
-  localStorage.setItem('darkMode', 'DISABLED');
-};
-
-const handleClick = (darkMode: string | null) => {
-  if (darkMode !== 'ENABLED') {
-    enableDarkMode();
-  } else {
-    disableDarkMode();
-  }
-};
+import { useEffect, useState } from 'react';
 
 const toggleHTMLDarkModeClass = (enabled: boolean) => {
-  const htmlElement = document.getElementsByTagName('html')[0];
-
   if (enabled) {
-    htmlElement.classList.add('dark');
+    document.documentElement.classList.add('dark');
   } else {
-    htmlElement.classList.remove('dark');
+    document.documentElement.classList.remove('dark');
   }
 };
 
@@ -33,10 +12,10 @@ export default function DarkModeToggle() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    const localDark = localStorage.getItem('darkMode');
+    const localTheme = localStorage.getItem('theme');
     const initialDarkMode =
-      localDark !== null
-        ? localDark === 'true'
+      localTheme !== null
+        ? localTheme === 'dark'
         : window.matchMedia('(prefers-color-scheme: dark)').matches;
     setDarkMode(initialDarkMode);
   }, []);
@@ -47,7 +26,7 @@ export default function DarkModeToggle() {
 
   useEffect(() => {
     toggleHTMLDarkModeClass(darkMode);
-    localStorage.setItem('darkMode', darkMode ? 'true' : 'false');
+    localStorage.setItem('theme', darkMode ? 'light' : 'dark');
   }, [darkMode]);
 
   return (

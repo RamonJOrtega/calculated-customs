@@ -73,6 +73,7 @@ const Navbar = () => {
       {navElements.map((a, n) => {
         return (
           <Link
+            key={a.href}
             href={a.href}
             onMouseEnter={() => handleLinkHover(n)}
             className="flex items-center px-1"

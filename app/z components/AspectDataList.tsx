@@ -2,7 +2,7 @@ interface AspectDataList {
   id: string;
 }
 
-export default function AspectDataList(props: any) {
+export default function AspectDataList(props: AspectDataList) {
   return (
     <datalist id={props.id}>
       <option value="10"></option>
