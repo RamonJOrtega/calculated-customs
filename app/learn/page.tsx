@@ -2,21 +2,33 @@ import Image from 'next/image';
 import {} from 'next/font/google';
 import pagePicture from '../../public/lamborghini 6861x4233.jpg';
 import '../globals.css';
+import HeaderImage, { headerImageText } from '@/app/z components/HeaderImage';
 
 export default function LearnPage() {
   return (
     <div>
-      <div className="relative flex h-96 w-full flex-col justify-center overflow-hidden rounded-lg">
-        <Image
-          src={pagePicture}
-          alt="white wheels and tires"
-          placeholder="blur"
-          //fill={true}
+      <div className="relative flex h-80 w-full flex-col justify-center overflow-hidden rounded-lg md:h-96">
+        <HeaderImage
+          image={{
+            src: pagePicture,
+            alt: 'white wheels and tires',
+          }}
+          Overlay={
+            <a
+              href={'#'}
+              className="absolute bottom-0 flex w-full  bg-gray-900/20 p-2 underline decoration-amber-500 underline-offset-4"
+            >
+              <h1
+                className={
+                  'flex flex-auto flex-row justify-around text-lg sm:text-2xl md:text-5xl '
+                }
+              >
+                CALCULATING WHEEL AND TIRE PERFORMANCE
+              </h1>
+            </a>
+          }
         />
       </div>
-      <br></br>
-      <h1>CALCULATING WHEEL AND TIRE PERFORMANCE</h1>
-      <br></br>
       <section>
         <h3> How Accurate Are Our Calculators? </h3>
         <br></br>

@@ -3,7 +3,7 @@ import '../globals.css';
 export default function TermsAndConditionsPage() {
   return (
     <div>
-      <div className="mx-2 w-9/10 w-max-282">
+      <div className="mx-2 w-5/6 max-w-full">
         <h2>
           <strong>Terms and Conditions</strong>
         </h2>

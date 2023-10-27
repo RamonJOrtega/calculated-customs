@@ -2,6 +2,7 @@ import Image from 'next/image';
 import {} from 'next/font/google';
 import pagePicture from '../../public/gold-audi 4016x6016.jpg';
 import president from '../../public/presidentImage.jpg';
+import HeaderImage from '@/app/z components/HeaderImage';
 
 export default function LearnPage() {
   const wheelsLlink = 'https://www.tkqlhce.com/click-100641204-10377976';
@@ -13,25 +14,29 @@ export default function LearnPage() {
 
   return (
     <div>
-      <div className="flex h-96 w-full flex-col content-center justify-center overflow-hidden rounded-xl">
-        <Image
-          src={pagePicture}
-          alt="calculated customs wheel tire "
-          placeholder="blur"
-          fill={false}
+      <div className="relative flex h-80 w-full flex-col justify-center overflow-hidden rounded-lg md:h-96">
+        <HeaderImage
+          image={{
+            src: pagePicture,
+            alt: 'calculated customs wheel tire',
+          }}
+          Overlay={
+            <section className="absolute bottom-0 flex w-full items-center bg-gray-900/60 p-2 underline decoration-amber-500 underline-offset-4">
+              <a href={'#'} className={'flex flex-auto flex-row justify-between '}>
+                <h1 className={'text-2xl sm:text-4xl md:text-5xl'}>ABOUT US</h1>
+              </a>
+
+              <p className={'flex flex-col self-end text-right text-lg md:flex-row'}>
+                <a href={wheelsLlink}>Find your wheels.</a>&#160;
+                <a href={tiresLink}>Find your tires.</a>&#160;
+                <a href="/">Compare.</a>
+              </p>
+            </section>
+          }
         />
       </div>
-      <section>
-        <div>
-          <br></br>
-          <h1>ABOUT US</h1>
-
-          <p>
-            <a href={wheelsLlink}>Find your wheels.</a>&#160;
-            <a href={tiresLink}>Find your tires.</a>&#160;
-            <a href="/">Compare.</a>
-          </p>
-          <br></br>
+      <section className={'gap-4'}>
+        <div className={'mt-4'}>
           <p>
             You’ll KNOW which combo is faster BEFORE you spend thousands of dollars
             on your whip’s new kicks. <br></br>
