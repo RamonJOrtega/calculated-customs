@@ -29,7 +29,6 @@
 
   --inputBackground: #fefce8;
   --resultBackground: #fef9c3;
-  --inputText: #eab308;
   --resultText: #262626;
 }
 
@@ -53,7 +52,6 @@
     --card-border-rgb: 200, 200, 200;
 
     --inputBackground: #262626;
-    --inputText: white;
     --resultBackground: #171717;
     /* --resultText: #fef08a; */
   }
@@ -74,9 +72,9 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,transparent, rgb(var(--background-end-rgb)))
-    rgb(var(--background-start-rgb));
+  /*color: rgb(var(--foreground-rgb));*/
+  /*background: linear-gradient(to bottom,transparent, rgb(var(--background-end-rgb)))*/
+  /*  rgb(var(--background-start-rgb));*/
     display: flex;
     justify-content: center;
 }
