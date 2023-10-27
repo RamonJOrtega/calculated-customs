@@ -64,11 +64,9 @@ const CalcInput: React.FC<CalcInputProps> = (props: CalcInputProps) => {
     }
   };
 
-  let inputElement = null;
-
-  if (typeof props.value === 'boolean') {
-    inputElement = (
-      <div className="flex items">
+  const inputElement =
+    typeof props.value === 'boolean' ? (
+      <div className="flex">
         <input
           className="form-checkbox checked:bg-yellow-200"
           type="checkbox"
@@ -79,19 +77,15 @@ const CalcInput: React.FC<CalcInputProps> = (props: CalcInputProps) => {
         />
         <div className="ml-2 text-sm text-stone-600"> ex. 325/40R22 </div>
       </div>
-    );
-  } else if (props.value) {
-    if (props.title.includes('Inertia')) {
-      inputElement = (
+    ) : typeof props.value === 'string' ? (
+      props.title.includes('Inertia') ? (
         <input
           className="rounded-md bg-neutral-800 font-bold text-yellow-200"
           type="number"
           value={props.value}
           disabled
         />
-      );
-    } else {
-      inputElement = (
+      ) : (
         <input
           className="w-full rounded-md bg-neutral-700 font-bold text-white"
           type="number"
@@ -109,9 +103,8 @@ const CalcInput: React.FC<CalcInputProps> = (props: CalcInputProps) => {
           min="0"
           step="0.1"
         />
-      );
-    }
-  }
+      )
+    ) : null;
 
   return props.isVisible ? (
     <div>

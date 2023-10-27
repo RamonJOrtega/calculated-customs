@@ -71,7 +71,7 @@ const ZeroToSixtyResult: React.FC<ZeroToSixtyResultProps> = (props) => {
           <input
             value={percentDecMessage}
             disabled
-            className="mt-3 mb-3 h-8 w-11/12 rounded-lg border-none bg-gradient-to-r from-amber-50 to-yellow-200 text-center text-lg font-bold text-green-600"
+            className="my-3 h-8 w-11/12 rounded-lg border-none bg-gradient-to-r from-amber-50 to-yellow-200 text-center text-lg font-bold text-green-600"
           />
           <input
             value={secondsFasterMessage}
@@ -84,7 +84,7 @@ const ZeroToSixtyResult: React.FC<ZeroToSixtyResultProps> = (props) => {
           <input
             value={percentIncMessage}
             disabled
-            className="mt-3 mb-3 h-8 w-11/12 rounded-lg border-none bg-gradient-to-r from-yellow-300 to-amber-600 p-1 text-center text-lg font-bold text-orange-700"
+            className="my-3 h-8 w-11/12 rounded-lg border-none bg-gradient-to-r from-yellow-300 to-amber-600 p-1 text-center text-lg font-bold text-orange-700"
           />
           <input
             value={secondsSlowerMessage}

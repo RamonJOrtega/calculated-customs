@@ -27,12 +27,12 @@ export default function FieldTitle(props: CalcInputProps) {
     <div className="relative mx-1 text-neutral-600">
       {props.title}
       {tipTextKey in tipTextSet && (
-        <span className="relative ml-2 text-yellow-200 group">
+        <span className="group relative ml-2 text-yellow-200">
           <strong>&#x24D8;</strong>
           <span
-            className="absolute z-10 hidden group-hover:block 
-                bg-gradient-to-r from-amber-50 to-yellow-200
-                text-neutral-900 text-sm font-bold px-2 py-1 rounded-md mt-2"
+            className="absolute z-10 mt-2 hidden 
+                rounded-md bg-gradient-to-r from-amber-50
+                to-yellow-200 px-2 py-1 text-sm font-bold text-neutral-900 group-hover:block"
           >
             {tipTextSet[tipTextKey]}
           </span>

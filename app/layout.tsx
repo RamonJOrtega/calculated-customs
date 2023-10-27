@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <main
           className={
-            'bg-white md:px-16 md:py-4 dark:bg-black text-black min-h-screen dark:text-white'
+            'flex min-h-screen max-w-full content-center items-center overflow-x-hidden bg-white text-black dark:bg-black dark:text-white md:px-16 md:py-4'
           }
         >
           <NavBar />

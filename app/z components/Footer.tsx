@@ -1,14 +1,13 @@
-import {} from 'next/font/google';
 import Link from 'next/link';
 
 export default function NavBar() {
   return (
-    <nav className="flex flex-wrap justify-evenly">
+    <nav className="flex w-full flex-wrap justify-evenly">
       <Link href="/terms-and-conditions">
-        <h5>Terms and Conditions </h5>
+        <span className={'text-lg font-bold'}> Terms and Conditions </span>
       </Link>
       <Link href="/privacy-policy">
-        <h5>Privacy Policy </h5>
+        <span className={'text-lg font-bold'}> Privacy Policy </span>
       </Link>
     </nav>
   );
