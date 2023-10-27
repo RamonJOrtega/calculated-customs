@@ -18,8 +18,8 @@ export const calcWheelInertia = (wheelDia: string, wheelWt: string): string => {
         C.HUB_RADIUS_METERS *
         C.HUB_RADIUS_METERS; //console.log("hub inertia is " + hubInertia)
   const rimInertia = C.RIM_MASS_PERCENTAGE * wheelMass_kg * wheelRad_m * wheelRad_m; //console.log("RIM inertia is " + rimInertia)
-  const wheelInertia = (rimInertia + spokeInertia + hubInertia).toFixed(1);
-  return wheelInertia;
+  // wheelInertia
+  return (rimInertia + spokeInertia + hubInertia).toFixed(1);
 };
 
 export const calcTotalInertia = (

@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import {} from 'next/font/google';
 import pagePicture from '../../public/gold-audi 4016x6016.jpg';
 import president from '../../public/presidentImage.jpg';
 import HeaderImage from '@/app/z components/HeaderImage';

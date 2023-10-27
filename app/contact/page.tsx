@@ -1,25 +1,6 @@
-import Image from 'next/image';
 import pagePicture from '../../public/gold-wheel 3840x5760.jpg';
 import { AiOutlineInstagram } from 'react-icons/ai';
-import Link from 'next/link';
 import HeaderImage, { headerImageText } from '@/app/z components/HeaderImage';
-/*
-      <div className="relative flex h-1/2 w-full flex-col justify-center overflow-hidden rounded-xl">
-        <div className={'h-full w-full'}>
-          <Image
-            id={'contact-image'}
-            objectFit={'cover'}
-            layout={'fill'}
-            quality={100}
-            src={pagePicture}
-            alt="Widebody Lamborghini"
-            placeholder="blur"
-            fill={false}
-          />
-        </div>
-
-      </div>
- */
 
 const Overlay = () => {
   return (

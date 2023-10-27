@@ -1,6 +1,6 @@
-interface WidthDataList {
-  id: string;
-}
+// interface WidthDataList {
+//   id: string;
+// }
 
 export default function WidthDataList(props: any) {
   return (

@@ -1,8 +1,6 @@
-import Image from 'next/image';
-import {} from 'next/font/google';
 import pagePicture from '../../public/lamborghini 6861x4233.jpg';
 import '../globals.css';
-import HeaderImage, { headerImageText } from '@/app/z components/HeaderImage';
+import HeaderImage from '@/app/z components/HeaderImage';
 
 export default function LearnPage() {
   return (

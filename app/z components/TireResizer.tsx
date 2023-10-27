@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import Draggable, { DraggableEventHandler } from 'react-draggable';
+import React from 'react';
+// import Draggable, { DraggableEventHandler } from 'react-draggable';
 
 const CircleResizer: React.FC = () => {
-  const [radius, setRadius] = useState<number>(50);
-  const [centerX, setCenterX] = useState<number>(200);
+  // const [radius, setRadius] = useState<number>(50);
+  // const [centerX, setCenterX] = useState<number>(200);
 
-  const handleCircleDrag: DraggableEventHandler = (_, { deltaX }): void => {
-    // Increase or decrease radius based on drag direction
-    setRadius((prevRadius) => prevRadius + deltaX);
-  };
-
-  const handleSquareDrag: DraggableEventHandler = (_, { deltaX }): void => {
-    // Move the square horizontally and update the circle's center accordingly
-    setCenterX((prevCenterX) => prevCenterX + deltaX);
-  };
+  // const handleCircleDrag: DraggableEventHandler = (_, { deltaX }): void => {
+  //   // Increase or decrease radius based on drag direction
+  //   setRadius((prevRadius) => prevRadius + deltaX);
+  // };
+  //
+  // const handleSquareDrag: DraggableEventHandler = (_, { deltaX }): void => {
+  //   // Move the square horizontally and update the circle's center accordingly
+  //   setCenterX((prevCenterX) => prevCenterX + deltaX);
+  // };
 
   return (
     <svg
