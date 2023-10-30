@@ -1,37 +1,47 @@
-import Image from 'next/image'
-import pagePicture from "../../public/gold-wheel 3840x5760.jpg"
-import { Inter } from 'next/font/google'
-import { AiOutlineInstagram } from 'react-icons/ai'
-import Link from 'next/link'
-const inter = Inter({ subsets: ['latin'] })
+import pagePicture from '../../public/gold-wheel 3840x5760.jpg';
+import { AiOutlineInstagram } from 'react-icons/ai';
+import HeaderImage, { headerImageText } from '@/app/z components/HeaderImage';
 
+const Overlay = () => {
+  return (
+    <a
+      target={'_blank'}
+      rel={'noreferrer'}
+      id={'instagram-link'}
+      href="https://www.instagram.com/calculatedcustoms"
+      className="absolute flex w-full  bg-gray-900/60 px-2 py-5 underline decoration-amber-500 underline-offset-4"
+    >
+      <h1 className={headerImageText}>
+        DM Us on Instagram
+        <div className="my-auto">
+          {' '}
+          <AiOutlineInstagram className={'text-white'} />
+        </div>
+      </h1>
+    </a>
+  );
+};
 
 export default function ContactPage() {
-    return(
-        <div className='flex flex-col items-center'>
-            <div className='w-3/4 h-1/4 overflow-hidden rounded-xl justify-center flex flex-col'>
-                    <Image
-                        src={pagePicture}
-                        alt="Widebody Lamborghini"
-                        placeholder="blur"
-                         fill={false}
-                    />
-                 </div>
-            <div>    
-            <h1  >
-                <Link href="https://www.instagram.com/calculatedcustoms" className='flex px-2'> 
-                     DM Us on Instagram  <div className='my-auto'> <AiOutlineInstagram /></div>  
-                </Link>
-                </h1>
-                <br></br>
-                <h3>Services Offered</h3>
-                <ul >
-                    <li>Fitment Advice</li>
-                    <li>Wheel Recommendations</li>
-                    <li>Tire Recommendations</li>
-                    <li>Transportation Services</li>
-                </ul>
-            </div>
-        </div>
-    )
+  return (
+    <div className="flex h-screen w-full flex-col items-center gap-4 sm:flex-row md:gap-2">
+      <HeaderImage
+        image={{
+          src: pagePicture,
+          height: '1/2',
+          alt: 'Widebody Lamborghini',
+        }}
+        Overlay={<Overlay />}
+      />
+      <section className={'text-2xl  md:text-left md:text-xl'}>
+        <h3 className={'underline'}>Services Offered</h3>
+        <ul className={'list-none'}>
+          <li className={'indent-0'}>Fitment Advice</li>
+          <li className={'indent-0'}>Wheel Recommendations</li>
+          <li className={'indent-0'}>Tire Recommendations</li>
+          <li className={'indent-0'}>Transportation Services</li>
+        </ul>
+      </section>
+    </div>
+  );
 }

@@ -1,10 +1,64 @@
-'use client'
-import {  } from 'next/font/google'
-import Link from  'next/link';
+'use client';
+import Link from 'next/link';
 import Image from 'next/image';
 import SocialLinks from './SocialLinks';
-import { SetStateAction, useState } from 'react';
-import DarkModeToggle from './DarkModeToggle';
+import React, { SetStateAction, useState } from 'react';
+import DarkModeToggle from '@/app/z components/DarkModeToggle';
+import { PropsWithChildren } from 'react';
+
+type FC = PropsWithChildren<any>;
+function Logo(): FC {
+  return (
+    <Image
+      src="/logo.svg"
+      alt="calculated customs logo"
+      width={28}
+      height={28}
+      priority
+    />
+  );
+}
+
+const Elem = ({
+  circlePosition,
+  title,
+  index,
+}: {
+  circlePosition: number;
+  title: string;
+  index: number;
+}): FC => {
+  return (
+    <>
+      <h5>{title}</h5>
+      <div className="m-1">
+        {circlePosition === index ? <Logo /> : <div className="h-7 w-7" />}
+      </div>
+    </>
+  );
+};
+
+const navElements: {
+  href: string;
+  title: string;
+}[] = [
+  {
+    href: '/',
+    title: 'CALCULATED CUSTOMS',
+  },
+  {
+    href: '/learn',
+    title: 'Learn',
+  },
+  {
+    href: '/about',
+    title: 'About',
+  },
+  {
+    href: '/contact',
+    title: 'Contact',
+  },
+];
 
 const Navbar = () => {
   const [circlePosition, setCirclePosition] = useState(1);
@@ -14,38 +68,37 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex justify-between flex-wrap my-4">
-      <Link href="/" onMouseEnter={() => handleLinkHover(1)} className="px-1 flex items-center ">
-        <h5>CALCULATED CUSTOMS</h5>
-        <div className='m-1'>
-          {circlePosition === 1 ? <Image src="/logo.svg" alt="calculated customs logo" width={28} height={28} priority /> : <div className='h-7 w-7'></div>}
-        </div>
-      </Link>
-      <Link href="/learn" onMouseEnter={() => handleLinkHover(2)} className="px-1 flex items-center">
-        <h5>Learn</h5>
-        <div className='m-1'>
-          {circlePosition === 2 ? <Image src="/logo.svg" alt="calculated customs logo" width={28} height={28} priority /> : <div className='h-7 w-7'></div>}
-        </div>
-      </Link>
-      <Link href="/about" onMouseEnter={() => handleLinkHover(3)} className="px-1 flex items-center">
-        <h5 >About</h5>
-        <div className='m-1'>
-          {circlePosition === 3 ? <Image src="/logo.svg" alt="calculated customs logo" width={28} height={28} priority /> : <div className='h-7 w-7'></div>}
-        </div>
-      </Link>
-      <Link href="/contact" onMouseEnter={() => handleLinkHover(4)} className="px-1 flex items-center">
-        <h5>Contact</h5>
-        <div className='m-1'>
-          {circlePosition === 4 ? <Image src="/logo.svg" alt="calculated customs logo" width={28} height={28} priority /> : <div className='h-7 w-7'></div>}
-        </div>
-      </Link>
-      <div onMouseEnter={() => handleLinkHover(5)} className="px-1 flex items-center">
+    <nav className="my-4 flex flex-wrap justify-between">
+      {navElements.map((a, n) => {
+        return (
+          <Link
+            key={a.href}
+            href={a.href}
+            onMouseEnter={() => handleLinkHover(n)}
+            className="flex items-center px-1"
+            passHref
+          >
+            <Elem circlePosition={circlePosition} title={a.title} index={n} />
+          </Link>
+        );
+      })}
+
+      <div
+        onMouseEnter={() => handleLinkHover(5)}
+        className="flex items-center px-1"
+      >
         <SocialLinks />
-        <div className='m-1'>
-          {circlePosition === 5 ? <Image src="/logo.svg" alt="calculated customs logo" width={28} height={28} priority /> : <div className='h-7 w-7'></div>}
+        <div className="m-1">
+          {circlePosition === 5 ? <Logo /> : <div className="h-7 w-7" />}
         </div>
       </div>
-      {/* <DarkModeToggle/> */}
+      <div
+        onMouseEnter={() => handleLinkHover(6)}
+        className="flex items-center px-1"
+      >
+        {/* don't show the circle, but remove from any other element  */}
+        <DarkModeToggle />
+      </div>
     </nav>
   );
 };

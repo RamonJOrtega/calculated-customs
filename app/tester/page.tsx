@@ -1,25 +1,19 @@
-'use client'
-import { Inter } from 'next/font/google'
-import dynamic from 'next/dynamic'
-import Link from 'next/link'
-import "../globals.css"
-import TireResizer from '../z components/TireResizer'
-
-
-
-const inter = Inter({ subsets: ['latin'] })
-
-
+'use client';
+import '../globals.css';
+import { useEffect } from 'react';
 
 export default function Home() {
+  // While this page is not yet setup, redirect to index
+  useEffect(() => {
+    document.location.href = '/';
+  }, []);
 
-  return (
-    <> 
-       <TireResizer />
-       <svg>
-        <use href = "../public/tire.svg"></use>
-       </svg>
-
-    </>
-  )
+  // return (
+  //   <>
+  //     <TireResizer />
+  //     <svg>
+  //       <use href="../public/tire.svg"></use>
+  //     </svg>
+  //   </>
+  // );
 }

@@ -1,44 +1,46 @@
-import React, { useState } from 'react';
-import Draggable, { DraggableEventHandler } from 'react-draggable';
+import React from 'react';
+// import Draggable, { DraggableEventHandler } from 'react-draggable';
 
 const CircleResizer: React.FC = () => {
-  const [radius, setRadius] = useState<number>(50);
-  const [centerX, setCenterX] = useState<number>(200);
+  // const [radius, setRadius] = useState<number>(50);
+  // const [centerX, setCenterX] = useState<number>(200);
 
-  const handleCircleDrag: DraggableEventHandler = (_, { deltaX }): void => {
-    // Increase or decrease radius based on drag direction
-    setRadius((prevRadius) => prevRadius + deltaX);
-  };
-
-  const handleSquareDrag: DraggableEventHandler = (_, { deltaX }): void => {
-    // Move the square horizontally and update the circle's center accordingly
-    setCenterX((prevCenterX) => prevCenterX + deltaX);
-  };
+  // const handleCircleDrag: DraggableEventHandler = (_, { deltaX }): void => {
+  //   // Increase or decrease radius based on drag direction
+  //   setRadius((prevRadius) => prevRadius + deltaX);
+  // };
+  //
+  // const handleSquareDrag: DraggableEventHandler = (_, { deltaX }): void => {
+  //   // Move the square horizontally and update the circle's center accordingly
+  //   setCenterX((prevCenterX) => prevCenterX + deltaX);
+  // };
 
   return (
-    <svg width="200" height="200" viewBox="-12.5 -12.5 25 25" xmlns="http://www.w3.org/2000/svg">
-        <circle 
-          id="tireC"
-          cx="0" cy="0" r="11.25" 
-          fill ="transparent" 
-          stroke = "#262626"
-          stroke-width="2.5"
-          stroke-dasharray="1.2"
-          stroke-linecap="round"
-          //transform="rotate(20)"
-         />
+    <svg
+      width="200"
+      height="200"
+      viewBox="-12.5 -12.5 25 25"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        id="tireC"
+        cx="0"
+        cy="0"
+        r="11.25"
+        fill="transparent"
+        stroke="#262626"
+      />
     </svg>
-
 
     // <div className='flex flex-col justify-center'>
     //   {/* <svg width={400} height={400}>
     //     <circle cx={centerX} cy={200} r={radius} fill="blue" />
     //   </svg> */}
-    //   <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">        
-    //     <circle 
+    //   <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+    //     <circle
     //         id="tireC"
     //         cx={centerX}cy={200} r={radius}
-    //         fill ="transparent" 
+    //         fill ="transparent"
     //         stroke='red'
     //         stroke-width="2.5"
     //         stroke-linecap="round"
@@ -84,7 +86,6 @@ const CircleResizer: React.FC = () => {
     //       />
     //   </Draggable>
     // </div>
-    
   );
 };
 
