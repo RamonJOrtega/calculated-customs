@@ -12,7 +12,7 @@ const MainCalculator = () => {
     const [isStdNotation1, setIsStdNotation1] = React.useState(false)
     const [isStdNotation2, setIsStdNotation2] = React.useState(true)
     const [isCompareEnabled, setIsCampareEnabled] = React.useState(false)
-    const [isSetup1, setIsSetup1] = React.useState(true)
+    const [isSetup1, setIsSetup1] = React.useState(false)
     const [tireDia1, setTireDia1] = React.useState("32.1")
     const [tireWt1, setTireWt1] = React.useState("55")
     const [tireAsp1, setTireAsp1] = React.useState("45")
